@@ -1,0 +1,123 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[automark]{scrpage2}
+
+\newcommand{\titledate}[2][2.5in]{%
+  \noindent%
+  \begin{tabular}{@{}p{#1}@{}}
+    \\ \hline \\[-.75\normalbaselineskip]
+    #2
+  \end{tabular} \hspace{1in}
+  \begin{tabular}{@{}p{#1}@{}}
+    \\ \hline \\[-.75\normalbaselineskip]
+    Ort, am TT.MM.JJJJ
+  \end{tabular}
+}
+
+\author{
+  Wagner Dario
+  \and
+  Stering Marcel
+  \and
+  Franz Matthias
+}
+\title{Diplomarbeit}
+\subtitle{iCal Web-Service}
+\date{\today{}, Kaindorf a.d. Sulm}
+
+\begin{document}
+\begin{titlepage}
+	\maketitle
+\end{titlepage}
+
+\section*{Eidesstattliche Erklärung}
+\label{sec:eidesstattliche-erklaerung}
+KRIEGEN WIR VON DER SCHULE
+
+\vspace*{30px}
+
+\titledate{Vor-/Zuname, Unterschrift}
+\vspace*{30px}
+
+\titledate{Vor-/Zuname, Unterschrift}
+\vspace{30px}
+
+\titledate{Vor-/Zuname, Unterschrift}
+
+
+\section*{Abstract}
+\label{sec:abstract}
+Diese Diplomarbeit befasst sich mit einem Stück Software welche im Auftrag der Firma Intact GmbH angefertigt wurde. Das Ziel der Diplomarbeit ist es, AuditorInnen welche die bereits existierende Anwendung Ecert verwenden, Kalender immer und überall verfügbar zu machen. Erreicht wurde dies mit Verwendung des iCal-Formates welches von jeder Kalender-Applikation verwendet wird um Kalender anzuzeigen und zu speichern. Die Kalender der AuditorInnen werden gespeichert und nachdem man sich auf einer Webseite angemeldet hat, kann man auf alle seine Kalender zugreifen und in jegliche Kalender-Applikation einbinden. Somit müssen sich AuditorInnen nicht mehr darauf konzentrieren, dass alle ihre/seine Kalender auf dem Gerät sind, denn diese sind nun übers Internet erreichbar. 
+\vspace{20px}
+\linebreak
+The subject of this thesis is a piece of software which was written on the behalf of Intact GmbH. The aim of this thesis is to offer auditors who already use Intact GmbHs own software, Ecert, the ability to access their calendars everywhere and anytime they want. This achievable because nearly every calendar-app uses the iCal-format to save the calendar. The iCal-format gets saved and the auditor just needs to login into a website and there they can find all their calendars ready to be integrated in their favorite calendar-app.
+
+\section*{Vorwort}
+\label{sec:vorwort}
+Gründe für Themenwahl und persönlicher Bezug dazu.
+
+\newpage
+	\tableofcontents
+\newpage
+
+\section*{Danksagung}
+\label{sec:danksagung}
+
+
+\section{Einleitung}
+\label{sec:einleitung}
+\subsection{Kurzbeschreibung}
+\label{sec:kurzbeschreibung}
+\subsection{Vorgehensweise}
+\label{sec:vorgehensweise}
+
+\section{Projektmanagement und Organisation}
+\label{sec:projektmanagement-und-organisation}
+
+\subsection{Intact GmbH}
+\label{sec:intact-gmbh}
+
+\section{iCal-Format}
+\label{sec:ical-format}
+\subsection{Allgemeines}
+\label{sec:ical-allgemeines}
+\subsection{Einbindung in Kalender-Apps}
+\label{sec:ical-einbindung-in-kalenderapps}
+\subsection{Keywords}
+\label{sec:ical-keywords}
+
+\section{Datenbank}
+\label{sec:datenbank}
+\subsection{MSSQL}
+\label{sec:db-mssql}
+\subsection{Aufbau}
+\label{sec:db-aufbau}
+
+\section{Parser}
+\label{sec:parser}
+\subsection{Aufgabe}
+\label{sec:parser-aufgabe}
+\subsection{Entity Framework}
+\label{sec:parser-entity-framework}
+
+\section{Webseite}
+\label{sec:webseite}
+
+\section{Literatur und Quellenverzeichnis}
+\label{sec:literatur-quellenverzeichnis}
+
+\section{Abbildungsverzeichnis}
+\label{sec:abbildungsverzeichnis}
+
+\section{Tabellenverzeichnis}
+\label{sec:tabellenverzeichnis}
+
+\section{Abkürzungsprotokoll}
+\label{sec:abkuerzungsprotokoll}
+
+\end{document}
