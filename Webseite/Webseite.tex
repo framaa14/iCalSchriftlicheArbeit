@@ -1,0 +1,93 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[automark]{scrpage2}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Nice Formatierung für C# Source Code [Anfang]
+\definecolor{bluekeywords}{rgb}{0,0,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
+\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{types}{rgb}{0.17,0.57,0.68}
+
+\usepackage{listings}
+\lstset{language=[Sharp]C,
+captionpos=b,
+%numbers=left, %Nummerierung
+%numberstyle=\tiny, % kleine Zeilennummern
+frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+showspaces=false,
+showtabs=false,
+breaklines=true,
+showstringspaces=false,
+breakatwhitespace=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+morekeywords={partial, var, value, get, set},
+keywordstyle=\color{bluekeywords},
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily\small,
+}
+\begin{document}
+ 
+\section{Webseite}
+\label{sec:Webseite}
+\subsection{Security}
+\label{sec:Security}
+In diesem Abschnitt beschäftigen wir uns mit der Security der Website.
+Wir behandeln wie man das sichere einloggen in eine Website gewähren kann, 
+wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
+möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beispiele anführen.
+
+\subsubsection{Login Handling}
+\label{sec:Login}
+\subsubsection{Absicherung}
+\label{sec:Absicherung}
+\subsubsection{Two-Factor-Auth}
+\label{sec:tfa}
+\subsubsection{XSRF/CSRF Protection}
+\label{sec:xss}
+\subsubsection{Sql-Injection Protection}
+\label{sec:sqli}
+\subsubsection{Password Hashes}
+\label{sec:hash}
+\subsection{ASP.NET MVC}
+In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Website aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Website aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+\label{sec:MVC}
+\subsubsection{Allgemeines MVC}
+\label{sec:allgemein}
+
+\subsubsection{Website Aufbau}
+\label{sec:aufbau}
+\subsubsection{Link generation}
+\label{sec:link}
+\subsubsection{Controller}
+\label{sec:Controller}
+\subsubsection{Views}
+\label{sec:Views}
+\subsubsection{Services}
+\label{sec:Services}
+\subsubsection{User Datenbank}
+\label{sec:UserDB}
+\begin{itemize}
+	\item Salt
+\end{itemize}
+\label{sec:salt}
+\end{document}
