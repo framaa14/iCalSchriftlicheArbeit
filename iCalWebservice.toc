@@ -1,66 +1,66 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Einleitung}{5}{section.1}
-\contentsline {subsection}{\numberline {1.1}Kurzbeschreibung}{5}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Vorgehensweise}{5}{subsection.1.2}
-\contentsline {section}{\numberline {2}Projektmanagement und Organisation}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}Intact GmbH}{5}{subsection.2.1}
-\contentsline {section}{\numberline {3}Technologien}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Allgemeines}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Programmierung}{5}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Visual Studio 17 Community}{5}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}.net Framework 4.6}{6}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}asp.net}{6}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}MSSQL}{6}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Microsoft SQL Server management Studios}{7}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Entity Framework}{7}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}iCal}{7}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{7}{subsubsection.3.2.8}
-\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{7}{subsubsection.3.2.9}
-\contentsline {subsection}{\numberline {3.3}Kommunikation}{7}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Discord}{7}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Telegram}{7}{subsubsection.3.3.2}
-\contentsline {subsection}{\numberline {3.4}File Sharing}{8}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}TFS}{8}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Discord}{8}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{8}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}Organisation}{9}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Trello}{9}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Discord}{9}{subsubsection.3.5.2}
-\contentsline {subsection}{\numberline {3.6}Schriftliche Arbeit}{9}{subsection.3.6}
-\contentsline {subsubsection}{\numberline {3.6.1}LaTeX}{9}{subsubsection.3.6.1}
-\contentsline {section}{\numberline {4}iCal-Format}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Allgemeines}{9}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Einbindung in Kalender-Apps}{9}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Keywords}{9}{subsection.4.3}
-\contentsline {section}{\numberline {5}Datenbank}{9}{section.5}
-\contentsline {subsection}{\numberline {5.1}MSSQL}{9}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Aufbau}{9}{subsection.5.2}
-\contentsline {section}{\numberline {6}Parser}{9}{section.6}
-\contentsline {subsection}{\numberline {6.1}Aufgabe}{9}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Entity Framework}{9}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Funktionsweise}{9}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Anwendung}{10}{subsubsection.6.2.2}
-\contentsline {section}{\numberline {7}Webseite}{10}{section.7}
-\contentsline {subsection}{\numberline {7.1}Security}{10}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Login Handling}{10}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Absicherung}{10}{subsubsection.7.1.2}
-\contentsline {subsubsection}{\numberline {7.1.3}Two-Factor-Auth}{10}{subsubsection.7.1.3}
-\contentsline {subsubsection}{\numberline {7.1.4}XSRF/CSRF Protection}{10}{subsubsection.7.1.4}
-\contentsline {subsubsection}{\numberline {7.1.5}Sql-Injection Protection}{10}{subsubsection.7.1.5}
-\contentsline {subsubsection}{\numberline {7.1.6}Password Hashes}{10}{subsubsection.7.1.6}
-\contentsline {subsection}{\numberline {7.2}ASP.NET MVC}{10}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Allgemeines MVC}{11}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Website Aufbau}{11}{subsubsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.3}Link generation}{11}{subsubsection.7.2.3}
-\contentsline {subsubsection}{\numberline {7.2.4}Controller}{11}{subsubsection.7.2.4}
-\contentsline {subsubsection}{\numberline {7.2.5}Views}{11}{subsubsection.7.2.5}
-\contentsline {subsubsection}{\numberline {7.2.6}Services}{11}{subsubsection.7.2.6}
-\contentsline {subsubsection}{\numberline {7.2.7}User Datenbank}{11}{subsubsection.7.2.7}
-\contentsline {section}{\numberline {8}Tests}{11}{section.8}
-\contentsline {subsection}{\numberline {8.1}Allgemeines}{11}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}iCal}{11}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Website-Security}{11}{subsection.8.3}
-\contentsline {section}{\numberline {9}Literatur und Quellenverzeichnis}{11}{section.9}
-\contentsline {section}{\numberline {10}Abbildungsverzeichnis}{11}{section.10}
-\contentsline {section}{\numberline {11}Tabellenverzeichnis}{11}{section.11}
-\contentsline {section}{\numberline {12}Abk\IeC {\"u}rzungsprotokoll}{11}{section.12}
+\contentsline {section}{\numberline {1}Einleitung}{7}{section.1}
+\contentsline {subsection}{\numberline {1.1}Kurzbeschreibung}{7}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Vorgehensweise}{7}{subsection.1.2}
+\contentsline {section}{\numberline {2}Projektmanagement und Organisation}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Intact GmbH}{7}{subsection.2.1}
+\contentsline {section}{\numberline {3}Technologien}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Allgemeines}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Programmierung}{7}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Visual Studio 17 Community}{7}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}.net Framework 4.6}{8}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}asp.net}{8}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}MSSQL}{8}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Microsoft SQL Server management Studios}{9}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Entity Framework}{9}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}iCal}{9}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{9}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{9}{subsubsection.3.2.9}
+\contentsline {subsection}{\numberline {3.3}Kommunikation}{9}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Discord}{9}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Telegram}{9}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}File Sharing}{10}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}TFS}{10}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Discord}{10}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{10}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Organisation}{11}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Trello}{11}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Discord}{11}{subsubsection.3.5.2}
+\contentsline {subsection}{\numberline {3.6}Schriftliche Arbeit}{11}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}LaTeX}{11}{subsubsection.3.6.1}
+\contentsline {section}{\numberline {4}iCal-Format}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Allgemeines}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Einbindung in Kalender-Apps}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Keywords}{11}{subsection.4.3}
+\contentsline {section}{\numberline {5}Datenbank}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}MSSQL}{11}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Aufbau}{11}{subsection.5.2}
+\contentsline {section}{\numberline {6}Parser}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Aufgabe}{11}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Entity Framework}{11}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Funktionsweise}{11}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Anwendung}{12}{subsubsection.6.2.2}
+\contentsline {section}{\numberline {7}Webseite}{12}{section.7}
+\contentsline {subsection}{\numberline {7.1}Security}{12}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Login Handling}{12}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Absicherung}{12}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Two-Factor-Auth}{12}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}XSRF/CSRF Protection}{12}{subsubsection.7.1.4}
+\contentsline {subsubsection}{\numberline {7.1.5}Sql-Injection Protection}{12}{subsubsection.7.1.5}
+\contentsline {subsubsection}{\numberline {7.1.6}Password Hashes}{12}{subsubsection.7.1.6}
+\contentsline {subsection}{\numberline {7.2}ASP.NET MVC}{12}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Allgemeines MVC}{13}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Website Aufbau}{13}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Link generation}{13}{subsubsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.4}Controller}{13}{subsubsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.5}Views}{13}{subsubsection.7.2.5}
+\contentsline {subsubsection}{\numberline {7.2.6}Services}{13}{subsubsection.7.2.6}
+\contentsline {subsubsection}{\numberline {7.2.7}User Datenbank}{13}{subsubsection.7.2.7}
+\contentsline {section}{\numberline {8}Tests}{13}{section.8}
+\contentsline {subsection}{\numberline {8.1}Allgemeines}{13}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}iCal}{13}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Website-Security}{13}{subsection.8.3}
+\contentsline {section}{\numberline {9}Literatur und Quellenverzeichnis}{13}{section.9}
+\contentsline {section}{\numberline {10}Abbildungsverzeichnis}{13}{section.10}
+\contentsline {section}{\numberline {11}Tabellenverzeichnis}{13}{section.11}
+\contentsline {section}{\numberline {12}Abk\IeC {\"u}rzungsprotokoll}{13}{section.12}
