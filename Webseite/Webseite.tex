@@ -51,8 +51,8 @@ basicstyle=\ttfamily\small,
 \label{sec:Webseite}
 \subsection{Security}
 \label{sec:Security}
-In diesem Abschnitt beschäftigen wir uns mit der Security der Website.
-Wir behandeln wie man das sichere einloggen in eine Website gewähren kann, 
+In diesem Abschnitt beschäftigen wir uns mit der Security der Webseite.
+Wir behandeln wie man das sichere einloggen in eine Webseite gewähren kann, 
 wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
 möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beispiele anführen.
 
@@ -62,19 +62,45 @@ möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beis
 \label{sec:Absicherung}
 \subsubsection{Two-Factor-Auth}
 \label{sec:tfa}
-\subsubsection{XSRF/CSRF Protection}
+\subsubsection{XSS Protection}
 \label{sec:xss}
+\subsubsection{Allgemeines über XSS}
+XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, zu Beispielen werden wir später noch kommen. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden User aufgerufen wird. 
+\subsubsection{XSS Targets:}
+\begin{enumerate}
+\item Javascript (wobei Javascript das beliebteste ist) 
+\item VBScript 
+\item ActiveX
+\item Flash
+\end{enumerate}
+\subsubsection{Warum ist Javascript so beliebt?}
+Der Grund hierfür ist das Javascript quasi eine fundamentale Einheit einer Webseite ist. Man wird kaum eine Webseite finden, welche kein Javascript verwendet.
+\subsubsection{Beliebte Angriffsvektoren}
+\begin{enumerate}
+\item Session Hijacking
+\item Website-Defacements 
+\item Phishing
+\end{enumerate}
+\subsubsection{Session Hijacking}
+Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein User gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei das überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Admin Session zugänglich wird und der Angreifer so auf einen Admin Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Und hier reicht schon eine kleine XSS Vulnerability aus um dies zu bewerkstelligen. 
+\subsubsection{Website-Defacements}
+Website-Defacements hat etwas von digitalem Graffiti. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und sie dann optisch zu verändern. 
+
+\subsubsection{Phishing}
+\subsubsection{Cross-Site-Tracing}
+\subsubsection{XSRF/CSRF Protection}
+\label{sec:csrf}
 \subsubsection{Sql-Injection Protection}
 \label{sec:sqli}
 \subsubsection{Password Hashes}
 \label{sec:hash}
 \subsection{ASP.NET MVC}
-In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Website aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Website aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseite aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Webseite aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 \label{sec:MVC}
 \subsubsection{Allgemeines MVC}
 \label{sec:allgemein}
 
-\subsubsection{Website Aufbau}
+\subsubsection{Aufbau der Webseite }
 \label{sec:aufbau}
 \subsubsection{Link generation}
 \label{sec:link}
