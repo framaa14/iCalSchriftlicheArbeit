@@ -33,8 +33,8 @@
 \BOOKMARK [1][-]{section.4}{Webseite}{}% 33
 \BOOKMARK [2][-]{subsection.4.1}{Security}{section.4}% 34
 \BOOKMARK [3][-]{subsubsection.4.1.1}{Login Handling}{subsection.4.1}% 35
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Absicherung}{subsection.4.1}% 36
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Two-Factor-Auth}{subsection.4.1}% 37
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Two-Factor-Auth}{subsection.4.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Path-Traversal}{subsection.4.1}% 37
 \BOOKMARK [3][-]{subsubsection.4.1.4}{XSS Protection}{subsection.4.1}% 38
 \BOOKMARK [3][-]{subsubsection.4.1.5}{Allgemeines \374ber XSS}{subsection.4.1}% 39
 \BOOKMARK [3][-]{subsubsection.4.1.6}{XSS Targets:}{subsection.4.1}% 40
@@ -43,15 +43,16 @@
 \BOOKMARK [3][-]{subsubsection.4.1.9}{Session Hijacking}{subsection.4.1}% 43
 \BOOKMARK [3][-]{subsubsection.4.1.10}{Website-Defacements}{subsection.4.1}% 44
 \BOOKMARK [3][-]{subsubsection.4.1.11}{Phishing}{subsection.4.1}% 45
-\BOOKMARK [3][-]{subsubsection.4.1.12}{Cross-Site-Tracing}{subsection.4.1}% 46
-\BOOKMARK [3][-]{subsubsection.4.1.13}{XSRF/CSRF Protection}{subsection.4.1}% 47
-\BOOKMARK [3][-]{subsubsection.4.1.14}{Sql-Injection Protection}{subsection.4.1}% 48
-\BOOKMARK [3][-]{subsubsection.4.1.15}{Password Hashes}{subsection.4.1}% 49
-\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 50
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 51
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Aufbau der Webseite }{subsection.4.2}% 52
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Link generation}{subsection.4.2}% 53
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Controller}{subsection.4.2}% 54
-\BOOKMARK [3][-]{subsubsection.4.2.5}{Views}{subsection.4.2}% 55
-\BOOKMARK [3][-]{subsubsection.4.2.6}{Services}{subsection.4.2}% 56
-\BOOKMARK [3][-]{subsubsection.4.2.7}{User Datenbank}{subsection.4.2}% 57
+\BOOKMARK [3][-]{subsubsection.4.1.12}{Wie gew\344hrleisten wir XSS Protection}{subsection.4.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.1.13}{Cross-Site-Tracing}{subsection.4.1}% 47
+\BOOKMARK [3][-]{subsubsection.4.1.14}{XSRF/CSRF Protection}{subsection.4.1}% 48
+\BOOKMARK [3][-]{subsubsection.4.1.15}{Sql-Injection Protection}{subsection.4.1}% 49
+\BOOKMARK [3][-]{subsubsection.4.1.16}{Password Hashes}{subsection.4.1}% 50
+\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 51
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 52
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Aufbau der Webseite }{subsection.4.2}% 53
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Link generation}{subsection.4.2}% 54
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Controller}{subsection.4.2}% 55
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Views}{subsection.4.2}% 56
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Services}{subsection.4.2}% 57
+\BOOKMARK [3][-]{subsubsection.4.2.7}{User Datenbank}{subsection.4.2}% 58
