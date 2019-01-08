@@ -1,0 +1,117 @@
+\section{Technologien}
+\subsection{Allgemeines}
+Unsere verwendeten Technologien werden anschließend, unter entsprechender Überschrift, beschrieben, wobei auf die wichtigsten, oder auch meist benutzten, genauer eingegangen wird, in Form einer Installation und einer erweiterten Beschreibung. Zudem werden auch alle Technologien beschrieben welche sich nicht bis zum Ende der Arbeit durchsetzen konnten und während der Arbeit auf eine andere gewechselt wurde oder diese überhaupt nicht mehr verwendet wurde. Dies wird jedoch im Beschreibungstext kenntlich gemacht.
+\subsection{Programmierung}
+\subsubsection {Visual Studio 17 Community}
+Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 / 2017 ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
+\begin{itemize}
+\item Visual Basic .NET
+\item C
+\item C++
+\item C\#
+\item F\#
+\item Typescript
+\item Python
+\item HTML
+\item JavaScript
+\item CSS
+\end{itemize}
+
+Da der Hauptteil unserer Diplomarbeit in der Objekt Orientierten Programmiersprache C\# geschrieben wurde, hat das Entwicklungsteam Visual Studio 2017 Community verwendet. Hierbei war es uns wichtig, dass jeder von uns die selbe "Jahres-Version", in diesem Fall 2017, verwendet, da es zwischen den Versionen kleine Unterscheide, welche zu einem Problem führen könnten, gibt. Ein gravierender Unterschied wäre die Syntax eines Propertys zwischen Version 2013 und 2017. 
+
+\begin{lstlisting}[caption=Syntax Unterschied: Property , label=lst:test]
+// Visual Studio 2013 Code
+  private string m_Beispiel;
+  public string Beispiel
+  {
+      get { return m_Beispiel; }
+      set { m_Beispiel = value; }
+  }
+
+// Visual Studio 2017 Code
+  private string m_Beispiel;
+  public string Beispiel
+  {
+      get => m_Beispiel;
+      set => m_Beispiel = value;
+  }
+\end{lstlisting}
+
+\subsubsection {.NET Framework 4.6}
+Am Anfang der Diplomarbeit wurde mit der Firma im Laufe eines Meetings festgelegt, dass bei der Entwicklung des Webservices .net Framework 4.6 verwendet werden soll um die Kompatibilät mit ihren .net Projekten zu garantieren.
+\raggedright
+Das .NET Framework ist ein Software Entwicklungs-Framework der Firma Microsoft, um Software zu entwicklen, installieren und auszuführen auf Windows basierenden Systemen. 
+Aktuell auswählbare Versionen in Visual Studio 2017:\\ 
+
+\centering
+\includegraphics{dotNetVersions}
+
+
+\raggedright
+\subsubsection {asp.net}
+Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Framework, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. 
+\url {https://w3techs.com/technologies/overview/programming_language/all} 
+% DAS DER LINK SO DRIN IS IS NUR VORÜBERGEHEND DAMIT I MA DIE SEITE "MERK"
+\\
+Im Anschluss wird durch Screenshots erläutert wie ein ASP.NET Projekt in Visual Studio 2017 erstellt wird.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{aspNetTutorial01}
+    \caption{Projekt erstellen}
+    \label{fig:aspNetTut01}
+
+    \centering
+    \includegraphics[width=\textwidth]{aspNetTutorial02}
+    \caption{ASP.NET Webanwendung auswählen}
+    \label{fig:aspNetTut02}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{aspNetTutorial03}
+    \caption{ASP.NET Vorlage auswählen}
+    \label{fig:aspNetTut03}
+    \centering
+    \includegraphics[width=\textwidth]{aspNetTutorial04}
+    \caption{Resultat}
+    \label{fig:aspNetTut04}
+\end{figure}
+
+\subsubsection {MSSQL}
+MSSQL ist KEIN Teil der finalen Diplomarbeit und wurde nur zu Testzwecken verwendet. Im Laufe der Entwicklung wurde von Teammitglied Matthias Franz und Marcel Stering ein Raspberry PI als Datenbank aufgesetzt um einige Tests durchzuführen. Dies wurde mit Microsoft SQL Server verwirklicht. 
+\subsubsection {Microsoft SQL Server management Studios}
+Bei der Microsoft SQL Server entwicklung kam Microsoft SQL Server management Studios zum Einsatz, die Aufgabe des Management Studios war es den Server zu konfigurieren und zu verwalten. 
+\subsubsection {Entity Framework}
+Das Entity Framework ist ein Großteil des Projektparts "Parser" gewesen. Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Parser genauer eingegangen.
+
+\subsubsection {iCal}
+iCal ist das Format in dem ein Kalender gespeichert wird. Das Format wird unter einer eigenen Überschrift im Laufe der schriftlichen Arbeit genauer erklärt. 
+\subsubsection {ReSharper}
+\subsubsection {PostMan}
+
+
+\subsection{Kommunikation}
+\subsubsection {Discord}
+Um im Laufe des praktischen Teils der Diplomarbeit die Übersicht zu behalten und alles zu organisieren wurde Discord verwendet. Discord hat viele Funktionen welche die Kommunikation im Team erleichtern. Discord bietet dem Benutzer an einen oder mehrere gratis Server zu erstellen. Ein Server kann aus Text und Sprachchannels bestehen. In einem Textchannel können festgelegte Personen schreiben und in einem Sprachchannel über Mikrofon miteinander reden. Falls wir also Teamintern etwas zu besprechen hatten oder falls Probleme auftraten die wir selbst lösen konnten bat uns Discord die perfekte Kommunikationsfläche. 
+
+Da wir als Gruppe mehrere Projekte haben haben wir einen "Projektserver". In diesem Projektserver haben wir einen Text und Sprach Channel für die Diplomarbeit. Im Text Channel werden kleine Probleme, die schnell geklärt werden können, besprochen und Files ausgetauscht. Im Sprach Channel werden gröbere Probleme besprochen oder wenn nötig Planänderungen. 
+
+\subsubsection {Telegram}
+Telegram wurde nicht regelmäßig verwendet, es war eher eine Backup Chat-Application. 
+
+\subsection{File Sharing}
+\subsubsection {TFS}
+Der Microsoft Team Foundation Server ist unsere Code-Sharing Technologie. Da unser Auftraggeber, die Firma Intact GmbH oder Intact Systems, mit dieser Technologie arbeitet haben wir bei einem der ersten Treffer TFS für Code Sharing gewählt. Wir hatten einige Probleme mit dem TFS wodurch oft einzelne Teile des Projekts entwickelt wurden und dann in ein Projekt zusammengeführt wurden. Die Probleme waren unter anderem, dass die Firma eine Zeit lang gebraucht hat um den Server zur Verfügung zustellen aber auch, dass das Verbinden mit dem Server manchmal nicht geklappt hat. 
+\subsubsection {Discord}
+Wie bereits bei den Technologien erwähnt haben wir auf einem Discord Server einen Text Channel eingerichtet. Dieser eignet sich nicht nur um miteinander zu schreiben sondern kann auch dafür genutzt werden mit anderen Benutzer Files zu teilen. 
+\subsubsection {Google Drive}
+Google Drive ist ein von Google bereitgestellter Cloud Service um Dokumente freizugeben und Online zu bearbeiten.
+
+Mithilfe von Google Drive wurde an Präsentationen und Projekten gearbeitet. Durch Google Docs und Google Präsentation fällt es leicht mit mehreren Personen gleichzeitig an einem Dokument zu arbeiten. Durch Google Drive wurden von uns Dokumente wie die IVM Matrix, den Projektstrukturplan, die Meetings und die SCRUM Sprints erstellt und an alle Mitglieder geteilt. 
+\subsection{Organisation}
+\subsubsection {Trello}
+\subsubsection {Discord}
+
+
+\subsection{Schriftliche Arbeit}
+\subsubsection {LaTeX}

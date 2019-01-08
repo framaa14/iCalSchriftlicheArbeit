@@ -1,29 +1,58 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Projektmanagement und Organisation}{6}{section.1}
-\contentsline {subsection}{\numberline {1.1}Team}{6}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Auftraggeber - Intact Systems}{6}{subsection.1.2}
-\contentsline {section}{\numberline {2}Webseite}{7}{section.2}
-\contentsline {subsection}{\numberline {2.1}Security}{7}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Login Handling}{7}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Absicherung}{7}{subsubsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.3}Two-Factor-Auth}{7}{subsubsection.2.1.3}
-\contentsline {subsubsection}{\numberline {2.1.4}XSS Protection}{7}{subsubsection.2.1.4}
-\contentsline {subsubsection}{\numberline {2.1.5}Allgemeines \IeC {\"u}ber XSS}{7}{subsubsection.2.1.5}
-\contentsline {subsubsection}{\numberline {2.1.6}XSS Targets:}{7}{subsubsection.2.1.6}
-\contentsline {subsubsection}{\numberline {2.1.7}Warum ist Javascript so beliebt?}{7}{subsubsection.2.1.7}
-\contentsline {subsubsection}{\numberline {2.1.8}Beliebte Angriffsvektoren}{7}{subsubsection.2.1.8}
-\contentsline {subsubsection}{\numberline {2.1.9}Session Hijacking}{8}{subsubsection.2.1.9}
-\contentsline {subsubsection}{\numberline {2.1.10}Website-Defacements}{8}{subsubsection.2.1.10}
-\contentsline {subsubsection}{\numberline {2.1.11}Phishing}{8}{subsubsection.2.1.11}
-\contentsline {subsubsection}{\numberline {2.1.12}Cross-Site-Tracing}{8}{subsubsection.2.1.12}
-\contentsline {subsubsection}{\numberline {2.1.13}XSRF/CSRF Protection}{8}{subsubsection.2.1.13}
-\contentsline {subsubsection}{\numberline {2.1.14}Sql-Injection Protection}{8}{subsubsection.2.1.14}
-\contentsline {subsubsection}{\numberline {2.1.15}Password Hashes}{8}{subsubsection.2.1.15}
-\contentsline {subsection}{\numberline {2.2}ASP.NET MVC}{8}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Allgemeines MVC}{8}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Aufbau der Webseite }{8}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Link generation}{8}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Controller}{8}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Views}{8}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Services}{8}{subsubsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.7}User Datenbank}{8}{subsubsection.2.2.7}
+\contentsline {section}{\numberline {1}Projektmanagement und Organisation}{7}{section.1}
+\contentsline {subsection}{\numberline {1.1}Team}{7}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Auftraggeber - Intact Systems}{7}{subsection.1.2}
+\contentsline {section}{\numberline {2}Parser}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aufgabe}{8}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Entity Framework}{8}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Funktionsweise}{8}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Anwendung}{8}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {3}Technologien}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Allgemeines}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Programmierung}{8}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Visual Studio 17 Community}{8}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}.NET Framework 4.6}{10}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}asp.net}{10}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}MSSQL}{12}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Microsoft SQL Server management Studios}{13}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Entity Framework}{13}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}iCal}{13}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{13}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{13}{subsubsection.3.2.9}
+\contentsline {subsection}{\numberline {3.3}Kommunikation}{13}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Discord}{13}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Telegram}{14}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}File Sharing}{14}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}TFS}{14}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Discord}{14}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{14}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Organisation}{15}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Trello}{15}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Discord}{15}{subsubsection.3.5.2}
+\contentsline {subsection}{\numberline {3.6}Schriftliche Arbeit}{15}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}LaTeX}{15}{subsubsection.3.6.1}
+\contentsline {section}{\numberline {4}Webseite}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Security}{15}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Login Handling}{15}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Absicherung}{15}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Two-Factor-Auth}{15}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}XSS Protection}{15}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.5}Allgemeines \IeC {\"u}ber XSS}{15}{subsubsection.4.1.5}
+\contentsline {subsubsection}{\numberline {4.1.6}XSS Targets:}{15}{subsubsection.4.1.6}
+\contentsline {subsubsection}{\numberline {4.1.7}Warum ist Javascript so beliebt?}{16}{subsubsection.4.1.7}
+\contentsline {subsubsection}{\numberline {4.1.8}Beliebte Angriffsvektoren}{16}{subsubsection.4.1.8}
+\contentsline {subsubsection}{\numberline {4.1.9}Session Hijacking}{16}{subsubsection.4.1.9}
+\contentsline {subsubsection}{\numberline {4.1.10}Website-Defacements}{16}{subsubsection.4.1.10}
+\contentsline {subsubsection}{\numberline {4.1.11}Phishing}{16}{subsubsection.4.1.11}
+\contentsline {subsubsection}{\numberline {4.1.12}Cross-Site-Tracing}{16}{subsubsection.4.1.12}
+\contentsline {subsubsection}{\numberline {4.1.13}XSRF/CSRF Protection}{16}{subsubsection.4.1.13}
+\contentsline {subsubsection}{\numberline {4.1.14}Sql-Injection Protection}{16}{subsubsection.4.1.14}
+\contentsline {subsubsection}{\numberline {4.1.15}Password Hashes}{16}{subsubsection.4.1.15}
+\contentsline {subsection}{\numberline {4.2}ASP.NET MVC}{16}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Allgemeines MVC}{17}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Aufbau der Webseite }{17}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Link generation}{17}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Controller}{17}{subsubsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.5}Views}{17}{subsubsection.4.2.5}
+\contentsline {subsubsection}{\numberline {4.2.6}Services}{17}{subsubsection.4.2.6}
+\contentsline {subsubsection}{\numberline {4.2.7}User Datenbank}{17}{subsubsection.4.2.7}
