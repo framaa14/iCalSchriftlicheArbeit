@@ -19,18 +19,17 @@
 \contentsline {subsubsection}{\numberline {3.2.5}Microsoft SQL Server management Studios}{14}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}Entity Framework}{14}{subsubsection.3.2.6}
 \contentsline {subsubsection}{\numberline {3.2.7}iCal}{14}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{14}{subsubsection.3.2.8}
-\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{14}{subsubsection.3.2.9}
-\contentsline {subsection}{\numberline {3.3}Kommunikation}{14}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Discord}{14}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{15}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{15}{subsubsection.3.2.9}
+\contentsline {subsection}{\numberline {3.3}Kommunikation}{15}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Discord}{15}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}Telegram}{15}{subsubsection.3.3.2}
 \contentsline {subsection}{\numberline {3.4}File Sharing}{15}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}TFS}{15}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Discord}{15}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{15}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{16}{subsubsection.3.4.3}
 \contentsline {subsection}{\numberline {3.5}Organisation}{16}{subsection.3.5}
 \contentsline {subsubsection}{\numberline {3.5.1}Trello}{16}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Discord}{16}{subsubsection.3.5.2}
 \contentsline {subsection}{\numberline {3.6}Schriftliche Arbeit}{16}{subsection.3.6}
 \contentsline {subsubsection}{\numberline {3.6.1}LaTeX}{16}{subsubsection.3.6.1}
 \contentsline {section}{\numberline {4}Webseite}{16}{section.4}
@@ -40,22 +39,25 @@
 \contentsline {subsubsection}{\numberline {4.1.3}Path-Traversal}{16}{subsubsection.4.1.3}
 \contentsline {subsubsection}{\numberline {4.1.4}XSS Protection}{16}{subsubsection.4.1.4}
 \contentsline {subsubsection}{\numberline {4.1.5}Allgemeines \IeC {\"u}ber XSS}{16}{subsubsection.4.1.5}
-\contentsline {subsubsection}{\numberline {4.1.6}XSS Targets:}{16}{subsubsection.4.1.6}
+\contentsline {subsubsection}{\numberline {4.1.6}XSS Targets:}{17}{subsubsection.4.1.6}
 \contentsline {subsubsection}{\numberline {4.1.7}Warum ist Javascript so beliebt?}{17}{subsubsection.4.1.7}
 \contentsline {subsubsection}{\numberline {4.1.8}Beliebte Angriffsvektoren}{17}{subsubsection.4.1.8}
 \contentsline {subsubsection}{\numberline {4.1.9}Session Hijacking}{17}{subsubsection.4.1.9}
 \contentsline {subsubsection}{\numberline {4.1.10}Website-Defacements}{17}{subsubsection.4.1.10}
-\contentsline {subsubsection}{\numberline {4.1.11}Phishing}{17}{subsubsection.4.1.11}
-\contentsline {subsubsection}{\numberline {4.1.12}Wie gew\IeC {\"a}hrleisten wir XSS Protection}{18}{subsubsection.4.1.12}
-\contentsline {subsubsection}{\numberline {4.1.13}Cross-Site-Tracing}{20}{subsubsection.4.1.13}
-\contentsline {subsubsection}{\numberline {4.1.14}XSRF/CSRF Protection}{20}{subsubsection.4.1.14}
-\contentsline {subsubsection}{\numberline {4.1.15}Sql-Injection Protection}{20}{subsubsection.4.1.15}
-\contentsline {subsubsection}{\numberline {4.1.16}Password Hashes}{20}{subsubsection.4.1.16}
-\contentsline {subsection}{\numberline {4.2}ASP.NET MVC}{20}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Allgemeines MVC}{20}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Aufbau der Webseite }{20}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Link generation}{20}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Controller}{20}{subsubsection.4.2.4}
-\contentsline {subsubsection}{\numberline {4.2.5}Views}{20}{subsubsection.4.2.5}
-\contentsline {subsubsection}{\numberline {4.2.6}Services}{20}{subsubsection.4.2.6}
-\contentsline {subsubsection}{\numberline {4.2.7}User Datenbank}{20}{subsubsection.4.2.7}
+\contentsline {subsubsection}{\numberline {4.1.11}Phishing}{18}{subsubsection.4.1.11}
+\contentsline {subsubsection}{\numberline {4.1.12}Cross-Site-Tracing XST}{18}{subsubsection.4.1.12}
+\contentsline {subsubsection}{\numberline {4.1.13}Beispiel}{19}{subsubsection.4.1.13}
+\contentsline {subsubsection}{\numberline {4.1.14}Wie gew\IeC {\"a}hrleisten wir XSS Protection}{19}{subsubsection.4.1.14}
+\contentsline {subsubsection}{\numberline {4.1.15}XSRF/CSRF Protection}{21}{subsubsection.4.1.15}
+\contentsline {subsubsection}{\numberline {4.1.16}Was ist XSRF/CSRF}{21}{subsubsection.4.1.16}
+\contentsline {subsubsection}{\numberline {4.1.17}Wie Funktioniert eine Solche Attacke}{21}{subsubsection.4.1.17}
+\contentsline {subsubsection}{\numberline {4.1.18}Verhindern}{22}{subsubsection.4.1.18}
+\contentsline {subsubsection}{\numberline {4.1.19}Password Hashes}{22}{subsubsection.4.1.19}
+\contentsline {subsection}{\numberline {4.2}ASP.NET MVC}{22}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Allgemeines MVC}{22}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Aufbau der Webseite }{22}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Link generation}{22}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Controller}{22}{subsubsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.5}Views}{22}{subsubsection.4.2.5}
+\contentsline {subsubsection}{\numberline {4.2.6}Services}{22}{subsubsection.4.2.6}
+\contentsline {subsubsection}{\numberline {4.2.7}User Datenbank}{22}{subsubsection.4.2.7}

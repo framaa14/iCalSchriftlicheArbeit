@@ -64,6 +64,23 @@ Es ergibt sich daraus \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
 \\
 Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom User zu sehen. 
+\subsubsection{Cross-Site-Tracing XST}
+Beim Cross-Site-Tracing wird XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert auf gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für das Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
+\\
+Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er / sie die Sitzung des Opfers entführen kann. Das Markieren eines Cookies, da HttpOnly JavaScript den Zugriff auf das Cookie verbietet und es vor dem Senden an Dritte schützt. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
+\\
+Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
+\subsubsection{Beispiel}
+\begin{lstlisting}
+<script>
+  var xmlhttp = new XMLHttpRequest();
+  var url = 'http://127.0.0.1/';
+
+  xmlhttp.withCredentials = true; // send cookie header
+  xmlhttp.open('TRACE', url, false);
+  xmlhttp.send();
+</script>
+\end{lstlisting}
 \subsubsection{Wie gewährleisten wir XSS Protection}
 Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standard XSS versucht werden könnte. Alle diese Eingaben erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL Faktor weg.
 \\
@@ -75,10 +92,35 @@ Alle Möglichen Eingabefelder
 \\
 In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\
 Dadurch hat unsere Webseite eine Funktionierende XSS Protection
-\subsubsection{Cross-Site-Tracing}
+
 \subsubsection{XSRF/CSRF Protection}
 \label{sec:csrf}
-\subsubsection{Sql-Injection Protection}
+\subsubsection{Was ist XSRF/CSRF}
+CSRF steht für Cross-Site Request Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Als Angreifer erbt man dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Websites enthalten Browser-Anforderungen automatisch alle mit der Website verknüpften Anmeldeinformationen, z. B. Sitzungscookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windows-Domäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
+\\
+Eine CSRF zielt oft darauf Daten zu Ändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstands.   der Angreifer erhält keine Antwort , sondern das Opfer. CSRF-Angriffe zielen daher auf Zustandsänderungsanforderungen ab.
+\\
+Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu speichern. Das kann durch einfaches Speichern eines IMG- oder IFRAME-Tags in einem HTML-fähigen Feld oder durch einen komplexeren Cross-Site-Scripting-Angriff erreicht werden. Wenn der Angriff einen CSRF-Angriff in der Seite speichern kann, wird der Schweregrad des Angriffs erhöht. 
+
+\subsubsection{Wie Funktioniert eine Solche Attacke}
+Man baut sich eine bösartige URL oder ein bösartiges Skript und bringt das Opfer dazu den URL aufzurufen. 
+\\
+Beispiel
+\begin{lstlisting}
+GET http://bank.com/transfer.do?acct=Angreiger&amount=1000 HTTP/1.1
+\end{lstlisting}
+Oder
+\begin{lstlisting}
+<a href="http://bank.com/transfer.do?acct=MARIA&amount=100000">View my Pictures!</a>
+\end{lstlisting}
+Auch eine Post Request ist möglich
+\\
+\begin{lstlisting}
+POST http://bank.com/transfer.do HTTP/1.1
+acct=Angreifer&amount=1000
+\end{lstlisting}
+\subsubsection{Verhindern}
+\url{https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2}
 \label{sec:sqli}
 \subsubsection{Password Hashes}
 \label{sec:hash}

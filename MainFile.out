@@ -29,32 +29,34 @@
 \BOOKMARK [3][-]{subsubsection.3.4.3}{Google Drive}{subsection.3.4}% 29
 \BOOKMARK [2][-]{subsection.3.5}{Organisation}{section.3}% 30
 \BOOKMARK [3][-]{subsubsection.3.5.1}{Trello}{subsection.3.5}% 31
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Discord}{subsection.3.5}% 32
-\BOOKMARK [2][-]{subsection.3.6}{Schriftliche Arbeit}{section.3}% 33
-\BOOKMARK [3][-]{subsubsection.3.6.1}{LaTeX}{subsection.3.6}% 34
-\BOOKMARK [1][-]{section.4}{Webseite}{}% 35
-\BOOKMARK [2][-]{subsection.4.1}{Security}{section.4}% 36
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Login Handling}{subsection.4.1}% 37
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Two-Factor-Auth}{subsection.4.1}% 38
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Path-Traversal}{subsection.4.1}% 39
-\BOOKMARK [3][-]{subsubsection.4.1.4}{XSS Protection}{subsection.4.1}% 40
-\BOOKMARK [3][-]{subsubsection.4.1.5}{Allgemeines \374ber XSS}{subsection.4.1}% 41
-\BOOKMARK [3][-]{subsubsection.4.1.6}{XSS Targets:}{subsection.4.1}% 42
-\BOOKMARK [3][-]{subsubsection.4.1.7}{Warum ist Javascript so beliebt?}{subsection.4.1}% 43
-\BOOKMARK [3][-]{subsubsection.4.1.8}{Beliebte Angriffsvektoren}{subsection.4.1}% 44
-\BOOKMARK [3][-]{subsubsection.4.1.9}{Session Hijacking}{subsection.4.1}% 45
-\BOOKMARK [3][-]{subsubsection.4.1.10}{Website-Defacements}{subsection.4.1}% 46
-\BOOKMARK [3][-]{subsubsection.4.1.11}{Phishing}{subsection.4.1}% 47
-\BOOKMARK [3][-]{subsubsection.4.1.12}{Wie gew\344hrleisten wir XSS Protection}{subsection.4.1}% 48
-\BOOKMARK [3][-]{subsubsection.4.1.13}{Cross-Site-Tracing}{subsection.4.1}% 49
-\BOOKMARK [3][-]{subsubsection.4.1.14}{XSRF/CSRF Protection}{subsection.4.1}% 50
-\BOOKMARK [3][-]{subsubsection.4.1.15}{Sql-Injection Protection}{subsection.4.1}% 51
-\BOOKMARK [3][-]{subsubsection.4.1.16}{Password Hashes}{subsection.4.1}% 52
-\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 53
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 54
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Aufbau der Webseite }{subsection.4.2}% 55
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Link generation}{subsection.4.2}% 56
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Controller}{subsection.4.2}% 57
-\BOOKMARK [3][-]{subsubsection.4.2.5}{Views}{subsection.4.2}% 58
-\BOOKMARK [3][-]{subsubsection.4.2.6}{Services}{subsection.4.2}% 59
-\BOOKMARK [3][-]{subsubsection.4.2.7}{User Datenbank}{subsection.4.2}% 60
+\BOOKMARK [2][-]{subsection.3.6}{Schriftliche Arbeit}{section.3}% 32
+\BOOKMARK [3][-]{subsubsection.3.6.1}{LaTeX}{subsection.3.6}% 33
+\BOOKMARK [1][-]{section.4}{Webseite}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Security}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Login Handling}{subsection.4.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Two-Factor-Auth}{subsection.4.1}% 37
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Path-Traversal}{subsection.4.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.4}{XSS Protection}{subsection.4.1}% 39
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Allgemeines \374ber XSS}{subsection.4.1}% 40
+\BOOKMARK [3][-]{subsubsection.4.1.6}{XSS Targets:}{subsection.4.1}% 41
+\BOOKMARK [3][-]{subsubsection.4.1.7}{Warum ist Javascript so beliebt?}{subsection.4.1}% 42
+\BOOKMARK [3][-]{subsubsection.4.1.8}{Beliebte Angriffsvektoren}{subsection.4.1}% 43
+\BOOKMARK [3][-]{subsubsection.4.1.9}{Session Hijacking}{subsection.4.1}% 44
+\BOOKMARK [3][-]{subsubsection.4.1.10}{Website-Defacements}{subsection.4.1}% 45
+\BOOKMARK [3][-]{subsubsection.4.1.11}{Phishing}{subsection.4.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.1.12}{Cross-Site-Tracing XST}{subsection.4.1}% 47
+\BOOKMARK [3][-]{subsubsection.4.1.13}{Beispiel}{subsection.4.1}% 48
+\BOOKMARK [3][-]{subsubsection.4.1.14}{Wie gew\344hrleisten wir XSS Protection}{subsection.4.1}% 49
+\BOOKMARK [3][-]{subsubsection.4.1.15}{XSRF/CSRF Protection}{subsection.4.1}% 50
+\BOOKMARK [3][-]{subsubsection.4.1.16}{Was ist XSRF/CSRF}{subsection.4.1}% 51
+\BOOKMARK [3][-]{subsubsection.4.1.17}{Wie Funktioniert eine Solche Attacke}{subsection.4.1}% 52
+\BOOKMARK [3][-]{subsubsection.4.1.18}{Verhindern}{subsection.4.1}% 53
+\BOOKMARK [3][-]{subsubsection.4.1.19}{Password Hashes}{subsection.4.1}% 54
+\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 55
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 56
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Aufbau der Webseite }{subsection.4.2}% 57
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Link generation}{subsection.4.2}% 58
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Controller}{subsection.4.2}% 59
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Views}{subsection.4.2}% 60
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Services}{subsection.4.2}% 61
+\BOOKMARK [3][-]{subsubsection.4.2.7}{User Datenbank}{subsection.4.2}% 62
