@@ -1,0 +1,49 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{test}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1061e0811d66c59f982deb33ca5f1927}{%
+           family={Franz},
+           familyi={F\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Leykam}%
+      }
+      \strng{namehash}{1061e0811d66c59f982deb33ca5f1927}
+      \strng{fullhash}{1061e0811d66c59f982deb33ca5f1927}
+      \strng{bibnamehash}{1061e0811d66c59f982deb33ca5f1927}
+      \strng{authorbibnamehash}{1061e0811d66c59f982deb33ca5f1927}
+      \strng{authornamehash}{1061e0811d66c59f982deb33ca5f1927}
+      \strng{authorfullhash}{1061e0811d66c59f982deb33ca5f1927}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{My first Book}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
