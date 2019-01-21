@@ -1923,8 +1923,10 @@
     <bcf:datasource type="file" datatype="bibtex">literaturQuellen.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">test</bcf:citekey>
-    <bcf:citekey order="2">test</bcf:citekey>
+    <bcf:citekey order="1">ScrumProduct-Backlog</bcf:citekey>
+    <bcf:citekey order="2">ScrumProduct-Backlog</bcf:citekey>
+    <bcf:citekey order="3">ScrumProduct-Increment</bcf:citekey>
+    <bcf:citekey order="4">ScrumProduct-Increment</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

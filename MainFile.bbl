@@ -19,29 +19,59 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{test}{book}{}
+    \entry{ScrumProduct-Increment}{online}{}
       \name{author}{1}{}{%
-        {{hash=1061e0811d66c59f982deb33ca5f1927}{%
-           family={Franz},
-           familyi={F\bibinitperiod},
-           given={Matthias},
+        {{hash=d33712bcde2d63bad054a832b61d01e8}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Mike},
            giveni={M\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Leykam}%
-      }
-      \strng{namehash}{1061e0811d66c59f982deb33ca5f1927}
-      \strng{fullhash}{1061e0811d66c59f982deb33ca5f1927}
-      \strng{bibnamehash}{1061e0811d66c59f982deb33ca5f1927}
-      \strng{authorbibnamehash}{1061e0811d66c59f982deb33ca5f1927}
-      \strng{authornamehash}{1061e0811d66c59f982deb33ca5f1927}
-      \strng{authorfullhash}{1061e0811d66c59f982deb33ca5f1927}
-      \field{sortinit}{F}
-      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \strng{namehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{bibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorbibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{My first Book}
+      \field{title}{What Does It Mean to Be Potentially Releasable?}
       \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.mountaingoatsoftware.com/blog/what-does-it-mean-to-be-potentially-releasable
+      \endverb
+      \verb{url}
+      \verb https://www.mountaingoatsoftware.com/blog/what-does-it-mean-to-be-potentially-releasable
+      \endverb
+    \endentry
+    \entry{ScrumProduct-Backlog}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b435de1009c4c844bbdfc3859daa4521}{%
+           family={Jungwirth},
+           familyi={J\bibinitperiod},
+           given={Kathrin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b435de1009c4c844bbdfc3859daa4521}
+      \strng{fullhash}{b435de1009c4c844bbdfc3859daa4521}
+      \strng{bibnamehash}{b435de1009c4c844bbdfc3859daa4521}
+      \strng{authorbibnamehash}{b435de1009c4c844bbdfc3859daa4521}
+      \strng{authornamehash}{b435de1009c4c844bbdfc3859daa4521}
+      \strng{authorfullhash}{b435de1009c4c844bbdfc3859daa4521}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scrum Grundlagen einfach erklärt: Der Product Backlog}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.inloox.de/unternehmen/blog/artikel/scrum-grundlagen-einfach-erklaert-der-product-backlog/
+      \endverb
+      \verb{url}
+      \verb https://www.inloox.de/unternehmen/blog/artikel/scrum-grundlagen-einfach-erklaert-der-product-backlog/
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
