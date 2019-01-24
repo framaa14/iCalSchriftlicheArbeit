@@ -1927,6 +1927,10 @@
     <bcf:citekey order="2">ScrumProduct-Backlog</bcf:citekey>
     <bcf:citekey order="3">ScrumProduct-Increment</bcf:citekey>
     <bcf:citekey order="4">ScrumProduct-Increment</bcf:citekey>
+    <bcf:citekey order="5">ScrumSprint-Backlog</bcf:citekey>
+    <bcf:citekey order="6">ScrumSprint-Backlog</bcf:citekey>
+    <bcf:citekey order="7">ScrumProductOwner</bcf:citekey>
+    <bcf:citekey order="8">ScrumProductOwner</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
