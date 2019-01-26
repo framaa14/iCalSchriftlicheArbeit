@@ -1931,6 +1931,9 @@
     <bcf:citekey order="6">ScrumSprint-Backlog</bcf:citekey>
     <bcf:citekey order="7">ScrumProductOwner</bcf:citekey>
     <bcf:citekey order="8">ScrumProductOwner</bcf:citekey>
+    <bcf:citekey order="9">ScrumScrumMaster</bcf:citekey>
+    <bcf:citekey order="10">ScrumScrumMaster</bcf:citekey>
+    <bcf:citekey order="11">ScrumTeam</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -19,31 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{ScrumProductOwner}{online}{}
-      \name{author}{1}{}{%
-        {{hash=53fe0881d8553a8d801dfb95b88f4e40}{%
-           family={•},
-           familyi={•\bibinitperiod}}}%
-      }
-      \strng{namehash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \strng{fullhash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \strng{bibnamehash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \strng{authorbibnamehash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \strng{authornamehash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \strng{authorfullhash}{53fe0881d8553a8d801dfb95b88f4e40}
-      \field{sortinit}{W}
-      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{WAS MACHT EIN PRODUCT OWNER?}
-      \field{year}{2016}
-      \verb{urlraw}
-      \verb https://www.scrum.de/was-macht-product-owner/
-      \endverb
-      \verb{url}
-      \verb https://www.scrum.de/was-macht-product-owner/
-      \endverb
-    \endentry
     \entry{ScrumProduct-Increment}{online}{}
       \name{author}{1}{}{%
         {{hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -123,6 +98,60 @@
       \endverb
       \verb{url}
       \verb https://www.inloox.de/unternehmen/blog/artikel/scrum-grundlagen-einfach-erklaert-der-sprint-backlog/
+      \endverb
+    \endentry
+    \entry{ScrumProductOwner}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cb970d4d79247025542e47edd0a22a37}{%
+           family={OWNER?},
+           familyi={O\bibinitperiod},
+           given={WAS\bibnamedelimb MACHT\bibnamedelimb EIN\bibnamedelima PRODUCT},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb970d4d79247025542e47edd0a22a37}
+      \strng{fullhash}{cb970d4d79247025542e47edd0a22a37}
+      \strng{bibnamehash}{cb970d4d79247025542e47edd0a22a37}
+      \strng{authorbibnamehash}{cb970d4d79247025542e47edd0a22a37}
+      \strng{authornamehash}{cb970d4d79247025542e47edd0a22a37}
+      \strng{authorfullhash}{cb970d4d79247025542e47edd0a22a37}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WAS MACHT EIN PRODUCT OWNER?}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.scrum.de/was-macht-product-owner/
+      \endverb
+      \verb{url}
+      \verb https://www.scrum.de/was-macht-product-owner/
+      \endverb
+    \endentry
+    \entry{ScrumScrumMaster}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8c565acad898e7b219a7d83206024794}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c565acad898e7b219a7d83206024794}
+      \strng{fullhash}{8c565acad898e7b219a7d83206024794}
+      \strng{bibnamehash}{8c565acad898e7b219a7d83206024794}
+      \strng{authorbibnamehash}{8c565acad898e7b219a7d83206024794}
+      \strng{authornamehash}{8c565acad898e7b219a7d83206024794}
+      \strng{authorfullhash}{8c565acad898e7b219a7d83206024794}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scrum-Master ist man aus Passion}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://t3n.de/news/scrum-master-aufgaben-ausbildung-gehalt-800972/
+      \endverb
+      \verb{url}
+      \verb https://t3n.de/news/scrum-master-aufgaben-ausbildung-gehalt-800972/
       \endverb
     \endentry
   \enddatalist

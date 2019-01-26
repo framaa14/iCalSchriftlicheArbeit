@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.7)  24 JAN 2019 12:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.7)  26 JAN 2019 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1248,8 +1248,20 @@ Package babel Info: Redefining ngerman shorthand "~
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.90 
-      <./images/ProjektmanagementUndOrganisation_SprintBacklog.png>])
-(./iCal-Format/iCal-Format.tex) (./Datenbank/Datenbank.tex)
+      <./images/ProjektmanagementUndOrganisation_SprintBacklog.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
+
+
+LaTeX Warning: Citation 'ScrumTeam' on page 11 undefined on input line 96.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
+
+ []
+
+) (./iCal-Format/iCal-Format.tex) (./Datenbank/Datenbank.tex)
 (./Parser/Parser.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
@@ -1259,6 +1271,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 7.
+ [11]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1276,10 +1297,11 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 21.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<./images/Parser_EFUse01.png, id=413, 212.29312pt x 24.09pt>
+<./images/Parser_EFUse01.png, id=423, 212.29312pt x 24.09pt>
 File: ./images/Parser_EFUse01.png Graphic file (type png)
 <use ./images/Parser_EFUse01.png>
 Package pdftex.def Info: ./images/Parser_EFUse01.png  used on input line 26.
@@ -1300,16 +1322,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--29
 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
-[11]
-<./images/Parser_EFUse02.png, id=421, 428.35031pt x 51.19125pt>
+<./images/Parser_EFUse02.png, id=424, 428.35031pt x 51.19125pt>
 File: ./images/Parser_EFUse02.png Graphic file (type png)
 <use ./images/Parser_EFUse02.png>
 Package pdftex.def Info: ./images/Parser_EFUse02.png  used on input line 33.
@@ -1322,8 +1335,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
-) has been already used, duplicate ignored
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1337,12 +1350,12 @@ ady used, duplicate ignored
 l.38 \break
             \textbf{3. Entity Framework generiert Klassen aus DB} \\ <./images/
 Parser_EFUse01.png> <./images/Parser_EFUse02.png>]
-<./images/Parser_EFUse03.png, id=430, 824.32968pt x 395.97937pt>
+<./images/Parser_EFUse03.png, id=434, 824.32968pt x 395.97937pt>
 File: ./images/Parser_EFUse03.png Graphic file (type png)
 <use ./images/Parser_EFUse03.png>
 Package pdftex.def Info: ./images/Parser_EFUse03.png  used on input line 42.
 (pdftex.def)             Requested size: 448.13095pt x 215.26974pt.
-<./images/Parser_EFUse04.png, id=431, 716.6775pt x 493.845pt>
+<./images/Parser_EFUse04.png, id=435, 716.6775pt x 493.845pt>
 File: ./images/Parser_EFUse04.png Graphic file (type png)
 <use ./images/Parser_EFUse04.png>
 Package pdftex.def Info: ./images/Parser_EFUse04.png  used on input line 49.
@@ -1363,12 +1376,12 @@ Package babel Info: Redefining ngerman shorthand "~
 l.53 I
       m nächsten Fenster nun  ''EF Designer aus Datenbank'' auswählen und ...
  <./images/Parser_EFUse03.png>]
-<./images/Parser_EFUse05.png, id=439, 483.30562pt x 188.20313pt>
+<./images/Parser_EFUse05.png, id=443, 483.30562pt x 188.20313pt>
 File: ./images/Parser_EFUse05.png Graphic file (type png)
 <use ./images/Parser_EFUse05.png>
 Package pdftex.def Info: ./images/Parser_EFUse05.png  used on input line 56.
 (pdftex.def)             Requested size: 448.13095pt x 174.51303pt.
-<./images/Parser_EFUse06.png, id=440, 465.23813pt x 278.54062pt>
+<./images/Parser_EFUse06.png, id=444, 465.23813pt x 278.54062pt>
 File: ./images/Parser_EFUse06.png Graphic file (type png)
 <use ./images/Parser_EFUse06.png>
 Package pdftex.def Info: ./images/Parser_EFUse06.png  used on input line 63.
@@ -1394,12 +1407,12 @@ ame{figure.7}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.66 \end{figure}
                   <./images/Parser_EFUse04.png> <./images/Parser_EFUse05.png>]
-<./images/Parser_EFUse07.png, id=449, 475.02469pt x 218.31563pt>
+<./images/Parser_EFUse07.png, id=453, 475.02469pt x 218.31563pt>
 File: ./images/Parser_EFUse07.png Graphic file (type png)
 <use ./images/Parser_EFUse07.png>
 Package pdftex.def Info: ./images/Parser_EFUse07.png  used on input line 70.
 (pdftex.def)             Requested size: 448.13095pt x 205.96289pt.
-<./images/Parser_EFUse09.png, id=450, 651.93562pt x 370.38374pt>
+<./images/Parser_EFUse09.png, id=454, 651.93562pt x 370.38374pt>
 File: ./images/Parser_EFUse09.png Graphic file (type png)
 <use ./images/Parser_EFUse09.png>
 Package pdftex.def Info: ./images/Parser_EFUse09.png  used on input line 78.
@@ -1426,7 +1439,7 @@ ame{figure.9}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.81 \end{figure}
                   <./images/Parser_EFUse06.png> <./images/Parser_EFUse07.png>]
-<./images/Parser_EFUse10.png, id=459, 218.31563pt x 204.01219pt>
+<./images/Parser_EFUse10.png, id=463, 218.31563pt x 204.01219pt>
 File: ./images/Parser_EFUse10.png Graphic file (type png)
 <use ./images/Parser_EFUse10.png>
 Package pdftex.def Info: ./images/Parser_EFUse10.png  used on input line 84.
@@ -1498,7 +1511,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-<./images/Technologien_dotNetVersions.png, id=472, 116.68594pt x 163.3603pt>
+<./images/Technologien_dotNetVersions.png, id=476, 116.68594pt x 163.3603pt>
 File: ./images/Technologien_dotNetVersions.png Graphic file (type png)
 <use ./images/Technologien_dotNetVersions.png>
 Package pdftex.def Info: ./images/Technologien_dotNetVersions.png  used on inpu
@@ -1523,27 +1536,27 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 55.
 [18 <./images/Technologien_dotNetVersions.png>]
-<./images/Technologien_aspNetTutorial01.png, id=495, 615.80063pt x 303.38344pt>
+<./images/Technologien_aspNetTutorial01.png, id=499, 615.80063pt x 303.38344pt>
 
 File: ./images/Technologien_aspNetTutorial01.png Graphic file (type png)
 <use ./images/Technologien_aspNetTutorial01.png>
 Package pdftex.def Info: ./images/Technologien_aspNetTutorial01.png  used on in
 put line 58.
 (pdftex.def)             Requested size: 448.13095pt x 220.78293pt.
-<./images/Technologien_aspNetTutorial02.png, id=496, 711.4078pt x 492.33937pt>
+<./images/Technologien_aspNetTutorial02.png, id=500, 711.4078pt x 492.33937pt>
 File: ./images/Technologien_aspNetTutorial02.png Graphic file (type png)
 <use ./images/Technologien_aspNetTutorial02.png>
 Package pdftex.def Info: ./images/Technologien_aspNetTutorial02.png  used on in
 put line 63.
 (pdftex.def)             Requested size: 448.13095pt x 310.14539pt.
-<./images/Technologien_aspNetTutorial03.png, id=497, 593.21625pt x 387.69844pt>
+<./images/Technologien_aspNetTutorial03.png, id=501, 593.21625pt x 387.69844pt>
 
 File: ./images/Technologien_aspNetTutorial03.png Graphic file (type png)
 <use ./images/Technologien_aspNetTutorial03.png>
 Package pdftex.def Info: ./images/Technologien_aspNetTutorial03.png  used on in
 put line 69.
 (pdftex.def)             Requested size: 448.13095pt x 292.88504pt.
-<./images/Technologien_aspNetTutorial04.png, id=498, 1292.57906pt x 508.90125pt
+<./images/Technologien_aspNetTutorial04.png, id=502, 1292.57906pt x 508.90125pt
 >
 File: ./images/Technologien_aspNetTutorial04.png Graphic file (type png)
 <use ./images/Technologien_aspNetTutorial04.png>
@@ -1967,19 +1980,19 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 109.
-<./images/Webseite_XSS_img1.png, id=579, 490.08093pt x 257.46187pt>
+<./images/Webseite_XSS_img1.png, id=583, 490.08093pt x 257.46187pt>
 File: ./images/Webseite_XSS_img1.png Graphic file (type png)
 <use ./images/Webseite_XSS_img1.png>
 Package pdftex.def Info: ./images/Webseite_XSS_img1.png  used on input line 114
 .
 (pdftex.def)             Requested size: 569.0701pt x 284.55247pt.
-<./images/Webseite_XSS_img2.png, id=580, 478.78876pt x 204.765pt>
+<./images/Webseite_XSS_img2.png, id=584, 478.78876pt x 204.765pt>
 File: ./images/Webseite_XSS_img2.png Graphic file (type png)
 <use ./images/Webseite_XSS_img2.png>
 Package pdftex.def Info: ./images/Webseite_XSS_img2.png  used on input line 115
 .
 (pdftex.def)             Requested size: 569.09357pt x 284.54752pt.
-<./images/Webseite_XSS_img3.png, id=581, 529.22719pt x 132.495pt>
+<./images/Webseite_XSS_img3.png, id=585, 529.22719pt x 132.495pt>
 File: ./images/Webseite_XSS_img3.png Graphic file (type png)
 <use ./images/Webseite_XSS_img3.png>
 Package pdftex.def Info: ./images/Webseite_XSS_img3.png  used on input line 116
@@ -2156,7 +2169,15 @@ Package rerunfilecheck Info: File `MainFile.out' has not changed.
 (rerunfilecheck)             Checksum: 9962A8069919C0B2231E2A06B3615C44;4753.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                MainFile
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'MainFile.run.xml'.
 \openout1 = `MainFile.run.xml'.
@@ -2164,10 +2185,10 @@ Package logreq Info: Writing requests to 'MainFile.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 18071 strings out of 492982
- 297864 string characters out of 6134897
- 846116 words of memory out of 5000000
- 21213 multiletter control sequences out of 15000+600000
+ 18074 strings out of 492982
+ 297984 string characters out of 6134897
+ 846194 words of memory out of 5000000
+ 21215 multiletter control sequences out of 15000+600000
  16815 words of font info for 41 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  41i,8n,51p,8819b,1977s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2182,10 +2203,10 @@ share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
 
-Output written on MainFile.pdf (33 pages, 661201 bytes).
+Output written on MainFile.pdf (33 pages, 663221 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
- 169 named destinations out of 1000 (max. 500000)
+ 732 PDF objects out of 1000 (max. 8388607)
+ 645 compressed objects within 7 object streams
+ 170 named destinations out of 1000 (max. 500000)
  632 words of extra memory for PDF output out of 10000 (max. 10000000)
 
