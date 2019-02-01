@@ -111,9 +111,9 @@ Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standa
 \\ \\
 Alle Möglichen Eingabefelder
 \\ \\
-\includegraphics[width=20cm, height=10cm]{Webseite_XSS_img1}
-\includegraphics[width=20cm, height=10cm]{Webseite_XSS_img2}
-\includegraphics[width=14cm, height=6cm]{Webseite_XSS_img3}
+\includegraphics[width=\textwidth]{Webseite_XSS_img1}
+\includegraphics[width=\textwidth]{Webseite_XSS_img2}
+\includegraphics[width=\textwidth]{Webseite_XSS_img3}
 \\ \\
 In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\ \\
 Dadurch hat unsere Webseite eine Funktionierende XSS Protection
@@ -146,9 +146,34 @@ acct=Angreifer&amount=1000
 \end{lstlisting}
 \subsubsection{Verhindern}
 \url{https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2}
-\label{sec:sqli}
+\subsubsection{Hashes}
+\label{hash-expl}
+Wir beginnen die Erklärung von HASHes mit einem Beispiel.
+\\ \\
+Sagen wir, wir wollen ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das wir feststellen können, das es nicht verändert wurde. Um das zu gewährleisten, gibt es HASH Algorithmen. Ein HASH ist eine Einwegfunktion, heißt man kann einen HASH für ein File berechnen aber nicht aus dem HASH das File holen. 
+
+Drei Sachen sind bei einem HASH Algorithmus wichtig.
+\begin{enumerate}
+\item Geschwindigkeit
+\item Ändert man ein 1-bit sollte der gesamte HASH anders sein
+\item HASH Kollisionen verhindern 
+\end{enumerate}
+
+\subsubsection{HASH Kollisionen}
+
+Sagen wir, wir haben ein wichtiges Dokument, das wir der Leitung in der IT schicken. Mit dem Dokument kommt der HASH damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Hacker möglich das File zu bekommen und zu verändern, würde der HASH ein anderer sein. Ist der HASH algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen HASH festzulegen.
+\\ \\
+Beispiele
+\begin{enumerate}
+\item MD5
+\item SHA1
+\end{enumerate}
+Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell kann man recht einfach Dokument erstellen welches zwar anders ist aber den selben HASH als das Orginal hat.
+
 \subsubsection{Password Hashes}
 \label{sec:hash}
+Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
+
 \subsection{ASP.NET MVC}
 In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseite aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Webseite aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 
