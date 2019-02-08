@@ -172,9 +172,41 @@ Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will 
 \subsubsection{Wie funktioniert ein HASH Algorithmus}
 Wie ein HASH Algorithmus grundsätzlich arbeitet werde ich anhand von SHA-256 erklären. 
 \subsubsection{Allgemeines über SHA256}
-text
+SHA256(secure hash algorithm) ist ein kryptografischer HASH mit eine Zeichenlänge von 256 bits. Es ist eine Schlüssellose HASH-Funktion.
+\\ \\
+Eine Nachricht wird in jeweils 512 Blöcken (16 * 32 Bits) abgearbeitet und jeder block benötigt 64 Runden.
 \subsubsection{Der Algorithmus}
-text
+Basis Operationen
+\begin{enumerate}
+\item Boolesche Operationen
+\begin{enumerate}
+\item AND
+\item XOR
+\item OR
+\end{enumerate}
+\item Bitweises Komplement
+\item Integer-Addition Modulo $2^{32}$, bezeichnet mit A + B.
+\end{enumerate}
+Jede dieser Operationen arbeitet mit 32 Bit. Bei der letzten Operation wird diese von Binär in Integer übersetzt und in Dezimal Basis geschrieben.\\ \\
+Wobei
+\begin{enumerate}
+\item RotR (A, n) bezeichnet die zirkulare Verschiebung von n Bits des Binärworts A nach rechts
+\item ShR (A, n) bezeichnet die Rechtsverschiebung von n Bits des Binärworts A
+\item AkB bezeichnet die Verkettung der Binärwörter A und B
+\end{enumerate}
+SHA256 benutzt folgende Funktionen \\ \\
+
+\includegraphics[width=\textwidth]{Website_SHA256_Functions}
+\subsubsection{Das Padding}
+Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist dafür wird folgendes getan.
+\begin{enumerate}
+\item Zuerst wird ein Bit 1 angehängt,
+\item Als nächstes werden k Bits 0 angehängt, wobei k die kleinste positive ganze Zahl ist, so dass l + 1 + k $<=$ 448 ist
+mod 512, wobei l die Länge der ursprünglichen Nachricht in Bits ist
+\item Schließlich wird die Länge l < $2^{64}$ der ursprünglichen Nachricht mit genau 64 Bits und diesen Bits dargestellt
+werden am Ende der Nachricht hinzugefügt
+\end{enumerate}
+Die Nachricht wird immer aufgefüllt, auch wenn die Anfangslänge bereits ein Vielfaches von 512 ist.
 \subsubsection{Password Hashes}
 \label{sec:hash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
