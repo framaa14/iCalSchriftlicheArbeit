@@ -196,7 +196,7 @@ Wobei
 \end{enumerate}
 SHA256 benutzt folgende Funktionen \\ \\
 
-\includegraphics[width=\textwidth]{Website_SHA256_Functions}
+\includegraphics[width=\textwidth height=\textheight]{Website_SHA256_Functions}
 \subsubsection{Das Padding}
 Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist dafür wird folgendes getan.
 \begin{enumerate}
@@ -207,6 +207,22 @@ mod 512, wobei l die Länge der ursprünglichen Nachricht in Bits ist
 werden am Ende der Nachricht hinzugefügt
 \end{enumerate}
 Die Nachricht wird immer aufgefüllt, auch wenn die Anfangslänge bereits ein Vielfaches von 512 ist.
+\subsubsection{Block decomposition}
+Für jeden Block M $\in$ {0, 1} 512 , 64 Wörter aus 32 Bits wird folgendermaßem vorgegangen. 
+
+\begin{enumerate}
+\item Die ersten 16 werden durch Aufteilen von M in 32-Bit-Blöcke erhalten
+\item Die restlichen 48 werden durch folgende Formel erhalten.
+\end{enumerate}
+Formel 1:
+\\ \\
+\includegraphics[width=150px height=150px]{Webseite_SHA256_f1}
+\\ \\
+Formel 2:
+\\ \\
+\includegraphics[width=230px height=230px]{Webseite_SHA256_f2}
+\\ \\
+(was passiert hier)
 \subsubsection{Password Hashes}
 \label{sec:hash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
@@ -217,7 +233,8 @@ In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseit
 \label{sec:MVC}
 \subsubsection{Allgemeines MVC}
 \label{sec:allgemein}
-
+\subsubsection{Erstellung der Webseite}
+\label{sec:erstellung}
 \subsubsection{Aufbau der Webseite }
 \label{sec:aufbau}
 \subsubsection{Link generation}
