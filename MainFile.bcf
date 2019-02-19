@@ -1934,6 +1934,13 @@
     <bcf:citekey order="9">ScrumScrumMaster</bcf:citekey>
     <bcf:citekey order="10">ScrumScrumMaster</bcf:citekey>
     <bcf:citekey order="11">ScrumTeam</bcf:citekey>
+    <bcf:citekey order="12">ScrumTeam</bcf:citekey>
+    <bcf:citekey order="13">ScrumSprint-Planning</bcf:citekey>
+    <bcf:citekey order="14">ScrumSprint-Planning</bcf:citekey>
+    <bcf:citekey order="15">ScrumDailyScrum</bcf:citekey>
+    <bcf:citekey order="16">ScrumDailyScrum</bcf:citekey>
+    <bcf:citekey order="17">ScrumScrum-Retroperspective</bcf:citekey>
+    <bcf:citekey order="18">ScrumScrum-Retroperspective</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

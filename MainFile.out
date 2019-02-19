@@ -56,12 +56,20 @@
 \BOOKMARK [3][-]{subsubsection.4.1.19}{Was ist XSRF/CSRF}{subsection.4.1}% 56
 \BOOKMARK [3][-]{subsubsection.4.1.20}{Wie Funktioniert eine Solche Attacke}{subsection.4.1}% 57
 \BOOKMARK [3][-]{subsubsection.4.1.21}{Verhindern}{subsection.4.1}% 58
-\BOOKMARK [3][-]{subsubsection.4.1.22}{Password Hashes}{subsection.4.1}% 59
-\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 60
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 61
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Aufbau der Webseite }{subsection.4.2}% 62
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Link generation}{subsection.4.2}% 63
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Controller}{subsection.4.2}% 64
-\BOOKMARK [3][-]{subsubsection.4.2.5}{Views}{subsection.4.2}% 65
-\BOOKMARK [3][-]{subsubsection.4.2.6}{Services}{subsection.4.2}% 66
-\BOOKMARK [3][-]{subsubsection.4.2.7}{User Datenbank}{subsection.4.2}% 67
+\BOOKMARK [3][-]{subsubsection.4.1.22}{Hashes}{subsection.4.1}% 59
+\BOOKMARK [3][-]{subsubsection.4.1.23}{HASH Kollisionen}{subsection.4.1}% 60
+\BOOKMARK [3][-]{subsubsection.4.1.24}{Wie funktioniert ein HASH Algorithmus}{subsection.4.1}% 61
+\BOOKMARK [3][-]{subsubsection.4.1.25}{Allgemeines \374ber SHA256}{subsection.4.1}% 62
+\BOOKMARK [3][-]{subsubsection.4.1.26}{Der Algorithmus}{subsection.4.1}% 63
+\BOOKMARK [3][-]{subsubsection.4.1.27}{Das Padding}{subsection.4.1}% 64
+\BOOKMARK [3][-]{subsubsection.4.1.28}{Block decomposition}{subsection.4.1}% 65
+\BOOKMARK [3][-]{subsubsection.4.1.29}{Password Hashes}{subsection.4.1}% 66
+\BOOKMARK [2][-]{subsection.4.2}{ASP.NET MVC}{section.4}% 67
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Allgemeines MVC}{subsection.4.2}% 68
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Erstellung der Webseite}{subsection.4.2}% 69
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Aufbau der Webseite }{subsection.4.2}% 70
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Link generation}{subsection.4.2}% 71
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Controller}{subsection.4.2}% 72
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Views}{subsection.4.2}% 73
+\BOOKMARK [3][-]{subsubsection.4.2.7}{Services}{subsection.4.2}% 74
+\BOOKMARK [3][-]{subsubsection.4.2.8}{User Datenbank}{subsection.4.2}% 75

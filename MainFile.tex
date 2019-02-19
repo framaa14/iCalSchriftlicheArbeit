@@ -6,7 +6,7 @@
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage[automark]{scrpage2}
+%\usepackage[automark]{scrpage2}
 \usepackage{color}
 \usepackage{listings}
 \usepackage{courier}
@@ -16,6 +16,17 @@
 \usepackage{ragged2e}
 \usepackage{float}
 \usepackage[backend=biber]{biblatex}
+\usepackage{fancyhdr}
+\newcommand{\theauthor}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO,RE]{\theauthor}
+\fancyfoot[LO,RE]{\thepage}
+%\fancyhead[RO,LE]{\nouppercase{\leftmark}}
+\renewcommand{\footrulewidth}{.5pt}
+
+
 
 \addbibresource{literaturQuellen.bib}
 
@@ -76,12 +87,15 @@ basicstyle=\ttfamily\small,
 \begin{document}
 	\begin{titlepage}
 		\maketitle
+		\begin{center}
+			Betreuer: Gernot Loibner\\
+			Partner: Intact GmbH
+		\end{center}
 	\end{titlepage}
 	
 \section*{Eidesstattliche Erklärung}
 \label{sec:eidesstattliche-erklaerung}
 KRIEGEN WIR VON DER SCHULE
-
 \vspace*{30px}
 
 \titledate{Vor-/Zuname, Unterschrift}

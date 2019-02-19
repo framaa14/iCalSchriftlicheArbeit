@@ -46,6 +46,62 @@
       \verb https://www.mountaingoatsoftware.com/blog/what-does-it-mean-to-be-potentially-releasable
       \endverb
     \endentry
+    \entry{ScrumScrum-Retroperspective}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a334769077f8479889d7450ec755c42d}{%
+           family={Huston},
+           familyi={H\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a334769077f8479889d7450ec755c42d}
+      \strng{fullhash}{a334769077f8479889d7450ec755c42d}
+      \strng{bibnamehash}{a334769077f8479889d7450ec755c42d}
+      \strng{authorbibnamehash}{a334769077f8479889d7450ec755c42d}
+      \strng{authornamehash}{a334769077f8479889d7450ec755c42d}
+      \strng{authorfullhash}{a334769077f8479889d7450ec755c42d}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How To Run A Sprint Retroperspective That Knocks Your Teams Socks Of}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://thedigitalprojectmanager.com/how-run-sprint-retrospective/
+      \endverb
+      \verb{url}
+      \verb https://thedigitalprojectmanager.com/how-run-sprint-retrospective/
+      \endverb
+    \endentry
+    \entry{ScrumTeam}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5aa97d68d228a8a52a2e2af18717b437}{%
+           family={Jeff\bibnamedelima Sutherland},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Ken\bibnamedelima Schwaber},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={und},
+           prefixi={u\bibinitperiod}}}%
+      }
+      \strng{namehash}{5aa97d68d228a8a52a2e2af18717b437}
+      \strng{fullhash}{5aa97d68d228a8a52a2e2af18717b437}
+      \strng{bibnamehash}{5aa97d68d228a8a52a2e2af18717b437}
+      \strng{authorbibnamehash}{5aa97d68d228a8a52a2e2af18717b437}
+      \strng{authornamehash}{5aa97d68d228a8a52a2e2af18717b437}
+      \strng{authorfullhash}{5aa97d68d228a8a52a2e2af18717b437}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{In aller Kürze: Scrum erklärt in 100 Wörtern.}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.dasscrumteam.com/de/scrum
+      \endverb
+      \verb{url}
+      \verb https://www.dasscrumteam.com/de/scrum
+      \endverb
+    \endentry
     \entry{ScrumProduct-Backlog}{online}{}
       \name{author}{1}{}{%
         {{hash=b435de1009c4c844bbdfc3859daa4521}{%
@@ -152,6 +208,62 @@
       \endverb
       \verb{url}
       \verb https://t3n.de/news/scrum-master-aufgaben-ausbildung-gehalt-800972/
+      \endverb
+    \endentry
+    \entry{ScrumDailyScrum}{online}{}
+      \name{author}{1}{}{%
+        {{hash=863934def50f0a3d5190f7051e2f2dc5}{%
+           family={Plewa},
+           familyi={P\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{863934def50f0a3d5190f7051e2f2dc5}
+      \strng{fullhash}{863934def50f0a3d5190f7051e2f2dc5}
+      \strng{bibnamehash}{863934def50f0a3d5190f7051e2f2dc5}
+      \strng{authorbibnamehash}{863934def50f0a3d5190f7051e2f2dc5}
+      \strng{authornamehash}{863934def50f0a3d5190f7051e2f2dc5}
+      \strng{authorfullhash}{863934def50f0a3d5190f7051e2f2dc5}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{DAILY SCRUM MEETING - STAND-UP MEETING IM AGILEN PROJEKTMANAGEMENT}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.kayenta.de/training-seminar/artikel/daily-scrum-meeting-stand-up-meeting-im-agilen-projektmanagement.html
+      \endverb
+      \verb{url}
+      \verb https://www.kayenta.de/training-seminar/artikel/daily-scrum-meeting-stand-up-meeting-im-agilen-projektmanagement.html
+      \endverb
+    \endentry
+    \entry{ScrumSprint-Planning}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1145fdb2255f7dc5b7da2e76ebef1500}{%
+           family={Sprint\bibnamedelima Planning?},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={What},
+           giveni={W\bibinitperiod},
+           prefix={is},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \strng{fullhash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \strng{bibnamehash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \strng{authorbibnamehash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \strng{authornamehash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \strng{authorfullhash}{1145fdb2255f7dc5b7da2e76ebef1500}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Sprint Planning?}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.scrum.org/resources/what-is-sprint-planning
+      \endverb
+      \verb{url}
+      \verb https://www.scrum.org/resources/what-is-sprint-planning
       \endverb
     \endentry
   \enddatalist
