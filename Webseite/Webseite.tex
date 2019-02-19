@@ -1,4 +1,4 @@
-
+\renewcommand{\theauthor}{Marcel Stering}
 \chapter{Webseite}
 \label{sec:Webseite}
 \section{Webseite-Security}
@@ -266,8 +266,61 @@ Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Ex
 \label{sec:erstellung}
 \subsection{Aufbau der Webseite }
 \label{sec:aufbau}
+In diesem Kapitel beschäftigen wir unser damit wie die Webseite aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite. 
+
+Zunächst kommen wir auf die Hauptseite\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_Main}
+Auf dieser kann man sich dann entweder Einloggen oder Registrieren. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_Register}
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_login}
+Hat man sein Passwort vergessen kann man dieses über das Passwort vergessen Feature zurücksetzen. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_PasswordReset}
+Ist man eingeloggt kann man seinen Account verwalten.\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_User1}
+Man kann sein Passwort ändern oder sein 2FA einrichten. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_password}
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_2FA}
+Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalender, bzw. das Abrufen der Links oder das direkt herunterladen.\\ \\
+ \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_calendars}
 \subsection{Link generation}
 \label{sec:link}
+Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion die der/die fertigen Kalender zur Verfügung stellt.
+\begin{lstlisting}
+public List<string> getUsersTables(string myuser)
+{
+        //List fuer UserIDs
+        List<int> result = new List<int>();
+        //Verbindung zu Datenbank
+        using (SqlConnection connection = new SqlConnection(@"dbstring"))
+        {
+            connection.Open();
+            //Abfragen und holen der UserID fuer den Parser
+            using (SqlCommand command = new SqlCommand("SELECT userid FROM UserTable WHERE Email = '" + myuser + "'", connection))
+            {
+                command.CommandType = CommandType.Text;
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(reader.GetInt32(0));
+                    }
+
+                    reader.Close();
+                }
+                command.Cancel();
+            }
+        }
+    //Erstellen der Liste fuer die Kalender
+    List<string> tables = new List<string>();
+    string icals = "";
+    //Aufrufen des Parsers und speichern der Daten
+    result.ForEach(x => icals += new Parser().GetICalFormat(x));
+    //Spliten nach den Kalendern und Files zurueckliefern
+    icals.Split("XCALSPLITX").ToList().ForEach(x => { if (x != "") tables.Add(x); });
+    return tables;
+}
+\end{lstlisting}
+Bei dem Benutztem SQL Statement könnt man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
 \subsection{Controller}
 \label{sec:Controller}
 \subsection{Views}
