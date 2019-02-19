@@ -1941,6 +1941,7 @@
     <bcf:citekey order="16">ScrumDailyScrum</bcf:citekey>
     <bcf:citekey order="17">ScrumScrum-Retroperspective</bcf:citekey>
     <bcf:citekey order="18">ScrumScrum-Retroperspective</bcf:citekey>
+    <bcf:citekey order="19">ScrumScrum-Review</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
