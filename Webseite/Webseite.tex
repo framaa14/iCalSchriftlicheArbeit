@@ -205,9 +205,8 @@ Wobei
 \item ShR (A, n) bezeichnet die Rechtsverschiebung von n Bits des Binärworts A
 \item AkB bezeichnet die Verkettung der Binärwörter A und B
 \end{enumerate}
-SHA256 benutzt folgende Funktionen \\ \\
-
-\includegraphics[width=500px height=500px]{Website_SHA256_Functions}
+SHA256 benutzt folgende Funktionen\\
+\includegraphics[width=300px,height=200px]{Website_SHA256_Functions}
 \subsubsection{Das Padding}
 Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist dafür wird folgendes getan.
 \begin{enumerate}
@@ -227,11 +226,9 @@ Für jeden Block M $\in$ {0, 1} 512 , 64 Wörter aus 32 Bits wird folgendermaße
 \end{enumerate}
 Formel 1:
 \\ \\
-\includegraphics[width=150px height=150px]{Webseite_SHA256_f1}
-\\ \\
-Formel 2:
-\\ \\
-\includegraphics[width=230px height=230px]{Webseite_SHA256_f2}
+\includegraphics[width=150px,height=30px]{Webseite_SHA256_f1}
+\\ \\Formel 2:\\ \\
+\includegraphics[width=280px ,height=30px]{Webseite_SHA256_f2}
 \\ \\
 (was passiert hier)
 \subsection{Password Hashes}
@@ -245,6 +242,27 @@ In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseit
 \subsection{Allgemeines MVC}
 \label{sec:allgemein}
 \subsection{Erstellung der Webseite}
+Dieses Kapitel befässt sich damit wie man in Visual-Studio ein MVC-Website Projekt erstellen kann.\\ \\
+Zunächst muss man sicherstellen das man alle benötigten Features installiert hat. Dafür geht man auf Datei -> Neues Projekt und klickt dann auf folgendes.\\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_features}
+Im Installer überprüft man dann ob man folgende Features installiert hat.\\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Install}
+Danach kann man ein MVC-Website Projekt erstellen dafür mach man folgendes.\\ \\
+Schritt 1:\\
+Zuerst müssen wir über File -> New -> Project, die Erstellung eines neuen Projekts einleiten.\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt1}
+Schritt 2:\\
+Danach müssen wir unter dem Tab Web die ASP.NET Core Web Application wählen und ihr einen Namen zuweisen. Danach klicken wir auf Ok.\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt2}
+Schritt 3:\\
+Nun muss das Modell gewählt werden, hier wählen wir die MVC Web-Application. Danach klicken wir auf Change Authentication. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt3}
+Schritt 4:\\
+In diesem Schritt müssen wir festlegen, das unsere Web-Anwendung User Daten speichert. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt4}
+Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Preview}
 \label{sec:erstellung}
 \subsection{Aufbau der Webseite }
 \label{sec:aufbau}
