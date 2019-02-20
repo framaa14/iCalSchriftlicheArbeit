@@ -10,6 +10,9 @@ möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beis
 
 \subsection{Login Handling}
 \label{sec:Login}
+Die Webseite soll eine Login Funktion haben die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\ \\Dafür muss unser Webseite eine passende sichere Authentifizierung gewährleisten können und diese sensiblen Daten in einer Datenbank verschlüsselt speichern. 
+
+(code erklären)
 \subsection{Two-Factor-Auth}
 \label{sec:tfa}
 \subsubsection{Was ist Two-Factor Authentication}
@@ -22,7 +25,7 @@ Die dabei geltenden Faktoren lauten:
 \end{enumerate}
 Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\ \\Als neueres Beispiel könnte man das Anmelden von seinem Google Account nehmen, wo man sein Passwort wissen muss und mit seinem Handy bestätigen, das man sich einloggen will, also etwas das man weiß und etwas was man hat. 
 
-(wikipedia)
+(wikipedia,code erklären)
 \subsection{Path-Traversal}
 \label{sec:Path-Traversal}
 Als Path-Traversal wird eine Security Lüge bezeichnet die es einem Angreifer, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können sollte. 
@@ -320,7 +323,7 @@ public List<string> getUsersTables(string myuser)
     return tables;
 }
 \end{lstlisting}
-Bei dem Benutztem SQL Statement könnt man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
+Bei dem Benutztem SQL Statement könnte man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
 \subsection{Controller}
 \label{sec:Controller}
 \subsection{Views}
