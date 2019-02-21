@@ -1,162 +1,166 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Projektmanagement und Organisation}{7}{section.1}
+\contentsline {section}{\numberline {1}Aufgabenstellung}{7}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Team}{7}{subsection.1.1}
+\contentsline {section}{\numberline {2}Projektmanagement und Organisation}{7}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Auftraggeber - Intact Systems}{7}{subsection.1.2}
+\contentsline {subsection}{\numberline {2.1}Team}{7}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Projektmanagement}{8}{subsection.1.3}
+\contentsline {subsection}{\numberline {2.2}Auftraggeber - Intact Systems}{8}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1}Scrum}{8}{subsubsection.1.3.1}
+\contentsline {subsection}{\numberline {2.3}Projektmanagement}{8}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.1.1}Artefakte}{8}{paragraph.1.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1}Scrum}{8}{subsubsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.1.2}Rollen}{10}{paragraph.1.3.1.2}
+\contentsline {paragraph}{\numberline {2.3.1.1}Artefakte}{8}{paragraph.2.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.1.3}Meetings}{11}{paragraph.1.3.1.3}
+\contentsline {paragraph}{\numberline {2.3.1.2}Rollen}{11}{paragraph.2.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.1.4}Scrum Abwandlung in diesem Projekt}{13}{paragraph.1.3.1.4}
+\contentsline {paragraph}{\numberline {2.3.1.3}Meetings}{12}{paragraph.2.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Parser}{13}{section.2}
+\contentsline {paragraph}{\numberline {2.3.1.4}Scrum Abwandlung in diesem Projekt}{13}{paragraph.2.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Aufgabe}{13}{subsection.2.1}
+\contentsline {section}{\numberline {3}Parser}{14}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Source-Code}{13}{subsubsection.2.1.1}
+\contentsline {subsection}{\numberline {3.1}Aufgabe}{14}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Entity Framework}{13}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {3.1.1}Source-Code}{14}{subsubsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Funktionsweise}{13}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {3.2}Entity Framework}{14}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Anwendung}{13}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Funktionsweise}{14}{subsubsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Source-Code}{19}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {3.2.2}Anwendung}{14}{subsubsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Technologien}{19}{section.3}
+\contentsline {subsubsection}{\numberline {3.2.3}Source-Code}{19}{subsubsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Allgemeines}{19}{subsection.3.1}
+\contentsline {section}{\numberline {4}Technologien}{19}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Programmierung}{19}{subsection.3.2}
+\contentsline {subsection}{\numberline {4.1}Allgemeines}{19}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Visual Studio 17 Community}{19}{subsubsection.3.2.1}
+\contentsline {subsection}{\numberline {4.2}Programmierung}{19}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}.NET Framework 4.6}{20}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Visual Studio 17 Community}{19}{subsubsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3}asp.net}{20}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2}.NET Framework 4.6}{20}{subsubsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.4}MSSQL}{23}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {4.2.3}asp.net}{20}{subsubsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.5}Microsoft SQL Server management Studios}{24}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {4.2.4}MSSQL}{23}{subsubsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.6}Entity Framework}{24}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {4.2.5}Microsoft SQL Server management Studios}{24}{subsubsection.4.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.7}iCal}{24}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {4.2.6}Entity Framework}{24}{subsubsection.4.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.8}ReSharper}{24}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {4.2.7}iCal}{24}{subsubsection.4.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.8.1}Resharper Installation}{25}{paragraph.3.2.8.1}
+\contentsline {subsubsection}{\numberline {4.2.8}ReSharper}{24}{subsubsection.4.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.9}PostMan}{25}{subsubsection.3.2.9}
+\contentsline {paragraph}{\numberline {4.2.8.1}Resharper Installation}{25}{paragraph.4.2.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Kommunikation}{25}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {4.2.9}PostMan}{25}{subsubsection.4.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}Discord}{25}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {4.3}Kommunikation}{25}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Telegram}{25}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.1}Discord}{25}{subsubsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}File Sharing}{26}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {4.3.2}Telegram}{25}{subsubsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}TFS}{26}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {4.4}File Sharing}{26}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Discord}{26}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {4.4.1}TFS}{26}{subsubsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.3}Google Drive}{26}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {4.4.2}Discord}{26}{subsubsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Organisation}{26}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {4.4.3}Google Drive}{26}{subsubsection.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Trello}{26}{subsubsection.3.5.1}
+\contentsline {subsection}{\numberline {4.5}Organisation}{26}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Schriftliche Arbeit}{26}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {4.5.1}Trello}{26}{subsubsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.6.1}LaTeX}{26}{subsubsection.3.6.1}
+\contentsline {subsection}{\numberline {4.6}Schriftliche Arbeit}{26}{subsection.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Webseite-Security}{27}{section.4}
+\contentsline {subsubsection}{\numberline {4.6.1}LaTeX}{26}{subsubsection.4.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Login Handling}{27}{subsection.4.1}
+\contentsline {paragraph}{\numberline {4.6.1.1}Warum LaTeX?}{27}{paragraph.4.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Two-Factor-Auth}{27}{subsection.4.2}
+\contentsline {section}{\numberline {5}Webseite-Security}{28}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Was ist Two-Factor Authentication}{27}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {5.1}Login Handling}{28}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Path-Traversal}{27}{subsection.4.3}
+\contentsline {subsection}{\numberline {5.2}Two-Factor-Auth}{28}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Grundprinzip}{27}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {5.2.1}Was ist Two-Factor Authentication}{28}{subsubsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2}Beispiele}{28}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {5.3}Path-Traversal}{28}{subsection.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.3}Protection Path-Traversal}{28}{subsubsection.4.3.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Grundprinzip}{29}{subsubsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}XSS Protection}{28}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {5.3.2}Beispiele}{29}{subsubsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Allgemeines \IeC {\"u}ber XSS}{28}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {5.3.3}Protection Path-Traversal}{29}{subsubsection.5.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}XSS Targets:}{28}{subsubsection.4.4.2}
+\contentsline {subsection}{\numberline {5.4}XSS Protection}{29}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Warum ist Javascript so beliebt?}{29}{subsubsection.4.4.3}
+\contentsline {subsubsection}{\numberline {5.4.1}Allgemeines \IeC {\"u}ber XSS}{29}{subsubsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.4}Beliebte Angriffsvektoren}{29}{subsubsection.4.4.4}
+\contentsline {subsubsection}{\numberline {5.4.2}XSS Targets:}{30}{subsubsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.5}Session Hijacking}{29}{subsubsection.4.4.5}
+\contentsline {subsubsection}{\numberline {5.4.3}Warum ist Javascript so beliebt?}{30}{subsubsection.5.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.6}Website-Defacements}{29}{subsubsection.4.4.6}
+\contentsline {subsubsection}{\numberline {5.4.4}Beliebte Angriffsvektoren}{30}{subsubsection.5.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.7}Phishing}{29}{subsubsection.4.4.7}
+\contentsline {subsubsection}{\numberline {5.4.5}Session Hijacking}{30}{subsubsection.5.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.8}Cross-Site-Tracing XST}{30}{subsubsection.4.4.8}
+\contentsline {subsubsection}{\numberline {5.4.6}Website-Defacements}{30}{subsubsection.5.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.9}Beispiel}{31}{subsubsection.4.4.9}
+\contentsline {subsubsection}{\numberline {5.4.7}Phishing}{30}{subsubsection.5.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.10}Wie gew\IeC {\"a}hrleisten wir XSS Protection}{31}{subsubsection.4.4.10}
+\contentsline {subsubsection}{\numberline {5.4.8}Cross-Site-Tracing XST}{32}{subsubsection.5.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}XSRF/CSRF Protection}{33}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {5.4.9}Beispiel}{32}{subsubsection.5.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.1}Was ist XSRF/CSRF}{33}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {5.4.10}Wie gew\IeC {\"a}hrleisten wir XSS Protection}{32}{subsubsection.5.4.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.2}Wie Funktioniert eine Solche Attacke}{33}{subsubsection.4.5.2}
+\contentsline {subsection}{\numberline {5.5}XSRF/CSRF Protection}{34}{subsection.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.3}Verhindern}{33}{subsubsection.4.5.3}
+\contentsline {subsubsection}{\numberline {5.5.1}Was ist XSRF/CSRF}{34}{subsubsection.5.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6}Hashes}{34}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {5.5.2}Wie Funktioniert eine Solche Attacke}{34}{subsubsection.5.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.1}HASH Kollisionen}{34}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {5.5.3}Verhindern}{34}{subsubsection.5.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7}Wie funktioniert ein HASH Algorithmus}{34}{subsection.4.7}
+\contentsline {subsection}{\numberline {5.6}Hashes}{35}{subsection.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.7.1}Allgemeines \IeC {\"u}ber SHA256}{34}{subsubsection.4.7.1}
+\contentsline {subsubsection}{\numberline {5.6.1}HASH Kollisionen}{35}{subsubsection.5.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.7.2}Der Algorithmus}{35}{subsubsection.4.7.2}
+\contentsline {subsection}{\numberline {5.7}Wie funktioniert ein HASH Algorithmus}{35}{subsection.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.7.3}Das Padding}{35}{subsubsection.4.7.3}
+\contentsline {subsubsection}{\numberline {5.7.1}Allgemeines \IeC {\"u}ber SHA256}{35}{subsubsection.5.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.7.4}Block decomposition}{36}{subsubsection.4.7.4}
+\contentsline {subsubsection}{\numberline {5.7.2}Der Algorithmus}{36}{subsubsection.5.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.8}Password Hashes}{36}{subsection.4.8}
+\contentsline {subsubsection}{\numberline {5.7.3}Das Padding}{36}{subsubsection.5.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}ASP.NET MVC}{36}{section.5}
+\contentsline {subsubsection}{\numberline {5.7.4}Block decomposition}{37}{subsubsection.5.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Allgemeines MVC}{37}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.8}Password Hashes}{37}{subsection.5.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Erstellung der Webseite}{37}{subsection.5.2}
+\contentsline {section}{\numberline {6}ASP.NET MVC}{37}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Aufbau der Webseite }{42}{subsection.5.3}
+\contentsline {subsection}{\numberline {6.1}Allgemeines MVC}{38}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Link generation}{42}{subsection.5.4}
+\contentsline {subsection}{\numberline {6.2}Erstellung der Webseite}{38}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Controller}{42}{subsection.5.5}
+\contentsline {subsection}{\numberline {6.3}Aufbau der Webseite }{42}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6}Views}{42}{subsection.5.6}
+\contentsline {subsection}{\numberline {6.4}Link generation}{46}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7}Services}{42}{subsection.5.7}
+\contentsline {subsection}{\numberline {6.5}Controller}{47}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.8}User Datenbank}{42}{subsection.5.8}
+\contentsline {subsection}{\numberline {6.6}Views}{47}{subsection.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.7}Services}{47}{subsection.6.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.8}User Datenbank}{47}{subsection.6.8}
