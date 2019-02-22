@@ -1,76 +1,80 @@
 \BOOKMARK [1][-]{section.1}{Aufgabenstellung}{}% 1
-\BOOKMARK [1][-]{section.2}{Projektmanagement und Organisation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Team}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Auftraggeber - Intact Systems}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Projektmanagement}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Scrum}{subsection.2.3}% 6
-\BOOKMARK [1][-]{section.3}{Parser}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{Aufgabe}{section.3}% 8
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Source-Code}{subsection.3.1}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Entity Framework}{section.3}% 10
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Funktionsweise}{subsection.3.2}% 11
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Anwendung}{subsection.3.2}% 12
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Source-Code}{subsection.3.2}% 13
-\BOOKMARK [1][-]{section.4}{Technologien}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Allgemeines}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Programmierung}{section.4}% 16
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Visual Studio 17 Community}{subsection.4.2}% 17
-\BOOKMARK [3][-]{subsubsection.4.2.2}{.NET Framework 4.6}{subsection.4.2}% 18
-\BOOKMARK [3][-]{subsubsection.4.2.3}{asp.net}{subsection.4.2}% 19
-\BOOKMARK [3][-]{subsubsection.4.2.4}{MSSQL}{subsection.4.2}% 20
-\BOOKMARK [3][-]{subsubsection.4.2.5}{Microsoft SQL Server management Studios}{subsection.4.2}% 21
-\BOOKMARK [3][-]{subsubsection.4.2.6}{Entity Framework}{subsection.4.2}% 22
-\BOOKMARK [3][-]{subsubsection.4.2.7}{iCal}{subsection.4.2}% 23
-\BOOKMARK [3][-]{subsubsection.4.2.8}{ReSharper}{subsection.4.2}% 24
-\BOOKMARK [3][-]{subsubsection.4.2.9}{PostMan}{subsection.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.3}{Kommunikation}{section.4}% 26
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Discord}{subsection.4.3}% 27
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Telegram}{subsection.4.3}% 28
-\BOOKMARK [2][-]{subsection.4.4}{File Sharing}{section.4}% 29
-\BOOKMARK [3][-]{subsubsection.4.4.1}{TFS}{subsection.4.4}% 30
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Discord}{subsection.4.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Google Drive}{subsection.4.4}% 32
-\BOOKMARK [2][-]{subsection.4.5}{Organisation}{section.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Trello}{subsection.4.5}% 34
-\BOOKMARK [2][-]{subsection.4.6}{Schriftliche Arbeit}{section.4}% 35
-\BOOKMARK [3][-]{subsubsection.4.6.1}{LaTeX}{subsection.4.6}% 36
-\BOOKMARK [1][-]{section.5}{Webseite-Security}{}% 37
-\BOOKMARK [2][-]{subsection.5.1}{Login Handling}{section.5}% 38
-\BOOKMARK [2][-]{subsection.5.2}{Two-Factor-Auth}{section.5}% 39
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Was ist Two-Factor Authentication}{subsection.5.2}% 40
-\BOOKMARK [2][-]{subsection.5.3}{Path-Traversal}{section.5}% 41
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Grundprinzip}{subsection.5.3}% 42
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Beispiele}{subsection.5.3}% 43
-\BOOKMARK [3][-]{subsubsection.5.3.3}{Protection Path-Traversal}{subsection.5.3}% 44
-\BOOKMARK [2][-]{subsection.5.4}{XSS Protection}{section.5}% 45
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Allgemeines \374ber XSS}{subsection.5.4}% 46
-\BOOKMARK [3][-]{subsubsection.5.4.2}{XSS Targets:}{subsection.5.4}% 47
-\BOOKMARK [3][-]{subsubsection.5.4.3}{Warum ist Javascript so beliebt?}{subsection.5.4}% 48
-\BOOKMARK [3][-]{subsubsection.5.4.4}{Beliebte Angriffsvektoren}{subsection.5.4}% 49
-\BOOKMARK [3][-]{subsubsection.5.4.5}{Session Hijacking}{subsection.5.4}% 50
-\BOOKMARK [3][-]{subsubsection.5.4.6}{Website-Defacements}{subsection.5.4}% 51
-\BOOKMARK [3][-]{subsubsection.5.4.7}{Phishing}{subsection.5.4}% 52
-\BOOKMARK [3][-]{subsubsection.5.4.8}{Cross-Site-Tracing XST}{subsection.5.4}% 53
-\BOOKMARK [3][-]{subsubsection.5.4.9}{Beispiel}{subsection.5.4}% 54
-\BOOKMARK [3][-]{subsubsection.5.4.10}{Wie gew\344hrleisten wir XSS Protection}{subsection.5.4}% 55
-\BOOKMARK [2][-]{subsection.5.5}{XSRF/CSRF Protection}{section.5}% 56
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Was ist XSRF/CSRF}{subsection.5.5}% 57
-\BOOKMARK [3][-]{subsubsection.5.5.2}{Wie Funktioniert eine Solche Attacke}{subsection.5.5}% 58
-\BOOKMARK [3][-]{subsubsection.5.5.3}{Verhindern}{subsection.5.5}% 59
-\BOOKMARK [2][-]{subsection.5.6}{Hashes}{section.5}% 60
-\BOOKMARK [3][-]{subsubsection.5.6.1}{HASH Kollisionen}{subsection.5.6}% 61
-\BOOKMARK [2][-]{subsection.5.7}{Wie funktioniert ein HASH Algorithmus}{section.5}% 62
-\BOOKMARK [3][-]{subsubsection.5.7.1}{Allgemeines \374ber SHA256}{subsection.5.7}% 63
-\BOOKMARK [3][-]{subsubsection.5.7.2}{Der Algorithmus}{subsection.5.7}% 64
-\BOOKMARK [3][-]{subsubsection.5.7.3}{Das Padding}{subsection.5.7}% 65
-\BOOKMARK [3][-]{subsubsection.5.7.4}{Block decomposition}{subsection.5.7}% 66
-\BOOKMARK [2][-]{subsection.5.8}{Password Hashes}{section.5}% 67
-\BOOKMARK [1][-]{section.6}{ASP.NET MVC}{}% 68
-\BOOKMARK [2][-]{subsection.6.1}{Allgemeines MVC}{section.6}% 69
-\BOOKMARK [2][-]{subsection.6.2}{Erstellung der Webseite}{section.6}% 70
-\BOOKMARK [2][-]{subsection.6.3}{Aufbau der Webseite }{section.6}% 71
-\BOOKMARK [2][-]{subsection.6.4}{Link generation}{section.6}% 72
-\BOOKMARK [2][-]{subsection.6.5}{Controller}{section.6}% 73
-\BOOKMARK [2][-]{subsection.6.6}{Views}{section.6}% 74
-\BOOKMARK [2][-]{subsection.6.7}{Services}{section.6}% 75
-\BOOKMARK [2][-]{subsection.6.8}{User Datenbank}{section.6}% 76
+\BOOKMARK [2][-]{subsection.1.1}{Technische Aspekte der Aufgabenstellung}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Projektmanagement und Organisation}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Team}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Auftraggeber - Intact Systems}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Projektmanagement}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Scrum}{subsection.2.3}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Arbeitsteilung}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Projektstrukturplan}{subsection.2.4}% 9
+\BOOKMARK [1][-]{section.3}{iCal}{}% 10
+\BOOKMARK [1][-]{section.4}{Parser}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Aufgabe}{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Source-Code}{subsection.4.1}% 13
+\BOOKMARK [2][-]{subsection.4.2}{Entity Framework}{section.4}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Funktionsweise}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Anwendung}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Source-Code}{subsection.4.2}% 17
+\BOOKMARK [1][-]{section.5}{Technologien}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Allgemeines}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Programmierung}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Visual Studio 17 Community}{subsection.5.2}% 21
+\BOOKMARK [3][-]{subsubsection.5.2.2}{.NET Framework 4.6}{subsection.5.2}% 22
+\BOOKMARK [3][-]{subsubsection.5.2.3}{asp.net}{subsection.5.2}% 23
+\BOOKMARK [3][-]{subsubsection.5.2.4}{MSSQL}{subsection.5.2}% 24
+\BOOKMARK [3][-]{subsubsection.5.2.5}{Microsoft SQL Server management Studios}{subsection.5.2}% 25
+\BOOKMARK [3][-]{subsubsection.5.2.6}{Entity Framework}{subsection.5.2}% 26
+\BOOKMARK [3][-]{subsubsection.5.2.7}{iCal}{subsection.5.2}% 27
+\BOOKMARK [3][-]{subsubsection.5.2.8}{ReSharper}{subsection.5.2}% 28
+\BOOKMARK [3][-]{subsubsection.5.2.9}{PostMan}{subsection.5.2}% 29
+\BOOKMARK [2][-]{subsection.5.3}{Kommunikation}{section.5}% 30
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Discord}{subsection.5.3}% 31
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Telegram}{subsection.5.3}% 32
+\BOOKMARK [2][-]{subsection.5.4}{File Sharing}{section.5}% 33
+\BOOKMARK [3][-]{subsubsection.5.4.1}{TFS}{subsection.5.4}% 34
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Discord}{subsection.5.4}% 35
+\BOOKMARK [3][-]{subsubsection.5.4.3}{Google Drive}{subsection.5.4}% 36
+\BOOKMARK [2][-]{subsection.5.5}{Organisation}{section.5}% 37
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Trello}{subsection.5.5}% 38
+\BOOKMARK [2][-]{subsection.5.6}{Schriftliche Arbeit}{section.5}% 39
+\BOOKMARK [3][-]{subsubsection.5.6.1}{LaTeX}{subsection.5.6}% 40
+\BOOKMARK [1][-]{section.6}{Webseite-Security}{}% 41
+\BOOKMARK [2][-]{subsection.6.1}{Login Handling}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.2}{Two-Factor-Auth}{section.6}% 43
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Was ist Two-Factor Authentication}{subsection.6.2}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Path-Traversal}{section.6}% 45
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Grundprinzip}{subsection.6.3}% 46
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Beispiele}{subsection.6.3}% 47
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Protection Path-Traversal}{subsection.6.3}% 48
+\BOOKMARK [2][-]{subsection.6.4}{XSS Protection}{section.6}% 49
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Allgemeines \374ber XSS}{subsection.6.4}% 50
+\BOOKMARK [3][-]{subsubsection.6.4.2}{XSS Targets:}{subsection.6.4}% 51
+\BOOKMARK [3][-]{subsubsection.6.4.3}{Warum ist Javascript so beliebt?}{subsection.6.4}% 52
+\BOOKMARK [3][-]{subsubsection.6.4.4}{Beliebte Angriffsvektoren}{subsection.6.4}% 53
+\BOOKMARK [3][-]{subsubsection.6.4.5}{Session Hijacking}{subsection.6.4}% 54
+\BOOKMARK [3][-]{subsubsection.6.4.6}{Website-Defacements}{subsection.6.4}% 55
+\BOOKMARK [3][-]{subsubsection.6.4.7}{Phishing}{subsection.6.4}% 56
+\BOOKMARK [3][-]{subsubsection.6.4.8}{Cross-Site-Tracing XST}{subsection.6.4}% 57
+\BOOKMARK [3][-]{subsubsection.6.4.9}{Beispiel}{subsection.6.4}% 58
+\BOOKMARK [3][-]{subsubsection.6.4.10}{Wie gew\344hrleisten wir XSS Protection}{subsection.6.4}% 59
+\BOOKMARK [2][-]{subsection.6.5}{XSRF/CSRF Protection}{section.6}% 60
+\BOOKMARK [3][-]{subsubsection.6.5.1}{Was ist XSRF/CSRF}{subsection.6.5}% 61
+\BOOKMARK [3][-]{subsubsection.6.5.2}{Wie Funktioniert eine Solche Attacke}{subsection.6.5}% 62
+\BOOKMARK [3][-]{subsubsection.6.5.3}{Verhindern}{subsection.6.5}% 63
+\BOOKMARK [2][-]{subsection.6.6}{Hashes}{section.6}% 64
+\BOOKMARK [3][-]{subsubsection.6.6.1}{HASH Kollisionen}{subsection.6.6}% 65
+\BOOKMARK [2][-]{subsection.6.7}{Wie funktioniert ein HASH Algorithmus}{section.6}% 66
+\BOOKMARK [3][-]{subsubsection.6.7.1}{Allgemeines \374ber SHA256}{subsection.6.7}% 67
+\BOOKMARK [3][-]{subsubsection.6.7.2}{Der Algorithmus}{subsection.6.7}% 68
+\BOOKMARK [3][-]{subsubsection.6.7.3}{Das Padding}{subsection.6.7}% 69
+\BOOKMARK [3][-]{subsubsection.6.7.4}{Block decomposition}{subsection.6.7}% 70
+\BOOKMARK [2][-]{subsection.6.8}{Password Hashes}{section.6}% 71
+\BOOKMARK [1][-]{section.7}{ASP.NET MVC}{}% 72
+\BOOKMARK [2][-]{subsection.7.1}{Allgemeines MVC}{section.7}% 73
+\BOOKMARK [2][-]{subsection.7.2}{Erstellung der Webseite}{section.7}% 74
+\BOOKMARK [2][-]{subsection.7.3}{Aufbau der Webseite }{section.7}% 75
+\BOOKMARK [2][-]{subsection.7.4}{Link generation}{section.7}% 76
+\BOOKMARK [2][-]{subsection.7.5}{Controller}{section.7}% 77
+\BOOKMARK [2][-]{subsection.7.6}{Views}{section.7}% 78
+\BOOKMARK [2][-]{subsection.7.7}{Services}{section.7}% 79
+\BOOKMARK [2][-]{subsection.7.8}{User Datenbank}{section.7}% 80

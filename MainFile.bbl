@@ -19,6 +19,35 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ScrumScrum-Review}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f7db5bbd8037b801423c59ef307ff86f}{%
+           family={Bittenfeld},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima Herwarth},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7db5bbd8037b801423c59ef307ff86f}
+      \strng{fullhash}{f7db5bbd8037b801423c59ef307ff86f}
+      \strng{bibnamehash}{f7db5bbd8037b801423c59ef307ff86f}
+      \strng{authorbibnamehash}{f7db5bbd8037b801423c59ef307ff86f}
+      \strng{authornamehash}{f7db5bbd8037b801423c59ef307ff86f}
+      \strng{authorfullhash}{f7db5bbd8037b801423c59ef307ff86f}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Das Review-Meeting in Scrum: „Das haben wir geschafft!“}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://blog.seibert-media.net/blog/2011/11/02/scrum-review-meeting/
+      \endverb
+      \verb{url}
+      \verb https://blog.seibert-media.net/blog/2011/11/02/scrum-review-meeting/
+      \endverb
+    \endentry
     \entry{ScrumProduct-Increment}{online}{}
       \name{author}{1}{}{%
         {{hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -264,6 +293,33 @@
       \endverb
       \verb{url}
       \verb https://www.scrum.org/resources/what-is-sprint-planning
+      \endverb
+    \endentry
+    \entry{TechnologieLaTeX}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7e742b2aed701e7700c1f2b0896a4907}{%
+           family={Steinhauser},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e742b2aed701e7700c1f2b0896a4907}
+      \strng{fullhash}{7e742b2aed701e7700c1f2b0896a4907}
+      \strng{bibnamehash}{7e742b2aed701e7700c1f2b0896a4907}
+      \strng{authorbibnamehash}{7e742b2aed701e7700c1f2b0896a4907}
+      \strng{authornamehash}{7e742b2aed701e7700c1f2b0896a4907}
+      \strng{authorfullhash}{7e742b2aed701e7700c1f2b0896a4907}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Was ist LaTex? Einfach erklärt}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://praxistipps.chip.de/was-ist-latex-einfach-erklaert_48193
+      \endverb
+      \verb{url}
+      \verb https://praxistipps.chip.de/was-ist-latex-einfach-erklaert_48193
       \endverb
     \endentry
   \enddatalist
