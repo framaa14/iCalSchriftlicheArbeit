@@ -1943,7 +1943,9 @@
     <bcf:citekey order="18">ScrumScrum-Retroperspective</bcf:citekey>
     <bcf:citekey order="19">ScrumScrum-Review</bcf:citekey>
     <bcf:citekey order="20">ScrumScrum-Review</bcf:citekey>
-    <bcf:citekey order="21">TechnologieLaTeX</bcf:citekey>
+    <bcf:citekey order="21">VMI-Matrix</bcf:citekey>
+    <bcf:citekey order="22">VMI-Matrix</bcf:citekey>
+    <bcf:citekey order="23">TechnologieLaTeX</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

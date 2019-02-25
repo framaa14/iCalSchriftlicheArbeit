@@ -322,6 +322,31 @@
       \verb https://praxistipps.chip.de/was-ist-latex-einfach-erklaert_48193
       \endverb
     \endentry
+    \entry{VMI-Matrix}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c5d9e656d25e34a2bed94768d8b64c78}{%
+           family={VMI-Matrix},
+           familyi={V\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \strng{fullhash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \strng{bibnamehash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \strng{authorbibnamehash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \strng{authornamehash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \strng{authorfullhash}{c5d9e656d25e34a2bed94768d8b64c78}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{VMI-Matrix}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.projektmanagementhandbuch.de/handbuch/projektplanung/vmi-matrix/
+      \endverb
+      \verb{url}
+      \verb https://www.projektmanagementhandbuch.de/handbuch/projektplanung/vmi-matrix/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
