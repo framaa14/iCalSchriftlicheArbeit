@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'MainFile.blg'
-[18] biber:313> INFO - === Mon Feb 25, 2019, 11:36:54
-[32] Biber.pm:371> INFO - Reading 'MainFile.bcf'
-[74] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
-[83] Biber.pm:3981> INFO - Processing section 0
-[90] Biber.pm:4154> INFO - Looking for bibtex format file 'literaturQuellen.bib' for section 0
-[91] bibtex.pm:1468> INFO - LaTeX decoding ...
-[111] bibtex.pm:1294> INFO - Found BibTeX data source 'literaturQuellen.bib'
-[150] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[150] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[150] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[151] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[160] bbl.pm:617> INFO - Writing 'MainFile.bbl' with encoding 'UTF-8'
-[163] bbl.pm:720> INFO - Output to MainFile.bbl
+[19] biber:313> INFO - === Di Feb 26, 2019, 16:13:32
+[35] Biber.pm:371> INFO - Reading 'MainFile.bcf'
+[81] Biber.pm:857> INFO - Found 14 citekeys in bib section 0
+[92] Biber.pm:3981> INFO - Processing section 0
+[99] Biber.pm:4154> INFO - Looking for bibtex format file 'literaturQuellen.bib' for section 0
+[100] bibtex.pm:1468> INFO - LaTeX decoding ...
+[126] bibtex.pm:1294> INFO - Found BibTeX data source 'literaturQuellen.bib'
+[176] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[176] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[176] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[176] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[190] bbl.pm:617> INFO - Writing 'MainFile.bbl' with encoding 'UTF-8'
+[193] bbl.pm:720> INFO - Output to MainFile.bbl

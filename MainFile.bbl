@@ -75,6 +75,60 @@
       \verb https://www.mountaingoatsoftware.com/blog/what-does-it-mean-to-be-potentially-releasable
       \endverb
     \endentry
+    \entry{TechnologieiCalExample}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3b338f1497992a1fa24ae4de9dd838f1}{%
+           family={Dawson},
+           familyi={D\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \strng{fullhash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \strng{bibnamehash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \strng{authorbibnamehash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \strng{authornamehash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \strng{authorfullhash}{3b338f1497992a1fa24ae4de9dd838f1}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RFC 2447 - iCalendar Message-Based Interoperability Protocol}
+      \field{year}{1998}
+      \verb{urlraw}
+      \verb https://tools.ietf.org/html/rfc2447
+      \endverb
+      \verb{url}
+      \verb https://tools.ietf.org/html/rfc2447
+      \endverb
+    \endentry
+    \entry{TechnologiePostman}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b3cedc9de2314e32896d25bce1bd0ecf}{%
+           family={Farmer},
+           familyi={F\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \strng{fullhash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \strng{bibnamehash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \strng{authorbibnamehash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \strng{authornamehash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \strng{authorfullhash}{b3cedc9de2314e32896d25bce1bd0ecf}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Student Blog: What is Postman, and why use it?}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it
+      \endverb
+      \verb{url}
+      \verb https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it
+      \endverb
+    \endentry
     \entry{ScrumScrum-Retroperspective}{online}{}
       \name{author}{1}{}{%
         {{hash=a334769077f8479889d7450ec755c42d}{%
