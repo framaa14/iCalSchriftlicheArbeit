@@ -6,9 +6,16 @@
 Die, während der Diplomarbeit, verwendeten Technologien werden anschließend, unter entsprechender Überschrift, beschrieben, wobei auf die wichtigsten, oder auch meist benutzten, genauer eingegangen wird, in Form einer Installation und einer erweiterten Beschreibung. Zudem werden auch alle Technologien beschrieben welche sich nicht bis zum Ende der Arbeit durchsetzen konnten und während der Arbeit auf eine andere gewechselt wurde oder diese überhaupt nicht mehr verwendet wurde. Dies wird jedoch im Beschreibungstext kenntlich gemacht.
 \subsection{Programmierung}
 \label{sec:TechnologieProgrammierung}
+\subsubsection {C\#}
+\label{sec:CSharp}
+Der praktische Teil der Diplomarbeit wurde mithilfe der Objekt-Orientierten Programmiersprache C\# entwickelt, da die Firma Intact GmbH, der Auftraggeber der Diplomarbeit, in der C\#/.NET-Entwicklung tätig ist. \\ \break
+C\# wurde im Jahr 2001 von Microsoft speziell für die .NET Umgebung veröffentlicht und ist daher eine junge Programmiersprache. C\# hat mehrere Anwendungsbereiche unter anderem kann man Desktopanwendungen, XML Web services, Datenbankanwendungen und vieles mehr entwickeln. \\ \break
+Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls man eine dieser Programmiersprachen beherrscht ist es einfach in kurzer Zeit zu lernen wie man in C\# programmiert. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig.
+\cite{TechnologieCSharpErklaerung} 
+
 \subsubsection {Visual Studio 17 Community}
 \label{sec:VisualStudio17Community}
-Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 / 2017 ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
+Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 (2017) ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
 \begin{itemize}
 \item Visual Basic .NET
 \item C
@@ -61,23 +68,21 @@ Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwend
 Im Anschluss wird durch Screenshots erläutert wie ein ASP.NET Projekt in Visual Studio 2017 erstellt wird.
 
 \begin{figure}[H]
-    \centering
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial01}
     \caption{ASP.NET Projekt erstellen}
     \label{fig:aspNetTut01}
-
-    \centering
+\end{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial02}
     \caption{ASP.NET Webanwendung auswählen}
     \label{fig:aspNetTut02}
 \end{figure}
 \begin{figure}[H]
-    \centering
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial03}
     \caption{ASP.NET Vorlage auswählen}
     \label{fig:aspNetTut03}
-
-    \centering
+\end{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial04}
     \caption{ASP.NET Projekt Resultat}
     \label{fig:aspNetTut04}
@@ -138,25 +143,6 @@ Wählt man nun eines der Möglichkeiten aus und klickt sich durch Agreements sol
 PostMan wird verwendet um API Tests durchzuführen. Die Software bietet eine sehr übersichtliche Benutzeroberfläche und ermöglicht es dem Benutzer einfach HTTP Requests zu generieren und erspart dem Benutzer große Mengen an Code zu schreiben.\break
 \textcite{TechnologiePostman} \\ \break
 Man kann zum Beispiel normale GET-Requests senden, bei der Response kann man unter anderem angeben wie sie angezeigt werden soll. Auf der linken Seite sieht man auch eine zeitliche Protokollierung wann welche Anfragen gesendet wurden.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]
-    {Technologien_Postman01}
-    \caption{Postman GET Request}
-    \label{fig:Postman}
-\end{figure}
-
-Unter dem Tab ''AUTH'' die ''standard authentifications'' setzen. Dadurch kann Postman sich bei einer Request anmelden.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]
-    {Technologien_Postman02}
-    \caption{Postman GET Request}
-    \label{fig:Postman}
-\end{figure}
-
 
 % HTTP und API müssen erklärt werden
 \subsection{Kommunikation}
