@@ -404,7 +404,7 @@ Man kann sein Passwort ändern oder sein 2FA einrichten. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_password}
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_2FA}
 Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalender, bzw. das Abrufen der Links oder das direkt herunterladen.\\ \\
- \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_calendars}
+\includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_calendars}
 \subsection{Link generation}
 \label{sec:link}
 Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion die der/die fertigen Kalender zur Verfügung stellt.
@@ -446,10 +446,45 @@ public List<string> getUsersTables(string myuser)
 Bei dem Benutztem SQL Statement könnte man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
 \subsection{Controller}
 \label{sec:Controller}
+MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel geben wir die folgende URL von unserem ICALWebservices in die Adressleiste eines Webbrowsers ein:\\ \\ 
+\url{http://localhost:50699/api/iCal/1} \\ \\
+In diesem Fall rufen wir einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ \\ Hier sehen sie wie dies implementiert wird.
+\begin{lstlisting}
+using iCalWebService.BL;
+using Microsoft.AspNetCore.Mvc;
+...
+[HttpGet("{id}", Name = "Get")]
+public string Get(int id)
+{
+  return dal.GetICSFileFromFTP(id);
+}
+\end{lstlisting}
+Wie man sehen kann ist ein Controller nur eine Klasse. 
+
+\subsubsection{Controller Actions}
+\label{sec:controller_actions}
+Kontroller Actions sind öffentliche Methoden die aufgerufen werden wenn ein Kontroller mit einer spezifischen URL aufgerufen wird. Worauf man hier achten muss ist, dass jede dieser öffentlichen Methoden von jedem über die richtige URL aufgerufen werden kann und deshalb hier sehr darauf geachtet werden muss was hier aufgerufen werden kann. 
+
+\subsubsection{Action Results}
+\label{sec:controller_actions_results}
+Eine Controller-Aktion gibt ein so genanntes Aktionsergebnis zurück. Ein Aktionsergebnis ist das, was eine Controller-Aktion als Antwort auf eine Browseranforderung zurückgibt.\\ \\Das MVC-Framework von ASP.NET unterstützt verschiedene Arten von Aktionsergebnissen, darunter:
+\begin{enumerate}
+\item ViewResult - Represents HTML and markup.
+\item EmptyResult - Represents no result.
+\item RedirectResult - Represents a redirection to a new URL.
+\item JsonResult - Represents a JavaScript Object Notation result that can be used in an AJAX application.
+\item JavaScriptResult - Represents a JavaScript script.
+\item ContentResult - Represents a text result.
+\item FileContentResult - Represents a downloadable file (with the binary content).
+\item FilePathResult - Represents a downloadable file (with a path).
+\item FileStreamResult - Represents a downloadable file (with a file stream).
+\end{enumerate}
+Alle diese Resultate kommen von der Basis Klasse ActionResult.
+
+%(https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs 27.02)
+
 \subsection{Views}
 \label{sec:Views}
-\subsection{Services}
-\label{sec:Services}
 \subsection{User Datenbank}
 \label{sec:UserDB}
 \begin{itemize}
