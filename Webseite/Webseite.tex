@@ -1,10 +1,10 @@
 \renewcommand{\theauthor}{Marcel Stering}
 \section{Webseite-Security}
 \label{sec:Security}
-In diesem Abschnitt beschäftigen wir uns mit der Security der Webseite.
-Wir behandeln wie man das sichere einloggen in eine Webseite gewähren kann, 
+In diesem Abschnitt wird die Security der Webseite behandelt.
+Es wird behandelt wie man das sichere einloggen in eine Webseite gewähren kann, 
 wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
-möglich ist und wie man Passwörter speichert. Dazu werden wir einige Code Beispiele anführen.
+möglich ist und wie man Passwörter speichert. Dazu werden auch einige Code Beispiele angeführt werden.
 
 \subsection{Login Handling}
 \label{sec:Login}
@@ -153,7 +153,7 @@ Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu 
 \label{sec:xss}
 \subsubsection{Allgemeines über XSS}
 \label{sec:xss_allgemein}
-XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, zu Beispielen werden wir später noch kommen. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden User aufgerufen wird. 
+XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden User aufgerufen wird. 
 \subsubsection{XSS Targets:}
 \label{sec:xss_targets}
 \begin{enumerate}
@@ -230,7 +230,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
   xmlhttp.send();
 </script>
 \end{lstlisting}
-\subsubsection{Wie gewährleisten wir XSS Protection}
+\subsubsection{Wie wird XSS Protection gewährleistet}
 \label{sec:xss_prot}
 Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standard XSS versucht werden könnte. Alle diese Eingaben erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL Faktor weg.
 \\ \\
@@ -277,9 +277,9 @@ acct=Angreifer&amount=1000
 \url{https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2}
 \subsection{Hashes}
 \label{hash-expl}
-Wir beginnen die Erklärung von HASHes mit einem Beispiel.
+Die Erklärung von HASHes wird mit einem Beispiel begonnen.
 \\ \\
-Sagen wir, wir wollen ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das wir feststellen können, das es nicht verändert wurde. Um das zu gewährleisten, gibt es HASH Algorithmen. Ein HASH ist eine Einwegfunktion, heißt man kann einen HASH für ein File berechnen aber nicht aus dem HASH das File holen. 
+Ziel ist es ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das man dabei feststellen kann, das es nicht verändert wurde. Um das zu gewährleisten, gibt es HASH Algorithmen. Ein HASH ist eine Einwegfunktion, heißt man kann einen HASH für ein File berechnen aber nicht aus dem HASH das File holen. 
 
 Drei Sachen sind bei einem HASH Algorithmus wichtig.
 \begin{enumerate}
@@ -290,7 +290,7 @@ Drei Sachen sind bei einem HASH Algorithmus wichtig.
 
 \subsubsection{HASH Kollisionen}
 \label{sec:hash_coll}
-Sagen wir, wir haben ein wichtiges Dokument, das wir der Leitung in der IT schicken. Mit dem Dokument kommt der HASH damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Hacker möglich das File zu bekommen und zu verändern, würde der HASH ein anderer sein. Ist der HASH algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen HASH festzulegen.
+Man habe ein wichtiges Dokument, das man der Leitung in der IT schicken. Mit dem Dokument kommt der HASH damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Hacker möglich das File zu bekommen und zu verändern, würde der HASH ein anderer sein. Ist der HASH algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen HASH festzulegen.
 \\ \\
 Beispiele
 \begin{enumerate}
@@ -360,7 +360,7 @@ Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig fü
 
 \section{ASP.NET MVC}
 \label{sec:MVC}
-In diesem Abschnitt beschäftigen wir uns mit ASP.NET MVC mit der unsere Webseite aufgebaut ist. Wir besprechen die Grundindention von MVC und was MVC ist. Wie die Webseite aufgebaut wurde werden wir anhand Code auszügen zeigen. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundindention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 
 \subsection{Allgemeines MVC}
 \label{sec:allgemein}
@@ -372,16 +372,16 @@ Im Installer überprüft man dann ob man folgende Features installiert hat.\\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Install}
 Danach kann man ein MVC-Website Projekt erstellen dafür mach man folgendes.\\ \\
 Schritt 1:\\
-Zuerst müssen wir über File -> New -> Project, die Erstellung eines neuen Projekts einleiten.\\ \\
+Zuerst müssen leitet man über File -> New -> Project, die Erstellung eines neuen Projektes ein.\\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt1}
 Schritt 2:\\
-Danach müssen wir unter dem Tab Web die ASP.NET Core Web Application wählen und ihr einen Namen zuweisen. Danach klicken wir auf Ok.\\ \\
+Danach muss man unter dem Tab Web die ASP.NET Core Web Application wählen und ihr einen Namen zuweisen. Danach klickt man auf Ok.\\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt2}
 Schritt 3:\\
-Nun muss das Modell gewählt werden, hier wählen wir die MVC Web-Application. Danach klicken wir auf Change Authentication. \\ \\
+Nun muss das Modell gewählt werden, hier wählen man die MVC Web-Application. Danach klickt man auf Change Authentication. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt3}
 Schritt 4:\\
-In diesem Schritt müssen wir festlegen, das unsere Web-Anwendung User Daten speichert. \\ \\
+In diesem Schritt muss man festlegen, das unsere Web-Anwendung User Daten speichert. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt4}
 Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
@@ -389,9 +389,9 @@ Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Ex
 \label{sec:erstellung}
 \subsection{Aufbau der Webseite }
 \label{sec:aufbau}
-In diesem Kapitel beschäftigen wir unser damit wie die Webseite aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite. 
+In diesem Kapitel wird begahandelt wie die Webseite des ICAL-Webservices aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite. 
 
-Zunächst kommen wir auf die Hauptseite\\ \\
+Zunächst kommt man auf die Hauptseite\\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_Main}
 Auf dieser kann man sich dann entweder Einloggen oder Registrieren. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_Register}
@@ -446,9 +446,9 @@ public List<string> getUsersTables(string myuser)
 Bei dem Benutztem SQL Statement könnte man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
 \subsection{Controller}
 \label{sec:Controller}
-MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel geben wir die folgende URL von unserem ICALWebservices in die Adressleiste eines Webbrowsers ein:\\ \\ 
+MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel gibt man die folgende URL von unserem ICALWebservices in die Adressleiste eines Webbrowsers ein:\\ \\ 
 \url{http://localhost:50699/api/iCal/1} \\ \\
-In diesem Fall rufen wir einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ \\ Hier sehen sie wie dies implementiert wird.
+In diesem Fall ruft man einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ \\ Hier sehen sie wie dies implementiert wird.
 \begin{lstlisting}
 using iCalWebService.BL;
 using Microsoft.AspNetCore.Mvc;
@@ -485,6 +485,52 @@ Alle diese Resultate kommen von der Basis Klasse ActionResult.
 
 \subsection{Views}
 \label{sec:Views}
+Für ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, den man in die Adressleiste des Browsers eingibt. Die Seite, die einer Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\ \\
+In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Methoden zugeordnet. Eine Controller-Methode kann einen View zurückgeben. Eine Controller-Methode führt jedoch möglicherweise eine andere Methode aus, z. B. das weiterleiten zu einer anderen Controller-Methode.
+
+\subsubsection{Beispiel einer View}
+\label{mvc_view_beispiel}
+Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
+\begin{lstlisting}
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-default">Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+\end{lstlisting}
+(erklären)
+%https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 \subsection{User Datenbank}
 \label{sec:UserDB}
 \begin{itemize}
