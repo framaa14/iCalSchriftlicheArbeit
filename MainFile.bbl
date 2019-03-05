@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ParserUsingKeyword}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fc02d81adb81e2a1a30e17fb5b21b8bd}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Tingz},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \strng{fullhash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \strng{bibnamehash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \strng{authorbibnamehash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \strng{authornamehash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \strng{authorfullhash}{fc02d81adb81e2a1a30e17fb5b21b8bd}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding the 'using' statement in C}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://www.codeproject.com/Articles/6564/Understanding-the-using-statement-in-C
+      \endverb
+      \verb{url}
+      \verb https://www.codeproject.com/Articles/6564/Understanding-the-using-statement-in-C
+      \endverb
+    \endentry
     \entry{ScrumScrum-Review}{online}{}
       \name{author}{1}{}{%
         {{hash=f7db5bbd8037b801423c59ef307ff86f}{%
@@ -100,6 +127,33 @@
       \endverb
       \verb{url}
       \verb https://tools.ietf.org/html/rfc2447
+      \endverb
+    \endentry
+    \entry{iCalDocumentation}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e7b9958d0544a77ff3fa81df26bb37f3}{%
+           family={Desruisseaux},
+           familyi={D\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \strng{fullhash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \strng{bibnamehash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \strng{authorbibnamehash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \strng{authornamehash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \strng{authorfullhash}{e7b9958d0544a77ff3fa81df26bb37f3}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{iCalendar (RFC 5545)}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://icalendar.org/RFC-Specifications/iCalendar-RFC-5545/
+      \endverb
+      \verb{url}
+      \verb https://icalendar.org/RFC-Specifications/iCalendar-RFC-5545/
       \endverb
     \endentry
     \entry{TechnologiePostman}{online}{}
@@ -239,6 +293,81 @@
       \verb https://www.inloox.de/unternehmen/blog/artikel/scrum-grundlagen-einfach-erklaert-der-sprint-backlog/
       \endverb
     \endentry
+    \entry{XST}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cross Site Tracing}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.owasp.org/index.php/Cross_Site_Tracing
+      \endverb
+      \verb{url}
+      \verb https://www.owasp.org/index.php/Cross_Site_Tracing
+      \endverb
+    \endentry
+    \entry{XSS}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cross-site Scripting (XSS)}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+      \endverb
+      \verb{url}
+      \verb https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+      \endverb
+    \endentry
+    \entry{Path-Trav}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Path Traversal}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.owasp.org/index.php/Path_Traversal
+      \endverb
+      \verb{url}
+      \verb https://www.owasp.org/index.php/Path_Traversal
+      \endverb
+    \endentry
     \entry{ScrumProductOwner}{online}{}
       \name{author}{1}{}{%
         {{hash=cb970d4d79247025542e47edd0a22a37}{%
@@ -319,6 +448,52 @@
       \verb{url}
       \verb https://www.kayenta.de/training-seminar/artikel/daily-scrum-meeting-stand-up-meeting-im-agilen-projektmanagement.html
       \endverb
+    \endentry
+    \entry{Phishing}{online}{}
+      \name{author}{1}{}{%
+        {{hash=931ae4156942f9c560dce646765b34d4}{%
+           family={Ramzan},
+           familyi={R\bibinitperiod},
+           given={Zulfikar},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{fullhash}{931ae4156942f9c560dce646765b34d4}
+      \strng{bibnamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authorbibnamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authornamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authorfullhash}{931ae4156942f9c560dce646765b34d4}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Phishing and Cross-Site Scripting}
+      \field{year}{2006}
+      \verb{urlraw}
+      \verb https://www.symantec.com/connect/blogs/phishing-and-cross-site-scripting
+      \endverb
+      \verb{url}
+      \verb https://www.symantec.com/connect/blogs/phishing-and-cross-site-scripting
+      \endverb
+    \endentry
+    \entry{sha256}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=451969e851a7f38cf112ace82d969f48}{%
+           family={researchgate},
+           familyi={r\bibinitperiod}}}%
+      }
+      \strng{namehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{fullhash}{451969e851a7f38cf112ace82d969f48}
+      \strng{bibnamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authorbibnamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authornamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authorfullhash}{451969e851a7f38cf112ace82d969f48}
+      \field{sortinit}{r}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The cryptographic hash function SHA-256}
+      \field{year}{2010}
     \endentry
     \entry{ScrumSprint-Planning}{online}{}
       \name{author}{1}{}{%
@@ -401,7 +576,88 @@
       \verb https://www.projektmanagementhandbuch.de/handbuch/projektplanung/vmi-matrix/
       \endverb
     \endentry
+    \entry{mic_controller}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a0a59bff607e05ff829a28f96b12b0bf}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{fullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{bibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorbibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authornamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorfullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ASP.NET MVC Controller Overview}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
+      \endverb
+    \endentry
+    \entry{mic_views}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a0a59bff607e05ff829a28f96b12b0bf}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{fullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{bibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorbibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authornamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorfullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ASP.NET MVC Views Overview}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
+      \endverb
+    \endentry
+    \entry{2FA}{online}{}
+      \name{author}{1}{}{%
+        {{hash=12672e79b01e9ca7018105efb0ef871c}{%
+           family={wikipedia},
+           familyi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{fullhash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{bibnamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authorbibnamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authornamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authorfullhash}{12672e79b01e9ca7018105efb0ef871c}
+      \field{sortinit}{w}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multi-factor authentication}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Multi-factor_authentication
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Multi-factor_authentication
+      \endverb
+    \endentry
   \enddatalist
+  \missing{CSRF}
+  \missing{MIME-Typ}
 \endrefsection
 \endinput
 
