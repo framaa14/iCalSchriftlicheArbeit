@@ -155,7 +155,7 @@ Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu 
 \label{sec:xss}
 \subsubsection{Allgemeines über XSS}
 \label{sec:xss_allgemein}
-XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden User aufgerufen wird. 
+XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden Benutzer aufgerufen wird. 
 \subsubsection{XSS Targets:}
 \label{sec:xss_targets}
 \begin{enumerate}
@@ -177,7 +177,7 @@ Der Grund hierfür ist das Javascript quasi eine fundamentale Einheit einer Webs
 \textcite{XSS}
 \subsubsection{Session Hijacking}
 \label{sec:xss_session_hijacking}
-Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein User gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei das überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Admin Session zugänglich wird und der Angreifer so auf einen Admin Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Und hier reicht schon eine kleine XSS Vulnerability aus um dies zu bewerkstelligen. 
+Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei das überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Admin Session zugänglich wird und der Angreifer so auf einen Admin Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Und hier reicht schon eine kleine XSS Vulnerability aus um dies zu bewerkstelligen. 
 \subsubsection{Website-Defacements}
 \label{sec:xss_web_def}
 Website-Defacements hat etwas von digitalem Graffiti. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und sie dann optisch zu verändern. 
@@ -213,7 +213,7 @@ Es ergibt sich daraus \\ \\
 \\ \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
 \\ \\
-Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom User zu sehen. 
+Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom Benutzer zu sehen. 
 \textcite{Phishing}
 \subsubsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
@@ -362,7 +362,7 @@ Formel 1:
 \textcite{sha256}
 \subsection{Password Hashes}
 \label{sec:pwdhash}
-Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner User hasht.
+Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer hasht.
 
 \section{ASP.NET MVC}
 \label{sec:MVC}
@@ -387,7 +387,7 @@ Schritt 3:\\
 Nun muss das Modell gewählt werden, hier wählen man die MVC Web-Application. Danach klickt man auf Change Authentication. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt3}
 Schritt 4:\\
-In diesem Schritt muss man festlegen, das unsere Web-Anwendung User Daten speichert. \\ \\
+In diesem Schritt muss man festlegen, das unsere Web-Anwendung Benutzer Daten speichert. \\ \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt4}
 Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
@@ -538,7 +538,21 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \textcite{mic_views}
 \subsection{User Datenbank}
 \label{sec:UserDB}
-\begin{itemize}
-	\item Salt
-\end{itemize}
+Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
+\subsubsection{Salt}
 \label{sec:salt}
+Salt kommt aus der Kryptographie und ist eine zufällige Zeichenfolge, die man an den Klartext (bspw. einem Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen HASH umgewandelt. Dies wird gemacht um die Entropie der Eingabe zu erhöhen. Man nutzt einen Salt oft für die Speicherung von Passwörtern in Datenbanken. Wird ein Passwort überprüft wird dabei aber nicht jedesmal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als Falsch erkannt werden würde. Deswegen speichert man bei der Speicherung des Passworts in der Datenbank den dafür generierten Salt-Wert auch ab.
+\subsubsection{Warum Salt}
+Hashfunktionen wie SHA oder MD5 oder zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hash-Werte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt das der Hashwert eines Passworts stehts der selbe ist. Somit kann man erkennen welche Benutzer das selbe Passwort nutzen. Benutzen viele Benutzer das selbe Passwort gibt es viele gleiche Hashwerte, wodurch man annehmen kannd das hier ein eher schwaches bekanntes Passwort benutzt wird, wodurch Angreifer dann auf BruteForce Angriffe setzen könnten. Bei Bruteforce Angriffen benutzt man entweder eine Liste bekannter Passwörter und geht diese Zeile für Zeile durch oder benutzt direkt alle Möglichkeiten die es geben könnte.Hätte man Beispielsweise ein Passwort das aus 2 Kleinbuchstaben bestehen würde, würde man alle Kombinationen die es gibt durchtesten. \\ \\ Code Beispiel:
+\begin{lstlisting} 
+for i in {a..z}; do for j in {a..z}; do echo $i$j;done;done 
+\end{lstlisting}
+Dies würde folgenden output bringen: \\
+aa\\
+ab\\
+ac\\
+ad\\
+ae\\
+af\\
+..\\
+Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen.
