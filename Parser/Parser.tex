@@ -1,3 +1,7 @@
+% TODO - Dario: 
+% Entity Framework Source-Code
+% Aufgabe, hinzufügen des Modells unseres Projekts und genauer darauf eingehen wie der Parser funktioniert. 
+
 \renewcommand{\theauthor}{Dario Wagner}
 \justifying
 \section{Parser}
@@ -42,7 +46,7 @@ using (var db = new iCalContext())
   foreach (var calendar in db.Calendar.Where
   		  (x => CalendarIdList.Contains(x.CalendarId)))
   {
-    iCalFormat.Append("BEGIN:VCALENDER\nVERSION:2.0\nMETHOD:PUBLISH\n"
+    iCalFormat.Append("BEGIN:VCALENDAR\nVERSION:2.0\nMETHOD:PUBLISH\n"
 	+ "TZID:" + calendar.TimeZone.Continent + "-" 
     + calendar.TimeZone.Country + "\n");
     // Part 4
