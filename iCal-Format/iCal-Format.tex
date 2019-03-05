@@ -1,2 +1,32 @@
 \section{iCal}
 \label{sec:iCal}
+\subsection{Was ist iCal?}
+\label{sec:wasIstiCal?}
+iCal oder auch iCalendar ist ein Dateiformat, welches dazu verwendet wird um Kalender zu speichern. Fast jede Kalenderanwendung verwendet zur Speicherung und Manipulation ihrer Kalender iCal. Als Datei hat eine iCal-Datei die Endung .ics. Ein .ics ist von Menschen lesbar und leicht veränderbar, was die Arbeit mit iCal-Dateien um einiges vereinfacht. \\
+iCal ist ein MIME-Typ, dies ermöglicht es iCal-Dateien über jegliche Methoden zu versenden.\\ \textcite{iCal-Basics} \\
+MIME bedeutet Multipurpose Internet Mail Extension und beschreibt Dateien, welche Art von Datei bei der Kommunikation zwischen Browser und Webserver versendet wird. MIME-Typen wären zum Beispiel: Textdateien, Bilder, Audio-Dateien. \\ \textcite{MIME-Typ}
+
+
+\subsection{Warum wurde iCal verwendet?}
+\label{sec:warumWurdeiCalVerwendet?}
+iCal wurde verwendet, da der Großteil der Kalenderprogramme das iCal-Format verwenden und es viele Ressourcen rund um iCal gibt, was den Umgang damit deutlich vereinfacht. Weiters sind die Grundlagen einer iCal-Datei schnell verstanden wegen des einfachen Aufbau einer Datei.
+
+\subsection{Aufbau einer iCal-Datei}
+\label{sec:aufbauEineriCalDatei}
+iCal-Dateien sind in einer Key-Value-Struktur aufgebaut, wobei sich jedes Key-Value-Paar in einer eigenen Zeile befindet. Eine iCal-Datei kann aus mehreren Kalendern bestehen und ein Kalender kann mehreren Objekten bestehen, die wichtigsten sind: Event-, To-do- und Journal-Elemente, welche genauer im Kapitel \ref{sec:keywords}.
+
+ BEGIN:VCALENDAR
+ VERSION:2.0
+ PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+ BEGIN:VEVENT
+ UID:19970610T172345Z-AF23B2@example.com
+ DTSTAMP:19970610T172345Z
+ DTSTART:19970714T170000Z
+ DTEND:19970715T040000Z
+ SUMMARY:Bastille Day Party
+ END:VEVENT
+ END:VCALENDAR
+
+\subsection{Keywords}
+\label{sec:keywords}
+des ist nur da, damit ich es referenzieren kannst, wennst die überschrift ändern willst änder des in der Referenz von "Aufbau einer iCal-Datei auch mit.
