@@ -1,5 +1,6 @@
 \section{iCal}
 \label{sec:iCal}
+
 \subsection{Was ist iCal?}
 \label{sec:wasIstiCal?}
 iCal oder auch iCalendar ist ein Dateiformat, welches dazu verwendet wird um Kalender zu speichern. Fast jede Kalenderanwendung verwendet zur Speicherung und Manipulation ihrer Kalender iCal. Als Datei hat eine iCal-Datei die Endung .ics. Ein .ics ist von Menschen lesbar und leicht veränderbar, was die Arbeit mit iCal-Dateien um einiges vereinfacht. \\
@@ -13,33 +14,46 @@ iCal wurde verwendet, da der Großteil der Kalenderprogramme das iCal-Format ver
 
 \subsection{Aufbau einer iCal-Datei}
 \label{sec:aufbauEineriCalDatei}
-iCal-Dateien sind in einer Key-Value-Struktur aufgebaut, wobei sich jedes Key-Value-Paar in einer eigenen Zeile befindet. Eine iCal-Datei kann aus mehreren Kalendern bestehen und ein Kalender kann aus mehreren Objekten bestehen, die wichtigsten sind: Event-, To-do- und Journal-Elemente, welche genauer im Kapitel \ref{sec:keywords}.
-
- BEGIN:VCALENDAR
- VERSION:2.0
- PRODID:-//hacksw/handcal//NONSGML v1.0//EN
- BEGIN:VEVENT
- UID:19970610T172345Z-AF23B2@example.com
- DTSTAMP:19970610T172345Z
- DTSTART:19970714T170000Z
- DTEND:19970715T040000Z
- SUMMARY:Bastille Day Party
- END:VEVENT
+iCal-Dateien sind in einer Key-Value-Struktur aufgebaut, wobei sich jedes Key-Value-Paar in einer eigenen Zeile befindet. Eine iCal-Datei kann aus mehreren Kalendern bestehen und ein Kalender kann aus mehreren Objekten bestehen, die wichtigsten sind: Event-, To-do- und Journal-Elemente, welche genauer im Kapitel \ref{sec:keywords}. \\ \\
+ BEGIN:VCALENDAR\\
+ VERSION:2.0\\
+ PRODID:-//hacksw/handcal//NONSGML v1.0//EN\\
+ BEGIN:VEVENT\\
+ UID:19970610T172345Z-AF23B2@example.com\\
+ DTSTAMP:19970610T172345Z\\
+ DTSTART:19970714T170000Z\\
+ DTEND:19970715T040000Z\\
+ SUMMARY:Bastille Day Party\\
+ END:VEVENT\\
  END:VCALENDAR
 
 % TODO: Erklärung der verwendeten Keywords
+% TODO: Zitate auf die Seite machen: https://www.kanzaki.com/docs/ical/
 \subsection{Keywords}
 \label{sec:keywords}
 Unter dieser Überschrift werden die in der Diplomarbeit verwendeten iCal-Keywords aufgelistet und erklärt. Am Ende der Auflistung folgt ein Beispiel welches alle genannten Keywords enthält. 
 \subsubsection{VCALENDAR}
 \label{sec:vCalendar} 
-Die Komponente ''VCALENDAR'' tritt nur im Zusammenhang mit ''BEGIN:'' oder ''END:'' auf. Sie gibt an wann ein Kalender beginnt und wann er aufhört. Jede weiter Komponente zwischen einem ''BEGIN:VCALENDAR'' und ''END:VCALENDAR'' gehört also zu einem Kalender. Ein Kalender kann Events, Termine, und ''ToDo's'', noch zu erldigende Aufgaben, enthalten. Ein Kalender ist also eine Gruppe von Terminen oder anderen Einträgen.
+Die Komponente ''VCALENDAR'' tritt nur im Zusammenhang mit ''BEGIN:'' oder ''END:'' auf. Sie gibt an wann ein Kalender beginnt und wann er aufhört. Jede weiter Komponente zwischen einem ''BEGIN:VCALENDAR'' und ''END:VCALENDAR'' gehört also zu einem Kalender. Ein Kalender kann Events, Termine, und ''ToDo's'', noch zu erldigende Aufgaben, enthalten. Ein Kalender ist also eine Gruppe von Terminen oder anderen Einträgen. 
 \subsubsection{VEVENT}
 \label{sec:vEvent} 
-Ein Event ist wie in \ref{sec:vCalendar} erwähnt ein Termin. Jeder Termin kann einen Alarm enthalten.  \ref{sec:vAlarm}
+Ein Event ist wie in \ref{sec:vCalendar} erwähnt ein Termin. Jeder Termin kann einen Alarm \ref{sec:vAlarm} enthalten. Das Event im Kalender kann auch unter anderem als eine regelmäßige Erinnerung im Kalender spezifiziert sein. Dann enthält die Event-Komponente statt dem üblichen Date-Time ein sogenanntes ''DTSTART''.
 \subsubsection{VTODO}
 \label{sec:vTodo} 
-platzhalter platzhalter platzhalter platzhalter 
+Die VTODO Komponente im Kalender ist ein Eintrag welcher der Benutzer als noch zu erledigen hinzugefügt hat. Als Beispiel könnte hier sein: ''Ich erstelle heute am 05.März.2019 um 6 Uhr ein Todo-Ereignis mit der Beschreibung ''Koffer packen'' für morgen 06.März.2019 um 12 Uhr und ich muss morgen um 16 Uhr fertig sein.'' \\
+Das Ganze könnte in Form eines iCal-Formats so aussehen: \\ \\
+  BEGIN:VTODO \\
+  UID:wagner-dario@kaindorf.at\\
+  DTSTAMP:20190305T060000+0100\\
+  DTSTART:20190306T120000+0100\\
+  DUE:20190306T160000+0100\\
+  SUMMARY:Koffer packen\\
+  CLASS:CONFIDENTIAL\\
+  CATEGORIES:TRAVELING\\
+  PRIORITY:3\\
+  STATUS:NEEDS-ACTION\\
+  END:VTODO\\
+  
 \subsubsection{VALARM}
 \label{sec:vAlarm} 
 platzhalter platzhalter platzhalter platzhalter 
