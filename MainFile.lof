@@ -1,36 +1,38 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Product-Backlog}}{11}{figure.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces Product-Backlog}}{12}{figure.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Sprint-Backlog}}{12}{figure.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces Sprint-Backlog}}{13}{figure.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Projektstrukturplan}}{16}{figure.3}
+\contentsline {figure}{\numberline {3}{\ignorespaces Projektstrukturplan}}{17}{figure.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces VMI-Matrix}}{17}{figure.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces VMI-Matrix}}{18}{figure.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Install}}{27}{figure.5}
+\contentsline {figure}{\numberline {5}{\ignorespaces ER-Diagramm}}{26}{figure.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Install complete}}{27}{figure.6}
+\contentsline {figure}{\numberline {6}{\ignorespaces Install}}{30}{figure.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Neues Element}}{27}{figure.7}
+\contentsline {figure}{\numberline {7}{\ignorespaces Install complete}}{30}{figure.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces ADO.NET Entity Data Model}}{28}{figure.8}
+\contentsline {figure}{\numberline {8}{\ignorespaces Neues Element}}{30}{figure.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces EF Designer aus Datenbank}}{28}{figure.9}
+\contentsline {figure}{\numberline {9}{\ignorespaces ADO.NET Entity Data Model}}{31}{figure.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Datenverbindung}}{29}{figure.10}
+\contentsline {figure}{\numberline {10}{\ignorespaces EF Designer aus Datenbank}}{31}{figure.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Datenbankobjekte ausw\IeC {\"a}hlen}}{29}{figure.11}
+\contentsline {figure}{\numberline {11}{\ignorespaces Datenverbindung}}{32}{figure.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Klassendiagramm}}{30}{figure.12}
+\contentsline {figure}{\numberline {12}{\ignorespaces Datenbankobjekte ausw\IeC {\"a}hlen}}{32}{figure.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces Solutionsexplorer}}{30}{figure.13}
+\contentsline {figure}{\numberline {13}{\ignorespaces Klassendiagramm}}{33}{figure.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces ASP.NET Projekt erstellen}}{33}{figure.14}
+\contentsline {figure}{\numberline {14}{\ignorespaces Solutionsexplorer}}{33}{figure.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces ASP.NET Webanwendung ausw\IeC {\"a}hlen}}{34}{figure.15}
+\contentsline {figure}{\numberline {15}{\ignorespaces ASP.NET Projekt erstellen}}{36}{figure.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces ASP.NET Vorlage ausw\IeC {\"a}hlen}}{34}{figure.16}
+\contentsline {figure}{\numberline {16}{\ignorespaces ASP.NET Webanwendung ausw\IeC {\"a}hlen}}{37}{figure.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces ASP.NET Projekt Resultat}}{35}{figure.17}
+\contentsline {figure}{\numberline {17}{\ignorespaces ASP.NET Vorlage ausw\IeC {\"a}hlen}}{37}{figure.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces ASP.NET Projekt Resultat}}{38}{figure.18}
