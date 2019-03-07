@@ -499,6 +499,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \begin{lstlisting}
 @model RegisterViewModel
 @{
+	//Hier setzt man den Titel der Seite
     ViewData["Title"] = "Register";
 }
 
@@ -506,6 +507,9 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 
 <div class="row">
     <div class="col-md-4">
+    /*Hier definiern wir die Form fuer das Registern eines Benutzers
+    Dafuer brauchen einige Labels und Input Controls. 
+    Das ganze ist noch in einer form die bei einem HTTP POST die Daten weitergibt */
         <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
             <h4>Create a new account.</h4>
             <hr />
@@ -525,6 +529,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
+            //Durch den Button wird die weitergabe der Eingegebenen Daten getriggert
             <button type="submit" class="btn btn-default">Register</button>
         </form>
     </div>
