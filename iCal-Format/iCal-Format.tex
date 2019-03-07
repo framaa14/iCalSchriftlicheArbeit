@@ -1,0 +1,168 @@
+%TODO
+%iCal Ding als Code-Listing?
+%iCal Bsp einrückung
+%Alarm erklären
+%
+\renewcommand{\theauthor}{Matthias Franz}
+\chapter{iCal}
+\label{sec:iCal}
+Dieses Kapitel befasst sich mit dem iCal-Dateiformat welches einen großen Teil in dieser Diplomarbeit einnimmt. Es wird behandelt wie eine iCal-Datei aufgebaut ist und weshalb iCal in diesem Projekt verwendet wurde.
+
+\section{Was ist iCal?}
+\label{sec:wasIstiCal?}
+iCal ist ein Dateiformat, welches dazu verwendet wird um Kalender zu speichern. Fast jede Kalenderanwendung verwendet zur Speicherung und Manipulation ihrer Kalender iCal. Als Datei hat eine iCal-Datei die Endung .ics. Eine .ics Datei ist von Menschen lesbar und leicht veränderbar, was die Arbeit mit iCal-Dateien um einiges vereinfacht. \\
+iCal ist ein MIME-Typ, dies ermöglicht es iCal-Dateien über jegliche Methoden zu versenden.\\ \textcite{iCalDocumentation} 
+
+\section{Warum wurde iCal verwendet?}
+\label{sec:warumWurdeiCalVerwendet?}
+iCal wurde verwendet, da der Großteil der Kalenderprogramme das iCal-Format verwenden und es viele Ressourcen rund um iCal gibt, was den Umgang damit deutlich vereinfacht. Weiters sind die Grundlagen einer iCal-Datei schnell verstanden wegen des einfachen Aufbau einer Datei.\\
+iCal hat ein ATTACH Attribut welches einen erlaubt Dateien an einen Termin anzuhängen. Man hat die Möglichkeit Dateien als Binär-Dateien oder als URLs zu FTP-Servern in das Attribut zu speichern. Da Binär-Dateien große Speichermengen verursachen würden wurde in diesem Projekt die Variante mit den URLs zu FTP-Servern verwendet, da dies Speicher spart. Weiters werden die URLs zu den FTP-Servern nicht in das ATTACH-Attribut geschrieben, sondern in die Beschreibung des Artikels, da oft externe Unternehmen auf Kalender zugreift und man somit eine Kurzbeschreibung über die angegebene Datei angeben kann. Wenn auf die Dateien über einen FTP-Server zugegriffen wird, benötigen Benutzer zugriff auf den FTP-Server, dies ist eine weitere Sicherheitsmaßnahme, denn so wird auch wenn jemand Zugriff auf einen Kalender bekommt nur die Termine angezeigt und auf die Dateien welche am FTP-Server kann man nur mit den richtigen Zugriffsdaten zugreifen.\\
+Die meisten Kalenderanwendungen haben von Haus aus eine Funktion um Kalender im iCal-Format zu exportieren oder um Kalender im iCal-Format zu importieren. Weiters haben die meisten Kalenderapplikationen die Funktion, dass man Kalender als URL einbinden kann, durch diese Funktion kann man dann den URL welcher vom Webservice generiert wird in ein Kalenderprogramm einbinden.
+
+\section{Aufbau einer iCal-Datei}
+\label{sec:aufbauEineriCalDatei}
+iCal-Dateien sind in einer Key-Value-Struktur aufgebaut, wobei sich jedes Key-Value-Paar in einer eigenen Zeile befindet. Eine iCal-Datei kann aus mehreren Kalendern bestehen und ein Kalender kann mehreren Objekten bestehen, die wichtigsten sind: Event-, To-do- und Journal-Elemente, welche genauer im Kapitel \ref{sec:keywords}.\\\\
+\texttt{BEGIN:VCALENDAR\\
+ VERSION:2.0\\
+ PRODID:-//hacksw/handcal//NONSGML v1.0//EN\\
+ BEGIN:VEVENT\\
+ UID:19970610T172345Z-AF23B2@example.com\\
+ DTSTAMP:19970610T172345Z\\
+ DTSTART:19970714T170000Z\\
+ DTEND:19970715T040000Z\\
+ SUMMARY:Bastille Day Party\\
+ END:VEVENT\\
+ END:VCALENDAR}\\\\
+Wie man sieht ist eine .ics Datei hierarchisch aufgebaut. Eine Datei muss mit BEGIN:VCALENDAR beginnen, wenn ein Kalender mit BEGIN:VCALENDAR begonnen wird muss er wie jedes andere Element einer iCal-Datei auch wieder geschlossen werden um die beinhalteten Elemente einordnen zu können. Die VCALENDAR Eigenschaft kann viele Attribute haben welche das Verhalten des Kalenders verändern, die meisten dieser Attribute sind allerdings nicht für diese Diplomarbeit relevant und wurden deshalb weggelassen. In einem VCALENDAR Element kann man dann entweder ein Event-, To-do oder Journal-Element erstellen, es gibt noch weiter erstellbare Elemente, diese sind aber für diese Diplomarbeit nicht von Relevanz. Wie im Beispiel angeführt wird im VCALENDAR ein VEVENT erstellt. Dieses VEVENT muss dann wie der VCALENDAR und alle anderen Attribute wieder geschlossen werden. Im Beispiel sieht man, dass Events auch mehrere Attribute hat welches das Verhalten des Events ändern, zum Beispiel SUMMARY, beschreibt was in der Kalenderapplikation in diesem Termin stehen würde.\\
+Wie schon erwähnt, ist besteht eine iCal-Datei aus einem Key-Value Paar pro Zeile, eine Zeile nennt man Content-Line im iCal-Jargon. Eine Content-Line sollte nicht länger als 75 octets sein. Eine Content-Line kann an jeder beliebigen Stelle mit einem CLRF in zwei oder mehrere Zeilen geteilt werden indem man in der folgenden Zeile am Beginn eine Leerzeile einfügt, für jede weitere Teilung wird ein weiteres Leerzeichen am Beginn der Zeile benötigt. \\\\
+Zum Beispiel kann\vspace*{2mm}\\
+\texttt{DESCRIPTION:This is a long description that exists on a long line.}\vspace*{2mm}\\als\vspace*{2mm}\\
+\texttt{DESCRIPTION:This is a lo\\ 
+ ng description\\  
+  that exists on a long line.}\\\\
+dargestellt werden.\vspace*{2mm}\\
+Manche iCal-Attribute können mehrere als nur einen Wert für den dementsprechenden Schlüssel haben, diese einzelnen Elemente sind dann mit einen Komma getrennt. Wenn ein Schlüssel mehrere verschiedene Attribute enthält, werden diese mit einem Strichpunkt getrennt. Wenn ein Wert eines Attributes ein Komma oder einen Strichpunkt enthält, dann muss dass Komma oder der Strichpunkt unter Anführungszeichen gesetzt werden.\\\\
+Ein Beispiel für die Trennung von Daten einer Liste in einem Schlüssel:\vspace*{2mm}\\
+\texttt{RDATE;VALUE=DATE:19970304,19970504,19970704,19970904}\vspace*{2mm}\\
+Wie man in diesem Beispiel sieht wurden die Werte für das Datum mit Kommas getrennt.\\\\
+Ein Beispiel für die Trennung von mehreren Attributen innerhalb eines Schlüssels:\vspace*{2mm}\\
+\texttt{ATTENDEE;RSVP=TRUE;ROLE=REQ-PARTICIPANT:mailto:
+jsmith@example.com}\vspace*{2mm}\\Man sieht, dass die verschiedenen Attribute wie RSVP und ROLE mit einem Strichpunkt getrennt worden sind. Genaueres zum ATTENDEE-Attribut im Kapitel \ref{sec:attendee}. 
+\\\textcite{iCalDocumentation} 
+
+
+
+\pagebreak
+\renewcommand{\theauthor}{Dario Wagner}
+% TODO: Erklärung der verwendeten Keywords
+% TODO: Zitate auf die Seite machen: https://www.kanzaki.com/docs/ical/
+\section{Keywords}
+\label{sec:keywords}
+Unter dieser Überschrift werden die in der Diplomarbeit verwendeten iCal-Keywords aufgelistet und erklärt. Am Ende der Auflistung folgt ein Beispiel welches alle genannten Keywords enthält. 
+\subsection{VCALENDAR}
+\label{sec:vCalendar} 
+Die Komponente ''VCALENDAR'' tritt nur im Zusammenhang mit ''BEGIN:'' oder ''END:'' auf. Sie gibt an wann ein Kalender beginnt und wann er aufhört. Jede weiter Komponente zwischen einem ''BEGIN:VCALENDAR'' und ''END:VCALENDAR'' gehört also zu einem Kalender. Ein Kalender kann Events, Termine, und ''ToDo's'', noch zu erldigende Aufgaben, enthalten. Ein Kalender ist also eine Gruppe von Terminen oder anderen Einträgen. 
+\subsection{VEVENT}
+\label{sec:vEvent} 
+Ein Event ist wie in \ref{sec:vCalendar} erwähnt ein Termin. Jeder Termin kann einen Alarm \ref{sec:vAlarm} enthalten. Das Event im Kalender kann auch unter anderem als eine regelmäßige Erinnerung im Kalender spezifiziert sein. Dann enthält die Event-Komponente statt dem üblichen Date-Time ein sogenanntes ''DTSTART''.
+\subsection{VTODO}
+\label{sec:vTodo} 
+Die VTODO Komponente im Kalender ist ein Eintrag welcher der Benutzer als noch zu erledigen hinzugefügt hat. Als Beispiel könnte hier sein: ''Ich erstelle heute am 05.März.2019 um 6 Uhr ein Todo-Ereignis mit der Beschreibung ''Koffer packen'' für morgen 06.März.2019 um 12 Uhr und ich muss morgen um 16 Uhr fertig sein.'' \\
+Das Ganze könnte in Form eines iCal-Formats so aussehen: \\ \\
+  BEGIN:VTODO \\
+  UID:wagner-dario@kaindorf.at\\
+  DTSTAMP:20190305T060000+0100\\
+  DTSTART:20190306T120000+0100\\
+  DUE:20190306T160000+0100\\
+  SUMMARY:Koffer packen\\
+  CLASS:CONFIDENTIAL\\
+  CATEGORIES:TRAVELING\\
+  PRIORITY:3\\
+  STATUS:NEEDS-ACTION\\
+  END:VTODO\\
+  
+\subsection{VALARM}
+\label{sec:vAlarm} 
+Wie der Name schon sagt gibt VALARM eine Gruppe von Komponenten, welche einen Alarm definieren, an.  Wie bei allen iCal Komponenten beginnt VALARM mit ''BEGIN:'' und hört mit ''END:'' auf. VALARM wird zwischen den BEGIN und END Komponenten einer TODO oder EVENT Komponente eingefügt. Ein Alarm kann also für ein Event oder Todo gesetzt werden, eine Alarm Komponente kann nicht selbständig in einem Kalender stehen. Ein VALARM muss eine ''Action'' und einen '' Trigger'' beinhalten. Es muss also definiert sein wann was passiert. Als Action gibt es vier Möglichkeiten: \\ \\
+\textbf{1. Audio} \\
+Wenn die Action ''Audio'' angegeben ist muss mit der ''ATTACH'' Eigenschaft auf eine Audio/Sound-Resource verwiesen werden, welche bei Aktivierung des Alarm abgespielt wird. \\ \\
+\textbf{2. Display} \\ 
+Die Implementierung der Action ''Display'' muss einen Text enthalten, welcher bei Auslösung des Alarms angezeigt wird. Angegeben wird der Text mithilfe der ''DESCRIPTION'' Eigenschaft. \\ \\
+\textbf{3. E-Mail} \\ 
+Durch die Action ''EMAIL'' wird wie der Name bereits verrät eine EMail gesendet. Um dies zu ermöglichen muss die ''DESCRIPTION'' Eigenschaft hinzugefügt werden, diese enthält den EMail Text. Die Eigenschaft ''SUMMARY'' enthält den Betreff und die Eigenschaft ''ATTENDEE'', welche bei \ref{sec:attendee} erklärt wird, enthält die EMail Adressen der Leute welche die Mail bekommen sollen. Zusätzlich ist es möglich die Eigenschaft ''ATTACH'' einzufügen um Anhänge mitzusenden. \\ \\
+\textbf{4. Procedure} \\ % GHÖRT NO BESSER ERKLÄRT
+Eine Procedure Action muss eine ''ATTACH'' Eigenschaft beinhalten. Diese muss auf maximal und minimal eine ''Procedure'' Resource verweisen, welche bei Alarmauslösung aufgerufen wird.
+\subsection{BEGIN: und END:}
+\label{sec:beginUndEnd} 
+Die ''BEGIN'' und ''END'' Komponenten in einer iCalender-Datei geben den Anfang und das Ende einer ''Kalender''-Komponente an, sowie Anfang und Ende des Kalenders selbst. ''Kalender''-Komponenten sind jene Komponenten welche dem Kalender untergeordnet sind und eigene Komponenten enthalten. Zum Beispiel Event, Todo oder Alarm. 
+% VTODO / VEVENT
+\subsection{UID}
+\label{sec:uid}
+Die UID selbst muss eindeutig sein, sie darf niemals auf mehr als einen Wert verweisen. Um dies zu gewährleisten gibt es einige generatoren. Unter C\# lässt sich ein sogenannter ''Global Unique Identifier'' wie folgt erstellen: \\
+\begin{lstlisting}[caption=GUID in C\#, label=lst:test]
+var id = Guid.NewGuid(); 
+\end{lstlisting}
+Eine Möglichkeit einen eindeutigen Wert selbst zu ''generieren'' wäre wenn ein Teil der ID aus dem heutigen Datum mit aktueller Uhrzeit bestehen würde, wenn ich die Uhrzeit mit tausendstel angebe, ist die Wahrscheinlichkeit die selbe ID zu generieren fast 0. 
+\subsection{SUMMARY}
+\label{sec:summary}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DTSTART}
+\label{sec:dtstart}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DTEND}
+\label{sec:dtend}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DTSTAMP}
+\label{sec:dtstamp}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{COMMENT}
+\label{sec:comment}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DESCRIPTION}
+\label{sec:description}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{LOCATION}
+\label{sec:location}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{PRIORITY}
+\label{sec:priority}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{RRULE}
+\label{sec:rrule}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DUE}
+\label{sec:due}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{CLASS}
+\label{sec:class}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{ORGANIZER}
+\label{sec:organizer}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{STATUS}
+\label{sec:status}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{ATTENDEE}
+\label{sec:attendee}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{TRANSP}
+\label{sec:transp}
+platzhalter platzhalter platzhalter platzhalter 
+%VALARM
+\subsection{TRIGGER}
+\label{sec:trigger}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{REPEAT}
+\label{sec:repeat}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{DURATION}
+\label{sec:duration}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{ACTION}
+\label{sec:action}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{ATTACH}
+\label{sec:attach}
+platzhalter platzhalter platzhalter platzhalter 
+\subsection{Beispiel}
+\label{sec:beispiel_ical}

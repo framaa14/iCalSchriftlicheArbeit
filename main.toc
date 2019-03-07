@@ -1,0 +1,170 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {american}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Aufgabenstellung}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Technische Aspekte der Aufgabenstellung}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Projektmanagement und Organisation}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Team}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Auftraggeber - Intact Systems}{4}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Projektmanagement}{4}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Scrum}{5}{subsection.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Artefakte}{5}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Rollen}{8}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Meetings}{10}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Scrum Abwandlung in diesem Projekt}{11}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Arbeitsteilung}{12}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Projektstrukturplan}{12}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}VMI-Matrix}{13}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}iCal}{15}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Was ist iCal?}{15}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Warum wurde iCal verwendet?}{15}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Aufbau einer iCal-Datei}{16}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Keywords}{19}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}VCALENDAR}{19}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}VEVENT}{19}{subsection.3.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}VTODO}{19}{subsection.3.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}VALARM}{20}{subsection.3.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.5}BEGIN: und END:}{21}{subsection.3.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.6}UID}{21}{subsection.3.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.7}SUMMARY}{22}{subsection.3.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.8}DTSTART}{22}{subsection.3.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.9}DTEND}{22}{subsection.3.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.10}DTSTAMP}{22}{subsection.3.4.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.11}COMMENT}{22}{subsection.3.4.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.12}DESCRIPTION}{22}{subsection.3.4.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.13}LOCATION}{22}{subsection.3.4.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.14}PRIORITY}{23}{subsection.3.4.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.15}RRULE}{23}{subsection.3.4.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.16}DUE}{23}{subsection.3.4.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.17}CLASS}{23}{subsection.3.4.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.18}ORGANIZER}{23}{subsection.3.4.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.19}STATUS}{23}{subsection.3.4.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.20}ATTENDEE}{23}{subsection.3.4.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.21}TRANSP}{24}{subsection.3.4.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.22}TRIGGER}{24}{subsection.3.4.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.23}REPEAT}{24}{subsection.3.4.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.24}DURATION}{24}{subsection.3.4.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.25}ACTION}{24}{subsection.3.4.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.26}ATTACH}{24}{subsection.3.4.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.27}Beispiel}{24}{subsection.3.4.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Datenbank}{25}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Funktion der Datenbank}{25}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Aufbau der Datenbank}{25}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Parser}{29}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Aufgabe}{29}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Source-Code}{29}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline using-Schl\IeC {\"u}sselwort in C\#}{31}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Entity Framework}{32}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Funktionsweise}{32}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Anwendung}{32}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Source-Code}{37}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Technologien}{39}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Allgemeines}{39}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Programmierung}{39}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}C\#}{39}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Visual Studio 17 Community}{40}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}.NET Framework 4.6}{41}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.4}asp.net}{42}{subsection.6.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.5}MSSQL}{45}{subsection.6.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.6}Microsoft SQL Server management Studios}{45}{subsection.6.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.7}Entity Framework}{45}{subsection.6.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.8}iCal}{45}{subsection.6.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.9}ReSharper}{46}{subsection.6.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Resharper Installation}{46}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.10}PostMan}{47}{subsection.6.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.11}Kommunikation}{48}{subsection.6.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.12}Discord}{48}{subsection.6.2.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.13}Telegram}{48}{subsection.6.2.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.14}File Sharing}{49}{subsection.6.2.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.15}TFS}{49}{subsection.6.2.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.16}Discord}{49}{subsection.6.2.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.17}Google Drive}{49}{subsection.6.2.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.18}Organisation}{50}{subsection.6.2.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.19}Trello}{50}{subsection.6.2.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.20}Schriftliche Arbeit}{50}{subsection.6.2.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.21}LaTeX}{50}{subsection.6.2.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Warum LaTeX?}{50}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.17}
