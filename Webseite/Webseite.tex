@@ -4,7 +4,7 @@
 In diesem Abschnitt wird die Security der Webseite behandelt.
 Es wird behandelt wie man das sichere einloggen in eine Webseite gewähren kann, 
 wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
-möglich ist und wie man Passwörter speichert. Dazu werden auch einige Code Beispiele angeführt werden.
+möglich ist und wie man Passwörter speichert. Es werden generell alle Themen behandelt die man bei der Erstellung einer sicheren Webseite beachten muss. Dazu werden auch einige Code Beispiele angeführt werden.
 \section{Login Handling}
 \label{sec:Login}
 Die Webseite soll eine Login Funktion haben die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\Dafür muss unser Webseite eine passende sichere Authentifizierung gewährleisten können und diese sensiblen Daten in einer Datenbank verschlüsselt speichern. 
@@ -116,7 +116,7 @@ public async Task<IActionResult> LoginWith2fa(LoginWith2faViewModel model, bool 
      }
 }
 \end{lstlisting}
-(wikipedia,code erklären)
+code erklären
 \section{Path-Traversal}
 \label{sec:Path-Traversal}
 Als Path-Traversal wird eine Security Lüge bezeichnet die es einem Angreifer, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können sollte. 
@@ -381,7 +381,7 @@ Nun muss das Modell gewählt werden, hier wählen man die MVC Web-Application. D
 Schritt 4:\\
 In diesem Schritt muss man festlegen, das unsere Web-Anwendung Benutzer Daten speichert. \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt4}
-Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
+Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.\\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Preview}
 \section{Aufbau der Webseite }
@@ -542,4 +542,4 @@ ad\\
 ae\\
 af\\
 ..\\
-Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen.
+Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen wie viel gleiche Passwörter es gibt.
