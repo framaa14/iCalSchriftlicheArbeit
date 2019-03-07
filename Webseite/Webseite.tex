@@ -356,12 +356,13 @@ Formel 1:
 \label{sec:pwdhash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer hasht.
 [https://crackstation.net/hashing-security.htm]
-\section{ASP.NET MVC}
+\chapter{ASP.NET MVC}
 \label{sec:MVC}
-In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundindention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
-\subsection{Allgemeines MVC}
+\section{Allgemeines MVC}
 \label{sec:allgemein}
-\subsection{Erstellung der Webseite}
+In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundindention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+\section{Erstellung der Webseite}
+\label{sec:erstellung_ws}
 Dieses Kapitel befässt sich damit wie man in Visual-Studio ein MVC-Website Projekt erstellen kann.\\
 Zunächst muss man sicherstellen das man alle benötigten Features installiert hat. Dafür geht man auf Datei -> Neues Projekt und klickt dann auf folgendes.\\
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_features}
@@ -383,8 +384,7 @@ In diesem Schritt muss man festlegen, das unsere Web-Anwendung Benutzer Daten sp
 Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Express Lokal starten und testen. Macht man das ganze sieht man das ASP Template.
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
 \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Preview}
-\label{sec:erstellung}
-\subsection{Aufbau der Webseite }
+\section{Aufbau der Webseite }
 \label{sec:aufbau}
 In diesem Kapitel wird begahandelt wie die Webseite des ICAL-Webservices aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite.
 Zunächst kommt man auf die Hauptseite\\
@@ -401,7 +401,7 @@ Man kann sein Passwort ändern oder sein 2FA einrichten. \\
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_2FA}
 Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalender, bzw. das Abrufen der Links oder das direkt herunterladen.\\
 \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_calendars}
-\subsection{Link generation}
+\section{Link generation}
 \label{sec:link}
 Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion die der/die fertigen Kalender zur Verfügung stellt.
 \begin{lstlisting}
@@ -439,7 +439,7 @@ public List<string> getUsersTables(string myuser)
 }
 \end{lstlisting}
 Bei dem Benutztem SQL Statement könnte man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
-\subsection{Controller}
+\section{Controller}
 \label{sec:Controller}
 MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel gibt man die folgende URL von unserem ICALWebservices in die Adressleiste eines Webbrowsers ein:\\
 \url{http://localhost:50699/api/iCal/1} \\
@@ -455,10 +455,10 @@ public string Get(int id)
 }
 \end{lstlisting}
 Wie man sehen kann ist ein Controller nur eine Klasse.
-\subsubsection{Controller Actions}
+\subsection{Controller Actions}
 \label{sec:controller_actions}
 Kontroller Actions sind öffentliche Methoden die aufgerufen werden wenn ein Kontroller mit einer spezifischen URL aufgerufen wird. Worauf man hier achten muss ist, dass jede dieser öffentlichen Methoden von jedem über die richtige URL aufgerufen werden kann und deshalb hier sehr darauf geachtet werden muss was hier aufgerufen werden kann. 
-\subsubsection{Action Results}
+\subsection{Action Results}
 \label{sec:controller_actions_results}
 Eine Controller-Aktion gibt ein so genanntes Aktionsergebnis zurück. Ein Aktionsergebnis ist das, was eine Controller-Aktion als Antwort auf eine Browseranforderung zurückgibt.\\Das MVC-Framework von ASP.NET unterstützt verschiedene Arten von Aktionsergebnissen, darunter:
 \begin{enumerate}
@@ -478,7 +478,7 @@ Alle diese Resultate kommen von der Basis Klasse ActionResult.
 \label{sec:Views}
 Für ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, den man in die Adressleiste des Browsers eingibt. Die Seite, die einer Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
 In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Methoden zugeordnet. Eine Controller-Methode kann einen View zurückgeben. Eine Controller-Methode führt jedoch möglicherweise eine andere Methode aus, z. B. das weiterleiten zu einer anderen Controller-Methode.
-\subsubsection{Beispiel einer View}
+\subsection{Beispiel einer View}
 \label{mvc_view_beispiel}
 Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \begin{lstlisting}
@@ -523,10 +523,10 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \end{lstlisting}
 (erklären)
 \textcite{mic_views}
-\subsection{User Datenbank}
+\section{User Datenbank}
 \label{sec:UserDB}
 Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
-\subsubsection{Salt}
+\subsection{Salt}
 \label{sec:salt}
 Salt kommt aus der Kryptographie und ist eine zufällige Zeichenfolge, die man an den Klartext (bspw. einem Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen HASH umgewandelt. Dies wird gemacht um die Entropie der Eingabe zu erhöhen. Man nutzt einen Salt oft für die Speicherung von Passwörtern in Datenbanken. Wird ein Passwort überprüft wird dabei aber nicht jedesmal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als Falsch erkannt werden würde. Deswegen speichert man bei der Speicherung des Passworts in der Datenbank den dafür generierten Salt-Wert auch ab.
 \subsubsection{Warum Salt}
