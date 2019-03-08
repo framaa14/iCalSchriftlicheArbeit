@@ -2,7 +2,7 @@
 %iCal Ding als Code-Listing?
 %iCal Bsp einrückung
 %Alarm erklären
-%
+
 \renewcommand{\theauthor}{Matthias Franz}
 \chapter{iCal}
 \label{sec:iCal}
@@ -49,8 +49,6 @@ Ein Beispiel für die Trennung von mehreren Attributen innerhalb eines Schlüsse
 \texttt{ATTENDEE;RSVP=TRUE;ROLE=REQ-PARTICIPANT:mailto:
 jsmith@example.com}\vspace*{2mm}\\Man sieht, dass die verschiedenen Attribute wie RSVP und ROLE mit einem Strichpunkt getrennt worden sind. Genaueres zum ATTENDEE-Attribut im Kapitel \ref{sec:attendee}. 
 \\\textcite{iCalDocumentation} 
-
-
 
 \pagebreak
 \renewcommand{\theauthor}{Dario Wagner}
@@ -105,19 +103,22 @@ var id = Guid.NewGuid();
 Eine Möglichkeit einen eindeutigen Wert selbst zu ''generieren'' wäre wenn ein Teil der ID aus dem heutigen Datum mit aktueller Uhrzeit bestehen würde, wenn ich die Uhrzeit mit tausendstel angebe, ist die Wahrscheinlichkeit die selbe ID zu generieren fast 0. 
 \subsection{SUMMARY}
 \label{sec:summary}
-platzhalter platzhalter platzhalter platzhalter 
+Diese Eigenschaft kann in den Kalender Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VJOURNAL und VALARM \ref{sec:vAlarm} verwendet werden. In dieser Eigenschaft kann eine kurze Beschreibung für eine Aktivität festgehalten werden.
 \subsection{DTSTART}
 \label{sec:dtstart}
-platzhalter platzhalter platzhalter platzhalter 
+Kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VTIMEZONE verwendet werden. Der Zweck dieser Eigenschaft wird bis auf in der VFREEBUSY erklärt, da diese keine in der Diplomarbeit verwendete Komponente ist. \\ \\ \textbf{VEVENT} / \textbf{VTODO}: Wenn diese Eigenschaft in VEVENT oder VTODO hinzugefügt wird dann kann für das Event ein Start-Datum und eine Start-Zeit festgelegt werden. Bei einer VEVENT und VTODO Komponente ist es möglich, dass sie ein Start-Datum enthält aber kein End-Datum (DTEND \ref{sec:dtend}). \\ \\ \textbf{VTIMEZONE}: In der VTIMEZONE Komponente gibt die DTSTART Eigenschaft den tatsächlichen Beginn einer Zeitzone an und ist verpflichtend, also nicht optional. \\
+Beispiel für eine DTSTART Eigenschaft: \\
+DTSTART: 20190308T165800
 \subsection{DTEND}
 \label{sec:dtend}
-platzhalter platzhalter platzhalter platzhalter 
+Diese Komponente kann nur in VEVENT \ref{sec:vEvent} und VFREEBUSY hinzugefügt werden. Wie bei DTSTART wird nur die Verwendung in VEVENT erklärt. In VEVENT definiert die Eigenschaft das End-Datum und die End-Zeit eines Termins/Events.
 \subsection{DTSTAMP}
 \label{sec:dtstamp}
-platzhalter platzhalter platzhalter platzhalter 
+DTSTAMP kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VJOURNAL verwendet werden. In dieser Eigenschaft wird der das Datum und die Uhrzeit festgehalten zuwelcher die .ics-Datei aus den Informationen aus der Datenbank erstellt wurde.
+% https://stackoverflow.com/questions/11594921/whats-the-difference-between-created-and-dtstamp-in-the-icalendar-format
 \subsection{COMMENT}
 \label{sec:comment}
-platzhalter platzhalter platzhalter platzhalter 
+In dieser Eigenschaft kann ein Kommentar, welcher für den Benutzer sichtbar ist, eingefügt werden. Diese Eigenschaft kann mehrmals hinzugefügt werden und in VEVENT, VTODO, VJOURNAL, VTIMEZONE und VFREEBUSY hinzugefügt werden.
 \subsection{DESCRIPTION}
 \label{sec:description}
 platzhalter platzhalter platzhalter platzhalter 
