@@ -169,6 +169,8 @@ basicstyle=\ttfamily\small,
 \fancyhead[LO,RE]{\theauthor}
 \fancyfoot[LO,RE]{\thepage}
 
+\usepackage{wrapfig}
+
 %----------------------ENDE UNSER STUFF-----------------------
 
 \input{template/mycommands}
@@ -201,7 +203,7 @@ basicstyle=\ttfamily\small,
 
 \tableofcontents               
 
-\mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
+\mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scr
 
 	\input{./Einleitung/Einleitung.tex}
 	\input{./Projektmanagement_und_Organisation/ProjUOrg.tex}
@@ -209,7 +211,7 @@ basicstyle=\ttfamily\small,
 	\input{./Datenbank/Datenbank.tex}
 	\input{./Parser/Parser.tex}
 	\input{./Technologien/Technologien.tex}
-	%\input{./Webseite/Webseite.tex}
+	\input{./Webseite/Webseite.tex}
 	\input{./Tests/Tests.tex}
 	
 

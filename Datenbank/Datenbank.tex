@@ -1,4 +1,5 @@
-%TODO Bilder zitieren
+%TODO 
+%Bilder zitieren
 
 \renewcommand{\theauthor}{Matthias Franz}
 \chapter{Datenbank}
@@ -24,11 +25,39 @@ Ein ER-Diagramm besteht aus Entitäten und Relationen, eine Entität ist eine Ta
 \end{figure}
 Im ER-Diagramm von Abbildung \ref{fig:erDiagramm} werden Primary-Keys fett und Foreign Keys kursiv dargestellt.
 
-\pagebreak
 \begin{figure}[H]
 	\includegraphics[angle=270,origin=c,width=\textwidth]{Datenbank_ER-Diagramm.jpg}
     \caption{ER-Diagramm}
     \label{fig:erDiagramm}
 \end{figure}
+
+\subsubsection*{Benutzer und Kalender}
+\label{ref:benutzerKalender}
+In der UserTable-Tabelle werden Benutzerdaten gespeichert, jeder Benutzer bekommt eine einmalide Id zugewiesen, die UserId. Weiters wird von jeden Benutzer ein Benutzername, eine Email und ein Passwort gespeichert. Genaueres zum UserTable ist im Kapitel \ref{sec:UserDB}. Da ein Benutzer mehrere Kalender haben kann und ein Kalender auch zu mehreren Benutzern gehört, gibt es die Tabelle UserHasCalendar, welche dazu dient, festzuhalten welcher Kalender zu welchen Benutzern gehört. Dies wird erreicht indem der Primary-Key der UserTable-Tabelle und der Calender-Tabelle zusammen als Primary-Key in der UserHasCalender-Tabelle genommen werden.Wie dies im ER-Diagramm aussieht sieht man in Abbildung \ref{fig:userCalender}.\\
+Die Calender-Tabelle speichert Informationen zu einem Kalender welche dann im Parser in die iCal-Datei gegeben werden.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Datenbank_UserCalendar.png}
+    \caption{Relation zwischen Benutzer und Kalender}
+    \label{fig:userCalender}
+\end{figure}
+
+\subsubsection*{Kalender und Zeitzonen}
+\label{ref:kalenderZeitzonen}
+Da dieses Projekt für ein Unternehmen gemacht wurde, welches mit Internationalen Kunden tätig ist, ist es wichtig, dass Kalender in verschiedenen Zeitzonen seien können. Deswegen wurde eine eigene Tabelle mit Zeitzonen angefertigt, damit das hinzufügen von einer Zeitzone in einen Kalender einfacher wird. Die TimeZone-Tabelle welche Zeitzonen abbildet besteht aus einer einmaligen Id und dem Land und der Stadt der Zeitzone, da im iCal-Format Zeitzonen so abgebildet werden. 
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Datenbank_CalendarTimezone.png}
+    \caption{Relation zwischen Kalender und Zeitzone}
+    \label{fig:timezoneCalender}
+\end{figure}
+
+\subsubsection*{Kalendereinträge}
+\label{ref:kalenderEintraege}
+Ein Kalender besteht aus mehreren Kalendereinträgen, ein Kalenderbeitrag ist zum Beispiel ein Termin oder ein To-Do Element. Termine werden in der Event-Tabelle und To-Dos in der ToDo-Tabelle abgebildet. Da diese beiden Objekte viele ähnliche Attribute haben aber dennoch einige Attribute besitzen welche die andere Tabelle nicht benötigt, sind sie beide mit der gleichen Supertabelle über eine is-a Relation verbunden. Is-a bedeutet, dass beide Tabellen alle Attribute der CalendarEntry-Tabelle zusätzlich zu ihren eigenen Attributen besitzen.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Datenbank_CalenderEntries.png}
+    \caption{Kalendereinträge}
+    \label{fig:calendarEntries}
+\end{figure}
+
+
 	
-\pagebreak

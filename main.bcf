@@ -1942,6 +1942,15 @@
     <bcf:citekey order="16">TechnologieiCalExample</bcf:citekey>
     <bcf:citekey order="17">TechnologiePostman</bcf:citekey>
     <bcf:citekey order="18">TechnologieLaTeX</bcf:citekey>
+    <bcf:citekey order="19">2FA</bcf:citekey>
+    <bcf:citekey order="20">Path-Trav</bcf:citekey>
+    <bcf:citekey order="21">XSS</bcf:citekey>
+    <bcf:citekey order="22">Phishing</bcf:citekey>
+    <bcf:citekey order="23">XST</bcf:citekey>
+    <bcf:citekey order="24">CSRF</bcf:citekey>
+    <bcf:citekey order="25">sha256</bcf:citekey>
+    <bcf:citekey order="26">mic_controller</bcf:citekey>
+    <bcf:citekey order="27">mic_views</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
