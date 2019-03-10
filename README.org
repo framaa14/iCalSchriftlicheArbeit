@@ -81,3 +81,5 @@ This template is licensed under a [[https://creativecommons.org/licenses/by-sa/3
 ** What Is Still Work in Progress?
 
 Please have a look at the file "[[https://github.com/novoid/LaTeX-KOMA-template/blob/master/template/todos.org][template/todos.org]]".
+
+~ok cool
