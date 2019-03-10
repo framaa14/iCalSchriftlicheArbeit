@@ -1,33 +1,33 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {american}{}
+\babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Aufgabenstellung}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Technische Aspekte der Aufgabenstellung}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Team}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Projektmanagement und Organisation}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Team}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}Auftraggeber - Intact Systems}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Auftraggeber - Intact Systems}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Projektmanagement}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Projektmanagement}{4}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.1}Scrum}{4}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Scrum}{5}{subsection.2.3.1}
+\contentsline {subsubsection}{\nonumberline Artefakte}{4}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Artefakte}{5}{section*.8}
+\contentsline {subsubsection}{\nonumberline Rollen}{7}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Rollen}{8}{section*.9}
+\contentsline {subsubsection}{\nonumberline Meetings}{8}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Meetings}{10}{section*.10}
+\contentsline {subsubsection}{\nonumberline Scrum Abwandlung in diesem Projekt}{10}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Scrum Abwandlung in diesem Projekt}{11}{section*.11}
+\contentsline {section}{\numberline {2.3}Arbeitsteilung}{11}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Arbeitsteilung}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.1}Projektstrukturplan}{11}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Projektstrukturplan}{12}{subsection.2.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}VMI-Matrix}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.3.2}VMI-Matrix}{12}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}iCal}{15}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -139,31 +139,31 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.9}ReSharper}{49}{subsection.6.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Resharper Installation}{50}{section*.18}
+\contentsline {subsubsection}{\nonumberline ReSharper Installation}{50}{section*.18}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.10}PostMan}{50}{subsection.6.2.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.11}Kommunikation}{51}{subsection.6.2.11}
+\contentsline {section}{\numberline {6.3}Kommunikation}{51}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.12}Discord}{51}{subsection.6.2.12}
+\contentsline {subsection}{\numberline {6.3.1}Discord}{51}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.13}Telegram}{51}{subsection.6.2.13}
+\contentsline {subsection}{\numberline {6.3.2}Telegram}{51}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.14}File Sharing}{51}{subsection.6.2.14}
+\contentsline {section}{\numberline {6.4}File Sharing}{51}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.15}TFS}{51}{subsection.6.2.15}
+\contentsline {subsection}{\numberline {6.4.1}TFS}{51}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.16}Discord}{52}{subsection.6.2.16}
+\contentsline {subsection}{\numberline {6.4.2}Discord}{52}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.17}Google Drive}{52}{subsection.6.2.17}
+\contentsline {subsection}{\numberline {6.4.3}Google Drive}{52}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.18}Organisation}{52}{subsection.6.2.18}
+\contentsline {section}{\numberline {6.5}Organisation}{52}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.19}Trello}{52}{subsection.6.2.19}
+\contentsline {subsection}{\numberline {6.5.1}Trello}{52}{subsection.6.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.20}Schriftliche Arbeit}{53}{subsection.6.2.20}
+\contentsline {section}{\numberline {6.6}Schriftliche Arbeit}{53}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.21}LaTeX}{53}{subsection.6.2.21}
+\contentsline {subsection}{\numberline {6.6.1}LaTeX}{53}{subsection.6.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Warum LaTeX?}{53}{section*.19}
 \defcounter {refsection}{0}\relax 
@@ -185,17 +185,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.2}Beispiele}{60}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Protection Path-Traversal}{61}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.3}Protection Path-Traversal}{60}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}XSS Protection}{61}{section.7.4}
+\contentsline {section}{\numberline {7.4}XSS Protection}{60}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Allgemeines \IeC {\"u}ber XSS}{61}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}Allgemeines \IeC {\"u}ber XSS}{60}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}XSS Targets:}{61}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.3}Warum ist Javascript so beliebt?}{61}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.4}Beliebte Angriffsvektoren}{62}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.4}Beliebte Angriffsvektoren}{61}{subsection.7.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.5}Session Hijacking}{62}{subsection.7.4.5}
 \defcounter {refsection}{0}\relax 
@@ -203,7 +203,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.7}Phishing}{62}{subsection.7.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.8}Cross-Site-Tracing XST}{64}{subsection.7.4.8}
+\contentsline {subsection}{\numberline {7.4.8}Cross-Site-Tracing XST}{63}{subsection.7.4.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.9}Beispiel}{65}{subsection.7.4.9}
 \defcounter {refsection}{0}\relax 
@@ -227,9 +227,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.6}Hashes}{71}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.1}HASH Kollisionen}{72}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.1}Hash Kollisionen}{72}{subsection.7.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.7}Wie funktioniert ein HASH Algorithmus}{72}{section.7.7}
+\contentsline {section}{\numberline {7.7}Wie funktioniert ein Hash Algorithmus}{72}{section.7.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.7.1}Allgemeines \IeC {\"u}ber SHA256}{73}{subsection.7.7.1}
 \defcounter {refsection}{0}\relax 
@@ -255,11 +255,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5.1}Controller Actions}{90}{subsection.8.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.2}Action Results}{90}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.2}Action Results}{91}{subsection.8.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5.3}Views}{91}{subsection.8.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.4}Beispiel einer View}{91}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.4}Beispiel einer View}{92}{subsection.8.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.6}User Datenbank}{93}{section.8.6}
 \defcounter {refsection}{0}\relax 
@@ -267,4 +267,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Warum Salt}{94}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{95}{chapter*.26}
+\contentsline {chapter}{\nonumberline Literatur}{95}{chapter*.26}

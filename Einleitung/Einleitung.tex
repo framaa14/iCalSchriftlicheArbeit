@@ -1,5 +1,3 @@
-\renewcommand{\theauthor}{Matthias Franz}
-
 \chapter{Aufgabenstellung}
 \label{sec:Aufgabenstellung}
 Die Aufgabenstellung für diese Diplomarbeit wurde von der Intact GmbH vorgegeben. Die Aufgabe war, einen Webservice inklusive Webseite zu erstellen welche es ermöglichen Kalender inklusive Dateien welche an Terminen angeheftet sind immer und überall in ein beliebiges Kalenderprogramm einzubinden. \\
@@ -9,3 +7,25 @@ Dieser Webservice und Webseite wird für ausgewählte Kunden der Intact GmbH fü
 \label{sec:TechnischeAspekteDerAufgabenstellung}
 Die meisten Kalenderanwendungen verwenden das iCal-Dateiformat um Kalender zu speichern. In dieser Diplomarbeit wurde das iCal-Format so umgewandelt, dass man es in einer MSSQL Datenbank speichern kann. Die Daten dieser Datenbank werden dann von einem Parser in das iCal-Format umgewandelt. Das von den Daten der Datenbank generierte iCal-Format kann dann über einen Webservice mit einem URL in ein beliebiges Kalenderprogramm eingebunden werden. Für die Implementierung des Webservices und des Parsers wurden .Net-Technologien verwendet, genaueres zu .Net und MSSQL in Kapitel \ref{sec:Technologien}.  Dateien welche an Terminen angeheftet werden, werden über URLs zu einem FTP-Server zugreifbar sein, da das speichern von Dateien in der Datenbank ineffizient wäre. Genaueres zum iCal-Format in Kapitel \ref{sec:iCal}.
 \pagebreak
+
+\section{Team} %Fotos fehlen noch
+\label{sec:Team}
+	\subsection*{Dario Wagner}
+		Verantwortlich für: 
+		\begin{itemize}
+			\item Parser
+			\item iCal
+		\end{itemize}
+	\subsection*{Marcel Stering}
+		Verantwortlich für: 
+		\begin{itemize}
+			\item Security
+			\item Webseite
+		\end{itemize}
+	\subsection*{Matthias Franz}
+		Verwantwortlich für: 
+		\begin{itemize}
+			\item iCal
+			\item Datenbank
+			\item Projektleitung
+		\end{itemize}				

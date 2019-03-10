@@ -36,7 +36,7 @@
 %% spacing. Please use with caution: 100% ("1.0") is fine because the
 %% font was designed for it.
 
-\newcommand{\mylanguage}{ngerman,american}
+\newcommand{\mylanguage}{ngerman}
 %% "english,ngerman", "ngerman,english", ...
 %% NOTE: The *last* language is the active one!
 %% See babel documentation for further details.
@@ -117,7 +117,7 @@
 %% this information is used only for generating the title page:
 \newcommand{\myworktitle}{Diplomarbeit}
 \newcommand{\myuniversity}{Graz University of Technology}
-\newcommand{\myinstitute}{HTL Kaindorf}
+\newcommand{\myinstitute}{HTL Kaindorf, Abteilung Informatik}
 \newcommand{\mysupervisor}{Gernot Loibner}
 \newcommand{\mypartner}{Intact GmbH}
 \newcommand{\myhometown}{Kaindorf a. d. Sulm} %% your home town
@@ -136,6 +136,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{ragged2e}
+\usepackage[ngerman]{babel}
 \graphicspath{ {./figures/} }
 
 \definecolor{bluekeywords}{rgb}{0,0,1}
@@ -168,6 +169,14 @@ basicstyle=\ttfamily\small,
 \fancyhf{}
 \fancyhead[LO,RE]{\theauthor}
 \fancyfoot[LO,RE]{\thepage}
+\fancyhead[RO,LE]{\nouppercase{\leftmark}}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[LO,RE]{\theauthor}
+  \fancyfoot[LO,RE]{\thepage}
+  \fancyhead[RO,LE]{\nouppercase{\leftmark}}
+}
 
 \usepackage{wrapfig}
 

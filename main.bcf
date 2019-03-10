@@ -127,7 +127,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>american</bcf:value>
+      <bcf:value>ngerman</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -1939,18 +1939,22 @@
     <bcf:citekey order="13">iCalDocumentation</bcf:citekey>
     <bcf:citekey order="14">ParserUsingKeyword</bcf:citekey>
     <bcf:citekey order="15">TechnologieCSharpErklaerung</bcf:citekey>
-    <bcf:citekey order="16">TechnologieiCalExample</bcf:citekey>
-    <bcf:citekey order="17">TechnologiePostman</bcf:citekey>
-    <bcf:citekey order="18">TechnologieLaTeX</bcf:citekey>
-    <bcf:citekey order="19">2FA</bcf:citekey>
-    <bcf:citekey order="20">Path-Trav</bcf:citekey>
-    <bcf:citekey order="21">XSS</bcf:citekey>
-    <bcf:citekey order="22">Phishing</bcf:citekey>
-    <bcf:citekey order="23">XST</bcf:citekey>
-    <bcf:citekey order="24">CSRF</bcf:citekey>
-    <bcf:citekey order="25">sha256</bcf:citekey>
-    <bcf:citekey order="26">mic_controller</bcf:citekey>
-    <bcf:citekey order="27">mic_views</bcf:citekey>
+    <bcf:citekey order="16">visualstudio</bcf:citekey>
+    <bcf:citekey order="17">aspnetstatistik</bcf:citekey>
+    <bcf:citekey order="18">entityframework</bcf:citekey>
+    <bcf:citekey order="19">TechnologieiCalExample</bcf:citekey>
+    <bcf:citekey order="20">TechnologiePostman</bcf:citekey>
+    <bcf:citekey order="21">trello</bcf:citekey>
+    <bcf:citekey order="22">TechnologieLaTeX</bcf:citekey>
+    <bcf:citekey order="23">2FA</bcf:citekey>
+    <bcf:citekey order="24">Path-Trav</bcf:citekey>
+    <bcf:citekey order="25">XSS</bcf:citekey>
+    <bcf:citekey order="26">Phishing</bcf:citekey>
+    <bcf:citekey order="27">XST</bcf:citekey>
+    <bcf:citekey order="28">CSRF</bcf:citekey>
+    <bcf:citekey order="29">sha256</bcf:citekey>
+    <bcf:citekey order="30">mic_controller</bcf:citekey>
+    <bcf:citekey order="31">mic_views</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
