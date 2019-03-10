@@ -85,8 +85,8 @@ using (MyResource myRes = new MyResource())
 \label{sec:parser-entity-framework}
 \subsubsection {Funktionsweise}
 Mithilfe des Entity Framework lässt sich eine Datenbankstruktur innerhalb des Projekts mit Klassen darstellen. Wenn auf eine dieser Klassen in Form einer Value-Abfrage zugegriffen oder durch sonstige GET/SET Methoden, wird durch das Entity Framework ein Datenbank Zugriff durchgeführt. 
-Um die Funktionsweise genauer zu verstehen folgt ein Beispiel mit einer Datenbank in welcher Autos gespeichert werden:
-HIER KOMMT DANN EIN BEISPIEL
+%Um die Funktionsweise genauer zu verstehen folgt ein Beispiel mit einer Datenbank in welcher Autos gespeichert werden:
+%HIER KOMMT DANN EIN BEISPIEL
 \subsubsection {Anwendung}
 Voraussetzung: Funktionsfähige ASP.NET Web Application \\
 \break \textbf{1. Erstellung einer Datenbank} \\
@@ -97,29 +97,29 @@ In der Packet Manager Console folgenden Befehl eingeben und bestätigen:
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.5\textwidth]{Parser_EFUse01}
-    \caption{Install}
+    \caption{EF Install}
     \label{fig:parsef01}
 \end{figure}
 Abschluss der Installation sieht wie folgt aus:
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{Parser_EFUse02}
-    \caption{Install complete}
+    \caption{EF Install complete}
     \label{fig:parsef02}
 \end{figure} 
 
 \textbf{3. Entity Framework generiert Klassen aus DB} \\
-Im Solution Explorer auf den Model Ordner Rechtsklick machen -> ''Hinzufügen'' -> ''Neues Element''
+Im Solution Explorer auf den Model Ordner Rechtsklick machen, ''Hinzufügen'' und ''Neues Element''.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse03}
-    \caption{Neues Element}
+    \caption{EF Neues Element}
     \label{fig:parsef03}
 \end{figure} 
-Anschließend auf ''Daten'' -> ''ADO.NET Entity Data Model'' -> Hinzufügen
+Anschließend auf ''Daten'', ''ADO.NET Entity Data Model'' und Hinzufügen
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse04}
-    \caption{ADO.NET Entity Data Model}
+    \caption{EF ADO.NET Entity Data Model}
     \label{fig:parsef04}
 \end{figure} 
 Im nächsten Fenster nun  ''EF Designer aus Datenbank'' auswählen und ''Weiter''
@@ -133,14 +133,14 @@ Hier zunächst die Verbindung auswählen in diesem Fall ist ein lokales Datenban
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse06}
-    \caption{Datenverbindung}
+    \caption{EF Datenverbindung}
     \label{fig:parsef06}
 \end{figure} 
 Alle Tabellen auswählen und auf ''Fertig stellen''. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse07}
-    \caption{Datenbankobjekte auswählen}
+    \caption{EF Datenbankobjekte auswählen}
     \label{fig:parsef07}
 \end{figure} 
 Falls eine Sicherheitswarnung erscheint auf ''OK'' klicken. \\
@@ -148,18 +148,15 @@ Endresultat, das Entity Framework hat die Tables im Models Ordner erstellt und a
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse09}
-    \caption{Klassendiagramm}
+    \caption{EF Klassendiagramm}
     \label{fig:parsef07}
 \end{figure} 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Parser_EFUse10}
-    \caption{Solutionsexplorer}
+    \caption{EF Solutionsexplorer}
     \label{fig:parsef07}
 \end{figure} 
-
-
-
 \subsection{Source-Code}
 \label{ef-sourcecode}
 %Hier kommt die Source-Code Erklärung des Parsers hin
