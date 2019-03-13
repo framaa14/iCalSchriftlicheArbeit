@@ -1,3 +1,5 @@
+%TODO ER-Diagramm selbstverweis auf Attendee 2x
+
 \renewcommand{\theauthor}{Matthias Franz}
 \chapter{Datenbank}
 \label{sec:datenbank}
@@ -23,7 +25,7 @@ Ein ER-Diagramm besteht aus Entitäten und Relationen, eine Entität ist eine Ta
 Im ER-Diagramm von Abbildung \ref{fig:erDiagramm} werden Primary-Keys fett und Foreign Keys kursiv dargestellt.
 
 \begin{figure}[H]
-	\includegraphics[angle=270,origin=c,width=\textwidth]{Datenbank_ER-Diagramm.jpg}
+	\includegraphics[angle=270,origin=c,width=\textwidth]{Datenbank_ER-Diagramm.png}
     \caption{ER-Diagramm}
     \label{fig:erDiagramm}
 \end{figure}
@@ -56,5 +58,22 @@ Ein Kalender besteht aus mehreren Kalendereinträgen, ein Kalenderbeitrag ist zu
     \label{fig:calendarEntries}
 \end{figure}
 
+\subsubsection*{Kalendereintragseigenschaften}
+\label{ref:kalendereintragseigenschaften}
+Einträge wie VEVENT und VTODO in iCal-Dateien haben eine Vielzahl an Attributen, diese Attribute werden in der Datenbank durch Eins zu Mehrere Beziehungen abgebildet. Die Attribute welche in der Datenbank mit der CalendarEntry-Tabelle verbunden sind für alle Einträge in einer iCal-Datei zur Verfügung stehen sind sie nur mit der CalendarEntry-Tabelle verbunden anstatt mit der ToDo- oder Event-Tabelle. Die Tabellen RRUle, Class, Organizer und Status wurden in eigene Tabellen ausgebaut, da so keine Fehler auftreten können, zum Beispiel kann man so keinen Status in einen Kalendereintrag eintragen welcher nicht existiert, denn es gibt nur eine bestimmte Anzahl an vorgefertigten Einträge welche das iCal-Format erlaubt. Deswegen sind die Status- und Class-Tabelle schon von Haus aus gefüllt.
+In der Class-Tabelle gibt es die Einträge: PUBLIC, PRIVATE und CONFIDENTIAL. In der Status Tabelle gibt es für für ToDo- und Event-Einträge verschiedene Einträge, da in der Datenbank die Status-Tabelle nicht mit einer Event oder einer ToDo-Tabelle verbunden ist macht das in der Datenbank keine Probleme. Ob ein Status eines ToDo-Elements in einem Event verwendet wird wird im Parser abgefragt. Inhalte der Status Tabelle sind: TENTATIVE, CONFIRMED, CANCELLED, NEEDS-ACTION, COMPLETED, IN-PROCESS und CANCELLED. Genaueres zur Funktionsweise dieser Attribute im Kapitel \ref{sec:keywords}.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Datenbank_Attribute.jpg}
+    \caption{Kalendereintragseigenschaften}
+    \label{fig:kalendereintragseigenschaften}
+\end{figure}
 
-	
+\subsubsection*{Teilnehmer}
+\label{ref:teilnehmer}
+Im iCal-Format kann man Terminen Teilnehmer zuweisen.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Datenbank_Attendee.png}
+    \caption{Teilnehmer}
+    \label{fig:datenbankTeilnehmer}
+\end{figure}
+
