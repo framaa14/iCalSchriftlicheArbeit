@@ -12,14 +12,17 @@ Die Webseite soll eine Login-Funktion haben die es einem Nutzer des ICAL-Webserv
 \subsection{Der Login Code}
 \label{sec:Login_Handling_Code}
 \begin{lstlisting}
+/* Hier wird die Methode gesetzt, festgelegt ob nicht angemeldete User die Erlaubnis haben diese zu nutzen und der Anti-Request-Forgery-Token wird gesetz. */
 [HttpPost]
 [AllowAnonymous]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
 {
+	//setzen der ReturnUrl
     ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
+        	//Aufrufen des PasswordSignInAsync und abpruefen ob der Login erfolgreich war
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
             if (result.Succeeded)
             {
@@ -30,6 +33,7 @@ public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = 
             {
                 return RedirectToAction(nameof(LoginWith2fa), new { returnUrl, model.RememberMe });
             }
+            //Ebenso abpruefen ob der User ausgeloggt ist.
             if (result.IsLockedOut)
             {
                 _logger.LogWarning("User account locked out.");
@@ -205,6 +209,57 @@ Es ergibt sich daraus \\
 \\
 Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angreifer eingegebene Daten vom Benutzer zu sehen. 
 \\ vgl. \textcite{Phishing}
+\subsection{HTTP-Protokoll}
+Da sich die fortführende Themen mit HTTP und HTTP Request Protokollen beschäftigen werden, werden in diesem Kapitel kurz das Hypertext Transfer Protocol (HTTP) erklärt. 
+\subsubsection{HTTP-Allgemein}
+Das Hypertext Transfer Protocol läuft auf Port 80/TCP und ist für die Übertragung von Daten zuständig.
+\subsubsection{HTTP-Funktionsweise}
+Hypertext Transfer Protocol kommuniziert auf dem Client-Server-Prinzip. Bedeutet das der HTTP-Client(ein Browser) eine Anfrage (eine sogenannte HTTP-Request) an einen HTTP-Server. Der Server analysiert die Anfrage und antwortet mit einer HTTP-Response. Die Kommunikation endet mit der Antwort des HTTP-Servers. Diese Kommunikation wird in Textform abgehalten. Die Meldungen werden wie bereits erwähnt HTTP-Request und HTTP-Response genannt und diese bestehen aus einem Header und Daten. Dieser Header enthält alle notwendigen Steuerinformationen. Die HTTP-Daten sind abhängig von wem sie gesendet werden, werden diese vom Server gesendet kommen sie als ein File, werden sie vom Client gesendet enthaltet diese Daten von den Nutzereingaben, die dieser getätigt hat.
+\subsubsection{HTTP-Request}
+Nun beschäftigen wird die HTTP-Request behandeln, welche in den weiteren Kapiteln eine Rolle spielen wird.\\Der HTTP-Request ist eine Anfrage vom Client an einen Server, dieser Request besteht aus Methode, URL und dem Request-Header. Die meist genutzten Methoden sind POST und GET, da damit die Hauptkommunikation von Server und Client funktioniert. Auf die Methode folgt durch Leerzeichen getrennt der URL und die verwendete HTTP-Version. Danach kommt der Header und bei der Methode POST die Formular-Daten.
+\paragraph{HTTP-Request-Header}
+\begin{enumerate}
+\item Methode URL HTTP/Version
+\item General Header
+\item Request Header
+\item Entity Header (optional)
+\item Leerzeile (!)
+\item Request Entity (falls vorhanden)
+\end{enumerate}
+\subsubsection{Header-Methoden}
+In diesem Abschnitt werden die für die weiterführenden Kapiteln relevanten Header-Methoden erklärt werden.
+\paragraph{Methoden}
+\begin{enumerate}
+\item GET
+\item POST
+\item HEAD
+\item PUT
+\item OPTIONS
+\item DELETE
+\item TRACE
+\item CONNECT
+\end{enumerate}
+\paragraph{GET}:\\Die GET-Methode hat als Zweck eine HTML-Datei oder eine andere Quelle vom HTTP-Server anzufordern. Die Quelle wird durch den Url festgelegt.Über GET kann man auch Formular-Daten übermitteln. Diese werden in codierter Form an den URL angehängt. Die Trennung von URL und Formular Daten erfolgt dabei durch ein Fragezeichen(?).
+\paragraph{Beispiel HTTP-GET Request mit Postman}
+\begin{lstlisting}
+GET / HTTP/1.1
+Host: www.htl-kaindorf.at
+Content-Type: application/x-www-form-urlencoded
+cache-control: no-cache
+Postman-Token: d5bf16bd-2c73-4911-8a4c-c33d13dfa6ad
+\end{lstlisting}
+\paragraph{POST}:\\Die POST-Methode ähnelt der GET-Methode in der Funktion, jedoch wird sie zum senden von Formular-Daten an ein Serverseitiges Skript verwendet. Hierbei werden die Daten im Entity-Bereich getrennt und durch eine Leezeile vom Header übertragen.
+\paragraph{Beispiel HTTP-POST Request mit Postman}
+\begin{lstlisting}
+POST / HTTP/1.1
+Host: www.google.com
+Content-Type: application/x-www-form-urlencoded
+cache-control: no-cache
+Postman-Token: b632b3e6-a87f-4ba6-80eb-e3c6c701710b
+firstname=Marcellastname=Stering
+\end{lstlisting}
+Hier wurden an den Host www.google.com die Formular-Daten firstname=Marcel und lastname=Stering gesendet.
+\paragraph{Trace}:\\Mit der TRACE-Methode werden HTTP-Requests, zwichen Client und Server über einen/mehrere Proxy-Server verfolgt. Die zwischengehaltenen Server stehen hierbei dann im Header-Feld "Via".
 \subsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
 Beim Cross-Site-Tracing werden XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert fast gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für den Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
