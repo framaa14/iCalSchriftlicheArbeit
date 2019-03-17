@@ -157,25 +157,54 @@ Diese Komponente des Kalenders sorgt dafür, dass man bei einem Termin, wo mehre
 Der Sinn dieser Eigenschaft ist es den Status oder die Bestätigung des Kalender Objekts zu definieren. In einer VTODO Komponente könnte der Status so aussehen: STATUS:NEEDS-ACTION. Heißt er ist noch nicht abgeschlossen und muss noch bearbeitet werden.
 \subsection{ATTENDEE}
 \label{sec:attendee}
-platzhalter platzhalter platzhalter platzhalter 
+Die Aufgabe dieser Eigenschaft ist es Teilnehmer eines Termins zum Kalender hinzufügen zu können. Die Eigenschaft \textbf{muss} nur innerhalb von Kalenderkomponenten angegeben werden, um Teilnehmer, Nichtteilnehmer und den Vorsitzenden einer Gruppenkalenderentität anzugeben. \\ \\ 
+\textbf{Parameter:}
+\begin{itemize}
+ \item \textbf{CN} steht für den anzuzeigenden Namen, welcher der Kalenderadresse zugeordnet ist
+ \item \textbf{ROLE} für die beabsichtigte Rolle, die der Teilnehmer in der Kalenderkomponente haben wird
+ \item \textbf{PARTSTAT} für den Status der Teilnahme des Teilnehmers
+ \item \textbf{RSVP}, um anzuzeigen, ob eine Antwort verlangt wird
+ \item \textbf{CUTYPE}, um den Typ des Kalenderbenutzers anzugeben
+ \item \textbf{MEMBER}, um die Gruppen anzugeben, zu denen der Teilnehmer gehört
+ \item \textbf{DELEGATED-TO}, um die Kalenderbenutzer anzugeben, an die die ursprüngliche Anforderung delegiert wurde
+ \item \textbf{DELEGATED-FROM}, um anzugeben, von wem die Anfrage delegiert wurde
+ \item \textbf{SENT-BY}, um anzugeben, wer im Auftrag der ATTENDEE handelt
+ \item \textbf{DIR}, um den URI anzugeben, der auf die dem Teilnehmer entsprechenden Verzeichnisinformationen zeigt
+ \end{itemize} 
+Diese Eigenschaftsparameter können für eine Eigenschaft ''ATTENDEE'' in einer Kalenderkomponente ''VEVENT'', ''VTODO'' oder ''VJOURNAL'' angegeben werden. Sie dürfen in einer ''ATTENDEE''-Eigenschaft in einer ''VFREEBUSY''- oder ''VALARM''-Kalenderkomponente nicht angegeben werden. Wenn der Eigenschaftsparameter LANGUAGE angegeben wird, gilt die angegebene Sprache für den Parameter CN. \\ \\
+Eine ATTENDEE Eigenschaft könnte wie folgt aussehen: \\
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=\textwidth]{images/iCal_Format_attendee}
+    \caption{iCal ATTENDEE Beispiel}
+    \label{fig:netFramework}
+\end{figure}
 \subsection{TRANSP}
 \label{sec:transp}
-platzhalter platzhalter platzhalter platzhalter 
+Diese Eigenschaft ist zur Angabe, ob ein Event beim Filtern nach ''beschäftigter Zeit'' angezeigt werden soll oder nicht. Der Wert der Eigenschaft TRANSP kann entweder ''OPAQUE'' oder ''TRANSPARENT''. Opaque bedeutet undurchsichtig und wird somit beim Filtern nach beschäftigter Zeit angezeigt.
 %VALARM
 \subsection{TRIGGER}
 \label{sec:trigger}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VALARM \\
+Gibt an wann ein Alarm ausgelöst werden soll. Der Standard-Wert ist die Eigenschaft ''DURATION'' \ref{sec:duration}. Es gibt mehrere Möglichkeiten anzugeben wann der Alarm ausgelöst werden soll. 
+\begin{enumerate}
+\item Trigger welcher 20 Minuten nach Start des Events auslöst: \\TRIGGER:-P20M\\
+\item Trigger welcher 10 Minuten nach Ende des Events auslöst: \\TRIGGER;RELATED=END:P10M\\
+\item Trigger welcher an einer absoluten Uhrzeit auslöst (17.03.2019 - 12 Uhr): \\TRIGGER;VALUE=DATE-TIME:20190317T120000Z\\
+\end{enumerate}
 \subsection{REPEAT}
 \label{sec:repeat}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VALARM \\
+Gibt an wie oft ein Alarm nach erstmaliger Auslösung wiederholt werden soll. Um einen Alarm mit 5 Minuten Abstand 4 mal zu wiederholen muss die REPEAT Eigenschaft wie folgt aussehen: \\ \\ REPEAT:4\\DURATION:PT5M
 \subsection{DURATION}
 \label{sec:duration}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO, VALARM, VFREEBUSY\\
+Diese Eigenschaft gibt eine Dauer an. Bei einem Event kann sie eine Zeit angeben wie lange das Event dauert, anstatt einer DTEND Eigenschaft \ref{sec:dtend}. Die DURATION kann auch wie bei dem Beispiel einer REPEAT Eigenschaft \ref{sec:repeat} genutzt werden.
 \subsection{ACTION}
 \label{sec:action}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VALARM \\
+Beschreibt die Aktion die ausgeführt wird wenn ein Alarm ausgelöst wird. Wie bei VALARM \ref{sec:vAlarm} beschrieben kann hier zum Beispiel ''ACTION:AUDIO'' angegeben werden, dann wird beim auslösen des Alarm ein Ton abgespielt. Welches Geräusch abgespielt wird hängt vom Verweis auf die Sound-Datei ab. 
 \subsection{ATTACH}
 \label{sec:attach}
-platzhalter platzhalter platzhalter platzhalter 
-\subsection{Beispiel}
-\label{sec:beispiel_ical}
+\textbf{Anwendbar in:} VEVENT, VTODO, VALARM, VJOURNAL\\
+Mithilfe der ATTACH-Eigenschaft kann eine Datei dem Termin angehängt werden. Dies könnte zum Beispiel ein wichtiges Formular für ein Meeting oder Notizen für eine Präsentation sein. 
