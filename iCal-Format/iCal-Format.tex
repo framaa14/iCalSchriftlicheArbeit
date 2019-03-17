@@ -116,35 +116,45 @@ DTSTART: 20190308T165800
 Diese Komponente kann nur in VEVENT \ref{sec:vEvent} und VFREEBUSY hinzugefügt werden. Wie bei DTSTART wird nur die Verwendung in VEVENT erklärt. In VEVENT definiert die Eigenschaft das End-Datum und die End-Zeit eines Termins/Events.
 \subsection{DTSTAMP}
 \label{sec:dtstamp}
-DTSTAMP kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VJOURNAL verwendet werden. In dieser Eigenschaft wird der das Datum und die Uhrzeit festgehalten zuwelcher die .ics-Datei aus den Informationen aus der Datenbank erstellt wurde.
+DTSTAMP kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VJOURNAL verwendet werden. In dieser Eigenschaft wird der das Datum und die Uhrzeit festgehalten zu welcher die .ics-Datei aus den Informationen aus der Datenbank erstellt wurde.
 % https://stackoverflow.com/questions/11594921/whats-the-difference-between-created-and-dtstamp-in-the-icalendar-format
 \subsection{COMMENT}
 \label{sec:comment}
-In dieser Eigenschaft kann ein Kommentar, welcher für den Benutzer sichtbar ist, eingefügt werden. Diese Eigenschaft kann mehrmals hinzugefügt werden und in VEVENT, VTODO, VJOURNAL, VTIMEZONE und VFREEBUSY hinzugefügt werden.
+In dieser Eigenschaft kann ein Kommentar, welcher für den Benutzer sichtbar ist, eingefügt werden. Diese Eigenschaft kann mehrmals hinzugefügt werden und in VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VJOURNAL, VTIMEZONE und VFREEBUSY hinzugefügt werden.
 \subsection{DESCRIPTION}
 \label{sec:description}
-platzhalter platzhalter platzhalter platzhalter 
+Die Description ist eine Eigenschaft welche in VEVENT und VTODO benutzt werden kann. Der Wert der Eigenschaft ist ein einfacher Text welcher das Event oder die zu erledigende Aufgabe genauer beschreibt. 
 \subsection{LOCATION}
 \label{sec:location}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO \\ % FORMAT AUF ALLE ANDREN ÜBERNEHMEN
+Mithilfe dieser Eigenschaft kann in der Aktivität ein Ort genauer definiert werden. Bei einem Termin namens "Meeting" kann in der Location der Konferenzraum reingeschrieben werden. 
 \subsection{PRIORITY}
 \label{sec:priority}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO \\
+Die Eigenschaft Priority kann definiert werden um die Wichtigkeit des eingetragenen Termins zu spefizieren. Der Wert der Eigenschaft ist ein Integer, also eine Zahl. Der Wert der als Priority eingetragen werden kann liegt im Bereich 0-9. Wobei 0 der Standard-Wert ist, wenn 0 festgelegt wird ist es so als wäre die Eigenschaft nicht spezifiziert worden. Anders als zu erwarten ist aber der Wert 9 die niedrigste und der Wert 1 die höchste Priorität. 
 \subsection{RRULE}
 \label{sec:rrule}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL \\
+Der Name der Eigenschaft heißt ausgeschrieben ''Recurrence Rule'' was auf Deutsch ''Wiederholungsregel'' bedeutet. In dieser Eigenschaft wird definiert in welcher Frequenz und wie oft ein Ereignis im Kalender auftreten \textbf{wiederholt} werden soll. Die Eigenschaft DTSTART \ref{sec:dtstart} ist hierbei besonders wichtig. Anhand der DTSTART Eigenschaft wird angegeben von welchem Datum die Wiederholungsregel ausgeht. Diese Eigenschaften in Kombination könnten wie folgt aussehen: \\ \\
+Tägliches-Event für die nächsten 10-Mal:\\
+ DTSTART;TZID=US-Eastern:19970902T090000\\
+ RRULE:FREQ=DAILY;COUNT=10\\
 \subsection{DUE}
 \label{sec:due}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VTODO\\
+Der Wert der Eigenschaft ist ein Datum und muss entweder gleich oder größer als das Start-Datum sein. Sie gibt an bis was etwas zu erledigen ist. 
 \subsection{CLASS}
 \label{sec:class}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
+Die ''CLASS'' Eigenschaft ist eine Komponente zur Sicherheit in einer Kalender Applikation. Mithilfe dieser Eigenschaft kann der Zugriff auf Termin Informationen kontrolliert werden. Der Wert dieser Eigenschaft sind vorgegebene Werte. Ein hinzugefügtes Class-Objekt könnte wie folgt aussehen: CLASS:PUBLIC.
 \subsection{ORGANIZER}
 \label{sec:organizer}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
+Diese Komponente des Kalenders sorgt dafür, dass man bei einem Termin, wo mehrere Leute beteiligt sind, einen Organisator im Termin festlegen kann. Die wichtigste Eigenschaft von ''Class'' ist unter anderem ''CN'' bei welcher man den Anzeigenamen angeben muss. Eine ''ORGANIZER'' Eigenschaft könnte zum Beispiel so aussehen: \\ \\ ORGANIZER;CN=Dario Wagner:MAILTO:wagdaa14@htlkaindorf.at\\
 \subsection{STATUS}
 \label{sec:status}
-platzhalter platzhalter platzhalter platzhalter 
+\textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
+Der Sinn dieser Eigenschaft ist es den Status oder die Bestätigung des Kalender Objekts zu definieren. In einer VTODO Komponente könnte der Status so aussehen: STATUS:NEEDS-ACTION. Heißt er ist noch nicht abgeschlossen und muss noch bearbeitet werden.
 \subsection{ATTENDEE}
 \label{sec:attendee}
 platzhalter platzhalter platzhalter platzhalter 
