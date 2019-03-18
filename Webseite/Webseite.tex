@@ -710,7 +710,7 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 \end{lstlisting}
 (erklären)
 \\ vgl. \textcite{mic_views}
-\section{User Datenbank}
+\section{Benutzer Datenbank}
 \label{sec:UserDB}
 Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
 \subsection{Salt}
@@ -730,4 +730,12 @@ ae\\
 af\\
 ..\\
 Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist es nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen wie viel gleiche Passwörter es in der Datenbank gibt.
+\subsubsection{Die Benutzerdatenbank}
+Zu behandeln ist hier die Benutzertabelle. Welche folgendermaßen erstellt wurde.
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Webseite_userdb}
+    \caption{Webseite Benutzer Datenbank}
+    \label{fig:webdb}
+\end{figure}
+In diesem Bild ist ersichtlich welche Daten alle in der Benutzertabelle verwaltet und gespeichert werden.
 \pagebreak
