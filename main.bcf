@@ -1952,9 +1952,10 @@
     <bcf:citekey order="26">Phishing</bcf:citekey>
     <bcf:citekey order="27">XST</bcf:citekey>
     <bcf:citekey order="28">CSRF</bcf:citekey>
-    <bcf:citekey order="29">sha256</bcf:citekey>
-    <bcf:citekey order="30">mic_controller</bcf:citekey>
-    <bcf:citekey order="31">mic_views</bcf:citekey>
+    <bcf:citekey order="29">CSRF-Protection</bcf:citekey>
+    <bcf:citekey order="30">sha256</bcf:citekey>
+    <bcf:citekey order="31">mic_controller</bcf:citekey>
+    <bcf:citekey order="32">mic_views</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
