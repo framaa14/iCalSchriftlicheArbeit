@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.7)  20 MAR 2019 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.7)  21 MAR 2019 08:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2067,9 +2067,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--54
  []
 
 
-Overfull \hbox (12.56883pt too wide) in paragraph at lines 26--54
-\OT1/pplj/m/n/12 (-20) BE-GIN:VCALENDAR be-gin-nen. Wenn ein Ka-len-der mit BE-
-GIN:VCALENDAR
+Overfull \hbox (24.14397pt too wide) in paragraph at lines 26--54
+\OT1/pplj/m/n/12 (-20) Eine .ics Da-tei hier-ar-chisch auf-ge-baut. Ei-ne Da-te
+i muss mit BE-GIN:VCALENDAR
  []
 
 
@@ -4335,7 +4335,7 @@ f-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (120 pages, 1592238 bytes).
+Output written on main.pdf (120 pages, 1592297 bytes).
 PDF statistics:
  2077 PDF objects out of 2487 (max. 8388607)
  1831 compressed objects within 19 object streams
