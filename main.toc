@@ -177,7 +177,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.2}2FA Login Code}{63}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Path-Traversal}{65}{section.7.3}
+\contentsline {section}{\numberline {7.3}Path-Traversal}{66}{section.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.1}Grundprinzip}{66}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
@@ -189,7 +189,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}HTTP-Funktionsweise}{67}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}HTTP-Request}{67}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3}HTTP-Request}{68}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline HTTP-Request-Header}{68}{section*.23}
 \defcounter {refsection}{0}\relax 
@@ -197,15 +197,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Methoden}{68}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline GET}{68}{section*.26}
+\contentsline {paragraph}{\nonumberline GET}{69}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Beispiel HTTP-GET Request mit Postman}{69}{lstlisting.7.-3}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline POST}{69}{section*.28}
 \defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Beispiel HTTP-POST Request mit Postman}{69}{lstlisting.7.-4}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Trace}{69}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}XSS Protection}{69}{section.7.5}
+\contentsline {section}{\numberline {7.5}XSS Protection}{70}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Allgemeines \IeC {\"u}ber XSS}{69}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.1}Allgemeines \IeC {\"u}ber XSS}{70}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.2}XSS Targets:}{70}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
