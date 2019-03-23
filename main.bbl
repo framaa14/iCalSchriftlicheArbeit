@@ -49,6 +49,33 @@
       \verb https://www.codeproject.com/Articles/6564/Understanding-the-using-statement-in-C
       \endverb
     \endentry
+    \entry{aspnetstatistik}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f8c427fa3c9be2de5ce9b3e50e6cf886}{%
+           family={Anonym},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \strng{fullhash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \strng{bibnamehash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \strng{authorbibnamehash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \strng{authornamehash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \strng{authorfullhash}{f8c427fa3c9be2de5ce9b3e50e6cf886}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Usage of server-side programming languages for websites}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://w3techs.com/technologies/overview/programming_language/all
+      \endverb
+      \verb{url}
+      \verb https://w3techs.com/technologies/overview/programming_language/all
+      \endverb
+    \endentry
     \entry{ScrumScrum-Review}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=f7db5bbd8037b801423c59ef307ff86f}{%
@@ -327,34 +354,85 @@
       \verb https://www.inloox.de/unternehmen/blog/artikel/scrum-grundlagen-einfach-erklaert-der-sprint-backlog/
       \endverb
     \endentry
-    \entry{ScrumProductOwner}{online}{}
+    \entry{XST}{online}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=cb970d4d79247025542e47edd0a22a37}{%
-           family={OWNER?},
-           familyi={O\bibinitperiod},
-           given={WAS\bibnamedelimb MACHT\bibnamedelimb EIN\bibnamedelima PRODUCT},
-           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
       }
-      \strng{namehash}{cb970d4d79247025542e47edd0a22a37}
-      \strng{fullhash}{cb970d4d79247025542e47edd0a22a37}
-      \strng{bibnamehash}{cb970d4d79247025542e47edd0a22a37}
-      \strng{authorbibnamehash}{cb970d4d79247025542e47edd0a22a37}
-      \strng{authornamehash}{cb970d4d79247025542e47edd0a22a37}
-      \strng{authorfullhash}{cb970d4d79247025542e47edd0a22a37}
-      \field{sortinit}{O}
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{WAS MACHT EIN PRODUCT OWNER?}
-      \field{year}{2016}
+      \field{title}{Cross Site Tracing}
+      \field{year}{2014}
       \verb{urlraw}
-      \verb https://www.scrum.de/was-macht-product-owner/
+      \verb https://www.owasp.org/index.php/Cross_Site_Tracing
       \endverb
       \verb{url}
-      \verb https://www.scrum.de/was-macht-product-owner/
+      \verb https://www.owasp.org/index.php/Cross_Site_Tracing
+      \endverb
+    \endentry
+    \entry{Path-Trav}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Path Traversal}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.owasp.org/index.php/Path_Traversal
+      \endverb
+      \verb{url}
+      \verb https://www.owasp.org/index.php/Path_Traversal
+      \endverb
+    \endentry
+    \entry{XSS}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e0aca2fe8231010480c521fa93bc7ee6}{%
+           family={owasp},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{fullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{bibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorbibnamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authornamehash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \strng{authorfullhash}{e0aca2fe8231010480c521fa93bc7ee6}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cross-site Scripting (XSS)}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+      \endverb
+      \verb{url}
+      \verb https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
       \endverb
     \endentry
     \entry{ScrumScrumMaster}{online}{}
@@ -415,6 +493,114 @@
       \endverb
       \verb{url}
       \verb https://www.kayenta.de/training-seminar/artikel/daily-scrum-meeting-stand-up-meeting-im-agilen-projektmanagement.html
+      \endverb
+    \endentry
+    \entry{ScrumProductOwner}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=57894e5082f28e340104c53c1b37a264}{%
+           family={ProwarenessGmbH},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{57894e5082f28e340104c53c1b37a264}
+      \strng{fullhash}{57894e5082f28e340104c53c1b37a264}
+      \strng{bibnamehash}{57894e5082f28e340104c53c1b37a264}
+      \strng{authorbibnamehash}{57894e5082f28e340104c53c1b37a264}
+      \strng{authornamehash}{57894e5082f28e340104c53c1b37a264}
+      \strng{authorfullhash}{57894e5082f28e340104c53c1b37a264}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WAS MACHT EIN PRODUCT OWNER?}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.scrum.de/was-macht-product-owner/
+      \endverb
+      \verb{url}
+      \verb https://www.scrum.de/was-macht-product-owner/
+      \endverb
+    \endentry
+    \entry{Phishing}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=931ae4156942f9c560dce646765b34d4}{%
+           family={Ramzan},
+           familyi={R\bibinitperiod},
+           given={Zulfikar},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{fullhash}{931ae4156942f9c560dce646765b34d4}
+      \strng{bibnamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authorbibnamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authornamehash}{931ae4156942f9c560dce646765b34d4}
+      \strng{authorfullhash}{931ae4156942f9c560dce646765b34d4}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Phishing and Cross-Site Scripting}
+      \field{year}{2006}
+      \verb{urlraw}
+      \verb https://www.symantec.com/connect/blogs/phishing-and-cross-site-scripting
+      \endverb
+      \verb{url}
+      \verb https://www.symantec.com/connect/blogs/phishing-and-cross-site-scripting
+      \endverb
+    \endentry
+    \entry{sha256}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=451969e851a7f38cf112ace82d969f48}{%
+           family={researchgate},
+           familyi={r\bibinitperiod}}}%
+      }
+      \strng{namehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{fullhash}{451969e851a7f38cf112ace82d969f48}
+      \strng{bibnamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authorbibnamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authornamehash}{451969e851a7f38cf112ace82d969f48}
+      \strng{authorfullhash}{451969e851a7f38cf112ace82d969f48}
+      \field{sortinit}{r}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The cryptographic hash function SHA-256}
+      \field{year}{2010}
+    \endentry
+    \entry{CSRF-Protection}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=46e7f86b11ade65e293413c9b9884dcf}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46e7f86b11ade65e293413c9b9884dcf}
+      \strng{fullhash}{46e7f86b11ade65e293413c9b9884dcf}
+      \strng{bibnamehash}{46e7f86b11ade65e293413c9b9884dcf}
+      \strng{authorbibnamehash}{46e7f86b11ade65e293413c9b9884dcf}
+      \strng{authornamehash}{46e7f86b11ade65e293413c9b9884dcf}
+      \strng{authorfullhash}{46e7f86b11ade65e293413c9b9884dcf}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prevent Cross-Site Request Forgery (XSRF/CSRF) attacks in ASP.NET Core}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2
       \endverb
     \endentry
     \entry{ScrumSprint-Planning}{online}{}
@@ -480,6 +666,36 @@
       \verb https://praxistipps.chip.de/was-ist-latex-einfach-erklaert_48193
       \endverb
     \endentry
+    \entry{entityframework}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=b832dce6533de4ce7db41d422b01d4c9}{%
+           family={Vega},
+           familyi={V\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b832dce6533de4ce7db41d422b01d4c9}
+      \strng{fullhash}{b832dce6533de4ce7db41d422b01d4c9}
+      \strng{bibnamehash}{b832dce6533de4ce7db41d422b01d4c9}
+      \strng{authorbibnamehash}{b832dce6533de4ce7db41d422b01d4c9}
+      \strng{authornamehash}{b832dce6533de4ce7db41d422b01d4c9}
+      \strng{authorfullhash}{b832dce6533de4ce7db41d422b01d4c9}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{entityframework}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://github.com/aspnet/EntityFramework6/blob/master/README.md
+      \endverb
+      \verb{url}
+      \verb https://github.com/aspnet/EntityFramework6/blob/master/README.md
+      \endverb
+    \endentry
     \entry{VMI-Matrix}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=c5d9e656d25e34a2bed94768d8b64c78}{%
@@ -505,6 +721,68 @@
       \endverb
       \verb{url}
       \verb https://www.projektmanagementhandbuch.de/handbuch/projektplanung/vmi-matrix/
+      \endverb
+    \endentry
+    \entry{mic_controller}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a0a59bff607e05ff829a28f96b12b0bf}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{fullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{bibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorbibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authornamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorfullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ASP.NET MVC Controller Overview}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
+      \endverb
+    \endentry
+    \entry{mic_views}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a0a59bff607e05ff829a28f96b12b0bf}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{fullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{bibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorbibnamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authornamehash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \strng{authorfullhash}{a0a59bff607e05ff829a28f96b12b0bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ASP.NET MVC Views Overview}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
       \endverb
     \endentry
     \entry{TechnologieCSharpErklaerung}{online}{}
@@ -537,7 +815,91 @@
       \verb https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework
       \endverb
     \endentry
+    \entry{trello}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Trello}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Trello
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Trello
+      \endverb
+    \endentry
+    \entry{2FA}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multi-factor authentication}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Multi-factor_authentication
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Multi-factor_authentication
+      \endverb
+    \endentry
+    \entry{visualstudio}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Visual Studio}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Visual_Studio
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Visual_Studio
+      \endverb
+    \endentry
   \enddatalist
+  \missing{CSRF}
 \endrefsection
 \endinput
 
