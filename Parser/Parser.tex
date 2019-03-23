@@ -13,7 +13,7 @@ Die Aufgabe des Parsers ist es auf die Datenbank zuzugreifen und sich die, für 
 \subsection{Source-Code}
 \label{sec:parser-sourcecode}
 Unter dieser Überschrift wird auf einen wichtigen Teil des Parsers eingegangen um seine Funktionsweise in Kombination mit dem Entity Framework zu verstehen. Im Prinzip besteht der Parser aus zwei Teilen, dem Verbindungsaufbau mit der Datenbank(DB) über das Entity Framework und dem konvertieren der Daten zu einer iCal-Zeichenkette. Da der zweite Teil sich nur mit reinem Abfragen ob Daten vorhanden sind und wenn sie vorhanden sind dem hinzufügen zum StringBuilder beschäftigt wird dieser Teil nicht erklärt.\\ \\
-Im folgenden eingefügten Source-Code ist zu sehen wie man mit hilfe des Parser auf die Datenbank zugreifen kann. Der Source-Code ist anhand von Kommentaren in vier Parts aufgeteilt. Das Source-Code Beispiel wurde identisch aus dem praktischen Teil der Diplomarbeit in der Klasse Parser unter der Methode GetICalFormat(int UserID) übernommen. \\ \\
+Im folgenden eingefügten Source-Code ist zu sehen wie mithilfe des Parser auf die Datenbank zugegriffen werden kann. Der Source-Code ist anhand von Kommentaren in vier Parts aufgeteilt. Das Source-Code Beispiel wurde identisch aus dem praktischen Teil der Diplomarbeit in der Klasse Parser unter der Methode GetICalFormat(int UserID) übernommen. \\ \\
 \textbf{Part 1} \\
 Im ersten Part wird der StringBuilder, welcher letzten Endes die fertige Zeichenkette zurückgibt, erstellt. Anschließend wird über den ''using''-Command [\ref{usingkeyword}] ein Objekt mit dem Namen ''db'' von der Klasse iCalContext erstellt. Die Klasse iCalContext wurde vom Entity Framework automatisch generiert und wird unter folgender Überschrift ''\ref{ef-sourcecode} Source-Code'' erklärt. Unter dem Schlüsselwort ''using'' wird desweiteren eine Boolean-Variable erstellt, welche später bei einer Abfrage benötigt wird. Diese kann vorerst ignoriert werden, da sie für die Erklärung irrelevant ist. Im Anschluss wird eine Liste des Typen ''int'' erstellt, welche später unsere Kalender-IDs enthalten wird. \\ \\
 \textbf{Part 2} \\
@@ -21,7 +21,7 @@ In diesem Abschnitt wird über eine foreach-Schleife durch eine Liste iteriert w
 \textbf{Part 3} \\
 In Part 3 ist der Kopf der foreach-Schleife die sich bis zum Ende der Methode durchzieht zusehen. In dieser werden alle Kalender, mit einer ID, welche in der CalendarIdList enhalten sind, iteriert. Das heißt die Methode wird erst beendet wenn alle Kalender des Benutzers in einen iCal-String umgewandelt wurden und im StringBuilder enthalten sind. Da am Anfang von jedem Kalender immer ''BEGIN:VCALENDER'' und eine Timezone angegeben wird, wird dieser String direkt an den StringBuilder angehängt. \\ \\
 \textbf{Part 4} \\
-In Part 4 sieht man den Kopf einer foreach-Schleife welcher dafür sorgt, dass durch jeden Termin oder Eintrag im Kalender durchiteriert wird. Da das iCal-Format für einen Kalender wie folgt aufgebaut ist: 
+In Part 4 ist der Kopf einer foreach-Schleife sichtbar, welcher dafür sorgt, dass durch jeden Termin oder Eintrag im Kalender durchiteriert wird. Da das iCal-Format für einen Kalender wie folgt aufgebaut ist: 
 \begin{itemize}
 \item Kalender Anfang
 \item Termin/Eintrag
@@ -44,18 +44,19 @@ using (var db = new iCalContext())
   }
   // Part 3
   foreach (var calendar in db.Calendar.Where
-  		  (x => CalendarIdList.Contains(x.CalendarId)))
+  	(x => CalendarIdList.Contains(x.CalendarId)))
   {
-    iCalFormat.Append("BEGIN:VCALENDAR\nVERSION:2.0\nMETHOD:PUBLISH\n"
+    iCalFormat.Append("BEGIN:VCALENDAR\nVERSION:2.0\n"
+	+ "METHOD:PUBLISH\n"
 	+ "TZID:" + calendar.TimeZone.Continent + "-" 
-    + calendar.TimeZone.Country + "\n");
+	+ calendar.TimeZone.Country + "\n");
     // Part 4
     foreach (var calendarEntry in calendar.CalendarEntry)
     {
 \end{lstlisting} 
 \subsubsection{using-Schlüsselwort in C\#}
 \label{usingkeyword}
-Using wird verwendet wenn man sichergehen will, dass das Objekt oder die Objekte in using entsorgt werden. Um zu veranschaulichen wie using funktioniert, folgendes Beispiel.
+Using wird verwendet wenn um sicherzugehen, dass das Objekt oder die Objekte, welche in ''using'' verwendet werden, entsorgt werden. Um zu veranschaulichen wie ''using'' funktioniert, folgendes Beispiel:
 
 \begin{lstlisting}[caption=Parser funktionsweise von using, label=lst:test]
 // using Schluesselwort
@@ -79,9 +80,11 @@ using (MyResource myRes = new MyResource())
             ((IDisposable)myRes).Dispose();
     }
 }
-\end{lstlisting} \break vgl. \cite{ParserUsingKeyword}
+\end{lstlisting} 
+vgl. \cite{ParserUsingKeyword}
 \section{Entity Framework}
 \label{sec:parser-entity-framework}
+In diesem Kapitel wird beschrieben wie das Entity Framework funktioniert und wie es angewendet wird. Die  Beschreibung der Anwendung wird mithilfe von Bildschirmaufnahmen veranschaulicht. 
 \subsubsection {Funktionsweise}
 Mithilfe des Entity Framework lässt sich eine Datenbankstruktur innerhalb des Projekts mit Klassen darstellen. Wenn auf eine dieser Klassen in Form einer Value-Abfrage zugegriffen oder durch sonstige GET/SET Methoden, wird durch das Entity Framework ein Datenbank Zugriff durchgeführt. 
 %Um die Funktionsweise genauer zu verstehen folgt ein Beispiel mit einer Datenbank in welcher Autos gespeichert werden:
@@ -89,7 +92,7 @@ Mithilfe des Entity Framework lässt sich eine Datenbankstruktur innerhalb des P
 \subsubsection {Anwendung}
 Voraussetzung: Funktionsfähige ASP.NET Web Application \\
 \break \textbf{1. Erstellung einer Datenbank} \\
-Als Beispiel wurde für dieses Beispiel die Scott Tiger Datenbank verwendet.
+Um die Anwendung des Entity Frameworks zu verstehen wurde die Scott-Tiger Datenbank verwendet welche öffentlich unter folgendem Link zugänglich ist:  
 \break \url{http://jailer.sourceforge.net/scott-tiger.sql.html} \\
 \break \textbf{2. Installieren des EntityFrameworks} \\
 In der Packet Manager Console folgenden Befehl eingeben und bestätigen: 
@@ -107,14 +110,14 @@ Abschluss der Installation sieht wie folgt aus:
 \end{figure} 
 
 \textbf{3. Entity Framework generiert Klassen aus DB} \\
-Im Solution Explorer auf den Model Ordner Rechtsklick machen, ''Hinzufügen'' und ''Neues Element''.
+Im Solution Explorer auf den Model Ordner Rechtsklick machen, ''Hinzufügen'' und ''Neues Element'' auswählen. Folgende Bildschirmaufnahme zeigt wie dies in etwa aussehen sollte.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse03}
     \caption{EF Neues Element}
     \label{fig:parsef03}
 \end{figure} 
-Anschließend auf ''Daten'', ''ADO.NET Entity Data Model'' und Hinzufügen
+Anschließend, wie in der nächsten Bildschirmaufnahme gezeigt, auf ''Daten'', ''ADO.NET Entity Data Model'' und Hinzufügen
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse04}
@@ -142,22 +145,23 @@ Alle Tabellen auswählen und auf ''Fertig stellen''.
     \caption{EF Datenbankobjekte auswählen}
     \label{fig:parsef07}
 \end{figure} 
-Falls eine Sicherheitswarnung erscheint auf ''OK'' klicken. \\
-Endresultat, das Entity Framework hat die Tables im Models Ordner erstellt und am Bildschirm sieht man das Klassen mit ihren Beziehungen. Dies sollte ungefähr so aussehen:
+Falls nach Beendung dieses Schrittes eine Sicherheitswarnung sichtbar wird, muss auf ''Ok'' geklickt werden um die Erstellung fortzusetzen. \\
+\textbf{Endresultat:} Das Entity Framework hat die Tabellen im ''Models'' Ordner erstellt. Es sollten anschließend alle Klassen automatisch übersichtlich dargestellt werden. Dies sieht in etwa wie in folgender Bildschirmaufnahme aus:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse09}
+    \includegraphics[width=0.95\textwidth]{Parser_EFUse09}
     \caption{EF Klassendiagramm}
     \label{fig:parsef07}
 \end{figure} 
+Im Solutionsexplorer der Visual Studio Entwicklungsumgebung sollten alle Models sichtbar sein. Dies sieht nach erfolgreicher Anwendung wie in folgender Abbildung aus. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Parser_EFUse10}
     \caption{EF Solutionsexplorer}
     \label{fig:parsef07}
 \end{figure} 
-\subsection{Source-Code}
-\label{ef-sourcecode}
+%\subsection{Source-Code}
+%\label{ef-sourcecode}
 %Hier kommt die Source-Code Erklärung des Parsers hin
 
 %SOURCE CODE VOM iCalContext
