@@ -11,7 +11,7 @@ Die Daten werden dann vom Parser genommen und in eine funktionierende .ics-Datei
 
 \section{Aufbau der Datenbank}
 \label{sec:aufbauDatenbank}
-Die Datenbank ist relationale MSSQL-Datenbank. Das ER-Diagramm welches in Abbildung \ref{fig:erDiagramm} zu sehen ist wurde mit der Krähenfuß- oder auch Martinnotation abgebildet. 
+Die Datenbank ist eine relationale MSSQL-Datenbank. Das ER-Diagramm welches in Abbildung \ref{fig:erDiagramm} zu sehen ist wurde mit der Krähenfuß- oder auch Martinnotation abgebildet. 
 \\
 Ein ER-Diagramm besteht aus Entitäten und Relationen. Eine Entität ist eine Tabelle und eine Relation ist eine Verbindung zweier Entitäten. Eine Relation hat immer zwei Kardinalitäten. Eine Kardinalität gibt an wie oft sich eine Entität auf diese Tabelle referenzieren kann. In der Krähenfußnotation gibt es sechs verschiedene Kardinalitäten. Da auf jeder der beiden Seiten einer Relation eine Kardinalität ist, gibt es viele verschiedene Kombinationen. Alle möglichen Kardinalitäten werden in Abbildung \ref{fig:kardinalitaeten} gezeigt.
 \begin{figure}[H]
@@ -68,7 +68,7 @@ In der Class-Tabelle gibt es die Einträge: PUBLIC, PRIVATE und CONFIDENTIAL. In
 
 \subsubsection*{Teilnehmer}
 \label{ref:teilnehmer}
-Im iCal-Format können Termine an Teilnehmer zuweisen. Diese Teilnehmer benötigen eine Email-Adresse sowie einen Vor- und Nachnamen. Weiters gibt es für Teilnehmer eine Rolle welche in der Role-Tabelle abgebildet wird und einen Status ob der gefragte Teilnehmer bereits zugesagt hat, dies wird in der PartStat-Tabelle abgebildet. Rollen könnten sein: CHAIR, REQ-PARTICIPANT, OPT-PARTICIPANT und NON-PARTICIPANT, für den Zustand der Annahme gibt es unterschiedliche Zustände für Events und Todos, jedoch sind beide in der selben Tabelle abgebildet: NEEDS-ACTION, ACCEPTED, DECLINED, TENTATIVE, DELEGATED, COMPLETED und IN-PROCESS.\\
+Im iCal-Format können Termine an Teilnehmer zuweisen. Diese Teilnehmer benötigen eine Email-Adresse sowie einen Vor- und Nachnamen. Weiters gibt es für Teilnehmer eine Rolle welche in der Role-Tabelle abgebildet wird und einen Status ob der gefragte Teilnehmer bereits zugesagt hat, dies wird in der PartStat-Tabelle abgebildet. Rollen könnten sein: CHAIR, REQ-PARTICIPANT, OPT-PARTICIPANT und NON-PARTICIPANT, für den Zustand der Annahme gibt es unterschiedliche Zustände. Für Events und To-Dos, sind beide in der selben Tabelle abgebildet: NEEDS-ACTION, ACCEPTED, DECLINED, TENTATIVE, DELEGATED, COMPLETED und IN-PROCESS.\\
 Da ein Kalendereintrag mehrere Teilnehmer haben kann, wird die Tabelle Attendance benötigt, welche verwaltet welche Teilnehmer in welchen Kalendereinträgen stehen sollen. Wie die Abbildung der Teilnehmer im ER-Diagramm modelliert wurde, ist in Abbildung \ref{fig:datenbankTeilnehmer} ersichtlich.\\
 Ein Alarm kann, wenn er auslöst, eine Email-Benachrichtigung aussenden. Diese Email wird dann an alle Teilnehmer versendet, welche im Alarm festgelegt worden sind. Da ein Alarm mehrere Teilnehmer haben kann und ein Teilnehmer wiederum mehrere Alarme haben kann, wird die Tabelle AttendeeAlarm benötigt um festzustellen welcher Teilnehmer zu welchen Alarmen gehört.
 \begin{figure}[H]
