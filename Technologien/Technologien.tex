@@ -3,7 +3,7 @@
 \label{sec:Technologien}
 \section{Allgemeines}
 \label{sec:TechnologieAllgemeines}
-Die, während der Diplomarbeit, verwendeten Technologien werden anschließend, unter entsprechender Überschrift, beschrieben, wobei auf die wichtigsten, oder auch meist benutzten, genauer eingegangen wird, in Form einer Installation und einer erweiterten Beschreibung. Zudem werden auch alle Technologien beschrieben welche sich nicht bis zum Ende der Arbeit durchsetzen konnten und während der Arbeit auf eine andere gewechselt wurde oder diese überhaupt nicht mehr verwendet wurde. Dies wird jedoch im Beschreibungstext kenntlich gemacht.
+Die, während der Diplomarbeit, verwendeten Technologien werden anschließend, unter entsprechender Überschrift, beschrieben. Wobei auf die wichtigsten, oder auch meist benutzten, genauer eingegangen wird, in Form einer Installation und einer erweiterten Beschreibung. Zudem werden auch alle Technologien beschrieben welche sich nicht bis zum Ende der Arbeit durchsetzen konnten und während der Arbeit durch eine andere ersetzt wurden oder überhaupt nicht mehr verwendet wurden. Dies wird jedoch im Beschreibungstext kenntlich gemacht.
 \section{Programmierung}
 \label{sec:TechnologieProgrammierung}
 Dieses Unterkapitel befasst sich mit allen Technologien welche im Laufe der Programmierung verwendet wurden. Alle programmier-bezogenene Technologien werden aufgelistet und je nach Wichtigkeit teilweise erklärt.
@@ -11,7 +11,7 @@ Dieses Unterkapitel befasst sich mit allen Technologien welche im Laufe der Prog
 \label{sec:CSharp}
 Der praktische Teil der Diplomarbeit wurde mithilfe der Objekt-Orientierten Programmiersprache C\# entwickelt, da die Firma Intact GmbH, der Auftraggeber der Diplomarbeit, in der C\#/.NET-Entwicklung tätig ist. \\ \break
 C\# wurde im Jahr 2001 von Microsoft speziell für die .NET Umgebung veröffentlicht und ist daher eine junge Programmiersprache. C\# hat mehrere Anwendungsbereiche unter anderem können Desktopanwendungen, XML Web services, Datenbankanwendungen und vieles mehr entwickelt werden. \\ \break
-Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls eine dieser Programmiersprachen bekannt ist, ist es einfach in kurzer Zeit zu lernen wie in C\# zu programmieren. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig. \\vgl. \cite{TechnologieCSharpErklaerung} 
+Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls eine dieser Programmiersprachen bekannt ist, ist es einfach in kurzer Zeit zu lernen in C\# zu programmieren. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig. \\vgl. \cite{TechnologieCSharpErklaerung} 
 \subsubsection{Visual Studio 17 Community}
 \label{sec:VisualStudio17Community}
 Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 (2017) ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
@@ -49,8 +49,8 @@ Da der Hauptteil der Diplomarbeit in der Objekt Orientierten Programmiersprache 
 \subsubsection{.NET Framework 4.6}
 \label{sec:.NETFramework4.6}
 Am Anfang der Diplomarbeit wurde mit der Firma im Laufe eines Meetings festgelegt, dass bei der Entwicklung des Webservices .net Framework 4.6 verwendet werden soll um die Kompatibilät mit ihren .net Projekten zu garantieren.
-Das .NET Framework ist ein Software Entwicklungs-Framework der Firma Microsoft, um Software zu entwicklen, installieren und auszuführe,n auf Windows basierenden Systemen. 
-Aktuell auswählbare Versionen in Visual Studio 2017:\\ 
+Das .NET Framework ist ein Software Entwicklungs-Framework der Firma Microsoft, um Software auf Windows basierenden Systemen zu entwicklen, installieren und auszuführen. 
+Aktuell auswählbare Versionen in Visual Studio 2017, siehe Abbildung \ref{fig:netFramework}.\\ 
 \begin{figure}[H]
 	\centering
     \includegraphics{Technologien_dotNetVersions}
@@ -60,7 +60,7 @@ Aktuell auswählbare Versionen in Visual Studio 2017:\\
 \justifying
 \subsubsection {asp.net}
 \label{sec:asp.net}
-Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Framework, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. \\vgl. \cite{aspnetstatistik}
+Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Frameworks, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. \\ \cite{aspnetstatistik} \\
 \\ Im Anschluss wird durch Abbildung \ref{fig:aspNetTut01}, \ref{fig:aspNetTut02}, \ref{fig:aspNetTut03} und \ref{fig:aspNetTut04} Schritt für Schritt gezeigt wie ein ASP.NET Projekt in Visual Studio 2017 erstellt wird.
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial01}
@@ -90,7 +90,7 @@ MSSQL ist KEIN Teil der finalen Diplomarbeit und wurde nur zu Testzwecken verwen
 Bei der Microsoft SQL Server entwicklung kam Microsoft SQL Server management Studios zum Einsatz, die Aufgabe des Management Studios war es den Server zu konfigurieren und zu verwalten. 
 \subsubsection {Entity Framework}
 \label{sec:ef}
-Das Entity Framework ist ein Großteil des Projektparts "Parser" gewesen. Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Parser genauer eingegangen. \\vgl. \cite{entityframework}
+Das Entity Framework ist ein Großteil des Projektparts "Parser". Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Kapitel ''Parser'' genauer eingegangen. \\vgl. \cite{entityframework}
 %\subsubsection {iCal}
 %\label{sec:ical}
 %iCal ist das Format in dem ein Kalender gespeichert wird. Das Format wird unter einer eigenen Überschrift im Laufe der schriftlichen Arbeit genauer erklärt. \ref{sec:iCal}
@@ -121,35 +121,34 @@ ReSharper ist eine Erweiterung für Visual Studio, welche das Entwickeln im .NET
 \label{sec:ReSharperInstallation}
 1. ReSharper auf der JetBrains Seite unter folgendem Link herunterladen: \break \url {https://www.jetbrains.com/resharper/download/} \\
 2. Nach Download, die .exe Datei ausführen \\
-3. Installierte Visual Studio Version auswählen, License Agreement akzeptieren, anschließend bei gewolltem Paket auf "Install" klicken und auf "Next". 
-Wenn nun auf "Next" geklickt wird, werden alle zu installierenden Pakete nochmal angezeigt. Falls die Auswahl passt, auf "Install" klicken. \\
+3. Installierte Visual Studio Version auswählen, License Agreement akzeptieren, anschließend bei gewolltem Paket auf ''Install'' klicken und auf ''Next''. 
+Wenn nun auf ''Next'' geklickt wird, werden alle zu installierenden Pakete nochmal angezeigt. Falls die Auswahl passt, auf "Install" klicken. \\
 4. Wenn die Installation abgeschlossen ist Fenster schließen. \\
 5. Um sicherzugehen, dass die Installation erfolgt ist, Visual Studio starten. Hier sollte nun ein Fenster aufploppen um das Shortcut Scheme auszuwählen.
 Wird nun eine der Möglichkeiten gewählt und die Vereinbarungen akzeptiert sollte anschließend eine Lizenz Information zu sehen sein. Hier beim Paket auf ''Start Evaluation'' klicken und anschließend auf ''OK''. ReSHarper ist nach diesen Schritten funktionsfähig und bereit zur Verwendung.
 \subsubsection {PostMan}
 \label{sec:PostMan}
 % unzufrieden mit Formulierung
-PostMan wird verwendet um API Tests durchzuführen. Die Software bietet eine sehr übersichtliche Benutzeroberfläche und ermöglicht es dem Benutzer einfach HTTP Requests zu generieren und erspart dem Benutzer große Mengen an Code zu schreiben. \\
+PostMan wird verwendet um API Tests durchzuführen. Die Software bietet eine sehr übersichtliche Benutzeroberfläche und ermöglicht es dem Benutzer einfach HTTP Requests zu generieren und erspart dem Anwender große Mengen an Code zu schreiben. \\
 \\vgl. \cite{TechnologiePostman} \\ \break
-Mithilfe von PostMan ist es möglich einfache GET-Requests zu senden, bei der Response ist unter möglich einzustellen wie diese angezeigt werden sollen. Auf der linken Seite der PostMan-Anwendung ist eine zeitliche Protokollierung, wann welche Anfrage gesendet wurde, sichtbar.
+Mithilfe von PostMan ist es möglich einfache GET-Requests zu senden, bei der Response ist mitunter möglich einzustellen wie diese angezeigt werden sollen. Auf der linken Seite der PostMan-Anwendung ist eine zeitliche Protokollierung, wann welche Anfrage gesendet wurde, sichtbar.
 % HTTP und API müssen erklärt werden
 \section{Kommunikation}
 \label{sec:Kommunikation}
 Das Kapitel Kommunikation befasst sich mit allen verwendeten Technologien, welche zur Kommunikation innerhalb des Teams verwendet wurden.
 \subsubsection {Discord}
 \label{sec:Discord}
-Um im Laufe des praktischen Teils der Diplomarbeit die Übersicht zu behalten und alles zu organisieren wurde Discord verwendet. Discord hat viele Funktionen welche die Kommunikation im Team erleichtern. Discord bietet dem Benutzer an einen oder mehrere gratis Server zu erstellen. Ein Server kann aus Text und Sprachchannels bestehen. In einem Textchannel können festgelegte Personen schreiben und in einem Sprachchannel über Mikrofon miteinander reden. Falls wir also Teamintern etwas zu besprechen hatten oder falls Probleme auftraten die wir selbst lösen konnten bat Discord die perfekte Kommunikationsfläche. 
-Da wir als Gruppe mehrere Projekte haben haben wir einen "Projektserver". In diesem Projektserver haben wir einen Text und Sprach Channel für die Diplomarbeit. Im Text Channel werden kleine Probleme, die schnell geklärt werden können, besprochen und Files ausgetauscht. Im Sprach Channel werden gröbere Probleme besprochen oder wenn nötig Planänderungen. 
+Um im Laufe des praktischen Teils der Diplomarbeit die Übersicht zu behalten und alles zu organisieren wurde Discord verwendet. Discord hat viele Funktionen welche die Kommunikation im Team erleichtern. Discord bietet dem Benutzer an einen oder mehrere Server gratis zu erstellen. Ein Server kann aus Text und Sprachchannels bestehen. In einem Textchannel können festgelegte Personen schreiben und in einem Sprachchannel kann über VOIP miteinander geredet werden. Falls Teamintern etwas zu besprechen war oder Probleme auftraten bat Discord die perfekte Kommunikationsfläche. Da wir als Gruppe mehrere Projekte haben, haben wir einen "Projektserver". In diesem Projektserver wurde ein Text und Sprach Channel für die Diplomarbeit eingerichtet. Im Text Channel werden kleine Probleme, welche schnell gelöst werden können, besprochen und Files ausgetauscht. Im Sprach Channel werden gröbere Probleme besprochen oder wenn nötig Zeitplan-Änderungen behandelt. 
 %Installation und Server erstellung
 \subsubsection {Telegram}
 \label{sec:Telegram}
-Telegram wurde nicht regelmäßig verwendet, es diente als ein Backup falls Discord aus jeglichen Gründen nicht Verfügbar war. Telegram ist eine Chat-Applikation. 
+Telegram wurde nicht regelmäßig verwendet, es diente als ein Backup falls Discord aus jeglichen Gründen nicht Verfügbar war. Telegram ist eine Chat-Applikation, vergleichbar mit WhatsApp. 
 \section{Filesharing}
 \label{sec:Filesharing}
 Das Thema ''Filesharing'' ist in einer Diplomarbeit im Bereich der Software-Entwicklung essentiell. Unter dieser Überschrift werden alle Technologien im Bereich Filesharing, welche während der Diplomarbeit verwendet wurden, aufgelistet und erklärt. 
 \subsubsection {TFS}
 \label{sec:TFS}
-Der Microsoft Team Foundation Server ist die verwendete Code-Sharing Technologie. Da der Auftraggeber, die Firma Intact GmbH oder Intact Systems, mit dieser Technologie arbeitet haben wir bei einem der ersten Treffer TFS für Code Sharing gewählt. Wir hatten einige Probleme mit dem TFS wodurch oft einzelne Teile des Projekts entwickelt wurden und dann in ein Projekt zusammengeführt wurden. Die Probleme waren unter anderem, dass die Firma eine Zeit lang gebraucht hat um den Server zur Verfügung zustellen aber auch, dass das Verbinden mit dem Server oft nicht geklappt hat. 
+Der Microsoft Team Foundation Server ist die verwendete Code-Sharing Technologie. Da der Auftraggeber, die Firma Intact GmbH oder Intact Systems, mit dieser Technologie arbeitet haben wir, bei einem der ersten Treffen, TFS für Code Sharing gewählt. Wir hatten einige Probleme mit dem TFS wodurch oft einzelne Teile des Projekts entwickelt wurden und dann in ein Projekt zusammengeführt wurden. Die Probleme waren unter anderem, dass die Firma längere Zeit gebraucht hat um den Server zur Verfügung zustellen aber auch, dass das Verbinden mit dem Server am Anfang nicht geklappt hat. 
 %Anleitung wie man einen TFS benutzt ? maybe
 \subsubsection {Discord}
 \label{sec:Discord}

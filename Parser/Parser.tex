@@ -13,9 +13,9 @@ Die Aufgabe des Parsers ist es auf die Datenbank zuzugreifen und sich die, für 
 \subsection{Source-Code}
 \label{sec:parser-sourcecode}
 Unter dieser Überschrift wird auf einen wichtigen Teil des Parsers eingegangen um seine Funktionsweise in Kombination mit dem Entity Framework zu verstehen. Im Prinzip besteht der Parser aus zwei Teilen, dem Verbindungsaufbau mit der Datenbank(DB) über das Entity Framework und dem konvertieren der Daten zu einer iCal-Zeichenkette. Da der zweite Teil sich nur mit reinem Abfragen ob Daten vorhanden sind und wenn sie vorhanden sind dem hinzufügen zum StringBuilder beschäftigt wird dieser Teil nicht erklärt.\\ \\
-Im folgenden eingefügten Source-Code ist zu sehen wie mithilfe des Parser auf die Datenbank zugegriffen werden kann. Der Source-Code ist anhand von Kommentaren in vier Parts aufgeteilt. Das Source-Code Beispiel wurde identisch aus dem praktischen Teil der Diplomarbeit in der Klasse Parser unter der Methode GetICalFormat(int UserID) übernommen. \\ \\
+Im folgenden eingefügten Source-Code ist zu sehen wie mithilfe des Parser auf die Datenbank zugegriffen werden kann. Der Source-Code ist anhand von Kommentaren in vier Parts aufgeteilt. Das Source-Code Beispiel wurde identisch aus dem praktischen Teil der Diplomarbeit in der Klasse Parser unter der Methode GetICalFormat(int userID) übernommen. \\ \\
 \textbf{Part 1} \\
-Im ersten Part wird der StringBuilder, welcher letzten Endes die fertige Zeichenkette zurückgibt, erstellt. Anschließend wird über den ''using''-Command [\ref{usingkeyword}] ein Objekt mit dem Namen ''db'' von der Klasse iCalContext erstellt. Die Klasse iCalContext wurde vom Entity Framework automatisch generiert und wird unter folgender Überschrift ''\ref{ef-sourcecode} Source-Code'' erklärt. Unter dem Schlüsselwort ''using'' wird desweiteren eine Boolean-Variable erstellt, welche später bei einer Abfrage benötigt wird. Diese kann vorerst ignoriert werden, da sie für die Erklärung irrelevant ist. Im Anschluss wird eine Liste des Typen ''int'' erstellt, welche später unsere Kalender-IDs enthalten wird. \\ \\
+Im ersten Part wird der StringBuilder, welcher letzten Endes die fertige Zeichenkette zurückgibt, erstellt. Anschließend wird über den ''using''-Command ein Objekt mit dem Namen ''db'' von der Klasse iCalContext erstellt. Die Klasse iCalContext wurde vom Entity Framework automatisch generiert. Unter dem Schlüsselwort ''using'' wird desweiteren eine Boolean-Variable erstellt, welche später bei einer Abfrage benötigt wird. Diese kann vorerst ignoriert werden, da sie für die Erklärung irrelevant ist. Im Anschluss wird eine Liste des Typen ''int'' erstellt, welche später unsere Kalender-IDs enthalten wird. \\ \\
 \textbf{Part 2} \\
 In diesem Abschnitt wird über eine foreach-Schleife durch eine Liste iteriert welche alle Calender IDs enthält die dem übergebenem User gehören. In der Schleife werden alle IDs in die CalendarIdList gespeichert. \\ \\
 \textbf{Part 3} \\
@@ -56,7 +56,7 @@ using (var db = new iCalContext())
 \end{lstlisting} 
 \subsubsection{using-Schlüsselwort in C\#}
 \label{usingkeyword}
-Using wird verwendet wenn um sicherzugehen, dass das Objekt oder die Objekte, welche in ''using'' verwendet werden, entsorgt werden. Um zu veranschaulichen wie ''using'' funktioniert, folgendes Beispiel:
+Using wird verwendet um sicherzugehen, dass das Objekt oder die Objekte, welche in ''using'' verwendet werden, entsorgt werden. Um zu veranschaulichen wie ''using'' funktioniert, folgendes Beispiel:
 
 \begin{lstlisting}[caption=Parser funktionsweise von using, label=lst:test]
 // using Schluesselwort
@@ -124,41 +124,41 @@ Anschließend, wie in der nächsten Bildschirmaufnahme gezeigt, auf ''Daten'', '
     \caption{EF ADO.NET Entity Data Model}
     \label{fig:parsef04}
 \end{figure} 
-Im nächsten Fenster nun  ''EF Designer aus Datenbank'' auswählen und ''Weiter''
+Im nächsten Fenster nun  ''EF Designer aus Datenbank'' auswählen und ''Weiter''. Wie in Abbildung \ref{fig:parsef05} gezeigt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse05}
     \caption{EF Designer aus Datenbank}
     \label{fig:parsef05}
 \end{figure} 
-Hier zunächst die Verbindung auswählen in diesem Fall ist ein lokales Datenbankfile vorhanden, daher wird dieses per DropDownMenü ausgewählt und auf ''Weiter''
+Wie in Abbildung \ref{fig:parsef06} wird hier zunächst die Verbindung ausgewählt. In diesem Fall ist ein lokales Datenbankfile vorhanden, daher wird dieses per DropDownMenü ausgewählt und auf ''Weiter'' geklickt. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse06}
     \caption{EF Datenverbindung}
     \label{fig:parsef06}
 \end{figure} 
-Alle Tabellen auswählen und auf ''Fertig stellen''. 
+Wie in Abbildung \ref{fig:parsef07}, alle Tabellen auswählen und auf ''Fertig stellen'' klicken. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Parser_EFUse07}
     \caption{EF Datenbankobjekte auswählen}
     \label{fig:parsef07}
 \end{figure} 
-Falls nach Beendung dieses Schrittes eine Sicherheitswarnung sichtbar wird, muss auf ''Ok'' geklickt werden um die Erstellung fortzusetzen. \\
-\textbf{Endresultat:} Das Entity Framework hat die Tabellen im ''Models'' Ordner erstellt. Es sollten anschließend alle Klassen automatisch übersichtlich dargestellt werden. Dies sieht in etwa wie in folgender Bildschirmaufnahme aus:
+Falls nach Beendung dieses Schrittes eine Sicherheitswarnung sichtbar wird, muss auf ''Ok'' geklickt werden um die Erstellung fortzusetzen. \\ \\
+\textbf{Endresultat:} Das Entity Framework hat die Tabellen im ''Models'' Ordner erstellt. Es sollten anschließend alle Klassen automatisch übersichtlich dargestellt werden. Dies sieht in etwa wie in folgender Bildschirmaufnahme \ref{fig:parsef09} aus:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{Parser_EFUse09}
     \caption{EF Klassendiagramm}
-    \label{fig:parsef07}
+    \label{fig:parsef09}
 \end{figure} 
-Im Solutionsexplorer der Visual Studio Entwicklungsumgebung sollten alle Models sichtbar sein. Dies sieht nach erfolgreicher Anwendung wie in folgender Abbildung aus. 
+Im Solutionsexplorer der Visual Studio Entwicklungsumgebung sollten alle Models sichtbar sein. Dies sieht nach erfolgreicher Anwendung wie in Abbildung \ref{fig:parsef10} aus. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Parser_EFUse10}
     \caption{EF Solutionsexplorer}
-    \label{fig:parsef07}
+    \label{fig:parsef10}
 \end{figure} 
 %\subsection{Source-Code}
 %\label{ef-sourcecode}
