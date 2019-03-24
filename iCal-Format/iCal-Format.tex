@@ -62,7 +62,6 @@ Die Komponente ''VCALENDAR'' tritt nur im Zusammenhang mit ''BEGIN:'' oder ''END
 \subsubsection{VEVENT} 
 \label{sec:vEvent}
 Ein Event ist wie in \ref{sec:vCalendar} erwähnt ein Termin. Jeder Termin kann einen Alarm \ref{sec:vAlarm} enthalten. Das Event im Kalender kann auch unter anderem als eine regelmäßige Erinnerung im Kalender spezifiziert sein. Dann enthält die Event-Komponente statt dem üblichen Date-Time ein sogenanntes ''DTSTART''.
-\\vgl. \textcite{VEVENT} 
 \subsubsection{VTODO}
 \label{sec:vTodo} 
 Die VTODO Komponente im Kalender ist ein Eintrag welcher der Benutzer als noch zu erledigen hinzugefügt hat. Als Beispiel könnte hier sein: ''Ich erstelle heute am 05.März.2019 um 6 Uhr ein Todo-Ereignis mit der Beschreibung ''Koffer packen'' für morgen 06.März.2019 um 12 Uhr und ich muss morgen um 16 Uhr fertig sein.'' \\
@@ -78,7 +77,6 @@ Das Ganze könnte in Form eines iCal-Formats so aussehen: \\ \\
   PRIORITY:3\\
   STATUS:NEEDS-ACTION\\
   END:VTODO\\
-\\vgl. \textcite{VTODO} 
 \subsubsection{VALARM}
 \label{sec:vAlarm} 
 Wie der Name schon sagt gibt VALARM eine Gruppe von Komponenten, welche einen Alarm definieren, an.  Wie bei allen iCal Komponenten beginnt VALARM mit ''BEGIN:'' und hört mit ''END:'' auf. VALARM wird zwischen den BEGIN und END Komponenten einer TODO oder EVENT Komponente eingefügt. Ein Alarm kann also für ein Event oder Todo gesetzt werden, eine Alarm Komponente kann nicht selbständig in einem Kalender stehen. Ein VALARM muss eine ''Action'' und einen '' Trigger'' beinhalten. Es muss also definiert sein wann was passiert. Als Action gibt es vier Möglichkeiten: \\ \\
@@ -90,7 +88,6 @@ Die Implementierung der Action ''Display'' muss einen Text enthalten, welcher be
 Durch die Action ''EMAIL'' wird wie der Name bereits verrät eine EMail gesendet. Um dies zu ermöglichen muss die ''DESCRIPTION'' Eigenschaft hinzugefügt werden, diese enthält den EMail Text. Die Eigenschaft ''SUMMARY'' enthält den Betreff und die Eigenschaft ''ATTENDEE'', welche bei \ref{sec:attendee} erklärt wird, enthält die EMail Adressen der Leute welche die Mail bekommen sollen. Zusätzlich ist es möglich die Eigenschaft ''ATTACH'' einzufügen um Anhänge mitzusenden. \\ \\
 \textbf{4. Procedure} \\ % GHÖRT NO BESSER ERKLÄRT
 Eine Procedure Action muss eine ''ATTACH'' Eigenschaft beinhalten. Diese muss auf maximal und minimal eine ''Procedure'' Resource verweisen, welche bei Alarmauslösung aufgerufen wird.
-\\vgl. \textcite{VALARM} 
 \subsubsection{BEGIN: und END:}
 \label{sec:beginUndEnd} 
 Die ''BEGIN'' und ''END'' Komponenten in einer iCalender-Datei geben den Anfang und das Ende einer ''Kalender''-Komponente an, sowie Anfang und Ende des Kalenders selbst. ''Kalender''-Komponenten sind jene Komponenten welche dem Kalender untergeordnet sind und eigene Komponenten enthalten. Zum Beispiel Event, Todo oder Alarm. 
@@ -102,44 +99,35 @@ Die UID selbst muss eindeutig sein, sie darf niemals auf mehr als einen Wert ver
 var id = Guid.NewGuid(); 
 \end{lstlisting}
 Eine Möglichkeit einen eindeutigen Wert selbst zu ''generieren'' wäre wenn ein Teil der ID aus dem heutigen Datum mit aktueller Uhrzeit bestehen würde, wenn ich die Uhrzeit mit tausendstel angebe, ist die Wahrscheinlichkeit die selbe ID zu generieren fast 0.
-\\vgl. \textcite{UID}  
 \subsubsection{SUMMARY}
 \label{sec:summary}
 Diese Eigenschaft kann in den Kalender Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VJOURNAL und VALARM \ref{sec:vAlarm} verwendet werden. In dieser Eigenschaft kann eine kurze Beschreibung für eine Aktivität festgehalten werden.
-\\vgl. \textcite{SUMMARY} 
 \subsubsection{DTSTART}
 \label{sec:dtstart}
 Kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VTIMEZONE verwendet werden. Der Zweck dieser Eigenschaft wird bis auf in der VFREEBUSY erklärt, da diese keine in der Diplomarbeit verwendete Komponente ist. \\ \\ \textbf{VEVENT} / \textbf{VTODO}: Wenn diese Eigenschaft in VEVENT oder VTODO hinzugefügt wird dann kann für das Event ein Start-Datum und eine Start-Zeit festgelegt werden. Bei einer VEVENT und VTODO Komponente ist es möglich, dass sie ein Start-Datum enthält aber kein End-Datum (DTEND \ref{sec:dtend}). \\ \\ \textbf{VTIMEZONE}: In der VTIMEZONE Komponente gibt die DTSTART Eigenschaft den tatsächlichen Beginn einer Zeitzone an und ist verpflichtend, also nicht optional. \\
 Beispiel für eine DTSTART Eigenschaft: \\
-DTSTART: 20190308T165800
-\\vgl. \textcite{DTSTART} 
+DTSTART: 20190308T165800 
 \subsubsection{DTEND}
 \label{sec:dtend}
 Diese Komponente kann nur in VEVENT \ref{sec:vEvent} und VFREEBUSY hinzugefügt werden. Wie bei DTSTART wird nur die Verwendung in VEVENT erklärt. In VEVENT definiert die Eigenschaft das End-Datum und die End-Zeit eines Termins/Events.
-\\vgl. \textcite{DTEND} 
 \subsubsection{DTSTAMP}
 \label{sec:dtstamp}
 DTSTAMP kann in den Komponenten VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VFREEBUSY und VJOURNAL verwendet werden. In dieser Eigenschaft wird der das Datum und die Uhrzeit festgehalten zu welcher die .ics-Datei aus den Informationen aus der Datenbank erstellt wurde.
 % https://stackoverflow.com/questions/11594921/whats-the-difference-between-created-and-dtstamp-in-the-icalendar-format
-\\vgl. \textcite{DTSTAMP} 
 \subsubsection{COMMENT}
 \label{sec:comment}
 In dieser Eigenschaft kann ein Kommentar, welcher für den Benutzer sichtbar ist, eingefügt werden. Diese Eigenschaft kann mehrmals hinzugefügt werden und in VEVENT \ref{sec:vEvent}, VTODO \ref{sec:vTodo}, VJOURNAL, VTIMEZONE und VFREEBUSY hinzugefügt werden.
-\\vgl. \textcite{COMMENT} 
 \subsubsection{DESCRIPTION}
 \label{sec:description}
-Die Description ist eine Eigenschaft welche in VEVENT und VTODO benutzt werden kann. Der Wert der Eigenschaft ist ein einfacher Text welcher das Event oder die zu erledigende Aufgabe genauer beschreibt. 
-\\vgl. \textcite{DESCRIPTION} 
+Die Description ist eine Eigenschaft welche in VEVENT und VTODO benutzt werden kann. Der Wert der Eigenschaft ist ein einfacher Text welcher das Event oder die zu erledigende Aufgabe genauer beschreibt.  
 \subsubsection{LOCATION}
 \label{sec:location}
 \textbf{Anwendbar in:} VEVENT, VTODO \\ % FORMAT AUF ALLE ANDREN ÜBERNEHMEN
 Mithilfe dieser Eigenschaft kann in der Aktivität ein Ort genauer definiert werden. Bei einem Termin namens "Meeting" kann in der Location der Konferenzraum reingeschrieben werden. 
-\\vgl. \textcite{LOCATION} 
 \subsubsection{PRIORITY}
 \label{sec:priority}
 \textbf{Anwendbar in:} VEVENT, VTODO \\
 Die Eigenschaft Priority kann definiert werden um die Wichtigkeit des eingetragenen Termins zu spefizieren. Der Wert der Eigenschaft ist ein Integer, also eine Zahl. Der Wert der als Priority eingetragen werden kann liegt im Bereich 0-9. Wobei 0 der Standard-Wert ist, wenn 0 festgelegt wird ist es so als wäre die Eigenschaft nicht spezifiziert worden. Anders als zu erwarten ist aber der Wert 9 die niedrigste und der Wert 1 die höchste Priorität. 
-\\vgl. \textcite{PRIORITY} 
 \subsubsection{RRULE}
 \label{sec:rrule}
 \textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL \\
@@ -147,27 +135,22 @@ Der Name der Eigenschaft heißt ausgeschrieben ''Recurrence Rule'' was auf Deuts
 Tägliches-Event für die nächsten 10-Mal:\\
  DTSTART;TZID=US-Eastern:19970902T090000\\
  RRULE:FREQ=DAILY;COUNT=10\\
-\\vgl. \textcite{RRULE} 
 \subsubsection{DUE}
 \label{sec:due}
 \textbf{Anwendbar in:} VTODO\\
 Der Wert der Eigenschaft ist ein Datum und muss entweder gleich oder größer als das Start-Datum sein. Sie gibt an bis was etwas zu erledigen ist. 
-\\vgl. \textcite{DUE} 
 \subsubsection{CLASS}
 \label{sec:class}
 \textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
 Die ''CLASS'' Eigenschaft ist eine Komponente zur Sicherheit in einer Kalender Applikation. Mithilfe dieser Eigenschaft kann der Zugriff auf Termin Informationen kontrolliert werden. Der Wert dieser Eigenschaft sind vorgegebene Werte. Ein hinzugefügtes Class-Objekt könnte wie folgt aussehen: CLASS:PUBLIC.
-\\vgl. \textcite{CLASS} 
 \subsubsection{ORGANIZER}
 \label{sec:organizer}
 \textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
 Diese Komponente des Kalenders sorgt dafür, dass bei einem Termin, wo mehrere Leute beteiligt sind, ein Organisator im Termin festgelegt werden kann. Die wichtigste Eigenschaft von ''Class'' ist unter anderem ''CN'' bei welcher der Anzeigename angeben werden muss. Eine ''ORGANIZER'' Eigenschaft könnte zum Beispiel so aussehen: \\ \\ ORGANIZER;CN=Dario Wagner:MAILTO:wagdaa14@htlkaindorf.at\\
-\\vgl. \textcite{ORGANIZER} 
 \subsubsection{STATUS}
 \label{sec:status}
 \textbf{Anwendbar in:} VEVENT, VTODO, VJOURNAL\\
 Der Sinn dieser Eigenschaft ist es den Status oder die Bestätigung des Kalender Objekts zu definieren. In einer VTODO Komponente könnte der Status so aussehen: STATUS:NEEDS-ACTION. Heißt er ist noch nicht abgeschlossen und muss noch bearbeitet werden.
-\\vgl. \textcite{STATUS} 
 \subsubsection{ATTENDEE}
 \label{sec:attendee}
 Die Aufgabe dieser Eigenschaft ist es Teilnehmer eines Termins zum Kalender hinzufügen zu können. Die Eigenschaft \textbf{muss} nur innerhalb von Kalenderkomponenten angegeben werden, um Teilnehmer, Nichtteilnehmer und den Vorsitzenden einer Gruppenkalenderentität anzugeben. \\ \\ 
@@ -192,12 +175,10 @@ Eine ATTENDEE Eigenschaft könnte wie in folgender Bildschirmaufnahme aussehen: 
     \caption{iCal ATTENDEE Beispiel}
     \label{fig:netFramework}
 \end{figure}
-\\vgl. \textcite{ATTENDEE} 
 \subsubsection{TRANSP}
 \label{sec:transp}
 Diese Eigenschaft ist zur Angabe, ob ein Event beim Filtern nach ''beschäftigter Zeit'' angezeigt werden soll oder nicht. Der Wert der Eigenschaft TRANSP kann entweder ''OPAQUE'' oder ''TRANSPARENT''. Opaque bedeutet undurchsichtig und wird somit beim Filtern nach beschäftigter Zeit angezeigt.
 %VALARM
-\\vgl. \textcite{iCalDocumentation} 
 \subsubsection{TRIGGER}
 \label{sec:trigger}
 \textbf{Anwendbar in:} VALARM \\
@@ -207,26 +188,23 @@ Gibt an wann ein Alarm ausgelöst werden soll. Der Standard-Wert ist die Eigensc
 \item Trigger welcher 10 Minuten nach Ende des Events auslöst: \\TRIGGER;RELATED=END:P10M\\
 \item Trigger welcher an einer absoluten Uhrzeit auslöst (17.03.2019 - 12 Uhr): \\TRIGGER;VALUE=DATE-TIME:20190317T120000Z\\
 \end{enumerate}
-vgl. \textcite{TRIGGER} 
 \subsubsection{REPEAT}
 \label{sec:repeat}
 \textbf{Anwendbar in:} VALARM \\
 Gibt an wie oft ein Alarm nach erstmaliger Auslösung wiederholt werden soll. Um einen Alarm mit 5 Minuten Abstand 4 mal zu wiederholen muss die REPEAT Eigenschaft wie folgt aussehen: \\ \\ REPEAT:4\\DURATION:PT5M
 \renewcommand{\theauthor}{Dario Wagner}
-\\vgl. \textcite{REPEAT} 
 \subsubsection{DURATION}
 \label{sec:duration}
 \textbf{Anwendbar in:} VEVENT, VTODO, VALARM, VFREEBUSY\\
 Diese Eigenschaft gibt eine Dauer an. Bei einem Event kann sie eine Zeit angeben wie lange das Event dauert, anstatt einer DTEND Eigenschaft \ref{sec:dtend}. Die DURATION kann auch wie bei dem Beispiel einer REPEAT Eigenschaft \ref{sec:repeat} genutzt werden.
-\\vgl. \textcite{DURATION} 
 \subsubsection{ACTION}
 \label{sec:action}
 \textbf{Anwendbar in:} VALARM \\
 Beschreibt die Aktion die ausgeführt wird wenn ein Alarm ausgelöst wird. Wie bei VALARM \ref{sec:vAlarm} beschrieben kann hier zum Beispiel ''ACTION:AUDIO'' angegeben werden, dann wird beim auslösen des Alarm ein Ton abgespielt. Welches Geräusch abgespielt wird hängt vom Verweis auf die Sound-Datei ab. 
-\\vgl. \textcite{ACTION} 
 \subsubsection{ATTACH}
 \label{sec:attach}
 \textbf{Anwendbar in:} VEVENT, VTODO, VALARM, VJOURNAL\\
-Mithilfe der ATTACH-Eigenschaft kann eine Datei dem Termin angehängt werden. Dies könnte zum Beispiel ein wichtiges Formular für ein Meeting oder Notizen für eine Präsentation sein. 
-\\vgl. \textcite{ATTACH} 
+Mithilfe der ATTACH-Eigenschaft kann eine Datei dem Termin angehängt werden. Dies könnte zum Beispiel ein wichtiges Formular für ein Meeting oder Notizen für eine Präsentation sein.
+\\ \\ \\ \\
+\textcite{KanzakiKeywords}
 \pagebreak
