@@ -7,12 +7,12 @@ Die, während der Diplomarbeit, verwendeten Technologien werden anschließend, u
 \section{Programmierung}
 \label{sec:TechnologieProgrammierung}
 Dieses Unterkapitel befasst sich mit allen Technologien welche im Laufe der Programmierung verwendet wurden. Alle programmier-bezogenene Technologien werden aufgelistet und je nach Wichtigkeit teilweise erklärt.
-\subsection{C\#}
+\subsubsection{C\#}
 \label{sec:CSharp}
 Der praktische Teil der Diplomarbeit wurde mithilfe der Objekt-Orientierten Programmiersprache C\# entwickelt, da die Firma Intact GmbH, der Auftraggeber der Diplomarbeit, in der C\#/.NET-Entwicklung tätig ist. \\ \break
 C\# wurde im Jahr 2001 von Microsoft speziell für die .NET Umgebung veröffentlicht und ist daher eine junge Programmiersprache. C\# hat mehrere Anwendungsbereiche unter anderem können Desktopanwendungen, XML Web services, Datenbankanwendungen und vieles mehr entwickelt werden. \\ \break
 Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls eine dieser Programmiersprachen bekannt ist, ist es einfach in kurzer Zeit zu lernen wie in C\# zu programmieren. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig. \\vgl. \cite{TechnologieCSharpErklaerung} 
-\subsection{Visual Studio 17 Community}
+\subsubsection{Visual Studio 17 Community}
 \label{sec:VisualStudio17Community}
 Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 (2017) ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
 \begin{itemize}
@@ -46,7 +46,7 @@ Da der Hauptteil der Diplomarbeit in der Objekt Orientierten Programmiersprache 
   }
 \end{lstlisting}
 
-\subsection{.NET Framework 4.6}
+\subsubsection{.NET Framework 4.6}
 \label{sec:.NETFramework4.6}
 Am Anfang der Diplomarbeit wurde mit der Firma im Laufe eines Meetings festgelegt, dass bei der Entwicklung des Webservices .net Framework 4.6 verwendet werden soll um die Kompatibilät mit ihren .net Projekten zu garantieren.
 Das .NET Framework ist ein Software Entwicklungs-Framework der Firma Microsoft, um Software zu entwicklen, installieren und auszuführe,n auf Windows basierenden Systemen. 
@@ -58,7 +58,7 @@ Aktuell auswählbare Versionen in Visual Studio 2017:\\
     \label{fig:netFramework}
 \end{figure}
 \justifying
-\subsection {asp.net}
+\subsubsection {asp.net}
 \label{sec:asp.net}
 Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Framework, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. \\vgl. \cite{aspnetstatistik}
 \\ Im Anschluss wird durch Abbildung \ref{fig:aspNetTut01}, \ref{fig:aspNetTut02}, \ref{fig:aspNetTut03} und \ref{fig:aspNetTut04} Schritt für Schritt gezeigt wie ein ASP.NET Projekt in Visual Studio 2017 erstellt wird.
@@ -82,16 +82,16 @@ Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwend
     \caption{ASP.NET Projekt Resultat}
     \label{fig:aspNetTut04}
 \end{figure}
-\subsection {MSSQL}
+\subsubsection {MSSQL}
 \label{sec:MSSQL}
 MSSQL ist KEIN Teil der finalen Diplomarbeit und wurde nur zu Testzwecken verwendet. Im Laufe der Entwicklung wurde von Teammitglied Matthias Franz und Marcel Stering ein Raspberry PI als Datenbank aufgesetzt um einige Tests durchzuführen. Dies wurde mit Microsoft SQL Server verwirklicht. 
-\subsection {Microsoft SQL Server management Studios}
+\subsubsection {Microsoft SQL Server management Studios}
 \label{sec:mssql-server-management-studio}
 Bei der Microsoft SQL Server entwicklung kam Microsoft SQL Server management Studios zum Einsatz, die Aufgabe des Management Studios war es den Server zu konfigurieren und zu verwalten. 
-\subsection {Entity Framework}
+\subsubsection {Entity Framework}
 \label{sec:ef}
 Das Entity Framework ist ein Großteil des Projektparts "Parser" gewesen. Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Parser genauer eingegangen. \\vgl. \cite{entityframework}
-%\subsection {iCal}
+%\subsubsection {iCal}
 %\label{sec:ical}
 %iCal ist das Format in dem ein Kalender gespeichert wird. Das Format wird unter einer eigenen Überschrift im Laufe der schriftlichen Arbeit genauer erklärt. \ref{sec:iCal}
 %Ein Beispiel für den Aufbau des iCal-Formats sieht wie folgt aus: 
@@ -114,7 +114,7 @@ Das Entity Framework ist ein Großteil des Projektparts "Parser" gewesen. Das En
 %   STATUS:CONFIRMED \break
 %   END:VEVENT
 %\end{flushleft} \break vgl. \cite{TechnologieiCalExample}
-\subsection {ReSharper}
+\subsubsection {ReSharper}
 \label{sec:ReSharper}
 ReSharper ist eine Erweiterung für Visual Studio, welche das Entwickeln im .NET Bereich erleichtert. Die tschechische Firma JetBrains ist unter anderem Herausgeber von PyCharm, IntelliJ IDEA,  CLion und vielen weiteren hilfreichen Entwicklungs-Tools. 
 \subsubsection{ReSharper Installation}
@@ -126,7 +126,7 @@ Wenn nun auf "Next" geklickt wird, werden alle zu installierenden Pakete nochmal
 4. Wenn die Installation abgeschlossen ist Fenster schließen. \\
 5. Um sicherzugehen, dass die Installation erfolgt ist, Visual Studio starten. Hier sollte nun ein Fenster aufploppen um das Shortcut Scheme auszuwählen.
 Wird nun eine der Möglichkeiten gewählt und die Vereinbarungen akzeptiert sollte anschließend eine Lizenz Information zu sehen sein. Hier beim Paket auf ''Start Evaluation'' klicken und anschließend auf ''OK''. ReSHarper ist nach diesen Schritten funktionsfähig und bereit zur Verwendung.
-\subsection {PostMan}
+\subsubsection {PostMan}
 \label{sec:PostMan}
 % unzufrieden mit Formulierung
 PostMan wird verwendet um API Tests durchzuführen. Die Software bietet eine sehr übersichtliche Benutzeroberfläche und ermöglicht es dem Benutzer einfach HTTP Requests zu generieren und erspart dem Benutzer große Mengen an Code zu schreiben. \\
@@ -135,37 +135,37 @@ Mithilfe von PostMan ist es möglich einfache GET-Requests zu senden, bei der Re
 % HTTP und API müssen erklärt werden
 \section{Kommunikation}
 \label{sec:Kommunikation}
-\subsection {Discord}
+\subsubsection {Discord}
 \label{sec:Discord}
 Um im Laufe des praktischen Teils der Diplomarbeit die Übersicht zu behalten und alles zu organisieren wurde Discord verwendet. Discord hat viele Funktionen welche die Kommunikation im Team erleichtern. Discord bietet dem Benutzer an einen oder mehrere gratis Server zu erstellen. Ein Server kann aus Text und Sprachchannels bestehen. In einem Textchannel können festgelegte Personen schreiben und in einem Sprachchannel über Mikrofon miteinander reden. Falls wir also Teamintern etwas zu besprechen hatten oder falls Probleme auftraten die wir selbst lösen konnten bat Discord die perfekte Kommunikationsfläche. 
 Da wir als Gruppe mehrere Projekte haben haben wir einen "Projektserver". In diesem Projektserver haben wir einen Text und Sprach Channel für die Diplomarbeit. Im Text Channel werden kleine Probleme, die schnell geklärt werden können, besprochen und Files ausgetauscht. Im Sprach Channel werden gröbere Probleme besprochen oder wenn nötig Planänderungen. 
 %Installation und Server erstellung
-\subsection {Telegram}
+\subsubsection {Telegram}
 \label{sec:Telegram}
 Telegram wurde nicht regelmäßig verwendet, es diente als ein Backup falls Discord aus jeglichen Gründen nicht Verfügbar war. Telegram ist eine Chat-Applikation. 
 \section{File Sharing}
 \label{sec:FileSharing}
-\subsection {TFS}
+\subsubsection {TFS}
 \label{sec:TFS}
 Der Microsoft Team Foundation Server ist die verwendete Code-Sharing Technologie. Da der Auftraggeber, die Firma Intact GmbH oder Intact Systems, mit dieser Technologie arbeitet haben wir bei einem der ersten Treffer TFS für Code Sharing gewählt. Wir hatten einige Probleme mit dem TFS wodurch oft einzelne Teile des Projekts entwickelt wurden und dann in ein Projekt zusammengeführt wurden. Die Probleme waren unter anderem, dass die Firma eine Zeit lang gebraucht hat um den Server zur Verfügung zustellen aber auch, dass das Verbinden mit dem Server oft nicht geklappt hat. 
 %Anleitung wie man einen TFS benutzt ? maybe
-\subsection {Discord}
+\subsubsection {Discord}
 \label{sec:Discord}
 Wie bereits bei den Technologien erwähnt haben wir auf einem Discord Server einen Text Channel eingerichtet. Dieser eignet sich nicht nur um miteinander zu schreiben sondern kann auch dafür genutzt werden mit anderen Benutzer Files zu teilen. 
-\subsection {Google Drive}
+\subsubsection {Google Drive}
 \label{sec:GoogleDrive}
 Google Drive ist ein von Google bereitgestellter Cloud Service um Dokumente freizugeben, Online zu bearbeiten und zu speichern.
 Mithilfe von Google Drive wurde an Präsentationen und Projekten gearbeitet. Durch Google Docs und Google Präsentation fällt es leicht mit mehreren Personen gleichzeitig an einem Dokument zu arbeiten. Durch Google Drive wurden Dokumente wie die IVM Matrix, den Projektstrukturplan, die Meetings und die SCRUM Sprints erstellt und an alle Mitglieder geteilt. 
 \section{Organisation}
 \label{sec:Organisation}
-\subsection {Trello}
+\subsubsection {Trello}
 \label{sec:Trello}
 Trello ist eine web-basiert Software die das managen von Projekten vereinfacht. Trello wurde benutzt um den management Prozess Scrum erfolgreich durchzuführen. Trello bietet eine gute Übersicht über den Status des Projekts, da es Aufgaben in Form von kleinen Karten in einer Liste anzeigt. Diese Aufgaben kann mit einer verantwortlichen Person inkl. Frist versehen werden. So wird dem Scrummaster die Möglichkeit geboten 3 Listen zu erstellen: ''To Do'', ''in Arbeit'' und ''Fertig''. Je nachdem in welchem Status sich die Aufgabe befindet wird sie dementsprechend zugeteilt. \\vgl. \cite{trello} 
 \section{Schriftliche Arbeit}
 \label{sec:TechSchriftlicheArbeit}
-\subsection {LaTeX}
+\subsubsection {LaTeX}
 \label{sec:LaTeX}
 LaTeX ist ein System mitdessen Hilfe ein Dokument erstellen werden kann. Die Formatierung dieses Dokuments läuft, anders als bei Word, über Befehle. LaTeX läuft über das Textsatzsystem TeX. TeX hat seine eigene Sprache um Formatierungen von Text oder Grafiken sehr präzise und individuell einzustellen. 
-\subsubsection{Warum LaTeX?}
-\label{sec:WarumLaTeX} 
+\subsubsection{Warum LaTeX?} 
+\label{sec:WarumLaTeX}
 Warum wurde LaTeX verwendet und nicht Word oder sonstige Programme? Sobald bei einem Dokument vorgeschriebene Formatierung einzuhalten ist oder es einen großen Umfang haben wird, lohnt es sich LaTeX zu verwenden. Mit LaTeX werden Formatierung per Befehl definiert, am Anfang des Dokuments können gewisse Vorgaben definiert werden. So ist es möglich Standardmäßige Einstellungen vorzunehmen, welche Formatierungsfehler beinahe komplett ausschließen. Nicht nur die Formatierung wird übersichtlicher und erleichtert, auch die Aufteilung des Projekts wird simpler. Es ist möglich ein Dokument als ''Haupt''-Dokument anzulegen und in diesem weitere einzelne Dokumente einzubinden. So können verschieden Themenbereiche in verschiedene Dokumente aufgeteilt werden. \\vgl. \cite{TechnologieLaTeX} 
