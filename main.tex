@@ -168,20 +168,30 @@ basicstyle=\ttfamily\small,
 \usepackage{fancyhdr}
 \newcommand{\theauthor}{}
 
-\pagestyle{fancy}
+\pagestyle{fancy}{
 \fancyhf{}
 \fancyhead[LO,RE]{\theauthor}
-\fancyfoot[LO,RE]{\thepage}
+\fancyfoot[LE,RO]{\thepage}
 \fancyhead[RO,LE]{\nouppercase{\leftmark}}
+}
 
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyhead[LO,RE]{\theauthor}
-  \fancyfoot[LO,RE]{\thepage}
+  \fancyfoot[LE,RO]{\thepage}
   \fancyhead[RO,LE]{\nouppercase{\leftmark}}
 }
 
 \usepackage{wrapfig}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+%\usepackage[lmargin=142pt,rmargin=95pt,tmargin=127pt,bmargin=123pt]{geometry}
 
 %----------------------ENDE UNSER STUFF-----------------------
 
@@ -203,7 +213,9 @@ basicstyle=\ttfamily\small,
 
 \input{colophon}                %% defines information about editor, LaTeX, font, ...
 
-\input{\mytitlepage}       
+\input{\mytitlepage}      
+
+%\blankpage
 
 \input{template/declaration_TU_Graz}  
 
@@ -230,6 +242,7 @@ basicstyle=\ttfamily\small,
 
 \printbibliography  
 \listoffigures
+\lstlistoflistings
 
 
 \end{document}
