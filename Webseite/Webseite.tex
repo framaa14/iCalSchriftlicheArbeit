@@ -61,7 +61,7 @@ Ein gutes Beispiel für die Zweifaktorauthentifizierung ist die Behebung von Gel
 \\ vgl. \textcite{2FA}
 \subsection{2FA Login Code}
 \label{sec:2FALogin}
-\begin{lstlisting}
+\begin{lstlisting}[caption={Login}]
 [HttpGet]
 [AllowAnonymous]
 public async Task<IActionResult> LoginWith2fa(bool rememberMe, string returnUrl = null)
@@ -177,7 +177,7 @@ In diesem Abschnitt werden die für die weiterführenden Kapiteln relevanten Hea
 \end{enumerate}
 \paragraph{GET}:\\Die GET-Methode hat als Zweck eine HTML-Datei oder eine andere Quelle vom HTTP-Server anzufordern. Die Quelle wird durch den URL festgelegt. Über GET können beispielsweise auch Formulardaten übermittelt werden. Diese werden in codierter Form an den URL angehängt. Die Trennung von URL und Formular Daten erfolgt dabei durch ein Fragezeichen(?).
 \paragraph{Beispiel HTTP-GET Request mit Postman}
-\begin{lstlisting}
+\begin{lstlisting}[caption={HTTP GET}]
 GET / HTTP/1.1
 Host: www.htl-kaindorf.at
 Content-Type: application/x-www-form-urlencoded
@@ -186,7 +186,7 @@ Postman-Token: d5bf16bd-2c73-4911-8a4c-c33d13dfa6ad
 \end{lstlisting}
 \paragraph{POST}:\\Die POST-Methode ähnelt der GET-Methode in der Funktion, jedoch wird sie zum senden von Formulardaten an ein serverseitiges Skript verwendet. Hierbei werden die Daten im Entity-Bereich durch eine Leerzeile getrennt und vom Header übertragen.
 \paragraph{Beispiel HTTP-POST Request mit Postman}
-\begin{lstlisting}
+\begin{lstlisting}[caption={HTTP POST}]
 POST / HTTP/1.1
 Host: www.google.com
 Content-Type: application/x-www-form-urlencoded
@@ -262,7 +262,7 @@ Modernere Browser verhindern das TRACE über JavaScript gesendet werden kann.
 \pagebreak
 \subsection{Beispiel}
 \label{sec:cst_bsp}
-\begin{lstlisting}
+\begin{lstlisting}[caption={Cross Site Tracing}]
 <script>
   var xmlhttp = new XMLHttpRequest();
   var url = 'http://127.0.0.1/';
@@ -307,16 +307,16 @@ Es ist manchmal möglich, den CSRF-Angriff auf der verwundbaren Seite selbst zu 
 Es wird eine bösartige URL oder ein bösartiges Skript gebaut und das Opfer wird dazu gebracht, die bösartige URL oder das bösartige Skript aufzurufen. 
 \\
 Beispiel
-\begin{lstlisting}
+\begin{lstlisting}[caption={CSRF example}]
 GET http://bank.com/transfer.do?acct=Angreiger&amount=1000 HTTP/1.1
 \end{lstlisting}
 Oder
-\begin{lstlisting}
+\begin{lstlisting}[caption={CSRF example 2}]
 <a href="http://bank.com/transfer.do?acct=MARIA&amount=100000">View my Pictures!</a>
 \end{lstlisting}
 Auch eine Post Request ist möglich
 \\
-\begin{lstlisting}
+\begin{lstlisting}[caption={CSRF example 3}]
 POST http://bank.com/transfer.do HTTP/1.1
 acct=Angreifer&amount=1000
 \end{lstlisting}
@@ -335,25 +335,25 @@ Wenn ein Benutzer sich mit seinem Benutzernamen und Kennwort authentifiziert, be
 Wenn ein Benutzer authentifiziert ist, wird ihm ein Token ausgestellt. Dieser Token enthält Benutzerinformationen oder ein Referenztoken, welcher auf den verwalteten Benutzerstatus verweist. Wenn ein Benutzer versucht, auf eine Ressource zuzugreifen, die eine Authentifizierung erfordert, wird dieser Token mit einem zusätzlichen Header in Form eines Bearer-Token an die Anwendung gesendet. Dies macht die Anwendung zustandslos. In jeder nachfolgenden Request wird dieser Token in der Anforderung zur serverseitigen Überprüfung übergeben. Dieser Token wird nicht kryptografisch verschlüsselt sondern encodiert. Auf dem Server wird dieser Token dann decodiert, um auf seine Informationen zugreifen zu können. Dieser Token wird lokal im Browser gespeichert, dadurch ist CSRF keine Gefahr mehr, da der Token nicht als Cookie gesetzt wurde.
 \subsubsection{ASP.NET Core antiforgery Konfiguration}
 Seit ASP.NET Core 2.0 wird automatisch in jedem Form-Feld im Hintergrund ein Antiforgery Token.
-\begin{lstlisting}
+\begin{lstlisting}[caption={ASP.NET Antiforgery}]
 <form method="post">
     ...
 </form>
 \end{lstlisting}
 Zum Abschalten dieses Features muss die Form folgendermaßen aussehen.
-\begin{lstlisting}
+\begin{lstlisting}[caption={ASP.NET Antiforgery deaktivieren}]
 <form method="post" asp-antiforgery="false">
     ...
 </form>
 \end{lstlisting}
 Der häufigste Ansatz zur Abwehr von CSRF-Angriffen ist die Verwendung des Synchronizer Token Pattern (STP). STP wird verwendet, wenn der Benutzer eine Seite mit Formulardaten anfordert:\\Der Server sendet einen Token, welcher der Identität des aktuellen Benutzers zugeordnet ist, an den Client.Der Client sendet diesen Token zur Überprüfung an den Server zurück.Wenn der Server einen Token erhält, welcher nicht mit der Identität des authentifizierten Benutzers übereinstimmt, wird die Anforderung zurückgewiesen.\\Dieser Token ist einzigartig. Der Token kann auch verwendet werden, um eine ordnungsgemäße Sequenzierung einer Reihe von Requests sicherzustellen (Beispielsweise wenn mehrere Requests an mehrere Seiten gesendet werden). Alle Formulare in ASP.NET Core MVC- und Razor Pages generieren Antiforgery-Tokens.\\ \\Beispiel\\
-\begin{lstlisting}
+\begin{lstlisting}[caption={ASP.NET Antiforgery form header}]
 <form action="/" method="post">
     @Html.AntiForgeryToken()
 </form>
 \end{lstlisting}
 Dies generiert.\\
-\begin{lstlisting}
+\begin{lstlisting}[caption={ASP.NET Antiforgery generierter input}]
 <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NrAkS ... s2-m9Yw">
 \end{lstlisting}
 vgl. \textcite{CSRF-Protection}
@@ -581,7 +581,7 @@ Und natürlich gibt es hier das Hauptfeature, nämlich das verwalten der Kalende
 \section{Link generation}
 \label{sec:link}
 Hier wird das Herz des ICAL-Webservices erklärt. Nämlich die Funktion, die die fertigen Kalender zur Verfügung stellt.
-\begin{lstlisting}
+\begin{lstlisting}[caption={Link erzeugung}]
 public List<string> getUsersTables(string myuser)
 {
         //List fuer UserIDs
@@ -621,7 +621,7 @@ Bei dem benutztem SQL Statement wäre es möglich anzunehmen, dass eine SQL-Inje
 MVC-Controller sind dafür verantwortlich, auf Anfragen zu reagieren, die an eine ASP.NET MVC-Webseite gesendet werden. Jede Anforderung wird dazu einem bestimmten Controller zugeordnet. Wird beispielsweise folgende URL von unserem ICAL-Webservice in die Adressleiste eines Webbrowsers eingegeben:\\
 \url{http://localhost:50699/api/iCal/1} \\
 ruft diese einen Kontroller mit dem Namen iCalController auf. Dieser iCalController ist dafür zuständig sich im Hintergrund den ICAL-Kalender mit der jeweiligen ID zu holen und eine HTTP-Response zu liefern.\\ Hier folgt dessen Implementierung. 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Controller Code example}]
 using iCalWebService.BL;
 using Microsoft.AspNetCore.Mvc;
 ...
@@ -658,7 +658,7 @@ In einer ASP.NET-MVC-Anwendung werden eingehende Browser Requests Controller Met
 \subsection{Beispiel einer View}
 \label{mvc_view_beispiel}
 Als Beispiel folgt hier die cshtml des Registrierens auf der Webseite.
-\begin{lstlisting}
+\begin{lstlisting}[caption={View Code example}]
 @model RegisterViewModel
 @{
   //Hier wird der Titel der Seite gesetzt.
@@ -707,7 +707,7 @@ Ein wichtiger Bereich der UserDB ist der Salt,also wird dieses Thema zuerst besp
 Salt kommt aus der Kryptografie und ist eine zufällige Zeichenfolge, die an einen Klartext (bspw. an ein Passwort eines Users) angehängt wird, bevor dieser einer Hashfunktion übergeben wird und in einen Hash umgewandelt. Dies wird gemacht, um die Entropie der Eingabe zu erhöhen. Ein Salt wird oft für die Speicherung von Passwörtern in Datenbanken genutzt. Wird ein Passwort überprüft, wird dabei aber nicht jedes Mal ein neuer Salt generiert, da sich ja sonst der entstandene Hashwert, von dem gespeichertem Hashwert unterscheiden würde und somit das Passwort als falsch erkannt werden würde. Deswegen wird bei der Speicherung des Passworts in der Datenbank der dafür generierte Saltwert auch abgespeichert.
 \subsubsection{Warum Salt}
 Hashfunktionen wie SHA oder MD5 oder andere zum Hashen von Passwörtern entwickelte Hashfunktionen erzeugen für unterschiedliche Klartexte jeweils unterschiedliche Hashwerte. Bei einer Hashfunktion ist es äußerst unwahrscheinlich, dass jene für zwei gleiche Klartexte zwei unterschiedliche Hashwerte erzeugt. Daraus folgt, dass der Hashwert eines Passworts stets derselbe ist. Somit ist es einfach zu erkennen, welche Benutzer dasselbe Passwort nutzen. Benutzen viele Benutzer dasselbe Passwort, gibt es viele gleiche Hashwerte, wodurch es anzunehmen ist, dass hier ein eher schwaches bekannteres Passwort benutzt wird, wodurch der Angreifer dann auf BruteForce Angriffe setzen könnte. Bei Bruteforce Angriffen wird entweder eine Liste bekannter Passwörter genutzt welche Zeile für Zeile durchgegangen wird oder es werden direkt alle Möglichkeiten, die es geben könnte, durchprobiert.Bei einem Passwort, das aus beispielsweise 2 Kleinbuchstaben besteht, ist es relativ rasch möglich, alle Möglichkeiten durchzutesten.\\ Code Beispiel:
-\begin{lstlisting} 
+\begin{lstlisting}[caption={Bruteforce example }]
 for i in {a..z}; do for j in {a..z}; do echo $i$j;done;done 
 \end{lstlisting}
 Dies würde folgenden output bringen: \\
@@ -721,7 +721,7 @@ af\\
 Durch Beifügen des Salt ist der Hashwert für gleiche Passwörter anders und somit ist es nicht direkt ersichtlich, wie viele Benutzer das gleiche Passwort nutzen. Dadurch kann ein Angreifer auch beim Einblick in die Datenbank nicht annehmen, dass einfache Passwörter genutzt werden, da er nicht abschätzen kann, wie viel gleiche Passwörter es in der Datenbank gibt.
 \subsubsection{Die Benutzerdatenbank}
 Zu behandeln ist hier die Benutzertabelle. Welche folgendermaßen erstellt wurde.
-\begin{lstlisting}
+\begin{lstlisting}[caption={User Datenbank}]
 CREATE TABLE [dbo].[AspNetUsers] (
     [Id]                   NVARCHAR (450)     NOT NULL,
     [AccessFailedCount]    INT                NOT NULL,
