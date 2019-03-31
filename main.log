@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.1)  31 MAR 2019 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.7)  31 MAR 2019 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2756,7 +2756,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 31.
  [50]
-<./figures/Technologien_dotNetVersions.png, id=882, 116.68594pt x 163.3603pt>
+<./figures/Technologien_dotNetVersions.png, id=883, 116.68594pt x 163.3603pt>
 File: ./figures/Technologien_dotNetVersions.png Graphic file (type png)
 <use ./figures/Technologien_dotNetVersions.png>
 Package pdftex.def Info: ./figures/Technologien_dotNetVersions.png  used on inp
@@ -2776,20 +2776,20 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
 [51]
-<./figures/Technologien_aspNetTutorial01.png, id=913, 615.80063pt x 303.38344pt
+<./figures/Technologien_aspNetTutorial01.png, id=915, 615.80063pt x 303.38344pt
 >
 File: ./figures/Technologien_aspNetTutorial01.png Graphic file (type png)
 <use ./figures/Technologien_aspNetTutorial01.png>
 Package pdftex.def Info: ./figures/Technologien_aspNetTutorial01.png  used on i
 nput line 66.
 (pdftex.def)             Requested size: 398.33862pt x 196.25252pt.
-<./figures/Technologien_aspNetTutorial02.png, id=914, 948.54375pt x 220.825pt>
+<./figures/Technologien_aspNetTutorial02.png, id=916, 948.54375pt x 220.825pt>
 File: ./figures/Technologien_aspNetTutorial02.png Graphic file (type png)
 <use ./figures/Technologien_aspNetTutorial02.png>
 Package pdftex.def Info: ./figures/Technologien_aspNetTutorial02.png  used on i
 nput line 71.
 (pdftex.def)             Requested size: 398.33862pt x 92.73575pt.
-<./figures/Technologien_aspNetTutorial03.png, id=915, 593.21625pt x 387.69844pt
+<./figures/Technologien_aspNetTutorial03.png, id=917, 593.21625pt x 387.69844pt
 >
 File: ./figures/Technologien_aspNetTutorial03.png Graphic file (type png)
 <use ./figures/Technologien_aspNetTutorial03.png>
@@ -2807,7 +2807,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figures/Technologien_aspNetTutorial04.png, id=916, 1292.57906pt x 508.90125p
+<./figures/Technologien_aspNetTutorial04.png, id=918, 1292.57906pt x 508.90125p
 t>
 File: ./figures/Technologien_aspNetTutorial04.png Graphic file (type png)
 <use ./figures/Technologien_aspNetTutorial04.png>
@@ -3084,6 +3084,16 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 184.
  [68]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
 Overfull \hbox (2.83469pt too wide) in paragraph at lines 203--204
 \OT1/pplj/m/n/12 (-20) ver []uber einen/-meh-re-re Proxy-Server ver-folgt. Die 
 w[]ahrend der []Ubertragung
@@ -3238,7 +3248,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 281.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 281.
-<./figures/Webseite_XSS_img1.png, id=1216, 490.08093pt x 257.46187pt>
+<./figures/Webseite_XSS_img1.png, id=1218, 490.08093pt x 257.46187pt>
 File: ./figures/Webseite_XSS_img1.png Graphic file (type png)
 <use ./figures/Webseite_XSS_img1.png>
 Package pdftex.def Info: ./figures/Webseite_XSS_img1.png  used on input line 28
@@ -3249,7 +3259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
-<./figures/Webseite_XSS_img2.png, id=1217, 478.78876pt x 204.765pt>
+<./figures/Webseite_XSS_img2.png, id=1219, 478.78876pt x 204.765pt>
 File: ./figures/Webseite_XSS_img2.png Graphic file (type png)
 <use ./figures/Webseite_XSS_img2.png>
 Package pdftex.def Info: ./figures/Webseite_XSS_img2.png  used on input line 29
@@ -3264,7 +3274,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 293.
 [74]
-<./figures/Webseite_XSS_img3.png, id=1232, 529.22719pt x 132.495pt>
+<./figures/Webseite_XSS_img3.png, id=1234, 529.22719pt x 132.495pt>
 File: ./figures/Webseite_XSS_img3.png Graphic file (type png)
 <use ./figures/Webseite_XSS_img3.png>
 Package pdftex.def Info: ./figures/Webseite_XSS_img3.png  used on input line 29
@@ -3341,7 +3351,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 333.
 [77]
-<./figures/Webseite_MVC_Cookies.png, id=1260, 798.985pt x 185.69376pt>
+<./figures/Webseite_MVC_Cookies.png, id=1262, 798.985pt x 185.69376pt>
 File: ./figures/Webseite_MVC_Cookies.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Cookies.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Cookies.png  used on input line
@@ -3583,7 +3593,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 484.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 484.
-<./figures/Webseite_MVC_Erstellung_features.png, id=1363, 712.91344pt x 494.597
+<./figures/Webseite_MVC_Erstellung_features.png, id=1365, 712.91344pt x 494.597
 81pt>
 File: ./figures/Webseite_MVC_Erstellung_features.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_features.png>
@@ -3607,7 +3617,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-<./figures/Webseite_MVC_Erstellung_Install.png, id=1369, 645.16031pt x 346.2937
+<./figures/Webseite_MVC_Erstellung_Install.png, id=1371, 645.16031pt x 346.2937
 5pt>
 File: ./figures/Webseite_MVC_Erstellung_Install.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Install.png>
@@ -3628,7 +3638,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 499.
 [88 <./figures/Webseite_MVC_Erstellung_features.png>]
-<./figures/Webseite_MVC_Erstellung_Schritt1.png, id=1376, 759.58781pt x 368.125
+<./figures/Webseite_MVC_Erstellung_Schritt1.png, id=1378, 759.58781pt x 368.125
 3pt>
 File: ./figures/Webseite_MVC_Erstellung_Schritt1.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Schritt1.png>
@@ -3649,7 +3659,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 507.
 [89 <./figures/Webseite_MVC_Erstellung_Install.png>]
-<./figures/Webseite_MVC_Erstellung_Schritt2.png, id=1383, 701.62125pt x 492.339
+<./figures/Webseite_MVC_Erstellung_Schritt2.png, id=1385, 701.62125pt x 492.339
 37pt>
 File: ./figures/Webseite_MVC_Erstellung_Schritt2.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Schritt2.png>
@@ -3670,7 +3680,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 514.
 [90 <./figures/Webseite_MVC_Erstellung_Schritt1.png>]
-<./figures/Webseite_MVC_Erstellung_Schritt3.png, id=1390, 592.46344pt x 414.799
+<./figures/Webseite_MVC_Erstellung_Schritt3.png, id=1392, 592.46344pt x 414.799
 68pt>
 File: ./figures/Webseite_MVC_Erstellung_Schritt3.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Schritt3.png>
@@ -3691,7 +3701,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 520.
 [91 <./figures/Webseite_MVC_Erstellung_Schritt2.png>]
-<./figures/Webseite_MVC_Erstellung_Schritt4.png, id=1397, 544.28343pt x 213.798
+<./figures/Webseite_MVC_Erstellung_Schritt4.png, id=1399, 544.28343pt x 213.798
 75pt>
 File: ./figures/Webseite_MVC_Erstellung_Schritt4.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Schritt4.png>
@@ -3707,7 +3717,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 527.
  [92 <./figures/Webseite_MVC_Erstellung_Schritt3.png>]
-<./figures/Webseite_MVC_Erstellung_Done.png, id=1404, 544.28343pt x 327.47343pt
+<./figures/Webseite_MVC_Erstellung_Done.png, id=1406, 544.28343pt x 327.47343pt
 >
 File: ./figures/Webseite_MVC_Erstellung_Done.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Done.png>
@@ -3719,7 +3729,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 527--532
 
  []
 
-<./figures/Webseite_MVC_Erstellung_Preview.png, id=1405, 1443.14156pt x 654.194
+<./figures/Webseite_MVC_Erstellung_Preview.png, id=1407, 1443.14156pt x 654.194
 06pt>
 File: ./figures/Webseite_MVC_Erstellung_Preview.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Erstellung_Preview.png>
@@ -3740,7 +3750,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 538.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 538.
-<./figures/Webseite_MVC_Aufbau_Main.png, id=1415, 1281.28688pt x 170.13562pt>
+<./figures/Webseite_MVC_Aufbau_Main.png, id=1417, 1281.28688pt x 170.13562pt>
 File: ./figures/Webseite_MVC_Aufbau_Main.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_Main.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Aufbau_Main.png  used on input 
@@ -3751,7 +3761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--546
 
  []
 
-<./figures/Webseite_MVC_Aufbau_Register.png, id=1416, 475.02469pt x 392.21532pt
+<./figures/Webseite_MVC_Aufbau_Register.png, id=1418, 475.02469pt x 392.21532pt
 >
 File: ./figures/Webseite_MVC_Aufbau_Register.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_Register.png>
@@ -3763,7 +3773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 547--552
 
  []
 
-<./figures/Webseite_MVC_Aufbau_login.png, id=1417, 523.20468pt x 317.68687pt>
+<./figures/Webseite_MVC_Aufbau_login.png, id=1419, 523.20468pt x 317.68687pt>
 File: ./figures/Webseite_MVC_Aufbau_login.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_login.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Aufbau_login.png  used on input
@@ -3788,14 +3798,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 558.
  [95 <./figures/Webseite_MVC_Aufbau_Register.png>]
-<./figures/Webseite_MVC_Aufbau_PasswordReset.png, id=1432, 523.20468pt x 191.96
+<./figures/Webseite_MVC_Aufbau_PasswordReset.png, id=1434, 523.20468pt x 191.96
 72pt>
 File: ./figures/Webseite_MVC_Aufbau_PasswordReset.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_PasswordReset.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Aufbau_PasswordReset.png  used 
 on input line 560.
 (pdftex.def)             Requested size: 398.33862pt x 146.15727pt.
-<./figures/Webseite_MVC_Aufbau_User1.png, id=1433, 945.5325pt x 371.88937pt>
+<./figures/Webseite_MVC_Aufbau_User1.png, id=1435, 945.5325pt x 371.88937pt>
 File: ./figures/Webseite_MVC_Aufbau_User1.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_User1.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Aufbau_User1.png  used on input
@@ -3816,7 +3826,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 569.
 [96 <./figures/Webseite_MVC_Aufbau_login.png> <./figures/Webseite_MVC_Aufbau_Pa
 sswordReset.png>]
-<./figures/Webseite_MVC_Aufbau_password.png, id=1442, 933.4875pt x 320.69812pt>
+<./figures/Webseite_MVC_Aufbau_password.png, id=1444, 933.4875pt x 320.69812pt>
 
 File: ./figures/Webseite_MVC_Aufbau_password.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_password.png>
@@ -3828,7 +3838,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 570--575
 
  []
 
-<./figures/Webseite_MVC_Aufbau_2FA.png, id=1443, 744.53156pt x 223.58531pt>
+<./figures/Webseite_MVC_Aufbau_2FA.png, id=1445, 744.53156pt x 223.58531pt>
 File: ./figures/Webseite_MVC_Aufbau_2FA.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_2FA.png>
 Package pdftex.def Info: ./figures/Webseite_MVC_Aufbau_2FA.png  used on input l
@@ -3844,7 +3854,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 581.
 [97 <./figures/Webseite_MVC_Aufbau_User1.png> <./figures/Webseite_MVC_Aufbau_pa
 ssword.png>]
-<./figures/Webseite_MVC_Aufbau_calendars.png, id=1452, 714.41907pt x 157.33781p
+<./figures/Webseite_MVC_Aufbau_calendars.png, id=1455, 714.41907pt x 157.33781p
 t>
 File: ./figures/Webseite_MVC_Aufbau_calendars.png Graphic file (type png)
 <use ./figures/Webseite_MVC_Aufbau_calendars.png>
@@ -4102,20 +4112,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35634 strings out of 492982
- 631297 string characters out of 6134897
- 1188214 words of memory out of 5000000
- 37441 multiletter control sequences out of 15000+600000
- 44323 words of font info for 324 fonts, out of 8000000 for 9000
+ 35625 strings out of 492982
+ 631163 string characters out of 6134897
+ 1188213 words of memory out of 5000000
+ 37437 multiletter control sequences out of 15000+600000
+ 43594 words of font info for 320 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  75i,12n,72p,8868b,3520s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -4134,10 +4140,10 @@ f-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (123 pages, 1569653 bytes).
+Output written on main.pdf (123 pages, 1569804 bytes).
 PDF statistics:
- 2035 PDF objects out of 2073 (max. 8388607)
- 1789 compressed objects within 18 object streams
+ 2032 PDF objects out of 2073 (max. 8388607)
+ 1786 compressed objects within 18 object streams
  750 named destinations out of 1000 (max. 500000)
- 41819 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 39259 words of extra memory for PDF output out of 42996 (max. 10000000)
 
