@@ -161,7 +161,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Warum LaTeX?}{59}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Webseite-Security}{61}{chapter.7}
+\contentsline {chapter}{\numberline {7}Website-Security}{61}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Login Handling}{61}{section.7.1}
 \defcounter {refsection}{0}\relax 
@@ -195,13 +195,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline GET}{69}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Beispiel HTTP-GET Request mit Postman}{69}{lstlisting.7.-2}
+\contentsline {paragraph}{\nonumberline Beispiel HTTP-GET Request mit Postman}{69}{lstlisting.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline POST}{69}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Beispiel HTTP-POST Request mit Postman}{69}{lstlisting.7.-3}
+\contentsline {paragraph}{\nonumberline Beispiel HTTP-POST Request mit Postman}{69}{lstlisting.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Trace}{69}{section*.72}
+\contentsline {paragraph}{\nonumberline Trace}{70}{section*.72}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.5}XSS Protection}{70}{section.7.5}
 \defcounter {refsection}{0}\relax 
@@ -211,13 +211,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.3}Warum ist Javascript so beliebt?}{70}{subsection.7.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Beliebte Angriffsvektoren}{70}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {7.5.4}Beliebte Angriffsvektoren}{71}{subsection.7.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.5}Session Hijacking}{71}{subsection.7.5.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.6}Website-Defacements}{71}{subsection.7.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.7}Phishing}{71}{subsection.7.5.7}
+\contentsline {subsection}{\numberline {7.5.7}Phishing}{72}{subsection.7.5.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.8}Cross-Site-Tracing XST}{73}{subsection.7.5.8}
 \defcounter {refsection}{0}\relax 
@@ -231,7 +231,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.6.2}Wie Funktioniert eine Solche Attacke}{77}{subsection.7.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.3}Verhindern}{77}{subsection.7.6.3}
+\contentsline {subsection}{\numberline {7.6.3}Verhindern}{78}{subsection.7.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Cookie}{78}{section*.73}
 \defcounter {refsection}{0}\relax 
@@ -239,27 +239,27 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline ASP.NET Core antiforgery Konfiguration}{79}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.7}Hashes}{80}{section.7.7}
+\contentsline {section}{\numberline {7.7}Hashes}{81}{section.7.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.7.1}Hash Kollisionen}{81}{subsection.7.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.8}Wie funktioniert ein Hash Algorithmus}{81}{section.7.8}
+\contentsline {section}{\numberline {7.8}Wie funktioniert ein Hash Algorithmus}{82}{section.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.8.1}Allgemeines \IeC {\"u}ber SHA256}{81}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.1}Allgemeines \IeC {\"u}ber SHA256}{82}{subsection.7.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.8.2}Der Algorithmus}{82}{subsection.7.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Das Padding}{82}{section*.76}
+\contentsline {subsubsection}{\nonumberline Das Padding}{83}{section*.76}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Block decomposition}{83}{section*.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Hash-computation}{83}{section*.78}
+\contentsline {subsubsection}{\nonumberline Hash-computation}{84}{section*.78}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.8.3}Passwort Hashes}{85}{subsection.7.8.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.8.4}Richtige Speicherung von Benutzerdaten}{85}{subsection.7.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Speichern eines Passworts}{85}{section*.79}
+\contentsline {paragraph}{\nonumberline Speichern eines Passworts}{86}{section*.79}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline \IeC {\"U}berpr\IeC {\"u}fen eines Passworts}{86}{section*.80}
 \defcounter {refsection}{0}\relax 
