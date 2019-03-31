@@ -8,20 +8,20 @@
 \label{sec:parser}
 \section{Aufgabe}
 \label{sec:parser-aufgabe}
-Die Aufgabe des Parsers ist es auf die Datenbank zuzugreifen und sich die, für das iCal Format notwendigen, Daten zu holen. Diese werden anschließend vom Parser in einen iCal String umgewandelt, damit der benutzte Kalender diesen verwerten kann und passende Termine erstellt. 
+Die Aufgabe des Parsers ist es auf die Datenbank zuzugreifen und sich die für das iCal Format notwendigen Daten zu holen. Diese werden anschließend vom Parser in einen iCal String umgewandelt, damit der benutzte Kalender diese verwerten kann und passende Termine erstellt. 
 
 \subsection{Source-Code}
 \label{sec:parser-sourcecode}
-Unter dieser Überschrift wird auf einen wichtigen Teil des Parsers eingegangen um seine Funktionsweise in Kombination mit dem Entity Framework zu verstehen. Im Prinzip besteht der Parser aus zwei Teilen, dem Verbindungsaufbau mit der Datenbank(DB) über das Entity Framework und dem konvertieren der Daten zu einer iCal-Zeichenkette. Da der zweite Teil sich nur mit reinem Abfragen ob Daten vorhanden sind und wenn sie vorhanden sind dem hinzufügen zum StringBuilder beschäftigt wird dieser Teil nicht erklärt.\\ \\
+Unter dieser Überschrift wird auf einen wichtigen Teil des Parsers eingegangen um seine Funktionsweise in Kombination mit dem Entity Framework zu verstehen. Im Prinzip besteht der Parser aus zwei Teilen, dem Verbindungsaufbau mit der Datenbank(DB) über das Entity Framework und dem Konvertieren der Daten zu einer iCal-Zeichenkette. Da der zweite Teil sich nur mit reinem Abfragen ob Daten vorhanden sind und wenn sie vorhanden sind dem hinzufügen zum StringBuilder beschäftigt wird dieser Teil nicht erklärt.\\ \\
 Im folgenden eingefügten Source-Code ist zu sehen wie mithilfe des Parser auf die Datenbank zugegriffen werden kann. Der Source-Code ist anhand von Kommentaren in vier Parts aufgeteilt. Das Source-Code Beispiel wurde identisch aus dem praktischen Teil der Diplomarbeit in der Klasse Parser unter der Methode GetICalFormat(int userID) übernommen. \\ \\
 \textbf{Part 1} \\
 Im ersten Part wird der StringBuilder, welcher letzten Endes die fertige Zeichenkette zurückgibt, erstellt. Anschließend wird über den ''using''-Command ein Objekt mit dem Namen ''db'' von der Klasse iCalContext erstellt. Die Klasse iCalContext wurde vom Entity Framework automatisch generiert. Unter dem Schlüsselwort ''using'' wird desweiteren eine Boolean-Variable erstellt, welche später bei einer Abfrage benötigt wird. Diese kann vorerst ignoriert werden, da sie für die Erklärung irrelevant ist. Im Anschluss wird eine Liste des Typen ''int'' erstellt, welche später unsere Kalender-IDs enthalten wird. \\ \\
 \textbf{Part 2} \\
 In diesem Abschnitt wird über eine foreach-Schleife durch eine Liste iteriert welche alle Calender IDs enthält die dem übergebenem User gehören. In der Schleife werden alle IDs in die CalendarIdList gespeichert. \\ \\
 \textbf{Part 3} \\
-In Part 3 ist der Kopf der foreach-Schleife die sich bis zum Ende der Methode durchzieht zusehen. In dieser werden alle Kalender, mit einer ID, welche in der CalendarIdList enhalten sind, iteriert. Das heißt die Methode wird erst beendet wenn alle Kalender des Benutzers in einen iCal-String umgewandelt wurden und im StringBuilder enthalten sind. Da am Anfang von jedem Kalender immer ''BEGIN:VCALENDER'' und eine Timezone angegeben wird, wird dieser String direkt an den StringBuilder angehängt. \\ \\
+In Part 3 ist der Kopf der foreach-Schleife die sich bis zum Ende der Methode durchzieht zu sehen. In dieser werden alle Kalender, mit einer ID, welche in der CalendarIdList enhalten sind, iteriert. Das heißt die Methode wird erst beendet wenn alle Kalender des Benutzers in einen iCal-String umgewandelt wurden und im StringBuilder enthalten sind. Da am Anfang von jedem Kalender immer ''BEGIN:VCALENDER'' und eine Timezone angegeben wird, wird dieser String direkt an den StringBuilder angehängt. \\ \\
 \textbf{Part 4} \\
-In Part 4 ist der Kopf einer foreach-Schleife sichtbar, welcher dafür sorgt, dass durch jeden Termin oder Eintrag im Kalender durchiteriert wird. Da das iCal-Format für einen Kalender wie folgt aufgebaut ist: 
+In Part 4 ist der Kopf einer foreach-Schleife sichtbar, welcher dafür sorgt, dass durch jeden Termin oder Eintrag im Kalender durchiteriert wird. Das iCal-Format für einen Kalender ist wie folgt aufgebaut: 
 \begin{itemize}
 \item Kalender Anfang
 \item Termin/Eintrag
@@ -86,14 +86,13 @@ vgl. \cite{ParserUsingKeyword}
 \label{sec:parser-entity-framework}
 In diesem Kapitel wird beschrieben wie das Entity Framework funktioniert und wie es angewendet wird. Die  Beschreibung der Anwendung wird mithilfe von Bildschirmaufnahmen veranschaulicht. 
 \subsubsection {Funktionsweise}
-Mithilfe des Entity Framework lässt sich eine Datenbankstruktur innerhalb des Projekts mit Klassen darstellen. Wenn auf eine dieser Klassen in Form einer Value-Abfrage zugegriffen oder durch sonstige GET/SET Methoden, wird durch das Entity Framework ein Datenbank Zugriff durchgeführt. 
+Mithilfe des Entity Framework lässt sich eine Datenbankstruktur innerhalb des Projekts mit Klassen darstellen. Wenn auf eine dieser Klassen in Form einer Value-Abfrage oder durch sonstige GET/SET Methoden zugegriffen wird, wird durch das Entity Framework ein Datenbank Zugriff durchgeführt. 
 %Um die Funktionsweise genauer zu verstehen folgt ein Beispiel mit einer Datenbank in welcher Autos gespeichert werden:
 %HIER KOMMT DANN EIN BEISPIEL
 \subsubsection {Anwendung}
-Voraussetzung: Funktionsfähige ASP.NET Web Application \\
+Voraussetzung: funktionsfähige ASP.NET Web Application \\
 \break \textbf{1. Erstellung einer Datenbank} \\
-Um die Anwendung des Entity Frameworks zu verstehen wurde die Scott-Tiger Datenbank verwendet welche öffentlich unter folgendem Link zugänglich ist:  
-\break \url{http://jailer.sourceforge.net/scott-tiger.sql.html} \\
+Um die Anwendung des Entity Frameworks zu verstehen wurde die Scott-Tiger Datenbank verwendet welche öffentlich unter folgendem Link zugänglich ist: \url{http://jailer.sourceforge.net/scott-tiger.sql.html} \\
 \break \textbf{2. Installieren des EntityFrameworks} \\
 In der Packet Manager Console folgenden Befehl eingeben und bestätigen: 
 \begin{figure}[H]
@@ -109,39 +108,39 @@ Abschluss der Installation sieht wie folgt aus:
     \label{fig:parsef02}
 \end{figure} 
 
-\textbf{3. Entity Framework generiert Klassen aus DB} \\
+\textbf{3. Klassen aus Datenbank generieren} \\
 Im Solution Explorer auf den Model Ordner Rechtsklick machen, ''Hinzufügen'' und ''Neues Element'' auswählen. Folgende Bildschirmaufnahme zeigt wie dies in etwa aussehen sollte.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse03}
+    \includegraphics[width=\textwidth]{images/Parser_EFUse03}
     \caption{EF Neues Element}
     \label{fig:parsef03}
 \end{figure} 
-Anschließend, wie in der nächsten Bildschirmaufnahme gezeigt, auf ''Daten'', ''ADO.NET Entity Data Model'' und Hinzufügen
+Anschließend, wie in der nächsten Bildschirmaufnahme gezeigt, auf ''Daten'', ''ADO.NET Entity Data Model'' und ''Hinzufügen''.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse04}
+    \includegraphics[width=\textwidth]{images/Parser_EFUse04}
     \caption{EF ADO.NET Entity Data Model}
     \label{fig:parsef04}
 \end{figure} 
 Im nächsten Fenster nun  ''EF Designer aus Datenbank'' auswählen und ''Weiter''. Wie in Abbildung \ref{fig:parsef05} gezeigt.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse05}
+    \includegraphics[width=\textwidth]{images/Parser_EFUse05}
     \caption{EF Designer aus Datenbank}
     \label{fig:parsef05}
 \end{figure} 
-Wie in Abbildung \ref{fig:parsef06} wird hier zunächst die Verbindung ausgewählt. In diesem Fall ist ein lokales Datenbankfile vorhanden, daher wird dieses per DropDownMenü ausgewählt und auf ''Weiter'' geklickt. 
+Wie in Abbildung \ref{fig:parsef06} wird hier zunächst die Verbindung ausgewählt. In diesem Fall ist eine lokale Datenbankdatei vorhanden, daher wird dieses per Dropdown-Liste ausgewählt und auf ''Weiter'' geklickt.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse06}
+    \includegraphics[width=\textwidth]{images/Parser_EFUse06}
     \caption{EF Datenverbindung}
     \label{fig:parsef06}
 \end{figure} 
 Wie in Abbildung \ref{fig:parsef07}, alle Tabellen auswählen und auf ''Fertig stellen'' klicken. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Parser_EFUse07}
+    \includegraphics[width=\textwidth]{images/Parser_EFUse07}
     \caption{EF Datenbankobjekte auswählen}
     \label{fig:parsef07}
 \end{figure} 
@@ -153,10 +152,10 @@ Falls nach Beendung dieses Schrittes eine Sicherheitswarnung sichtbar wird, muss
     \caption{EF Klassendiagramm}
     \label{fig:parsef09}
 \end{figure} 
-Im Solutionsexplorer der Visual Studio Entwicklungsumgebung sollten alle Models sichtbar sein. Dies sieht nach erfolgreicher Anwendung wie in Abbildung \ref{fig:parsef10} aus. 
+Im Solutionsexplorer der Visual Studio Entwicklungsumgebung sollten alle Klassen unter dem Ordner ''Models'' sichtbar sein. Des weiteren werden sie in einem Klassendiagramm dargestellt. Dies sieht nach erfolgreicher Anwendung wie in Abbildung \ref{fig:parsef10} aus. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Parser_EFUse10}
+    \includegraphics[width=0.45\textwidth]{Parser_EFUse10}
     \caption{EF Solutionsexplorer}
     \label{fig:parsef10}
 \end{figure} 
