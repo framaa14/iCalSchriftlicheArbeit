@@ -11,7 +11,7 @@ Dieses Unterkapitel befasst sich mit allen Technologien welche im Laufe der Prog
 \label{sec:CSharp}
 Der praktische Teil der Diplomarbeit wurde mithilfe der objektorientierte Programmiersprache C\# entwickelt, da die Firma Intact GmbH, der Auftraggeber der Diplomarbeit, in der C\#/.NET-Entwicklung tätig ist. \\ \break
 C\# wurde im Jahr 2001 von Microsoft speziell für die .NET Umgebung veröffentlicht und ist daher eine junge Programmiersprache. C\# hat mehrere Anwendungsbereiche unter anderem können Desktopanwendungen, XML Web services, Datenbankanwendungen und vieles mehr entwickelt werden. \\ \break
-Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls eine dieser Programmiersprachen bekannt ist, ist es einfach in kurzer Zeit zu lernen in C\# zu programmieren. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig. \\vgl. \cite{TechnologieCSharpErklaerung} 
+Die ''geschwungene Klammer''-Syntax von C\# ist sehr ähnlich zu Java, C oder C++. Falls eine dieser Programmiersprachen bekannt ist, ist es einfach in kurzer Zeit zu lernen in C\# zu programmieren. Die C\#-Syntax ist so aufgebaut, dass sie der C++-Syntax sehr ähnelt aber sie in vielen Bereichen vereinfacht und neue Funktionen hinzufügt. Anders als Java ist C\# nicht Betriebssystem unabhängig. \\vgl. \textcite{TechnologieCSharpErklaerung} 
 \subsubsection{Visual Studio 17 Community}
 \label{sec:VisualStudio17Community}
 Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmiersprachen, der Firma Microsoft. Die Version 15 (2017) ist die aktuellste Version und bietet neue Funktionen und Verbesserungen. Unter anderem die voll umfängliche Unterstützung der ASP.NET Core und .NET Core Entwicklung. Die aktuelle Version unterstützt folgende Sprachen:
@@ -27,7 +27,7 @@ Visual Studio ist eine Entwicklungsumgebung, für verschiedenste Programmierspra
 \item JavaScript
 \item CSS
 \end{itemize}
-Da der Hauptteil der Diplomarbeit in der objektorientierte Programmiersprache C\# geschrieben wurde, hat das Entwicklungsteam Visual Studio 2017 Community verwendet. Hierbei war es wichtig, dass jedes Mitglied der Diplomarbeitsgruppe die selbe "Jahres-Version", in diesem Fall 2017, verwendet, da es zwischen den Versionen kleine Unterscheide, welche zu einem Problem führen könnten, gibt. Ein gravierender Unterschied wäre die Syntax eines Propertys zwischen Version 2013 und 2017. \\vgl. \cite{visualstudio}
+Da der Hauptteil der Diplomarbeit in der objektorientierte Programmiersprache C\# geschrieben wurde, hat das Entwicklungsteam Visual Studio 2017 Community verwendet. Hierbei war es wichtig, dass jedes Mitglied der Diplomarbeitsgruppe die selbe "Jahres-Version", in diesem Fall 2017, verwendet, da es zwischen den Versionen kleine Unterscheide, welche zu einem Problem führen könnten, gibt. Ein gravierender Unterschied wäre die Syntax eines Propertys zwischen Version 2013 und 2017. \\vgl. \textcite{visualstudio}
 \begin{lstlisting}[caption=Syntax Unterschied: Property , label=lst:test]
 // Visual Studio 2013 Code
   private string m_Beispiel;
@@ -60,7 +60,7 @@ Aktuell auswählbare Versionen in Visual Studio 2017, siehe Abbildung \ref{fig:n
 \justifying
 \subsubsection {asp.net}
 \label{sec:asp.net}
-Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Frameworks, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. \\ \cite{aspnetstatistik} \\
+Da das Ziel der Diplomarbeit ein Webservice unter C\# ist, wurde ASP.NET verwendet. ASP.NET ist Teil des .net Frameworks, mit ihm lassen sich Webservices oder auch Webanwendungen einfach entwickeln. ASP.NET kommt bei 11.8\% aller aktiven Webseiten zum Einsatz und befindet sich deshalb auf dem 2ten Platz nach der Programmiersprache PHP. \\ \textcite{aspnetstatistik} \\
 \\ Im Anschluss wird durch Abbildung \ref{fig:aspNetTut01}, \ref{fig:aspNetTut02}, \ref{fig:aspNetTut03} und \ref{fig:aspNetTut04} Schritt für Schritt gezeigt wie ein ASP.NET Projekt in Visual Studio 2017 erstellt wird.
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{Technologien_aspNetTutorial01}
@@ -90,7 +90,7 @@ MSSQL ist KEIN Teil der finalen Diplomarbeit und wurde nur zu Testzwecken verwen
 Bei der Microsoft SQL Server Entwicklung kam Microsoft SQL Server Management Studios zum Einsatz. Die Aufgabe des Management Studios war es den Server zu konfigurieren und zu verwalten. 
 \subsubsection {Entity Framework}
 \label{sec:ef}
-Das Entity Framework ist ein Großteil des Projektparts "Parser". Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Kapitel ''Parser'' genauer eingegangen. \\vgl. \cite{entityframework}
+Das Entity Framework ist ein Großteil des Projektparts "Parser". Das Entity Framework wird angewandt um den Zugriff auf die Datenbank zu erleichtern. Es dient zur objektrationalen Abbildung auf .NET Objektstrukturen. Auf die Funktionsweise des EFs wird im Kapitel ''Parser'' genauer eingegangen. \\vgl. \textcite{entityframework}
 %\subsubsection {iCal}
 %\label{sec:ical}
 %iCal ist das Format in dem ein Kalender gespeichert wird. Das Format wird unter einer eigenen Überschrift im Laufe der schriftlichen Arbeit genauer erklärt. \ref{sec:iCal}
@@ -113,7 +113,7 @@ Das Entity Framework ist ein Großteil des Projektparts "Parser". Das Entity Fra
 %   ATTACH:ftp://ftp.bar.com/pub/docs/foo.doc \break
 %   STATUS:CONFIRMED \break
 %   END:VEVENT
-%\end{flushleft} \break vgl. \cite{TechnologieiCalExample}
+%\end{flushleft} \break vgl. \textcite{TechnologieiCalExample}
 \subsubsection {ReSharper}
 \label{sec:ReSharper}
 ReSharper ist eine Erweiterung für Visual Studio, welche das Entwickeln im .NET Bereich erleichtert. Die tschechische Firma JetBrains ist unter anderem Herausgeber von PyCharm, IntelliJ IDEA,  CLion und vielen weiteren hilfreichen Entwicklungs-Tools. 
@@ -130,7 +130,7 @@ Wird nun eine der Möglichkeiten gewählt und die Vereinbarungen akzeptiert soll
 \label{sec:PostMan}
 % unzufrieden mit Formulierung
 PostMan wird verwendet um API Tests durchzuführen. Die Software bietet eine sehr übersichtliche Benutzeroberfläche und ermöglicht es dem Benutzer einfach HTTP Requests zu generieren und erspart dem Anwender große Mengen an Code zu schreiben. \\
-\\vgl. \cite{TechnologiePostman} \\ \break
+\\vgl. \textcite{TechnologiePostman} \\ \break
 Mithilfe von PostMan ist es möglich einfache GET-Requests zu senden, bei der Response ist mitunter möglich einzustellen wie diese angezeigt werden sollen. Auf der linken Seite der PostMan-Anwendung ist eine zeitliche Protokollierung, wann welche Anfrage gesendet wurde, sichtbar.
 % HTTP und API müssen erklärt werden
 \section{Kommunikation}
@@ -164,7 +164,7 @@ Mithilfe von Google Drive wurde an Präsentationen und Projekten gearbeitet. Dur
 Organisation ist ein wichtiger Teil bei einem Projekt im Team. In diesem Kapitel werden alle eingesetzten Mittel zur erleichterten Organisation aufgelistet und erklärt.
 \subsubsection {Trello}
 \label{sec:Trello}
-Trello ist eine webbasierte Software die das Managen von Projekten vereinfacht. Trello wurde benutzt um den management Prozess Scrum erfolgreich durchzuführen. Trello bietet eine gute Übersicht über den Status des Projekts, da es Aufgaben in Form von kleinen Karten in einer Liste anzeigt. Diese Aufgabe kann mit einer verantwortlichen Person inkl. Frist versehen werden. So wird dem Scrummaster die Möglichkeit geboten 3 Listen zu erstellen: ''To Do'', ''in Arbeit'' und ''Fertig''. Je nachdem in welchem Status sich die Aufgabe befindet wird sie dementsprechend zugeteilt. \\vgl. \cite{trello} 
+Trello ist eine webbasierte Software die das Managen von Projekten vereinfacht. Trello wurde benutzt um den management Prozess Scrum erfolgreich durchzuführen. Trello bietet eine gute Übersicht über den Status des Projekts, da es Aufgaben in Form von kleinen Karten in einer Liste anzeigt. Diese Aufgabe kann mit einer verantwortlichen Person inkl. Frist versehen werden. So wird dem Scrummaster die Möglichkeit geboten 3 Listen zu erstellen: ''To Do'', ''in Arbeit'' und ''Fertig''. Je nachdem in welchem Status sich die Aufgabe befindet wird sie dementsprechend zugeteilt. \\vgl. \textcite{trello} 
 \section{Schriftliche Arbeit}
 \label{sec:TechSchriftlicheArbeit}
 Hier wird die verwendete Technologie zur Verfassung der Diplomarbeit angegeben. Mit anschließender Begründung warum sie verwendet wurde.
@@ -173,4 +173,4 @@ Hier wird die verwendete Technologie zur Verfassung der Diplomarbeit angegeben. 
 LaTeX ist ein System mit dessen Hilfe ein Dokument erstellen werden kann. Die Formatierung dieses Dokuments läuft, anders als bei Word, über Befehle. LaTeX läuft über das Textsatzsystem TeX. TeX hat seine eigene Sprache um Formatierungen von Text oder Grafiken sehr präzise und individuell einzustellen. 
 \subsubsection{Warum LaTeX?} 
 \label{sec:WarumLaTeX}
-Warum wurde LaTeX verwendet und nicht Word oder sonstige Programme? Sobald bei einem Dokument vorgeschriebene Formatierung einzuhalten ist oder es einen großen Umfang haben wird, lohnt es sich LaTeX zu verwenden. Mit LaTeX werden Formatierungen per Befehl definiert, am Anfang des Dokuments können gewisse Vorgaben definiert werden. So ist es möglich standardmäßige Einstellungen vorzunehmen, welche Formatierungsfehler beinahe komplett ausschließen. Nicht nur die Formatierung wird übersichtlicher und erleichtert, auch die Aufteilung des Projekts wird simpler. Es ist möglich ein Dokument als ''Haupt''-Dokument anzulegen und in diesem weitere einzelne Dokumente einzubinden. So können verschieden Themenbereiche in verschiedene Dokumente aufgeteilt werden. \\vgl. \cite{TechnologieLaTeX} 
+Warum wurde LaTeX verwendet und nicht Word oder sonstige Programme? Sobald bei einem Dokument vorgeschriebene Formatierung einzuhalten ist oder es einen großen Umfang haben wird, lohnt es sich LaTeX zu verwenden. Mit LaTeX werden Formatierungen per Befehl definiert, am Anfang des Dokuments können gewisse Vorgaben definiert werden. So ist es möglich standardmäßige Einstellungen vorzunehmen, welche Formatierungsfehler beinahe komplett ausschließen. Nicht nur die Formatierung wird übersichtlicher und erleichtert, auch die Aufteilung des Projekts wird simpler. Es ist möglich ein Dokument als ''Haupt''-Dokument anzulegen und in diesem weitere einzelne Dokumente einzubinden. So können verschieden Themenbereiche in verschiedene Dokumente aufgeteilt werden. \\vgl. \textcite{TechnologieLaTeX} 
